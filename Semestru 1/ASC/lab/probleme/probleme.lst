@@ -1,0 +1,72 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start
+     4                                  
+     5                                  extern exit, printf, scanf
+     6                                  import exit msvcrt.dll
+     7                                  import printf msvcrt.dll
+     8                                  import scanf msvcrt.dll
+     9                                  
+    10                                  ;Se da un numar natural negativ a (a: dword). Sa se afiseze valoarea lui in baza 10 si in baza 16, in urmatorul format: "a = <base_10> (baza 10), a = <base_16> (baza 16)"
+    11                                  
+    12                                  segment data use32 class = data
+    13 00000000 00000000                    a dd 0
+    14 00000004 536520646120756E20-         input_start db 'Se da un numar negativ: ', 0
+    14 0000000D 6E756D6172206E6567-
+    14 00000016 617469763A2000     
+    15 0000001D 4E7520616920696E74-         input_end_wr_in db 'Nu ai introdus un numar negativ!', 0
+    15 00000026 726F64757320756E20-
+    15 0000002F 6E756D6172206E6567-
+    15 00000038 617469762100       
+    16 0000003E 2573                        format1 db '%s'
+    17 00000040 2564                        format2 db '%d'
+    18 00000042 61203D202564202862-         output_b10 db 'a = %d (baza 10), ', 0
+    18 0000004B 617A61203130292C20-
+    18 00000054 00                 
+    19 00000055 61203D202578202862-         output_b16 db 'a = %x (baza 16)', 0
+    19 0000005E 617A612031362900   
+    20                                  
+    21                                  segment code use32 class = code
+    22                                      start:
+    23 00000000 68[04000000]                    push dword input_start
+    24 00000005 FF15[00000000]                  call [printf]
+    25 0000000B 83C404                          add esp, 4
+    26                                              ;se afiseaza mesajul de inceput
+    27                                          
+    28 0000000E 8D05[00000000]                  lea eax, [a]
+    29                                              ;se pune adresa lui a in eax
+    30                                          
+    31 00000014 50                              push eax
+    32 00000015 68[40000000]                    push dword format2
+    33 0000001A FF15[00000000]                  call [scanf]
+    34 00000020 83C408                          add esp, 4*2
+    35                                              ;se citeste un numar si se pune la adresa lui a
+    36                                          
+    37 00000023 833D[00000000]00                cmp dword [a], 0
+    38 0000002A 7D2A                            jge end_program_afis1
+    39                                              ;se verifica daca numarul este negativ
+    40                                          
+    41 0000002C FF35[00000000]                  push dword [a]
+    42 00000032 68[42000000]                    push output_b10
+    43 00000037 FF15[00000000]                  call [printf]
+    44 0000003D 83C408                          add esp, 2*4
+    45                                          
+    46 00000040 FF35[00000000]                  push dword [a]
+    47 00000046 68[55000000]                    push output_b16
+    48 0000004B FF15[00000000]                  call [printf]
+    49 00000051 83C408                          add esp, 2*4
+    50                                          
+    51 00000054 EB16                            jmp end_program_ok
+    52                                      
+    53                                      end_program_afis1:
+    54 00000056 68[1D000000]                    push dword input_end_wr_in
+    55 0000005B FF15[00000000]                  call [printf]
+    56 00000061 83C404                          add esp, 4
+    57                                              ;daca numarul nu este negativ, se termina programul si se afiseaza un mesaj corespunzator
+    58                                          
+    59 00000064 6A00                            push dword 0
+    60 00000066 FF15[00000000]                  call [exit]
+    61                                          
+    62                                      end_program_ok:
+    63 0000006C 6A00                            push dword 0
+    64 0000006E FF15[00000000]                  call [exit]

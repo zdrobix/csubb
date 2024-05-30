@@ -1,0 +1,113 @@
+Zdrobix Liquor Store
+
+
+
+Order for:     alex
+Order address: adresa 1
+
+
+Founders Centennial - 1/2K                        Legends Ltd                             Kegs           410.24  
+Finest Call Lime Juice - 1L                       Republic National Distributing Co       Non-Alcohol    291.19  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    421.27  
+Bodegas Hidalgo Fabuloso Solera Brandy - 750Ml    Tradewinds Specialty Imports Llc        Liquor         75.16   
+Southern Tier Thick Mint - 1/6K                   Legends Ltd                             Kegs           680.28  
+Ridge Cal Zin Paso Robles - 750Ml                 A Vintners Selections                   Wine           460.62  
+Brewers Art Green Peppercord Triple - 1/6K        Legends Ltd                             Kegs           110.39  
+Founding Spirits Gin - 750Ml                      Prestige Beverage Group Of Md Llc       Liquor         818.31  
+Union Miracle - 1/6K                              Legends Ltd                             Kegs           688.26  
+Barkeep Baked Apple Org Bitters 6/Cs - 8Oz        Bacchus Importers Ltd                   Non-Alcohol    693.19  
+Nauti Seltzer Lemon Lime - 12.Oz 4/6 Can          Legends Ltd                             Beer           618.73  
+Hitachino Anabai - 11.2Oz                         Legends Ltd                             Beer           202.95  
+Founding Spirits Rye Whisky - 750Ml               Prestige Beverage Group Of Md Llc       Liquor         213.38  
+Okunomatsu Tokubetsu Junmai - 720Ml               A Vintners Selections                   Wine           895.35  
+Hitachino Anabai - 11.2Oz                         Legends Ltd                             Beer           202.95  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    421.27  
+Varan Coffee Liq - 750Ml                          Bacchus Importers Ltd                   Liquor         299.34  
+Camille Cayran Cave De Cairanne Pas De La Beaume Cdr WhGrapes & Barley Llc                     Liquor         763.16  
+Finest Call Lime Juice - 1L                       Republic National Distributing Co       Non-Alcohol    291.19  
+Finest Call Lime Juice - 1L                       Republic National Distributing Co       Non-Alcohol    460.26  
+Hitachino Anabai - 11.2Oz                         Legends Ltd                             Beer           202.95  
+Stillwater Gose Gone Wild - 22.0Z                 Legends Ltd                             Beer           758.58  
+ciucas                                            ciucas and co                           Beer           19      
+Barkeep Baked Apple Org Bitters 6/Cs - 8Oz        Bacchus Importers Ltd                   Non-Alcohol    693.19  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    421.27  
+Avignonesi Rosso Di Toscana - 750Ml               A Vintners Selections                   Wine           546.82  
+Barkeep Baked Apple Org Bitters 6/Cs - 8Oz        Bacchus Importers Ltd                   Non-Alcohol    693.19  
+Camille Cayran Cave De Cairanne Pas De La Beaume Cdr WhGrapes & Barley Llc                     Liquor         247.82  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    118.12  
+Long Trail Cranberry Gose 1/6K                    Legends Ltd                             Kegs           74.65   
+Hendry Block 7 Napa Zin - 750Ml                   A Vintners Selections                   Wine           15.71   
+Bodegas Castano Hecula - 750Ml                    A Vintners Selections                   Wine           78.34   
+Finest Call Lime Juice - 1L                       Republic National Distributing Co       Non-Alcohol    291.19  
+Southern Tier Choklat Oranj - 6/4 12.Oz Nr        Legends Ltd                             Beer           690.43  
+Avignonesi Rosso Di Toscana - 750Ml               A Vintners Selections                   Wine           546.82  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    421.27  
+Nauti Seltzer Lemon Lime - 12.Oz 4/6 Can          Legends Ltd                             Beer           618.73  
+Southern Tier Choklat Oranj - 6/4 12.Oz Nr        Legends Ltd                             Beer           690.43  
+Avignonesi Rosso Di Toscana - 750Ml               A Vintners Selections                   Wine           546.82  
+Founding Spirits Gin - 750Ml                      Prestige Beverage Group Of Md Llc       Liquor         818.31  
+ciucas                                            ciucas and co                           Beer           19      
+Camille Cayran Cave De Cairanne Pas De La Beaume Cdr WhGrapes & Barley Llc                     Liquor         763.16  
+Sutter Home Fre Mer - 750Ml                       Republic National Distributing Co       Non-Alcohol    705.26  
+Zoco Pacharan Navarro Liq - 1L                    Tradewinds Specialty Imports Llc        Liquor         782.74  
+Sutter Home Fre' Spark - 750Ml                    Republic National Distributing Co       Non-Alcohol    917.58  
+Produttori Del Barbaresco Tor - 750Ml             A Vintners Selections                   Wine           663.44  
+Founding Spirits Gin - 750Ml                      Prestige Beverage Group Of Md Llc       Liquor         818.31  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    683.7   
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    118.12  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    421.27  
+Finest Call Lime Juice - 1L                       Republic National Distributing Co       Non-Alcohol    723.66  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    683.7   
+Varan Coffee Liq - 750Ml                          Bacchus Importers Ltd                   Liquor         299.34  
+Founding Spirits Gin - 750Ml                      Prestige Beverage Group Of Md Llc       Liquor         818.31  
+Sutter Home Fre' Spark - 750Ml                    Republic National Distributing Co       Non-Alcohol    917.58  
+Southern Tier Choklat Oranj - 6/4 12.Oz Nr        Legends Ltd                             Beer           690.43  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    118.12  
+Hitachino Anabai - 11.2Oz                         Legends Ltd                             Beer           202.95  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    683.7   
+Burley Oak Homegrown - 1/2K                       Legends Ltd                             Kegs           310.23  
+Long Trail Cranberry Gose 1/6K                    Legends Ltd                             Kegs           74.65   
+Sutter Home Fre' Spark - 750Ml                    Republic National Distributing Co       Non-Alcohol    917.58  
+Stillwater Gose Gone Wild - 22.0Z                 Legends Ltd                             Beer           758.58  
+ciucas                                            ciucas and co                           Beer           19      
+Burley Oak Homegrown - 1/2K                       Legends Ltd                             Kegs           310.23  
+Founders Azacca Ipa - 1/2K                        Legends Ltd                             Kegs           240.22  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    118.12  
+Grahams 6 Grapes Port - 750Ml                     A Vintners Selections                   Wine           59.1    
+Hitachino Anabai - 11.2Oz                         Legends Ltd                             Beer           202.95  
+Produttori Del Barbaresco Tor - 750Ml             A Vintners Selections                   Wine           663.44  
+Finest Call Lime Juice - 1L                       Republic National Distributing Co       Non-Alcohol    723.66  
+Unibroue A Tout Le Monde - 1/6K                   Legends Ltd                             Kegs           826.1   
+Ridge Cal Zin Paso Robles - 750Ml                 A Vintners Selections                   Wine           460.62  
+Founders Centennial - 1/2K                        Legends Ltd                             Kegs           410.24  
+The Bruery Or Xata - 750Ml                        Legends Ltd                             Beer           397.89  
+Verzet Oud Bruin - 20L                            Legends Ltd                             Kegs           368.43  
+Right Proper Raised By Wolves 1/6K                Legends Ltd                             Kegs           363.38  
+Nauti Seltzer Lemon Lime - 12.Oz 4/6 Can          Legends Ltd                             Beer           618.73  
+Southern Tier Thick Mint - 1/6K                   Legends Ltd                             Kegs           680.28  
+Founders Azacca Ipa - 1/2K                        Legends Ltd                             Kegs           240.22  
+Founders Centennial - 1/2K                        Legends Ltd                             Kegs           410.24  
+The Bruery Or Xata - 750Ml                        Legends Ltd                             Beer           397.89  
+Union Miracle - 1/6K                              Legends Ltd                             Kegs           688.26  
+Verzet Oud Bruin - 20L                            Legends Ltd                             Kegs           368.43  
+Del Borgo Verdi Imp Stout - 11.2Oz                Legends Ltd                             Beer           944.85  
+Varan Coffee Liq - 750Ml                          Bacchus Importers Ltd                   Liquor         299.34  
+Del Borgo Verdi Imp Stout - 11.2Oz                Legends Ltd                             Beer           944.85  
+Finest Call Lime Juice - 1L                       Republic National Distributing Co       Non-Alcohol    460.26  
+Long Trail Unearthed - 4/6 12.0Z Nr               Legends Ltd                             Beer           861.9   
+Produttori Del Barbaresco Tor - 750Ml             A Vintners Selections                   Wine           663.44  
+Ridge Cal Zin Paso Robles - 750Ml                 A Vintners Selections                   Wine           460.62  
+Bodegas Castano Hecula - 750Ml                    A Vintners Selections                   Wine           78.34   
+The Bruery Or Xata - 750Ml                        Legends Ltd                             Beer           397.89  
+Southern Tier Choklat Oranj - 6/4 12.Oz Nr        Legends Ltd                             Beer           690.43  
+Finest Call Lime Juice - 1L                       Republic National Distributing Co       Non-Alcohol    460.26  
+Finest Call Lime Juice - 1L                       Republic National Distributing Co       Non-Alcohol    723.66  
+Founders Azacca Ipa - 1/2K                        Legends Ltd                             Kegs           240.22  
+Ridge Cal Zin Paso Robles - 750Ml                 A Vintners Selections                   Wine           460.62  
+Ridge Cal Zin Paso Robles - 750Ml                 A Vintners Selections                   Wine           460.62  
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    683.7   
+Verzet Oud Bruin - 20L                            Legends Ltd                             Kegs           368.43  
+Bellefon Cuv Brut Rose 6/Cs - 750Ml               A Vintners Selections                   Wine           259.72  
+
+
+Total cost: 48629.1

@@ -1,0 +1,10 @@
+1,Mamaia,mare,100
+2,Muntenegru,munte,300
+3,Sovata,hotel,80
+4,OcnaMures,ocna,20
+5,OcnaSibiu,ocna,15
+6,Dubai,hotel,1000
+7,EuropaTour,tur,9000
+8,Sinaia,hotel,150
+9,Budapesta,hotel,200
+10,Techirghiol,mare,10

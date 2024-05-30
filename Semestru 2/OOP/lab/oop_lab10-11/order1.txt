@@ -1,0 +1,21 @@
+Zdrobix Liquor Store
+
+
+
+Order for:     Alex Zdroha
+Order address: str livezneni 13
+
+
+Hendry Block 7 Napa Zin - 750Ml                   A Vintners Selections                   Wine           15.71   
+Long Trail Cranberry Gose 1/6K                    Legends Ltd                             Kegs           74.65   
+Finest Call Grenadine - 1L                        Republic National Distributing Co       Non-Alcohol    421.27  
+Santa Barbara P/Noir - 750Ml                      A Vintners Selections                   Wine           931.27  
+Grahams 6 Grapes Port - 750Ml                     A Vintners Selections                   Wine           59.1    
+Southern Tier Choklat Oranj - 6/4 12.Oz Nr        Legends Ltd                             Beer           690.43  
+Nauti Seltzer Raspberry - 12.Oz 4/6 Can           Legends Ltd                             Beer           304.39  
+Unibroue A Tout Le Monde - 1/6K                   Legends Ltd                             Kegs           826.1   
+Unibroue A Tout Le Monde - 1/6K                   Legends Ltd                             Kegs           826.1   
+Del Borgo Verdi Imp Stout - 11.2Oz                Legends Ltd                             Beer           944.85  
+
+
+Total cost: 5093.87

@@ -1,0 +1,17 @@
+# ninja log v5
+32	1456	7381621354578793	CMakeFiles/sda_lab05.dir/TestScurt.cpp.obj	6c66ccd950d71ba3
+7	859	7381621259566757	CMakeFiles/sda_lab05.dir/App.cpp.obj	15dee3e3db8d453c
+11	1173	7381621351718829	CMakeFiles/sda_lab05.dir/Matrice.cpp.obj	4076806d39172c4a
+1457	1958	7381621359400362	sda_lab05.exe	e5f71fce64d49cdd
+24	944	7381621260397509	CMakeFiles/sda_lab05.dir/TestExtins.cpp.obj	771b0485f0fd9b26
+2	438	7382305290145958	build.ninja	fec36c3248cd92b8
+5	10295	7386203048742560	CMakeFiles/sda_lab05.dir/App.cpp.obj	15dee3e3db8d453c
+3062	10907	7386203048952565	CMakeFiles/sda_lab05.dir/Matrice.cpp.obj	4076806d39172c4a
+10297	15680	7386203103615281	CMakeFiles/sda_lab05.dir/TestScurt.cpp.obj	6c66ccd950d71ba3
+6083	15683	7386203103625272	CMakeFiles/sda_lab05.dir/TestExtins.cpp.obj	771b0485f0fd9b26
+15683	22096	7386203167651726	sda_lab05.exe	e5f71fce64d49cdd
+21	861	7386212922721972	CMakeFiles/sda_lab05.dir/Matrice.cpp.obj	4076806d39172c4a
+5	1038	7386212925059637	CMakeFiles/sda_lab05.dir/App.cpp.obj	15dee3e3db8d453c
+34	1094	7386212925651484	CMakeFiles/sda_lab05.dir/TestExtins.cpp.obj	771b0485f0fd9b26
+862	1519	7386212929939739	CMakeFiles/sda_lab05.dir/TestScurt.cpp.obj	6c66ccd950d71ba3
+1520	1811	7386212932675028	sda_lab05.exe	e5f71fce64d49cdd

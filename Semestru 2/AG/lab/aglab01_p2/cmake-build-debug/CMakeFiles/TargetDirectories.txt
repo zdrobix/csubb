@@ -1,0 +1,3 @@
+C:/Alex Zdroba/c++ proj/aglab01_p2/cmake-build-debug/CMakeFiles/aglab01_p2.dir
+C:/Alex Zdroba/c++ proj/aglab01_p2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Alex Zdroba/c++ proj/aglab01_p2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

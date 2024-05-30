@@ -1,0 +1,13 @@
+# ninja log v5
+1	716	7352068301196684	CMakeFiles/ag_partial.dir/main.cpp.obj	9fbbb0ad16d53d06
+727	991	7352068303740327	ag_partial.exe	bfe3e91d5a780715
+5	890	7352069424123404	CMakeFiles/ag_partial.dir/main.cpp.obj	9fbbb0ad16d53d06
+891	1183	7352069426904953	ag_partial.exe	bfe3e91d5a780715
+5	639	7352069945188941	CMakeFiles/ag_partial.dir/main.cpp.obj	9fbbb0ad16d53d06
+641	901	7352069947658619	ag_partial.exe	bfe3e91d5a780715
+9	876	7352070315084664	CMakeFiles/ag_partial.dir/main.cpp.obj	9fbbb0ad16d53d06
+877	1120	7352070317392575	ag_partial.exe	bfe3e91d5a780715
+5	642	7352071022375085	CMakeFiles/ag_partial.dir/main.cpp.obj	9fbbb0ad16d53d06
+643	879	7352071024586176	ag_partial.exe	bfe3e91d5a780715
+5	682	7352071446963950	CMakeFiles/ag_partial.dir/main.cpp.obj	9fbbb0ad16d53d06
+683	945	7352071449427245	ag_partial.exe	bfe3e91d5a780715

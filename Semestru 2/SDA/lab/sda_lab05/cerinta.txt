@@ -1,0 +1,4 @@
+TAD Matrice
+- reprezentare sub forma unei matrice rare
+- triplete de forma (linie, coloana, valoare)
+- memorate folodind o TD cu rezolvare coliziuni prin liste intrepatrunse

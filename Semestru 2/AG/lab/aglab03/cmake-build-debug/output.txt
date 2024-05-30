@@ -1,0 +1,6 @@
+Drumul de la 0 la 0 este de cost 0
+Drumul de la 0 la 1 este de cost 5000
+Drumul de la 0 la 2 este de cost 4
+Drumul de la 0 la 3 este de cost 1
+Drumul de la 0 la 4 este de cost 2
+

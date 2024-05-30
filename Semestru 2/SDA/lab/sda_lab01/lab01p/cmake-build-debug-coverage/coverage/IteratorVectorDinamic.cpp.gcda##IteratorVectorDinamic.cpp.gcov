@@ -1,0 +1,55 @@
+        -:    0:Source:C:/Alex Zdroba/c++ proj/sda_lab01/lab01p/IteratorVectorDinamic.cpp
+        -:    0:Graph:C:\Alex Zdroba\c++ proj\sda_lab01\lab01p\cmake-build-debug-coverage\CMakeFiles\lab01p.dir\IteratorVectorDinamic.cpp.gcno
+        -:    0:Data:C:\Alex Zdroba\c++ proj\sda_lab01\lab01p\cmake-build-debug-coverage\CMakeFiles\lab01p.dir\IteratorVectorDinamic.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "IteratorVectorDinamic.h"
+        -:    2:#include "VectorDinamic.h"
+        -:    3:
+        -:    4:
+function _ZN21IteratorVectorDinamicC2ERK13VectorDinamic called 3 returned 100% blocks executed 100%
+        3:    5:IteratorVectorDinamic::IteratorVectorDinamic(const VectorDinamic& _v) : v(_v) {
+        -:    6:	/* de adaugat */
+        3:    7:    curent = 0;
+        3:    8:}
+        -:    9:
+        -:   10:
+        -:   11:
+function _ZN21IteratorVectorDinamic4primEv called 1 returned 100% blocks executed 100%
+        1:   12:void IteratorVectorDinamic::prim() {
+        -:   13:	/* de adaugat */
+        1:   14:    curent = 0;
+        1:   15:}
+        -:   16:
+        -:   17:
+        -:   18:
+function _ZNK21IteratorVectorDinamic5validEv called 15 returned 100% blocks executed 100%
+       15:   19:bool IteratorVectorDinamic::valid() const{
+        -:   20:	/* de adaugat */
+       15:   21:    if (curent < v.dim() )
+       15:   21-block  0
+call    0 returned 15
+branch  1 taken 12 (fallthrough)
+branch  2 taken 3
+       12:   22:        return true;
+       12:   22-block  0
+        3:   23:	return false;
+        3:   23-block  0
+        -:   24:}
+        -:   25:
+        -:   26:
+        -:   27:
+function _ZNK21IteratorVectorDinamic7elementEv called 11 returned 100% blocks executed 100%
+       11:   28:TElem IteratorVectorDinamic::element() const{
+        -:   29:	/* de adaugat */
+       11:   30:    return v.e[curent];
+       11:   30-block  0
+        -:   31:}
+        -:   32:
+        -:   33:
+        -:   34:
+function _ZN21IteratorVectorDinamic7urmatorEv called 11 returned 100% blocks executed 100%
+       11:   35:void IteratorVectorDinamic::urmator() {
+        -:   36:	/* de adaugat */
+       11:   37:    curent ++;
+       11:   38:}
+        -:   39:

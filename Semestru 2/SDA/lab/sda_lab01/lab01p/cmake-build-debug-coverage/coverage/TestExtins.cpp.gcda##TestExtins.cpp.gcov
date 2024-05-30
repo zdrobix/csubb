@@ -1,0 +1,805 @@
+        -:    0:Source:C:/Alex Zdroba/c++ proj/sda_lab01/lab01p/TestExtins.cpp
+        -:    0:Graph:C:\Alex Zdroba\c++ proj\sda_lab01\lab01p\cmake-build-debug-coverage\CMakeFiles\lab01p.dir\TestExtins.cpp.gcno
+        -:    0:Data:C:\Alex Zdroba\c++ proj\sda_lab01\lab01p\cmake-build-debug-coverage\CMakeFiles\lab01p.dir\TestExtins.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <assert.h>
+        -:    2:#include "VectorDinamic.h"
+        -:    3:#include "TestExtins.h"
+        -:    4:#include "IteratorVectorDinamic.h"
+        -:    5:#include <iostream>
+        -:    6:#include <exception>
+        -:    7:
+        -:    8:using namespace std;
+        -:    9:
+        -:   10:
+function _Z11testCreeazav called 1 returned 100% blocks executed 73%
+        1:   11:void testCreeaza() {
+        1:   12:	VectorDinamic v(10);
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   13:	assert(v.dim() == 0);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   13-block  2
+call    5 never executed
+        1:   13-block  3
+        1:   14:	IteratorVectorDinamic iv = v.iterator(); //iterator pe vectorul vid ar trebui sa fie invalid din start
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   15:	assert(iv.valid() == false);
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   15-block  2
+call    5 never executed
+        1:   15-block  3
+        1:   16:}
+        1:   16-block  0
+call    0 returned 1
+    $$$$$:   16-block  1
+call    1 never executed
+        -:   17:
+function _Z10testAdaugav called 0 returned 0% blocks executed 0%
+    #####:   18:void testAdauga() {
+    #####:   19:	VectorDinamic v(5); //adaugam elementele [0, 4]
+    %%%%%:   19-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   20:	for (int i = 0; i < 5; i++) {
+    %%%%%:   20-block  0
+    %%%%%:   20-block  1
+    %%%%%:   20-block  2
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   21:		v.adaugaSfarsit(i);
+    %%%%%:   21-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   22:	}
+        -:   23:    	//adaugam la sfarsit 5,6,7
+    #####:   24:    	v.adauga(v.dim(),5);
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   24-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   25:    	v.adauga(v.dim(),6);
+    %%%%%:   25-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   25-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   26:    	v.adauga(v.dim(),7);
+    %%%%%:   26-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   26-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   27:	assert(v.dim() == 8);
+    %%%%%:   27-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   27-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   27-block  2
+call    5 never executed
+    %%%%%:   27-block  3
+        -:   28:	//vectorul este 0,1,2,3,4,5,6,7
+    #####:   29:	v.adauga(0,10);
+    %%%%%:   29-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   30:	v.adauga(1,11);
+    %%%%%:   30-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   31:	v.adauga(2,12);
+    %%%%%:   31-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   32:	v.modifica(v.dim()-1,9);
+    %%%%%:   32-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   32-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+        -:   33:	//vectorul este 10,11,12,0,1,2,3,4,5,6,9
+    #####:   34:	assert(v.dim() == 11);
+    %%%%%:   34-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   34-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   34-block  2
+call    5 never executed
+    %%%%%:   34-block  3
+    #####:   35:	int vals[]={10,11,12,0,1,2,3,4,5,6,9};
+        -:   36:	//test iterator
+    #####:   37:	IteratorVectorDinamic iv = v.iterator();
+    %%%%%:   37-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   38:	iv.prim();
+    %%%%%:   38-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   39:	int k = 0;
+    #####:   40:	while(iv.valid()){
+    %%%%%:   40-block  0
+    %%%%%:   40-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   40-block  2
+branch  3 never executed
+branch  4 never executed (fallthrough)
+    #####:   41:        TElem e = iv.element();
+    %%%%%:   41-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   42:        assert(e == vals[k]);
+    %%%%%:   42-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   42-block  1
+call    2 never executed
+    %%%%%:   42-block  2
+    #####:   43:        k++;
+    #####:   44:        iv.urmator();
+    %%%%%:   44-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   45:	}
+        -:   46:	//test parcurgere
+    #####:   47:	for(int i = 0; i < v.dim(); i++){
+    %%%%%:   47-block  0
+    %%%%%:   47-block  1
+    %%%%%:   47-block  2
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   47-block  3
+branch  3 never executed
+branch  4 never executed (fallthrough)
+    #####:   48:        TElem e = v.element(i);
+    %%%%%:   48-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   49:        assert(e == vals[i]);
+    %%%%%:   49-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   49-block  1
+call    2 never executed
+    %%%%%:   49-block  2
+        -:   50:	}
+    #####:   51:}
+    %%%%%:   51-block  0
+call    0 never executed
+    $$$$$:   51-block  1
+call    1 never executed
+        -:   52:
+function _Z10testStergev called 0 returned 0% blocks executed 0%
+    #####:   53:void testSterge() {
+    #####:   54:	VectorDinamic v(20);
+    %%%%%:   54-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   55:	for (int i = -100; i < 100; i = i + 2) { //adaugam elemente din 2 in 2 (numere pare)
+    %%%%%:   55-block  0
+    %%%%%:   55-block  1
+    %%%%%:   55-block  2
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   56:		v.adaugaSfarsit(i);
+    %%%%%:   56-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   57:	}
+    #####:   58:	assert(v.dim() == 100);
+    %%%%%:   58-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   58-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   58-block  2
+call    5 never executed
+    %%%%%:   58-block  3
+    #####:   59:	int val = 98;
+    #####:   60:	for (int i = 0; i < 100; i++) { //stergem elementele
+    %%%%%:   60-block  0
+    %%%%%:   60-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   61:			assert(v.sterge(v.dim()-1) == val);
+    %%%%%:   61-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   61-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   61-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    %%%%%:   61-block  3
+call    8 never executed
+    %%%%%:   61-block  4
+    #####:   62:            val -= 2;
+    %%%%%:   62-block  0
+        -:   63:    	}
+    #####:   64:	assert(v.dim() == 0);
+    %%%%%:   64-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   64-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   64-block  2
+call    5 never executed
+    %%%%%:   64-block  3
+    #####:   65:	for (int i = -100; i <= 100; i = i + 2) { //adaugam elemente din 2 in 2
+    %%%%%:   65-block  0
+    %%%%%:   65-block  1
+    %%%%%:   65-block  2
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   66:		v.adaugaSfarsit(i);
+    %%%%%:   66-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   67:	}
+        -:   68:	//stergem elementul de la final
+    #####:   69:	assert(v.sterge(v.dim() - 1) == 100);
+    %%%%%:   69-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   69-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   69-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    %%%%%:   69-block  3
+call    8 never executed
+    %%%%%:   69-block  4
+    #####:   70:    	assert(v.dim() == 100);
+    %%%%%:   70-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   70-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   70-block  2
+call    5 never executed
+    %%%%%:   70-block  3
+        -:   71:	//stergem toate elementele
+    #####:   72:	val = -100;
+    #####:   73:	for (int i = 0; i < 100; i++){
+    %%%%%:   73-block  0
+    %%%%%:   73-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   74:       		assert(v.sterge(0) == val);
+    %%%%%:   74-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   74-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   74-block  2
+call    5 never executed
+    %%%%%:   74-block  3
+    #####:   75:       		val += 2;
+    %%%%%:   75-block  0
+        -:   76:    	}
+        -:   77:    	//vectorul e vid
+    #####:   78:	assert(v.dim() == 0);
+    %%%%%:   78-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   78-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   78-block  2
+call    5 never executed
+    %%%%%:   78-block  3
+    #####:   79:   	 for (int i = -100; i <= 100; i++) { //adaugam elemente de la -100 la 100
+    %%%%%:   79-block  0
+    %%%%%:   79-block  1
+    %%%%%:   79-block  2
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   80:		v.adaugaSfarsit(i);
+    %%%%%:   80-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   81:	}
+        -:   82:	//stergem valorile pare
+    #####:   83:	int i=0;
+    #####:   84:	while(i < v.dim()){
+    %%%%%:   84-block  0
+    %%%%%:   84-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   84-block  2
+branch  3 never executed
+branch  4 never executed (fallthrough)
+    #####:   85:        	TElem e = v.element(i);
+    %%%%%:   85-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   86:        	if (e % 2 ==0) //e par, sterg
+    %%%%%:   86-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   87:            		e = v.sterge(i);
+    %%%%%:   87-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   87-block  1
+        -:   88:        	else
+    #####:   89:           		i++;
+    %%%%%:   89-block  0
+        -:   90:	}
+        -:   91:	//raman cele 100 elemente impare din intervalul [-100,100]
+        -:   92:	//test iterator
+    #####:   93:	IteratorVectorDinamic iv = v.iterator();
+    %%%%%:   93-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   94:	iv.prim();
+    %%%%%:   94-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   95:	val = -99;
+    #####:   96:	while(iv.valid()){
+    %%%%%:   96-block  0
+    %%%%%:   96-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   96-block  2
+branch  3 never executed
+branch  4 never executed (fallthrough)
+    #####:   97:        	TElem e = iv.element();
+    %%%%%:   97-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   98:        	assert(e == val);
+    %%%%%:   98-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   98-block  1
+call    2 never executed
+    %%%%%:   98-block  2
+    #####:   99:        	val += 2;
+    #####:  100:        	iv.urmator();
+    %%%%%:  100-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  101:	}
+        -:  102:	//test parcurgere
+    #####:  103:	val = -99;
+    #####:  104:	for(int i = 0; i < v.dim(); i++){
+    %%%%%:  104-block  0
+    %%%%%:  104-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  104-block  2
+branch  3 never executed
+branch  4 never executed (fallthrough)
+    #####:  105:        	TElem e = v.element(i);
+    %%%%%:  105-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  106:        	assert(e == val);
+    %%%%%:  106-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  106-block  1
+call    2 never executed
+    %%%%%:  106-block  2
+    #####:  107:        	val += 2;
+    %%%%%:  107-block  0
+        -:  108:	}
+    #####:  109: }
+    %%%%%:  109-block  0
+call    0 never executed
+    $$$$$:  109-block  1
+call    1 never executed
+        -:  110:
+        -:  111:
+function _Z12testIteratorv called 1 returned 100% blocks executed 85%
+        1:  112:void testIterator() { // test iterator
+        1:  113:	VectorDinamic v(10);
+        1:  113-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        6:  114:	for (int i = 0; i < 9; i = i + 2) { //adaugam elemente din 2 in 2 (numere pare)
+        1:  114-block  0
+        5:  114-block  1
+        6:  114-block  2
+branch  0 taken 5
+branch  1 taken 1 (fallthrough)
+        5:  115:		v.adaugaSfarsit(i);
+        5:  115-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  116:	}
+        1:  117:	IteratorVectorDinamic iv = v.iterator();
+        1:  117-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  118:	assert(iv.valid() == true);
+        1:  118-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  118-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  118-block  2
+call    5 never executed
+        1:  118-block  3
+        1:  119:    	iv.prim();
+        1:  119-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  120:	int k = 0;
+        6:  121:	while(iv.valid()){
+        1:  121-block  0
+        6:  121-block  1
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:  121-block  2
+branch  3 taken 5
+branch  4 taken 1 (fallthrough)
+        5:  122:        	TElem e1 = iv.element();
+        5:  122-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:  123:        	TElem e2 = v.element(k);
+        5:  123-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+       5*:  124:        	assert(e1 == e2);
+        5:  124-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5
+    %%%%%:  124-block  1
+call    2 never executed
+        5:  124-block  2
+        5:  125:        	iv.urmator();
+        5:  125-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:  126:       		k++;
+        5:  126-block  0
+        -:  127:	}
+        1:  128:}
+        1:  128-block  0
+call    0 returned 1
+    $$$$$:  128-block  1
+call    1 never executed
+        -:  129:
+function _Z12testQuantityv called 0 returned 0% blocks executed 0%
+    #####:  130:void testQuantity() {//scopul e sa adaugam multe date
+    #####:  131:	VectorDinamic v(100);
+    %%%%%:  131-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  132:	for (int i = 0; i < 200000 ; i++)
+    %%%%%:  132-block  0
+    %%%%%:  132-block  1
+    %%%%%:  132-block  2
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  133:			v.adaugaSfarsit(i);
+    %%%%%:  133-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  134:	assert(v.dim() == 200000);
+    %%%%%:  134-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  134-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  134-block  2
+call    5 never executed
+    %%%%%:  134-block  3
+    #####:  135:	IteratorVectorDinamic iv = v.iterator();
+    %%%%%:  135-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  136:	assert(iv.valid() == true);
+    %%%%%:  136-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  136-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  136-block  2
+call    5 never executed
+    %%%%%:  136-block  3
+    #####:  137:	for (int i = 0; i < v.dim(); i++) {
+    %%%%%:  137-block  0
+    %%%%%:  137-block  1
+    %%%%%:  137-block  2
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  137-block  3
+branch  3 never executed
+branch  4 never executed (fallthrough)
+    #####:  138:		iv.urmator();
+    %%%%%:  138-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  139:	}
+    #####:  140:	iv.prim();
+    %%%%%:  140-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  141:	int i=0;
+    #####:  142:	while (iv.valid()) { //testam elementele returnate de iterator
+    %%%%%:  142-block  0
+    %%%%%:  142-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  142-block  2
+branch  3 never executed
+branch  4 never executed (fallthrough)
+    #####:  143:		TElem e = iv.element();
+    %%%%%:  143-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  144:		assert(e == i);
+    %%%%%:  144-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  144-block  1
+call    2 never executed
+    %%%%%:  144-block  2
+    #####:  145:		i++;
+    #####:  146:		iv.urmator();
+    %%%%%:  146-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  147:	}
+    #####:  148:	assert(iv.valid() == false);
+    %%%%%:  148-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  148-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  148-block  2
+call    5 never executed
+    %%%%%:  148-block  3
+        -:  149:	//stergem toate elementele, incepand de la final
+    #####:  150:	for (int i = v.dim()-1; i >= 0; i--) {
+    %%%%%:  150-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  150-block  1
+    %%%%%:  150-block  2
+    %%%%%:  150-block  3
+branch  3 never executed
+branch  4 never executed (fallthrough)
+    #####:  151:			assert(v.sterge(v.dim()-1)==i);
+    %%%%%:  151-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  151-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  151-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    %%%%%:  151-block  3
+call    8 never executed
+    %%%%%:  151-block  4
+        -:  152:	}
+    #####:  153:	assert(v.dim() == 0);
+    %%%%%:  153-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  153-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  153-block  2
+call    5 never executed
+    %%%%%:  153-block  3
+    #####:  154:}
+    %%%%%:  154-block  0
+call    0 never executed
+    $$$$$:  154-block  1
+call    1 never executed
+        -:  155:
+function _Z12testExceptiiv called 1 returned 100% blocks executed 59%
+        1:  156:void testExceptii() {
+        1:  157:	VectorDinamic v(10);
+        1:  157-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  158:	try {
+        1:  159:		v.element(0);
+        1:  159-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:  160:	}
+        1:  161:	catch (exception&) {
+        1:  161-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  161-block  1
+call    2 returned 1
+        -:  162:		assert(true); //ar trebui sa arunce exceptie
+        1:  163:	}
+call    0 returned 1
+        -:  164:    	try {
+       1*:  165:		TElem e = v.sterge(1);
+        1:  165-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    %%%%%:  165-block  1
+        -:  166:	}
+        1:  167:	catch (exception&) {
+        1:  167-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  167-block  1
+call    2 returned 1
+        -:  168:		assert(true); //ar trebui sa arunce exceptie
+        1:  169:	}
+call    0 returned 1
+        -:  170:    	try {
+        1:  171:		v.modifica(0,1);
+        1:  171-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:  172:	}
+        1:  173:	catch (exception&) {
+        1:  173-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  173-block  1
+call    2 returned 1
+        -:  174:		assert(true); //ar trebui sa arunce exceptie
+        1:  175:	}
+call    0 returned 1
+        -:  176:	try {
+       1*:  177:		assert(v.dim()==0);
+        1:  177-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  177-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  177-block  2
+call    5 never executed
+        1:  177-block  3
+        -:  178:	}
+    =====:  179:	catch (exception&) {
+    $$$$$:  179-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:  179-block  1
+call    2 never executed
+    =====:  180:		assert(false); //nu ar trebui sa arunce exceptie
+call    0 never executed
+    =====:  181:	}
+    $$$$$:  181-block  0
+call    0 never executed
+        1:  182:}
+        1:  182-block  0
+call    0 returned 1
+    $$$$$:  182-block  1
+call    1 never executed
+        -:  183:
+        -:  184:
+        -:  185:
+function _Z13testAllExtinsv called 1 returned 100% blocks executed 100%
+        1:  186:void testAllExtins() {
+        1:  187:	testCreeaza();
+        1:  187-block  0
+call    0 returned 1
+        -:  188:	//testAdauga();
+        -:  189:	//testSterge();
+        1:  190:	testIterator();
+call    0 returned 1
+        -:  191:	//testQuantity();
+        1:  192:	testExceptii();
+call    0 returned 1
+        1:  193:}

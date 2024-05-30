@@ -1,0 +1,4 @@
+TAD Dictionar Ordonat:
+ -reprezentare sub forma unei LSI cu perechi
+ (cheie, valoare) ordonate in raport cu
+ cheile si cu o relatie de ordine /R intre chei

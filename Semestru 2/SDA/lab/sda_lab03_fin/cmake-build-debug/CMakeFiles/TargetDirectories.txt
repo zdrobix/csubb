@@ -1,0 +1,3 @@
+C:/Alex Zdroba/c++ proj/sda_lab03_fin/cmake-build-debug/CMakeFiles/sda_lab03_fin.dir
+C:/Alex Zdroba/c++ proj/sda_lab03_fin/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Alex Zdroba/c++ proj/sda_lab03_fin/cmake-build-debug/CMakeFiles/rebuild_cache.dir

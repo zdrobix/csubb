@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1709880300 source:c:\alex zdroba\c++ proj\ag_lab01_\main.cpp
+	<iostream>
+	<fstream>
+

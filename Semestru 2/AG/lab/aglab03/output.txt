@@ -1,0 +1,2 @@
+clang++ -std=c++11 main.cpp -o program
+./program cmake-build-debug/date.in date.out

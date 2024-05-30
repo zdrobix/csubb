@@ -1,0 +1,52 @@
+784
+B600 4.0L Diesel LongRun
+Semi
+8
+16
+Buldo x935 4.0L Diesel Grane
+Buldo
+4
+195
+Caterpillar EXV 711
+Buldo
+4
+989
+Cisterna 400V Diesel Rotativ 
+Cisterna
+6
+117
+DAF Berlin M800 S.C.A.S.V.
+Semi
+10
+2
+DAF Frantuzesc 5.0L benzina
+Semi
+10
+1
+Euro6 4.4L Mercedes
+Buldo
+4
+779
+Excavator 5000W Benzina Cupa 30l
+Excavator
+4
+514
+Excavator pietre si roca cupa 50l 4.0 Diesel
+Excavator
+4
+836
+Mafia autostrazilor romanesti
+Buldo
+8
+651
+Mercedes A800 V6 3.5 Diesel Cuplu 600nm
+Double
+10
+264
+Mercedes M#44
+Double
+16
+660
+Tractor underground
+Tractor
+4

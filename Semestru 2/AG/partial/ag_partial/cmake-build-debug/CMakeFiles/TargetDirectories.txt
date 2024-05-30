@@ -1,0 +1,3 @@
+C:/Alex Zdroba/c++ proj/ag_partial/cmake-build-debug/CMakeFiles/ag_partial.dir
+C:/Alex Zdroba/c++ proj/ag_partial/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Alex Zdroba/c++ proj/ag_partial/cmake-build-debug/CMakeFiles/rebuild_cache.dir

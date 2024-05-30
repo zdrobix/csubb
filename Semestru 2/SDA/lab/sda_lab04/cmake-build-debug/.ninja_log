@@ -1,0 +1,21 @@
+# ninja log v5
+223	1902	7358292282757900	CMakeFiles/sda_lab04.dir/Iterator.cpp.obj	95bfc980b62e1a38
+210	1927	7358292282727039	CMakeFiles/sda_lab04.dir/App.cpp.obj	b0e76b8f4f608f1e
+1	1941	7358292282777918	CMakeFiles/sda_lab04.dir/DO.cpp.obj	ccf049ff9c89afb3
+1916	2672	7358292290461295	CMakeFiles/sda_lab04.dir/TestScurt.cpp.obj	74345d59832497ad
+1928	2944	7358292293163536	CMakeFiles/sda_lab04.dir/TestExtins.cpp.obj	f6b55fc8d91e066f
+2945	3484	7358292298445169	sda_lab04.exe	90eee9041d922bed
+6	732	7358292431365994	CMakeFiles/sda_lab04.dir/App.cpp.obj	b0e76b8f4f608f1e
+733	1024	7358292434112639	sda_lab04.exe	90eee9041d922bed
+5	523	7358293216605943	CMakeFiles/sda_lab04.dir/Iterator.cpp.obj	95bfc980b62e1a38
+524	799	7358293219203694	sda_lab04.exe	90eee9041d922bed
+20	810	7358293504971865	CMakeFiles/sda_lab04.dir/App.cpp.obj	b0e76b8f4f608f1e
+5	833	7358293505233777	CMakeFiles/sda_lab04.dir/DO.cpp.obj	ccf049ff9c89afb3
+834	1133	7358293507950122	sda_lab04.exe	90eee9041d922bed
+6	672	7358293580386371	CMakeFiles/sda_lab04.dir/App.cpp.obj	b0e76b8f4f608f1e
+673	935	7358293582772950	sda_lab04.exe	90eee9041d922bed
+9	1378	7358293752976211	CMakeFiles/sda_lab04.dir/App.cpp.obj	b0e76b8f4f608f1e
+28	1672	7358293755899220	CMakeFiles/sda_lab04.dir/TestExtins.cpp.obj	f6b55fc8d91e066f
+1672	1968	7358293758760958	sda_lab04.exe	90eee9041d922bed
+7	1166	7358293869712441	CMakeFiles/sda_lab04.dir/DO.cpp.obj	ccf049ff9c89afb3
+1167	1597	7358293873894440	sda_lab04.exe	90eee9041d922bed

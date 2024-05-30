@@ -1,0 +1,340 @@
+936
+bed compress mad
+19
+folk
+122
+narrator shrink livid
+19
+rock
+130
+pot separate afraid
+19
+disco
+374
+clutter modify sunny
+19
+folk
+362
+rating modify tense
+19
+rock
+831
+turntable change sad
+19
+rock
+333
+stager separate furious
+Alex Zdroba
+folk
+241
+interference place calm
+Alex Zdroba
+pop
+976
+ident organize calm
+Alex Zdroba
+rock
+478
+producer swap sad
+Alex Zdroba
+folk
+101
+narrator compress mad
+Alex Zdroba
+pop
+634
+bed turn tense
+Alex Zdroba
+folk
+542
+cue add furious
+Alex Zdroba
+pop
+12
+liner swap icy
+Alex Zdroba
+folk
+84
+transmitter turn jolly
+Cel MAI INTERNATIONAL
+pop
+827
+engineer trash rosy
+Cel MAI INTERNATIONAL
+disco
+751
+ident edit lively
+Cel MAI INTERNATIONAL
+pop
+204
+engineer shorten wary
+Cel MAI INTERNATIONAL
+rock
+142
+player organize seething
+Cel MAI INTERNATIONAL
+disco
+258
+hour modify cross
+Cel MAI INTERNATIONAL
+pop
+386
+media change cross
+Cel MAI INTERNATIONAL
+disco
+336
+hook copy glum
+Cel MAI INTERNATIONAL
+rock
+942
+console shorten cold
+Delia si Cheloo
+disco
+803
+stager lengthen ornery
+Delia si Cheloo
+pop
+519
+level sort glum
+Delia si Cheloo
+rock
+891
+inflection change tranquil
+Delia si Cheloo
+folk
+882
+pitch file cheerful
+Delia si Cheloo
+folk
+820
+ident raise glum
+Delia si Cheloo
+pop
+709
+bumper shorten cold
+Delia si Cheloo
+rock
+597
+radio split seething
+Delia si Cheloo
+rock
+510
+broadcast separate ornery
+Delia si Cheloo
+disco
+547
+programming shorten tranquil
+Delia si Cheloo
+pop
+718
+liner modify icy
+Inna
+folk
+438
+pot compress glad
+Inna
+folk
+974
+pitch sort frigid
+Inna
+rock
+864
+transmitter create weary
+Inna
+pop
+288
+sweeper shrink kind
+Inna
+folk
+608
+rating tweak wary
+Inna
+rock
+750
+monitor throw worried
+Inna
+rock
+25
+queue delete furious
+Liviu Guta
+rock
+828
+sting change wary
+Liviu Guta
+pop
+36
+ident turn cheerful
+Liviu Guta
+disco
+10
+inflection compress cold
+Liviu Guta
+rock
+102
+bed modify mad
+Liviu Guta
+disco
+917
+copy edit excited
+Liviu Guta
+disco
+458
+monitor trash crabby
+Liviu Guta
+folk
+61
+monitor copy afraid
+Liviu Guta
+pop
+317
+monitor lengthen frigid
+Liviu Guta
+folk
+525
+pitch split jolly
+Liviu Guta
+folk
+467
+jingle put worried
+Liviu Guta
+pop
+941
+liner lower cold
+Mihai Bendeac
+folk
+482
+share replace afraid
+Mihai Bendeac
+rock
+740
+amplifier lengthen cheerful
+Mihai Bendeac
+pop
+117
+turntable sort icy
+Mihai Bendeac
+folk
+876
+clutter swap tense
+Mihai Bendeac
+disco
+806
+hour throw cold
+Mihai Bendeac
+disco
+3
+cume put lively
+Mihai Bendeac
+disco
+729
+producer replace tranquil
+Mihai Bendeac
+disco
+807
+spot change seething
+Mihai Bendeac
+pop
+809
+teaser connect lively
+Serban Magistratu
+rock
+430
+jingle place cross
+Serban Magistratu
+disco
+290
+billboard modify happy
+Serban Magistratu
+rock
+47
+credits modify ornery
+Serban Magistratu
+rock
+560
+jingle copy livid
+Serban Magistratu
+pop
+686
+sting place excited
+Serban Magistratu
+pop
+512
+feed file icy
+Serban Magistratu
+folk
+344
+media raise furious
+Serban Magistratu
+pop
+361
+level lower sunny
+Serban Magistratu
+pop
+392
+clutter sort upbeat
+Serban Magistratu
+pop
+328
+amplifier swap weary
+Serban Magistratu
+rock
+973
+band compress lively
+Serban Magistratu
+pop
+720
+log combine jovial
+Tudor Gheorghe
+pop
+815
+jingle organize tense
+Tudor Gheorghe
+folk
+641
+amplifier organize worried
+Tudor Gheorghe
+rock
+771
+engineer lower excited
+Tudor Gheorghe
+folk
+772
+turntable replace calm
+Tudor Gheorghe
+disco
+408
+format throw rosy
+Tudor Gheorghe
+rock
+832
+transmitter tweak calm
+Tudor Gheorghe
+folk
+5
+log split crazy
+Tudor Gheorghe
+folk
+88
+share sort sunny
+Tudor Gheorghe
+folk
+195
+simulcast merge happy
+Tudor Gheorghe
+disco
+622
+interference turn cold
+Tudor Gheorghe
+rock
+520
+monitor tweak shy
+Tudor Gheorghe
+rock
+273
+frequency copy happy
+Tudor Gheorghe
+rock
+263
+media shrink excited
+Tudor Gheorghe
+folk

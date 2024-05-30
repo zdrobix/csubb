@@ -1,0 +1,3 @@
+C:/Alex Zdroba/gitre/Semestru 2/AG/lab/aglab05/cmake-build-debug/CMakeFiles/aglab05.dir
+C:/Alex Zdroba/gitre/Semestru 2/AG/lab/aglab05/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Alex Zdroba/gitre/Semestru 2/AG/lab/aglab05/cmake-build-debug/CMakeFiles/rebuild_cache.dir

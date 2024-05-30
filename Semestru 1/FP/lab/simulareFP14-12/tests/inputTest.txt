@@ -1,0 +1,4 @@
+1,Mamaia,mare,100
+2,Muntenegru,munte,300
+3,Sovata,hotel,80
+4,OcnaMures,ocna,20

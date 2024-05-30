@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="sda_lab05" targetName="sda_lab05" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0973b729-4fa9-4285-b3f5-4358f23d23cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../AG/lab/aglab05/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AG/lab/aglab05/input3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AG/lab/aglab05/output.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AG/lab/aglab05/output3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AG/lab/aglab05/p1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/FileContentIndex/668bc57a-2fd0-4b6a-a046-a086db4c1b77.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/FileContentIndex/8da9723a-8a57-4063-802d-45e3720e7b45.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/FileContentIndex/ae09f0dc-8137-48f7-802d-aee10049e695.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/FileContentIndex/ccc69729-381e-4b3b-9e37-46f7f741d4a2.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/fileList.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/fileList.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/ipch/AutoPCH/267cbc514d11f2dd/MAIN.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/ipch/AutoPCH/8e91fd4250310869/SERVICE.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/ipch/AutoPCH/8e91fd4250310869/SERVICE.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/ipch/AutoPCH/f66449e04f24d32e/PRODGUI.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/.vs/lab10-11/v17/ipch/AutoPCH/f66449e04f24d32e/PRODGUI.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/lab10-11.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/lab10-11.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/lab10-11.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/lab10-11.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/prodGUI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/prodGUI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/prodGUI.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/prodGUI.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/products - Copy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/products - Copy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/productsBag.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/productsBag.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/service.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/service.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/service.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/service.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/domain.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/domain.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/lab10-11.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/lab10-11.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/link.secondary.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/link.secondary.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/moc.read.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/moc.read.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/moc.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/moc.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/lab10-11.tlog/unsuccessfulbuild" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/prodGUI.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/prodGUI.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/qrc_prodGUI.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/qrc_prodGUI.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/qt_work.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/qt_work.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/repo.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/repo.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/service.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/service.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/tests.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/tests.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/lab10-11/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/x64/Debug/lab10-11.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/x64/Debug/lab10-11.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/x64/Debug/lab10-11.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OOP/lab/oop_lab10-11/lab10-11/x64/Debug/lab10-11.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/CMakeFiles/sda_lab04vs.dir/lab04sda/lab04sda/DO.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/CMakeFiles/sda_lab04vs.dir/lab04sda/lab04sda/DO.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/CMakeFiles/sda_lab04vs.dir/lab04sda/lab04sda/Iterator.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/CMakeFiles/sda_lab04vs.dir/lab04sda/lab04sda/Iterator.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/CMakeFiles/sda_lab04vs.dir/lab04sda/lab04sda/TestExtins.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/CMakeFiles/sda_lab04vs.dir/lab04sda/lab04sda/TestExtins.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/CMakeFiles/sda_lab04vs.dir/lab04sda/lab04sda/TestScurt.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/CMakeFiles/sda_lab04vs.dir/lab04sda/lab04sda/TestScurt.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/sda_lab04vs.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/cmake-build-debug/sda_lab04vs.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/FileContentIndex/1b584144-9035-4eae-861a-f7bb13161a23.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/FileContentIndex/32485012-845a-4480-9e91-79dddb402bf5.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/FileContentIndex/6befea46-34b9-43cf-a184-d9bfde593229.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/FileContentIndex/8fa90afe-2707-43b7-b7fd-d7131d3725de.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/FileContentIndex/92cbd231-9ff1-4d1d-9ed8-e881ef908b7d.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/FileContentIndex/96d34f80-f932-4140-afd7-426b023899eb.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/FileContentIndex/9bd6218d-037b-4bdf-ac9f-8e2e453c4ff1.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/FileContentIndex/f28dcff2-1550-49eb-8d61-2424e8a738f8.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/ipch/AutoPCH/1f0f24790f182679/TESTSCURT.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/ipch/AutoPCH/1f0f24790f182679/TESTSCURT.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/ipch/AutoPCH/75af9726f1e1156a/ITERATOR.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/ipch/AutoPCH/75af9726f1e1156a/ITERATOR.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/ipch/AutoPCH/76a68e860c5c93f9/DO.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/ipch/AutoPCH/76a68e860c5c93f9/DO.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/.vs/lab04sda/v17/ipch/AutoPCH/8f02435758e1fb75/TESTEXTINS.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/DO.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/DO.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/DO.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/DO.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/Iterator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/Iterator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/Iterator.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/Iterator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/TestExtins.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/TestExtins.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/TestScurt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/TestScurt.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/TestScurt.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/TestScurt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/lab04sda.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/lab04sda.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/DO.nativecodeanalysis.sarif" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/DO.nativecodeanalysis.sarif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/DO.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/DO.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/Iterator.nativecodeanalysis.sarif" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/Iterator.nativecodeanalysis.sarif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/Iterator.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/Iterator.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/TestExtins.nativecodeanalysis.sarif" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/TestExtins.nativecodeanalysis.sarif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/TestExtins.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/TestExtins.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/TestScurt.nativecodeanalysis.sarif" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/TestScurt.nativecodeanalysis.sarif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/TestScurt.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/TestScurt.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.log" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.nativecodeanalysis.sarif" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.nativecodeanalysis.sarif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/lab04sda.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/lab04sda/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/x64/Debug/lab04sda.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/x64/Debug/lab04sda.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/x64/Debug/lab04sda.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../sda_lab04vs/lab04sda/x64/Debug/lab04sda.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/App.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matrice.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Matrice.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matrice.h" beforeDir="false" afterPath="$PROJECT_DIR$/Matrice.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestScurt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TestScurt.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestScurt.h" beforeDir="false" afterPath="$PROJECT_DIR$/TestScurt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-e5e8a7151903db532350.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-05T14-23-04-0979.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sda_lab05.dir/App.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sda_lab05.dir/App.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sda_lab05.dir/Matrice.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sda_lab05.dir/Matrice.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sda_lab05.dir/TestExtins.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sda_lab05.dir/TestExtins.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sda_lab05.dir/TestScurt.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sda_lab05.dir/TestScurt.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sda_lab05.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sda_lab05.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nod.h" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="3.4" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2fGhnsvLtU4STfoMwj9ieaNJNj7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "CMake Application.sda_lab05.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Alex Zdroba/gitre/Semestru 2/SDA/lab/sda_lab05",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="sda_lab05" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sda_lab05" TARGET_NAME="sda_lab05" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="sda_lab05" RUN_TARGET_NAME="sda_lab05">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0973b729-4fa9-4285-b3f5-4358f23d23cc" name="Changes" comment="" />
+      <created>1713433491369</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713433491369</updated>
+      <workItem from="1713433492706" duration="1231000" />
+      <workItem from="1713457440548" duration="631000" />
+      <workItem from="1714918174198" duration="5660000" />
+      <workItem from="1716143884477" duration="53000" />
+      <workItem from="1716393174400" duration="10986000" />
+      <workItem from="1716456541322" duration="2753000" />
+      <workItem from="1716527293037" duration="363000" />
+      <workItem from="1716916947561" duration="1280000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

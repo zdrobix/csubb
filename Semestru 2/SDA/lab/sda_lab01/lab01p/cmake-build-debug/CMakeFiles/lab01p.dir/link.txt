@@ -1,0 +1,3 @@
+"C:\CLion\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\lab01p.dir/objects.a
+C:\CLion\CLION2~1.4\bin\mingw\bin\ar.exe qc CMakeFiles\lab01p.dir/objects.a @CMakeFiles\lab01p.dir\objects1.rsp
+C:\CLion\CLION2~1.4\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\lab01p.dir/objects.a -Wl,--no-whole-archive -o lab01p.exe -Wl,--out-implib,liblab01p.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\lab01p.dir\linkLibs.rsp

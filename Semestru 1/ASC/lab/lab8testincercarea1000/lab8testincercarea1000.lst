@@ -1,0 +1,121 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start  
+     4                                  
+     5                                  section .text
+     6                                      extern exit, scanf, printf
+     7                                      import exit msvcrt.dll
+     8                                      import scanf msvcrt.dll
+     9                                      import printf msvcrt.dll
+    10                                      
+    11                                  section .data
+    12 00000000 31292028632B64292D-         input1 db '1) (c+d)-(a+d)+b  ', 10, 0
+    12 00000009 28612B64292B622020-
+    12 00000012 0A00               
+    13 00000014 392920457869742074-         inputext db '9) Exit the program.', 10, 0
+    13 0000001D 68652070726F677261-
+    13 00000026 6D2E0A00           
+    14 0000002A 456E74657220746865-         inputopt db 'Enter the option: ', 0
+    14 00000033 206F7074696F6E3A20-
+    14 0000003C 00                 
+    15                                      
+    16 0000003D 00                          option db 0
+    17 0000003E 256400                      format db '%d', 0
+    18                                      
+    19 00000041 00000000                    p1a dd 0
+    20 00000045 00000000                    p1b dd 0
+    21 00000049 00000000                    p1c dd 0
+    22 0000004D 00000000                    p1d dd 0
+    23                                      
+    24 00000051 456E7465722076616C-         inputpb1 db 'Enter values for a, b, c and d:', 10, 0
+    24 0000005A 75657320666F722061-
+    24 00000063 2C20622C206320616E-
+    24 0000006C 6420643A0A00       
+    25 00000072 28632B64292D28612B-         inputpb1rez db '(c+d)-(a+d)+b = %d', 10, 0
+    25 0000007B 64292B62203D202564-
+    25 00000084 0A00               
+    26                                      
+    27                                  start:
+    28 00000086 68[00000000]                push input1
+    29 0000008B FF15[00000000]              call [printf]
+    30 00000091 83C404                      add esp, 4
+    31                                  
+    32                                      ; Clear input buffer
+    33 00000094 60                          pusha
+    34 00000095 B800000000                  mov eax, 0
+    35 0000009A BB00000000                  mov ebx, 0
+    36 0000009F 89E1                        mov ecx, esp
+    37 000000A1 BA01000000                  mov edx, 1
+    38 000000A6 CD80                        int 0x80
+    39 000000A8 61                          popa
+    40                                  
+    41 000000A9 68[14000000]                push inputext
+    42 000000AE FF15[00000000]              call [printf]
+    43 000000B4 83C404                      add esp, 4
+    44                                  
+    45 000000B7 68[2A000000]                push inputopt
+    46 000000BC FF15[00000000]              call [printf]
+    47 000000C2 83C404                      add esp, 4
+    48                                  
+    49 000000C5 8D15[3D000000]              lea edx, [option]
+    50 000000CB 52                          push edx
+    51 000000CC 68[3E000000]                push format
+    52 000000D1 FF15[00000000]              call [scanf]
+    53 000000D7 83C408                      add esp, 4*2
+    54                                  
+    55                                      ; Clear input buffer after reading the option
+    56 000000DA 60                          pusha
+    57 000000DB B800000000                  mov eax, 0
+    58 000000E0 BB00000000                  mov ebx, 0
+    59 000000E5 89E1                        mov ecx, esp
+    60 000000E7 BA01000000                  mov edx, 1
+    61 000000EC CD80                        int 0x80
+    62 000000EE 61                          popa
+    63                                  
+    64 000000EF 803D[3D000000]01            cmp byte [option], 1
+    65 000000F6 7409                        je problema1
+    66                                  
+    67 000000F8 803D[3D000000]09            cmp byte [option], 9
+    68 000000FF 7477                        je end_program
+    69                                  
+    70                                  problema1:
+    71 00000101 68[51000000]                push inputpb1
+    72 00000106 FF15[00000000]              call [printf]
+    73 0000010C 83C404                      add esp, 4
+    74                                  
+    75 0000010F 8D1D[41000000]              lea ebx, [p1a]
+    76 00000115 53                          push ebx
+    77 00000116 68[3E000000]                push format
+    78 0000011B FF15[00000000]              call [scanf]
+    79 00000121 83C408                      add esp, 4*2
+    80                                  
+    81 00000124 8D1D[45000000]              lea ebx, [p1b]
+    82 0000012A 53                          push ebx
+    83 0000012B 68[3E000000]                push format
+    84 00000130 FF15[00000000]              call [scanf]
+    85 00000136 83C408                      add esp, 4*2
+    86                                  
+    87 00000139 8D1D[49000000]              lea ebx, [p1c]
+    88 0000013F 53                          push ebx
+    89 00000140 68[3E000000]                push format
+    90 00000145 FF15[00000000]              call [scanf]
+    91 0000014B 83C408                      add esp, 4*2
+    92                                  
+    93 0000014E 8D1D[4D000000]              lea ebx, [p1d]
+    94 00000154 53                          push ebx
+    95 00000155 68[3E000000]                push format
+    96 0000015A FF15[00000000]              call [scanf]
+    97 00000160 83C408                      add esp, 4*2
+    98                                  
+    99                                      ; Clear input buffer after reading values
+   100 00000163 60                          pusha
+   101 00000164 B800000000                  mov eax, 0
+   102 00000169 BB00000000                  mov ebx, 0
+   103 0000016E 89E1                        mov ecx, esp
+   104 00000170 BA01000000                  mov edx, 1
+   105 00000175 CD80                        int 0x80
+   106 00000177 61                          popa
+   107                                  
+   108                                  end_program:
+   109 00000178 6A00                        push dword 0
+   110 0000017A FF15[00000000]              call [exit]

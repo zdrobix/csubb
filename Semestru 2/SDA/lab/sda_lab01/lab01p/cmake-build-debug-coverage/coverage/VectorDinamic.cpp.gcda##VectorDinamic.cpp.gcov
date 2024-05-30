@@ -1,0 +1,259 @@
+        -:    0:Source:C:/Alex Zdroba/c++ proj/sda_lab01/lab01p/VectorDinamic.cpp
+        -:    0:Graph:C:\Alex Zdroba\c++ proj\sda_lab01\lab01p\cmake-build-debug-coverage\CMakeFiles\lab01p.dir\VectorDinamic.cpp.gcno
+        -:    0:Data:C:\Alex Zdroba\c++ proj\sda_lab01\lab01p\cmake-build-debug-coverage\CMakeFiles\lab01p.dir\VectorDinamic.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "VectorDinamic.h"
+        -:    2:#include "IteratorVectorDinamic.h"
+        -:    3:#include <stdexcept>
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+function _ZN13VectorDinamic5redimEv called 2 returned 100% blocks executed 90%
+        2:    7:void VectorDinamic::redim() {
+        -:    8:	//se aloca spatiu dublu
+       2*:    9:	TElem *eNou = new int[2 * cp];
+        2:    9-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:    9-block  1
+    %%%%%:    9-block  2
+call    2 never executed
+        2:    9-block  3
+call    3 returned 2
+        -:   10:
+        -:   11:	//valorile precedente se copiaza
+        8:   12:	for (int i = 0; i < n; i++)
+        8:   12-block  0
+branch  0 taken 6
+branch  1 taken 2 (fallthrough)
+        6:   13:		eNou[i] = e[i];
+        6:   13-block  0
+        -:   14:
+        -:   15:	//se dubleaza capacitatea
+        2:   16:	cp = 2 * cp;
+        -:   17:
+        -:   18:	//zona veche este eliberata
+        2:   19:	delete[] e;
+        2:   19-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   19-block  1
+call    2 returned 2
+        -:   20:
+        -:   21:	//vectorul va contine zona nou creata
+        2:   22:	e = eNou;
+        2:   23:}
+        -:   24:
+        -:   25:
+function _ZN13VectorDinamicC2Ei called 4 returned 100% blocks executed 80%
+        4:   26:VectorDinamic::VectorDinamic(int cp) {
+        -:   27:    //se seteaza capacitatea
+        4:   28:	this->cp = cp;
+        -:   29:
+        -:   30:	//se aloca spatiu de memorare pentru vector
+       4*:   31:	e = new TElem[cp];
+        4:   31-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 0
+        4:   31-block  1
+    %%%%%:   31-block  2
+call    2 never executed
+        4:   31-block  3
+call    3 returned 4
+        -:   32:
+        -:   33:	//se seteaza numarul de elemente
+        4:   34:	this->n = 0;
+        4:   35:}
+        -:   36:
+        -:   37:
+        -:   38:
+function _ZN13VectorDinamicD2Ev called 4 returned 100% blocks executed 100%
+        4:   39:VectorDinamic::~VectorDinamic() {
+        -:   40:	//se sterge vectorul
+        4:   41:    delete[] e;
+        4:   41-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 0
+        4:   41-block  1
+call    2 returned 4
+        4:   42:}
+        -:   43:
+        -:   44:
+        -:   45:
+function _ZNK13VectorDinamic3dimEv called 17 returned 100% blocks executed 100%
+       17:   46:int VectorDinamic::dim() const{
+        -:   47:	//se returneaza dimensiunea
+       17:   48:	return n;
+       17:   48-block  0
+        -:   49:}
+        -:   50:
+        -:   51:
+        -:   52:
+function _ZNK13VectorDinamic7elementEi called 6 returned 83% blocks executed 89%
+        6:   53:TElem VectorDinamic::element(int i) const{
+        -:   54:	//se returneaza elementul de pe pozitia i
+        6:   55:    if (i < 0 || i >= n)
+        6:   55-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 0
+        6:   55-block  1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 5
+        1:   56:        throw out_of_range("Index out of range!!!!");
+        1:   56-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   56-block  1
+call    4 returned 0
+    $$$$$:   56-block  2
+call    5 never executed
+        5:   57:	return e[i];
+        5:   57-block  0
+        5:   57-block  1
+        -:   58:}
+        -:   59:
+        -:   60:
+        -:   61:
+function _ZN13VectorDinamic13adaugaSfarsitEi called 11 returned 100% blocks executed 100%
+       11:   62:void VectorDinamic::adaugaSfarsit(TElem e) {
+        -:   63:    //daca s-a atins capacitatea maxima se redimensioneaza
+       11:   64:    if (n == cp)
+       11:   64-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 9
+        2:   65:        redim();
+        2:   65-block  0
+call    0 returned 2
+        -:   66:
+        -:   67:    //se adauga la sfarsit
+       11:   68:    this->e[n++] = e;
+       11:   69:}
+        -:   70:
+        -:   71:
+function _ZN13VectorDinamic6adaugaEii called 0 returned 0% blocks executed 0%
+    #####:   72:void VectorDinamic::adauga(int i, TElem e) {
+        -:   73:    //daca s-a atins capacitatea maxima se redimensioneaza
+    #####:   74:    if (i < 0 || i > n)
+    %%%%%:   74-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   74-block  1
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:   75:        throw out_of_range("Index out of range!");
+    %%%%%:   75-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   75-block  1
+call    4 never executed
+    $$$$$:   75-block  2
+call    5 never executed
+        -:   76:
+    #####:   77:    if (n == cp)
+    %%%%%:   77-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   78:        redim();
+    %%%%%:   78-block  0
+call    0 never executed
+        -:   79:
+        -:   80:    //se muta fiecare element in dreapta cu o pozitie pentru a face loc elementului adaugat
+    #####:   81:    for ( int index = n; index >= i ; index -- )
+    %%%%%:   81-block  0
+    %%%%%:   81-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+        -:   82:
+    #####:   83:        this->e[index++] = this->e[index];
+    %%%%%:   83-block  0
+        -:   84:
+        -:   85:    //se adauga noul element pe pozitia golita
+    #####:   86:    this->e[i] = e;
+        -:   87:
+    #####:   88:}
+    %%%%%:   88-block  0
+        -:   89:
+        -:   90:
+function _ZN13VectorDinamic8modificaEii called 1 returned 0% blocks executed 67%
+        1:   91:TElem VectorDinamic::modifica(int i, TElem e) {
+        -:   92:    //se retine valoarea elementului vechi
+        1:   93:    if (i < 0 || i >= n)
+        1:   93-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   93-block  1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:   94:        throw out_of_range("Index out of range!!");
+        1:   94-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   94-block  1
+call    4 returned 0
+    $$$$$:   94-block  2
+call    5 never executed
+        -:   95:
+    #####:   96:    TElem valoare_veche = this->e[i];
+        -:   97:
+        -:   98:    //se adauga noul element pe pozitia i
+    #####:   99:    this->e[i] = e;
+        -:  100:
+        -:  101:    //se returneaza valoarea veche
+    #####:  102:    return valoare_veche;
+    %%%%%:  102-block  0
+    %%%%%:  102-block  1
+        -:  103:}
+        -:  104:
+        -:  105:
+function _ZN13VectorDinamic6stergeEi called 1 returned 0% blocks executed 50%
+        1:  106:TElem VectorDinamic::sterge(int i) {
+        -:  107:    //se retine valoarea elementului vechi
+        1:  108:    if (i < 0 || i >= n)
+        1:  108-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  108-block  1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:  109:        throw out_of_range("Index out of range!!!");
+        1:  109-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  109-block  1
+call    4 returned 0
+    $$$$$:  109-block  2
+call    5 never executed
+        -:  110:
+    #####:  111:    TElem valoare_veche = this->e[i];
+        -:  112:
+    #####:  113:    for ( int index = i; index < n; index ++ )
+    %%%%%:  113-block  0
+    %%%%%:  113-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+        -:  114:
+    #####:  115:        this->e[index] = this->e[index+1];
+    %%%%%:  115-block  0
+        -:  116:
+    #####:  117:	return valoare_veche;
+    %%%%%:  117-block  0
+    %%%%%:  117-block  1
+        -:  118:}
+        -:  119:
+function _ZN13VectorDinamic8iteratorEv called 3 returned 100% blocks executed 100%
+        3:  120:IteratorVectorDinamic VectorDinamic::iterator() {
+        3:  121:	return  *this;
+        3:  121-block  0
+call    0 returned 3
+        -:  122:}
+        -:  123:
+        -:  124:
+        -:  125:

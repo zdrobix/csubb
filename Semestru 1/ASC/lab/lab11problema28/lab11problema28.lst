@@ -1,0 +1,114 @@
+     1                                  bits 32 
+     2                                  ;Se citeste de la tastatura un sir de caractere (litere mici si litere mari, cifre, caractere speciale, etc). 
+     3                                  ;Sa se formeze un sir nou doar cu literele mici si un sir nou doar cu literele mari. 
+     4                                  ;Sa se afiseze cele 2 siruri rezultate pe ecran.
+     5                                  
+     6                                  
+     7                                  
+     8                                  global start  
+     9                                  
+    10                                  section .text      
+    11                                      extern exit,scanf,printf
+    12                                      import exit msvcrt.dll
+    13                                      import scanf msvcrt.dll
+    14                                      import printf msvcrt.dll
+    15                                  
+    16                                  extern siruri
+    17                                      
+    18                                  section .data
+    19 00000000 25632000                    format db "%c ",0
+    20 00000004 496E74726F64756365-         afis_sir db "Introduceti un sir de caractere: ", 0
+    20 0000000D 746920756E20736972-
+    20 00000016 206465206361726163-
+    20 0000001F 746572653A2000     
+    21 00000026 4C6974657265206D69-         afis_mici db "Litere mici : %s",0
+    21 0000002F 6369203A20257300   
+    22 00000037 4C6974657265206D61-         afis_mari db "Litere mari: %s",0
+    22 00000040 72693A20257300     
+    23 00000047 00000000                    chr dw 0,0
+    24                                      
+    25 0000004B <res 0000001E>              lit_mici resw 15
+    26 00000069 <res 0000001E>              lit_mari resw 15
+    27 00000087 <res 0000001E>              sir_chr resw 15
+    28                                      
+    29 000000A5 00                          lun_mici db 0
+    30 000000A6 00                          lun_mari db 0
+    31 000000A7 00                          lun_sir db 0
+    32                                      
+    33                                  
+    34                                  start:
+    35 000000A8 BF[87000000]                mov edi, sir_chr
+    36                                          ;adresa sirului de intrare
+    37 000000AD 68[04000000]                push dword afis_sir
+    38 000000B2 68[00000000]                push dword format
+    39 000000B7 FF15[00000000]              call [printf]
+    40 000000BD 83C408                      add esp, 4*2
+    41                                      
+    42                                      start1:
+    43 000000C0 68[47000000]                push dword chr
+    44 000000C5 68[00000000]                push dword format
+    45 000000CA FF15[00000000]              call [scanf]
+    46 000000D0 83C408                      add esp, 4*2
+    47                                      
+    48 000000D3 833D[47000000]24            cmp dword [chr], '$'
+    49 000000DA 7410                        je sfarsit_citire
+    50                                      
+    51 000000DC 66A1[47000000]              mov ax, [chr]
+    52 000000E2 66AB                        stosw
+    53 000000E4 FE05[A7000000]              inc byte[lun_sir]
+    54                                          ;lungimea sirului citit
+    55                                      
+    56 000000EA EBD4                        jmp start1
+    57                                      sfarsit_citire:
+    58                                      
+    59                                      ;fct siruri(s, lungime, lit_mici, lit_mari)
+    60 000000EC 68[69000000]                push dword lit_mari
+    61 000000F1 68[4B000000]                push dword lit_mici
+    62 000000F6 FF35[A7000000]              push dword [lun_sir]
+    63 000000FC 68[87000000]                push dword sir_chr
+    64 00000101 E8(00000000)                call siruri
+    65 00000106 83C410                      add esp, 4*4
+    66                                      
+    67 00000109 68[26000000]                push afis_mici
+    68 0000010E FF15[00000000]              call [printf]
+    69 00000114 83C404                      add esp, 4
+    70 00000117 BE[4B000000]                mov esi, lit_mici
+    71 0000011C B900000000                  mov ecx, 0
+    72 00000121 8A0D[A5000000]              mov cl, [lun_mici]
+    73                                      
+    74                                      afisare_litere_mici:
+    75 00000127 66AD                            lodsw
+    76 00000129 98                              cwde
+    77 0000012A 51                              push ecx
+    78                                          
+    79 0000012B 50                              push dword eax
+    80 0000012C 68[00000000]                    push dword format
+    81 00000131 FF15[00000000]                  call [printf]
+    82 00000137 83C408                          add esp, 4*2
+    83 0000013A 59                              pop ecx
+    84 0000013B E2EA                        loop afisare_litere_mici
+    85                                      
+    86 0000013D 68[37000000]                push afis_mari
+    87 00000142 FF15[00000000]              call [printf]
+    88 00000148 83C404                      add esp, 4
+    89 0000014B BE[69000000]                mov esi, lit_mari
+    90 00000150 B900000000                  mov ecx, 0
+    91 00000155 8A0D[69000000]              mov cl, [lit_mari]
+    92                                      
+    93                                      afisare_litere_mari:
+    94 0000015B 66AD                            lodsw
+    95 0000015D 98                              cwde
+    96 0000015E 51                              push ecx
+    97                                          
+    98 0000015F 50                              push dword eax
+    99 00000160 68[00000000]                    push dword format
+   100 00000165 FF15[00000000]                  call [printf]
+   101 0000016B 83C408                          add esp, 4*2
+   102 0000016E 59                              pop ecx
+   103 0000016F E2EA                        loop afisare_litere_mari
+   104                                      
+   105 00000171 6A00                        push dword 0
+   106 00000173 FF15[00000000]              call [exit]
+   107                                      
+   108                                      
+   109                                     

@@ -1,0 +1,1 @@
+CMakeLists.txt not found in C:\Alex Zdroba\c++ proj\aglab03_p2 Select CMakeLists.txt

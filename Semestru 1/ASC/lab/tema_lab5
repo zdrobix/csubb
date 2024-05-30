@@ -1,0 +1,55 @@
+bits 32
+
+global start
+
+extern exit
+import exit msvcrt.dll
+
+segment data use32 class = data
+    s1 DB '+', '4', '2', 'a', '8', '4', 'X', '5'
+    lens1 EQU $-s1  ;lungimea sirului s1
+    
+    s2 DB 'a', '4', '5'
+    lens2 EQU $-s2  ;lungimea sirului s2
+    
+    d times (lens1 + 1)/3 + lens2 DB 0 ;lens1 + 1 pentru ca si pozitia 0 = multiplu de 3
+    lend DB (lens1 + 1)/3 + lens2   ;lungimea sirului d
+    
+segment code use32 class = code
+    start:
+    ;Se dau doua siruri de caractere S1 si S2. 
+    ;Sa se construiasca sirul D prin concatenarea elementelor de pe pozitiile 
+        ;multiplu de 3 din sirul S1 cu elementele sirului S2 in ordine inversa
+        
+    MOV ecx, 0      ;eliberam ecx, pentru a pune variabila de contor in ecx
+    MOV esi, s1     ;esi = adresa sirului s1
+    MOV edi, s2     ;edi = adresa sirului s2
+    MOV ebx, d      ;punem in ebx sirul nou creat
+    
+    ;se creaza  eticheta de concatenat
+    concateneaza:
+    
+        CMP ecx, lend       ;compara ecx cu lungimea asignata sirului d
+        JE end_program      ;se termina programul
+    
+        ;TEST ecx, 2         ;testam daca contorul este multiplu de 3
+        ;JNZ copiere_s2
+    
+        MOV al, [esi]      ;se ia caracterul curent din S1
+        MOV [ebx], al      ;se adauga la sfarsitul sirului D
+        INC ebx            ;pointerul pentru D ++
+    
+    copiere_s2:
+    
+        MOV al, [edi]      ;se ia caracterul curent din S2
+        MOV [ebx], al      ;se adauga la sfarsitul sirului D
+        INC ebx            ;pointerul pentru D ++
+
+        INC ecx            ;contorul ++
+        INC esi            ;se trece la urmatorul caracter din S1
+        DEC edi            ;se trece la caracterul anterior din S2
+        JMP concateneaza    ;se continua programul
+    
+    end_program:
+        push dword 0
+        call [exit]

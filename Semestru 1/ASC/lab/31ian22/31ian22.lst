@@ -1,0 +1,66 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start
+     4                                  
+     5                                  ;Se da un sir A de cuvinte. Construiti doua siruri de octeti  
+     6                                  ;- B1: contine ca elemente partea superioara a cuvintelor din A
+     7                                  ;- B2: contine ca elemente partea inferioara a cuvintelor din A
+     8                                  
+     9                                  extern exit
+    10                                  import exit msvcrt.dll
+    11                                  extern printf
+    12                                  import printf msvcrt.dll
+    13                                  
+    14                                  section data use32 class = data
+    15 00000000 34127856BC9AF0DE00-         sir_a dw 0x1234, 0x5678, 0x9ABC, 0xDEF0, 0
+    15 00000009 00                 
+    16                                      len_a equ ($-sir_a) / 2 
+    17 0000000A 00                          sir_b1 db 0
+    18 0000000B 00                          sir_b2 db 0
+    19 0000000C 6F6374657469692073-         format1 db 'octetii superiori: %s', 10
+    19 00000015 75706572696F72693A-
+    19 0000001E 2025730A           
+    20 00000022 6F6374657469692069-         format2 db 'octetii inferiori: %s', 10
+    20 0000002B 6E666572696F72693A-
+    20 00000034 2025730A           
+    21                                      
+    22                                  section code use32 class = code
+    23                                      start:
+    24 00000000 BE[0A000000]                    mov esi, sir_b1
+    25 00000005 BF[0B000000]                    mov edi, sir_b2
+    26                                          
+    27 0000000A 31C9                            xor ecx, ecx
+    28                                          
+    29 0000000C EB00                            jmp start_loop
+    30                                         
+    31                                          start_loop:
+    32 0000000E 83F905                              cmp ecx, len_a
+    33 00000011 7D13                                jge end_program
+    34                                              
+    35 00000013 668B8409[00000000]                  mov ax, [sir_a + ecx*2]
+    36 0000001B 8826                                mov [esi], ah
+    37 0000001D 8807                                mov [edi], al
+    38                                              
+    39 0000001F 46                                  inc esi
+    40 00000020 47                                  inc edi
+    41                                              
+    42 00000021 83C101                              add ecx, 1
+    43 00000024 EBE8                                jmp start_loop
+    44                                              
+    45                                          end_program:
+    46 00000026 C60600                              mov byte [esi], 0
+    47 00000029 C60700                              mov byte [edi], 0
+    48                                          
+    49 0000002C 68[0A000000]                        push dword sir_b1
+    50 00000031 68[0C000000]                        push dword format1
+    51 00000036 FF15[00000000]                      call [printf]
+    52 0000003C 83C404                              add esp, 4
+    53                                              
+    54 0000003F 68[0B000000]                        push dword sir_b2
+    55 00000044 68[22000000]                        push dword format2
+    56 00000049 FF15[00000000]                      call [printf]
+    57 0000004F 83C404                              add esp, 4
+    58                                              
+    59 00000052 6A00                                push dword 0
+    60 00000054 FF15[00000000]                      call [exit]
+    61                                              

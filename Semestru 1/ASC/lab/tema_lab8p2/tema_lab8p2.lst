@@ -1,0 +1,139 @@
+     1                                  bits 32
+     2                                  
+     3                                  ;Se da un nume de fisier (definit in segmentul de date). 
+     4                                  ;Sa se creeze un fisier cu numele dat, apoi sa se citeasca de la tastatura cuvinte pana cand se citeste de la tastatura caracterul '$'. 
+     5                                  ;Sa se scrie in fisier doar cuvintele care contin cel putin o litera mica (lowercase).
+     6                                  
+     7                                  segment .data
+     8 00000000 696E7075746C616238-         filename db 'inputlab8.txt', 0
+     8 00000009 2E74787400         
+     9 0000000E 7700                        mod_acces db 'w', 0
+    10 00000010 257300                      format db '%s', 0
+    11 00000013 25730A                      format2 db `%s\n`
+    12                                      len equ 100
+    13 00000016 64<rept>                    cuv times len db 100
+    14                                          ;variabila in care se vor citi cuvintele
+    15 0000007A 64<rept>                    rez times len db 100
+    16                                          ;variabila in care se vor salva cuvintele ce contin cel putin un lowercase
+    17                                  
+    18                                  section .text
+    19                                      global start
+    20                                      extern exit, fopen, fread, fclose, fscanf, fprintf, scanf
+    21                                      import exit msvcrt.dll
+    22                                      import fopen msvcrt.dll
+    23                                      import fclose msvcrt.dll
+    24                                      import fscanf msvcrt.dll
+    25                                      import fprintf msvcrt.dll
+    26                                      import fread msvcrt.dll
+    27                                      import scanf msvcrt.dll
+    28                                  
+    29                                  start:
+    30 00000000 68[0E000000]                push mod_acces
+    31 00000005 68[00000000]                push filename
+    32                                          ;punem modul de accesare al fisierului si fisierul pe stiva
+    33 0000000A FF15[00000000]              call [fopen]
+    34                                          ;deschidem fisierul   
+    35 00000010 83C408                      add esp, 8
+    36                                          
+    37 00000013 83F800                      cmp eax, 0
+    38 00000016 7473                        je end_program
+    39                                          ;daca s-a produs o eroare, terminam executia programului
+    40                                          
+    41                                          
+    42 00000018 89C3                        mov ebx, eax
+    43                                          ;salvam descriptorul de fisier
+    44                                          
+    45                                          
+    46 0000001A E804000000                  call read_words
+    47                                          ;citeste cuvinte din fisier
+    48                                      ;add esp, 4
+    49                                          ;se elibereaza stiva
+    50                                          
+    51                                          
+    52 0000001F EB60                        jmp close_file
+    53                                          ;se inchide fisierul
+    54 00000021 EB68                        jmp end_program
+    55                                          ;se termina executia
+    56                                          
+    57                                  read_words:
+    58 00000023 8D35[16000000]              lea esi, [cuv]
+    59 00000029 56                          push esi 
+    60                                      
+    61 0000002A 68[10000000]                push format
+    62                                          ; punem pe stiva formatul pentru fscanf
+    63 0000002F FF15[00000000]              call [scanf] ;scanf
+    64                                          ; apelam functia de citire
+    65 00000035 83C408                      add esp, 8
+    66                                          ; curatam parametrii de pe stiva
+    67                                      
+    68 00000038 E807000000                  call verify_word
+    69                                          ;incepe verificarea cuvintelor
+    70 0000003D 803E24                      cmp byte [esi], '$'
+    71                                          ;compara cuvantul cu sfarsitul sirului 
+    72 00000040 743E                        je end_of_file
+    73                                          ;se termina parcurgerea fisierului
+    74                                          
+    75 00000042 EBDF                        jmp read_words
+    76                                          ;se continua verificarea
+    77                                        
+    78                                  
+    79                                  verify_word:
+    80 00000044 BE[16000000]                mov esi, cuv
+    81                                      
+    82 00000049 EB00                        jmp verify_next_char
+    83                                          ;incepe verificarea litera cu litera
+    84                                  
+    85                                  verify_next_char:
+    86 0000004B 803E00                      cmp byte [esi], 0
+    87                                          ;compara caracterul cu finalul cuvantului
+    88 0000004E 7428                        je verify_end_word
+    89                                          ;daca s-a ajuns la finalul cuvantului se trece la urmatorul cuvant
+    90                                          
+    91 00000050 803E61                      cmp byte [esi], 'a'
+    92 00000053 7C1B                        jl not_lowercase
+    93                                          ;verifica daca caracterul este dupa a
+    94 00000055 803E7A                      cmp byte [esi], 'z'
+    95 00000058 7F16                        jg not_lowercase
+    96                                          ;verifica daca caracterul este inaintea lui a
+    97                                      
+    98 0000005A 53                          push ebx
+    99 0000005B 68[13000000]                push format2
+   100 00000060 68[16000000]                push cuv
+   101 00000065 FF15[00000000]              call [fprintf]
+   102                                          ;se pune cuvantul pe stiva si se afiseaza
+   103 0000006B 83C408                      add esp, 8
+   104                                          ;se elibereaza stiva
+   105 0000006E EBB3                        jmp read_words
+   106                                      
+   107                                  not_lowercase:
+   108 00000070 46                          inc esi     
+   109 00000071 803E00                      cmp byte [esi], 0
+   110                                          ;compara caracterul cu finalul cuvantului
+   111 00000074 75D5                        jne verify_next_char    
+   112                                          ;se continua cu verificarea literelor
+   113 00000076 7400                        je verify_end_word
+   114                                          ;daca s-a ajuns la finalul cuvantului se trece la urmatorul cuvant
+   115                                      
+   116                                  verify_end_word:
+   117 00000078 803E24                      cmp byte [esi], '$'
+   118                                          ;compara cuvantul cu sfarsitul sirului 
+   119 0000007B 7403                        je end_of_file
+   120                                          ;se termina parcurgerea fisierului
+   121 0000007D EBA4                        jmp read_words
+   122                                          ;daca nu sunt egale continua cu urm cuvant
+   123                                  
+   124                                  verify_end:
+   125 0000007F C3                          ret    
+   126                                      
+   127                                  end_of_file:
+   128 00000080 C3                          ret
+   129                                      
+   130                                  close_file:
+   131 00000081 53                          push ebx
+   132 00000082 FF15[00000000]              call [fclose]
+   133 00000088 83C404                      add esp, 4
+   134                                      
+   135                                  end_program:
+   136 0000008B 6A00                        push dword 0
+   137 0000008D FF15[00000000]              call [exit]
+   138                                      

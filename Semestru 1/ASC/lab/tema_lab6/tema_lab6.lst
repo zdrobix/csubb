@@ -1,0 +1,59 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start
+     4                                  
+     5                                  extern exit
+     6                                  import exit msvcrt.dll
+     7                                  
+     8                                  segment data use32 class = data
+     9                                      ;am marcat finalul sirurilor cu 0
+    10 00000000 010203040501020300          sirx DB 1, 2, 3, 4, 5, 1, 2, 3, 0 
+    11 00000009 010200                      siry DB 1, 2, 0
+    12                                      
+    13                                  segment code use32 class = code
+    14                                      start:
+    15                                          ;Dandu-se un sir de octeti si un subsir al sau, sa se elimine din primul sir toate aparitiile subsirului.
+    16                                          
+    17 00000000 8B35[00000000]                  mov esi, [sirx]         ;esi = adresa sirului de intrare
+    18 00000006 8B3D[00000000]                  mov edi, [sirx]         ;edi = adresa sirului, pentru a salva rezultatul
+    19                                      
+    20                                      cauta_loop:
+    21                                          ;verifica daca s-a ajuns la sfarsitul sirului (sirx)
+    22 0000000C AC                              lodsb                   ;se incarca octetul
+    23 0000000D 3C00                            cmp al, 0               ;se compara cu 0 (sfarsitul sirului, caracterul nul)
+    24 0000000F 7427                            je end_program          ;daca este egal cu 0, se termina programul
+    25                                      
+    26 00000011 B900000000                      mov ecx, 0              ;counter register
+    27                                      
+    28                                      compara_loop:
+    29                                          ;verifica daca s-a ajuns la sfarsitul subsirului (siry)
+    30 00000016 AC                              lodsb               
+    31 00000017 3C00                            cmp al, 0               ;incarca octetul si il compara cu 0
+    32 00000019 7413                            je gasit_subsir         ;daca s-a ajuns la sfarsitul subsirului, se trece la eticheta
+    33                                          
+    34                                          ;se verifica daca elementele sunt la fel
+    35 0000001B 3A81[09000000]                  cmp al, [siry + ecx]    ;compara octetul incarcat cu corespondenta din sir
+    36 00000021 7503                            jne nu_suntlafel        ;daca nu se potrivesc, sare la eticheta 'nu sunt la fel'
+    37                                          
+    38                                          ;elementele corespund, continua executia
+    39 00000023 41                              inc ecx                 ;se incrementeaza counter-ul
+    40 00000024 EBF0                            jmp compara_loop        ;se trece inapoi la parcurgerea sirului
+    41                                          
+    42                                      nu_suntlafel:
+    43                                          ;daca elementele nu corespund, se reia cautarea de la urm pozitie in sirx
+    44 00000026 B900000000                      mov ecx, 0              ;se elibereaza ecx
+    45 0000002B 46                              inc esi                 ;se trece la urmatorul element
+    46 0000002C EBDE                            jmp cauta_loop          ;continua executia
+    47                                      
+    48                                      gasit_subsir:
+    49                                          ;se sterge subsirul gasit din sirul de intrare
+    50 0000002E B900000000                      mov ecx, 0              ;
+    51 00000033 29CF                            sub edi, ecx            ;destinatia = pozitia inainte de a gasi elementul la fel
+    52                                            
+    53                                          ;se copiaza caracterele ramase in sirul de intrare
+    54 00000035 AA                              stosb
+    55 00000036 EBD4                            jmp cauta_loop          ;se continua executia
+    56                                      
+    57                                      end_program:
+    58 00000038 6A00                            push dword 0
+    59 0000003A FF15[00000000]                  call [exit]

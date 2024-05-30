@@ -1,0 +1,107 @@
+        -:    0:Source:C:/Alex Zdroba/c++ proj/sda_lab01/lab01p/App.cpp
+        -:    0:Graph:C:\Alex Zdroba\c++ proj\sda_lab01\lab01p\cmake-build-debug-coverage\CMakeFiles\lab01p.dir\App.cpp.gcno
+        -:    0:Data:C:\Alex Zdroba\c++ proj\sda_lab01\lab01p\cmake-build-debug-coverage\CMakeFiles\lab01p.dir\App.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include "VectorDinamic.h"
+        -:    3:#include "IteratorVectorDinamic.h"
+        -:    4:#include "TestExtins.h"
+        -:    5:#include "TestScurt.h"
+        -:    6:
+        -:    7:using namespace std;
+        -:    8:
+function _Z5meniuv called 1 returned 100% blocks executed 90%
+        1:    9:void meniu() {
+        -:   10:
+        1:   11:    VectorDinamic v(2);
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   12:
+        1:   13:    v.adaugaSfarsit(10);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14:    v.adaugaSfarsit(12);
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15:    v.adaugaSfarsit(13);
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16:    v.adaugaSfarsit(15);
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17:    v.adaugaSfarsit(18);
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18:    v.adaugaSfarsit(16);
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   19:
+        1:   20:    IteratorVectorDinamic i = v.iterator();
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   21:
+        7:   22:    while ( i.valid() )
+        1:   22-block  0
+        7:   22-block  1
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   22-block  2
+branch  3 taken 6
+branch  4 taken 1 (fallthrough)
+        -:   23:    {
+        6:   24:        cout << i.element() << ' ';
+        6:   24-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   24-block  1
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+        6:   24-block  2
+call    6 returned 6
+branch  7 taken 6 (fallthrough)
+branch  8 taken 0 (throw)
+        -:   25:
+        6:   26:        i.urmator();
+        6:   26-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   27:    }
+        1:   28:}
+        1:   28-block  0
+call    0 returned 1
+    $$$$$:   28-block  1
+call    1 never executed
+        -:   29:
+function main called 1 returned 100% blocks executed 100%
+        1:   30:int main() {
+        -:   31:
+        -:   32: 	//testAll();
+        1:   33: 	testAllExtins();
+        1:   33-block  0
+call    0 returned 1
+        1:   34:    meniu();
+call    0 returned 1
+        1:   35:	cout<<"End";
+call    0 returned 1
+        1:   36:    return 0;
+        -:   37:}

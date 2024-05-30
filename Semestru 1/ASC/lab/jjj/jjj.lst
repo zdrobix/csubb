@@ -1,0 +1,65 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start
+     4                                  
+     5                                  extern exit
+     6                                  import exit msvcrt.dll
+     7                                  
+     8                                  
+     9                                  
+    10                                  segment data use32 class = data
+    11 00000000 0102030405010200            input_string db 1, 2, 3, 4, 5, 1, 2, 0
+    12 00000008 010200                      sub_string db 1, 2, 0
+    13                                  
+    14                                      
+    15                                  segment code use32 class = code
+    16                                      _start:
+    17                                          ; Set up registers
+    18 00000000 8D35[00000000]                  lea esi, [input_string]  ; ESI will contain the address of the input string
+    19 00000006 8D3D[00000000]                  lea edi, [input_string]  ; EDI will contain the address of the input string for storing the result
+    20                                  
+    21                                      search_loop:
+    22                                          ; Check if we have reached the end of the input string
+    23 0000000C AC                              lodsb
+    24 0000000D 3C00                            cmp al, 0
+    25 0000000F 7422                            je end_program
+    26                                  
+    27                                          ; Try to match the substring starting from the address in ESI
+    28 00000011 B900000000                      mov ecx, 0  ; Counter for matching characters
+    29                                  
+    30                                      compare_loop:
+    31                                          ; Check if we have reached the end of the substring
+    32 00000016 AC                              lodsb
+    33 00000017 3C00                            cmp al, 0
+    34 00000019 740E                            je found_substring
+    35                                  
+    36                                          ; Check if the characters match
+    37 0000001B 3A81[08000000]                  cmp al, [sub_string + ecx]
+    38 00000021 7503                            jne not_match
+    39                                  
+    40                                          ; Characters match, continue the comparison
+    41 00000023 41                              inc ecx
+    42 00000024 EBF0                            jmp compare_loop
+    43                                  
+    44                                      not_match:
+    45                                          ; If characters don't match, restart the search from the next position in the input string
+    46 00000026 4E                              dec esi   ; Adjust ESI to restart the search from the next position
+    47 00000027 EBE3                            jmp search_loop
+    48                                  
+    49                                      found_substring:
+    50                                          ; Remove the found substring from the input string
+    51 00000029 B900000000                      mov ecx, 0
+    52 0000002E 29CE                            sub esi, ecx   ; Adjust ESI to point to the position before the match
+    53                                  
+    54                                          ; Copy the remaining characters to the input string
+    55 00000030 AA                              stosb
+    56 00000031 EBD9                            jmp search_loop
+    57                                  
+    58                                      end_program:
+    59                                          ; End of the program
+    60                                          ; (You can add additional code or output here, if necessary)
+    61                                  
+    62                                          ; Exit
+    63 00000033 B801000000                      mov eax, 1         ; System call for exit
+    64 00000038 31DB                            xor ebx, ebx       ; Return code 0
+    65 0000003A CD80                            int 0x80           ; Perform syscall
