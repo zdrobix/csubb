@@ -1,12 +1,18 @@
 import java.util.Vector;
 public class ExpressionCalc {
-    private final Vector<Pair> cleanExpression;
+    private Vector<Pair> cleanExpression;
 
     public ExpressionCalc(String args[]) {
-        this.cleanExpression = new ExpressionClear(args).getRidOfMultiplicationsAndDivision();
+        try {
+            this.cleanExpression = new ExpressionClear(args).getRidOfMultiplicationsAndDivision();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public NumarComplex getExpressionResult() {
+        if (cleanExpression.isEmpty())
+            return new NumarComplex(0, 0);
         NumarComplex result = this.cleanExpression.getFirst().getNumar();
         int i = 1;
         while (i < this.cleanExpression.size()) {
