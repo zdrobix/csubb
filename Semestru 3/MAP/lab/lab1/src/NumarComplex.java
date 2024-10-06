@@ -8,6 +8,9 @@ public class NumarComplex {
         this.im = im_;
     }
 
+    public double getRe() {return this.re;}
+    public double getIm() {return this.im;}
+
     public NumarComplex add (NumarComplex other) {
         return new NumarComplex(this.re + other.re, this.im + other.im);
     }
@@ -21,8 +24,8 @@ public class NumarComplex {
     }
 
     public NumarComplex divide (NumarComplex other) {
-        return new NumarComplex(this.re / other.re, this.im / other.im);
-        //not correct please revise
+        return new NumarComplex((this.re * other.re + this.im * other.im)/(other.re*other.re + other.im*other.im),
+                (this.im * other.re - this.re*other.im)/(other.re*other.re + other.im*other.im));
     }
 
     public NumarComplex conjugate() {
@@ -41,7 +44,9 @@ public class NumarComplex {
         } else if (string.contains("+")) {
             splitNumber = string.split("\\+");
         }
-        real = Double.parseDouble(splitNumber[0].trim());
+        if (splitNumber[0].trim().endsWith(" +"))
+            real = Double.parseDouble(splitNumber[0].trim().substring(0, splitNumber[0].trim().length() - 2));
+        else real = Double.parseDouble(splitNumber[0].trim());
         imaginary = Double.parseDouble(splitNumber[1].trim().substring(0, splitNumber[1].trim().length() - 3));
 
         if (isNegativeIm) {

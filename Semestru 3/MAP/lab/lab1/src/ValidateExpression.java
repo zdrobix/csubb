@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class ValidateExpression {
     public static void Validate(String args[], int argc) {
         if (argc % 2 == 0)
@@ -11,6 +9,8 @@ public class ValidateExpression {
                 }
             }
             if (i % 2 == 0) {
+                if (args[i].charAt(0) != '-' && args[i].charAt(0) != '+')
+                    throw new RuntimeException("Invalid sign for complex number: " + args[i]);
                 String complexNumber = args[i].trim().substring(1);         //ignoram semnul partii reale
                 String splitNumber[];
                 if (complexNumber.contains("-")) {
