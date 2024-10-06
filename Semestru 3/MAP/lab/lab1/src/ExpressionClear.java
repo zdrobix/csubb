@@ -1,6 +1,5 @@
 import java.util.Vector;
 public class ExpressionClear {
-
     private String args[];
 
     public ExpressionClear(String args_[]) {
@@ -8,6 +7,10 @@ public class ExpressionClear {
     }
 
     public Vector<Pair> getRidOfMultiplicationsAndDivision () {
+        //Ordinea ef. op.
+        //Scapa de orice inseamna inmultire/impartire.
+        //Realizeaza inmultirile si impartirile in serie si le adauga intr-un vector de perechi.
+        //Se returneaza acel vector.
         try {ValidateExpression.Validate(args, args.length);}
         catch (Exception e) {throw new RuntimeException(e.getCause().toString());}
 

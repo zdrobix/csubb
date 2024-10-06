@@ -11,6 +11,7 @@ public class ExpressionCalc {
     }
 
     public NumarComplex getExpressionResult() {
+        //Primeste un vector cu perechi de numere complexe si operatii, si calculeaza rezultatul expresiei.
         if (cleanExpression.isEmpty())
             return new NumarComplex(0, 0);
         NumarComplex result = this.cleanExpression.getFirst().getNumar();

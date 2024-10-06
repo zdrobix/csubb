@@ -1,9 +1,10 @@
 public class NumarComplex {
 
-    private double re;
-    private double im;
+    private double re; //partea reala
+    private double im; //partea imaginara
 
     public NumarComplex(double re_, double im_) {
+        //Constructorul clasei
         this.re = re_;
         this.im = im_;
     }
@@ -33,6 +34,7 @@ public class NumarComplex {
     }
 
     public static NumarComplex fromString(String string) {
+        //Primeste un string ca parametru si returneaza un numar complex.
         boolean isNegativeReal = string.charAt(0) == '-';
         boolean isNegativeIm = false;
         string = string.trim().substring(1);

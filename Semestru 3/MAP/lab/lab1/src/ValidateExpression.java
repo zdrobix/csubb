@@ -1,5 +1,9 @@
 public class ValidateExpression {
+    //Clasa de validator pentru un sir de String.
     public static void Validate(String args[], int argc) {
+        //Numarul de parametri trebuie sa fie impar.
+        //Nu pot exista operatori unul dupa celalalt.
+        //Numerele complexe sa fie de forma +/- a +/- b * i
         if (argc % 2 == 0)
             throw new RuntimeException("Invalid syntax.");
         for (int i = 0; i < argc; i++) {
