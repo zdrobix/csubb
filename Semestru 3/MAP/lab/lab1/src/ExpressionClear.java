@@ -8,6 +8,9 @@ public class ExpressionClear {
     }
 
     public Vector<Pair> getRidOfMultiplicationsAndDivision () {
+        try {ValidateExpression.Validate(args, args.length);}
+        catch (Exception e) {throw new RuntimeException(e.getCause().toString());}
+
         Vector<Pair> newExpression = new Vector<> ();
         for ( int i = 1; i < args.length; i += 2) {
             if ( this.args[i].equals("+") || this.args[i].equals("-") ) {
