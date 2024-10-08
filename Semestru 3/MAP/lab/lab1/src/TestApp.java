@@ -3,29 +3,30 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 public class TestApp {
 
+    @Test
     public void testAll() {
         try {
-            this.testNumarComplex();
+            this.testNumarComplex(); System.out.println("ok ");
         } catch (AssertionError e) {
             System.out.println("NumarComplex test failed. " + e.getMessage());
         }
         try {
-            this.testValidate();
+            this.testValidate(); System.out.println("ok ");
         } catch (AssertionError e) {
             System.out.println("Validator test failed. " + e.getMessage());
         }
         try {
-            this.testExpressionClear();
+            this.testExpressionClear(); System.out.println("ok ");
         } catch (AssertionError e) {
             System.out.println("ExpressionClear test failed. " + e.getMessage());
         }
         try {
-            this.testOperation();
+            this.testOperation(); System.out.println("ok ");
         } catch (AssertionError e) {
             System.out.println("Operation test failed. " + e.getMessage());
         }
         try {
-            this.testExpressionCalc();
+            this.testExpressionCalc(); System.out.println("ok ");
         } catch (AssertionError e) {
             System.out.println("ExpressionCalc test failed. " + e.getMessage());
         }
