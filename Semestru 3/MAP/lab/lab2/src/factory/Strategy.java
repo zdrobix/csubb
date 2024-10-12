@@ -1,4 +1,4 @@
-package sem1_2.factory;
+package factory;
 
 public enum Strategy {
     LIFO, FIFO;

@@ -1,6 +1,6 @@
-package sem1_2.factory;
+package factory;
 
-import sem1_2.model.Container;
+import container.Container;
 
 public interface Factory {
     Container createContainer(Strategy strategy);

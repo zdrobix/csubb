@@ -1,16 +1,28 @@
-package sem1_2.factory;
+package factory;
 
-import sem1_2.model.Container;
-import sem1_2.model.StackContainer;
+import container.Container;
+import container.StackContainer;
+import container.QueueContainer;
 
 public class TaskContainerFactory implements Factory {
+    private static TaskContainerFactory instance = new TaskContainerFactory();
+
+    private TaskContainerFactory() {}
+
+    public static TaskContainerFactory getInstance() {
+        return instance;
+    }
+
     @Override
     public Container createContainer(Strategy strategy) {
-        if (strategy == Strategy.FIFO) {
-            // return new QueueContainer();
-            return null;
-        } else {
-            return new StackContainer();
+        switch (strategy) {
+            case Strategy.FIFO: {
+                return new QueueContainer();
+            }
+            case Strategy.LIFO: {
+                return new StackContainer();
+            }
+            default: throw new IllegalArgumentException("Strategy not recognised " + strategy);
         }
     }
 }

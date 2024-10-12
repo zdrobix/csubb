@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a53a9835-f125-465c-8840-937b9b4e6c06" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/QueueContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/StackContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/TaskContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/decorator/DelayTaskRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/SortingMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/SortingTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/TestRunTasks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/decorator/AbstractTaskRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/decorator/AbstractTaskRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/decorator/PrinterTaskRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/decorator/PrinterTaskRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/decorator/StrategyTaskRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/decorator/StrategyTaskRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/decorator/TaskRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/decorator/TaskRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factory/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factory/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factory/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factory/Strategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factory/TaskContainerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factory/TaskContainerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MessageTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MessageTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/StackContainer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Task.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
@@ -17,19 +47,53 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2nCo82Poi8t8V9sAF5flQgEQkyc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main (2).executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "Q:/info/csubb/Semestru 3/MAP/lab/lab2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager" selected="Application.Main (2)">
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="lab2" />
+      <option name="PROGRAM_PARAMETERS" value="FIFO" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="lab2" />
+      <option name="PROGRAM_PARAMETERS" value="FIFO" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (2)" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -48,6 +112,7 @@
       <updated>1728486258885</updated>
       <workItem from="1728486259914" duration="148000" />
       <workItem from="1728486419504" duration="68000" />
+      <workItem from="1728637661416" duration="7449000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
-package sem1_2.decorator;
+package decorator;
 
-import sem1_2.model.Task;
+import model.Task;
 
 //abstract decorator
 public abstract class AbstractTaskRunner implements TaskRunner {

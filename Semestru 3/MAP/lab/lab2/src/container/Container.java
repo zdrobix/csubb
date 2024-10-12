@@ -1,7 +1,9 @@
-package sem1_2.model;
+package container;
+
+import model.Task;
 
 public interface Container {
-    Task remove();
+    abstract Task remove();
     void add(Task task);
     int size();
     boolean isEmpty();

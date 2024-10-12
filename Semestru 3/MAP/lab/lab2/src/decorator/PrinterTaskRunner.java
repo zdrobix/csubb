@@ -1,4 +1,4 @@
-package sem1_2.decorator;
+package decorator;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

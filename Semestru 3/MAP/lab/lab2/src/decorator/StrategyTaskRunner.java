@@ -1,16 +1,16 @@
-package sem1_2.decorator;
+package decorator;
 
-import sem1_2.model.Container;
-import sem1_2.model.Task;
-import sem1_2.factory.TaskContainerFactory;
-import sem1_2.factory.Strategy;
+import container.Container;
+import model.Task;
+import factory.TaskContainerFactory;
+import factory.Strategy;
 
 public class StrategyTaskRunner implements TaskRunner {
 
     private Container container;
 
     public StrategyTaskRunner(Strategy strategy) {
-        container = new TaskContainerFactory().createContainer(strategy);
+        container = TaskContainerFactory.getInstance().createContainer(strategy);
     }
 
     @Override
