@@ -34,10 +34,14 @@ public class TestRunTasks {
         while (strategyTaskRunner.hasTask())
             strategyTaskRunner.executeOneTask();
 
+        System.out.println();
+
         var printerTaskRunner = new PrinterTaskRunner(strategyTaskRunner);
         addTasks2(printerTaskRunner);
         while (printerTaskRunner.hasTask())
             printerTaskRunner.executeOneTask();
+
+        System.out.println();
 
         var delayTaskRunner = new DelayTaskRunner(strategyTaskRunner);
         addTasks(delayTaskRunner);
