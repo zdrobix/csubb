@@ -45,12 +45,14 @@ public class TestRunTasks {
             delayTaskRunner.executeOneTask();
     }
 
+
     public static void sortTasks() {
         var sortingTask = new SortingTask("1", "sort the numbers 1, 2, 3, 4",
                 SortingMethod.QuickSort, new Vector<Integer>(Arrays.asList(1, 2, 3, 4)));
         sortingTask.execute();
         for ( var nr : sortingTask.getNumbersVector() )
             System.out.print(nr);
+
 
         System.out.println();
 
