@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a53a9835-f125-465c-8840-937b9b4e6c06" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestRunTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRunTasks.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +46,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "Q:/info/csubb/Semestru 3/MAP/lab/lab2",
+    "last_opened_file_path": "Q:/info/csubb/Semestru 3/MAP/lab/lab3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,7 +55,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="lab2" />
@@ -107,6 +106,7 @@
       <workItem from="1728486419504" duration="68000" />
       <workItem from="1728637661416" duration="7449000" />
       <workItem from="1728968861252" duration="3539000" />
+      <workItem from="1729086008524" duration="30000" />
     </task>
     <servers />
   </component>
