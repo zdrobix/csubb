@@ -23,14 +23,7 @@ public abstract class AbstractFileRepository<ID, E extends Entity<ID>> extends I
 
     }
 
-    /**
-     *  extract entity  - template method design pattern
-     *  creates an entity of type E having a specified list of @code attributes
-     * @param attributes
-     * @return an entity of type E
-     */
     public abstract E extractEntity(List<String> attributes);
-    ///Observatie-Sugestie: in locul metodei template extractEntity, puteti avea un factory pr crearea instantelor entity
 
     protected abstract String createEntityAsString(E entity);
 

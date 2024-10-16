@@ -5,33 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54bcc3d2-8fc8-4a19-b725-7df326516fee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/lab3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repo/file/UtilizatorFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/TestRepoMemory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/TestUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/Entity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/InMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/InMemoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/MyMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Utilizator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Utilizator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/validators/UtilizatorValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/validators/UtilizatorValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../script.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2nWepNwEFpAgvpmKZJniYbpCM1M" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -42,7 +45,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Unnamed.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.TestRepoMemory.executor": "Run",
+    "JUnit.TestRepoMemory.testAll.executor": "Run",
+    "JUnit.TestRepoMemory.testCreate.executor": "Run",
+    "JUnit.TestRepoMemory.testDelete.executor": "Run",
+    "JUnit.TestRepoMemory.testSave.executor": "Run",
+    "JUnit.TestRepoMemory.testUpdate.executor": "Run",
+    "JUnit.TestUser.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "create.test.in.the.same.root": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -63,6 +79,112 @@
       <recent name="Q:\info\csubb\Semestru 3\MAP\lab\lab3\lab3\src\file" />
     </key>
   </component>
+  <component name="RunManager" selected="Application.Unnamed">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="lab3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRepoMemory.testAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
+      <option name="METHOD_NAME" value="testAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRepoMemory.testCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
+      <option name="METHOD_NAME" value="testCreate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRepoMemory.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
+      <option name="METHOD_NAME" value="testDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRepoMemory.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
+      <option name="METHOD_NAME" value="testSave" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRepoMemory.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
+      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="JUnit.TestRepoMemory.testAll" />
+      <item itemvalue="JUnit.TestRepoMemory.testCreate" />
+      <item itemvalue="JUnit.TestRepoMemory.testDelete" />
+      <item itemvalue="JUnit.TestRepoMemory.testSave" />
+      <item itemvalue="JUnit.TestRepoMemory.testUpdate" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestRepoMemory.testDelete" />
+        <item itemvalue="JUnit.TestRepoMemory.testAll" />
+        <item itemvalue="JUnit.TestRepoMemory.testUpdate" />
+        <item itemvalue="JUnit.TestRepoMemory.testSave" />
+        <item itemvalue="JUnit.TestRepoMemory.testCreate" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,7 +201,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729093441978</updated>
-      <workItem from="1729093443268" duration="919000" />
+      <workItem from="1729093443268" duration="1642000" />
+      <workItem from="1729107108483" duration="5895000" />
     </task>
     <servers />
   </component>

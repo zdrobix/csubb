@@ -1,5 +1,6 @@
 package domain;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,6 +12,7 @@ public class Utilizator extends Entity<Long>{
     public Utilizator(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.prieteni = new ArrayList<>();
     }
 
     public String getFirstName() {

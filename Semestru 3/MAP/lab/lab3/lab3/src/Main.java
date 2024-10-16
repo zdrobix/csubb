@@ -1,5 +1,11 @@
+import test.TestRepoMemory;
+import test.TestUser;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        new TestUser().testAll();
+        new TestRepoMemory().testAll();
     }
 }
+

@@ -23,28 +23,45 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
 
     @Override
     public Optional<E> findOne(ID id) {
-        return null;
+        if (id == null)
+            throw new NullPointerException("Cannot find a null id.");
+        return Optional.ofNullable(entities.get(id));
     }
 
     @Override
     public Iterable<E> findAll() {
+        if (!entities.isEmpty())
+            return entities.values();
         return null;
-
     }
 
     @Override
     public Optional<E> save(E entity)  {
-        return null;
+        if (entity == null)
+            throw new IllegalArgumentException("Entity cannot be null when saving");
+        this.validator.validate(entity);
+        return Optional.ofNullable(entities.putIfAbsent(entity.getId(), entity));
     }
 
     @Override
     public Optional<E> delete(ID id) {
-        return null;
+        if (id == null)
+            throw new IllegalArgumentException("Entity cannot be null when deleting");
+        if (!entities.containsKey(id))
+            return Optional.empty();
+        return Optional.ofNullable(entities.remove(id));
     }
 
     @Override
     public Optional<E> update(E entity) {
-        return null;
+        if (entity == null)
+            throw new IllegalArgumentException("Entity cannot be null when updating");
+        this.validator.validate(entity);
+        if (this.entities.containsKey(entity.getId())) {
+            this.entities.put(entity.getId(), entity);
+            return Optional.empty();
+        }
+        return Optional.of(entity);
     }
 
 }
