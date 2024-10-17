@@ -8,8 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import repo.memory.InMemoryRepository;
 import domain.Utilizator;
 
-import java.util.Optional;
-
 public class TestRepoMemory {
 
     @Test

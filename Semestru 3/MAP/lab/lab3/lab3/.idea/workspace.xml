@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54bcc3d2-8fc8-4a19-b725-7df326516fee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/TestRepoMemory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/Ui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input/inputTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/ServiceUtilizator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/TestRepoFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/file/UtilizatorFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/file/UtilizatorFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Utilizator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Utilizator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/validators/UtilizatorValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/validators/UtilizatorValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Prietenie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Prietenie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestRepoMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRepoMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../script.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +50,8 @@
   "keyToString": {
     "Application.Unnamed.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.TestRepoFile.testAddDelete.executor": "Run",
+    "JUnit.TestRepoFile.testAll.executor": "Run",
     "JUnit.TestRepoMemory.executor": "Run",
     "JUnit.TestRepoMemory.testAll.executor": "Run",
     "JUnit.TestRepoMemory.testCreate.executor": "Run",
@@ -87,6 +92,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestRepoFile.testAddDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestRepoFile" />
+      <option name="METHOD_NAME" value="testAddDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRepoFile.testAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestRepoFile" />
+      <option name="METHOD_NAME" value="testAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestRepoMemory.testAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
@@ -103,22 +140,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRepoMemory.testCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
-      <option name="METHOD_NAME" value="testCreate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestRepoMemory.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
@@ -130,22 +151,6 @@
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
       <option name="METHOD_NAME" value="testDelete" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestRepoMemory.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
-      <option name="METHOD_NAME" value="testSave" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,19 +174,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
+      <item itemvalue="JUnit.TestRepoFile.testAddDelete" />
+      <item itemvalue="JUnit.TestRepoFile.testAll" />
       <item itemvalue="JUnit.TestRepoMemory.testAll" />
-      <item itemvalue="JUnit.TestRepoMemory.testCreate" />
       <item itemvalue="JUnit.TestRepoMemory.testDelete" />
-      <item itemvalue="JUnit.TestRepoMemory.testSave" />
       <item itemvalue="JUnit.TestRepoMemory.testUpdate" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestRepoFile.testAddDelete" />
+        <item itemvalue="JUnit.TestRepoFile.testAll" />
         <item itemvalue="JUnit.TestRepoMemory.testDelete" />
         <item itemvalue="JUnit.TestRepoMemory.testAll" />
         <item itemvalue="JUnit.TestRepoMemory.testUpdate" />
-        <item itemvalue="JUnit.TestRepoMemory.testSave" />
-        <item itemvalue="JUnit.TestRepoMemory.testCreate" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +207,9 @@
       <option name="presentableId" value="Default" />
       <updated>1729093441978</updated>
       <workItem from="1729093443268" duration="1642000" />
-      <workItem from="1729107108483" duration="5895000" />
+      <workItem from="1729107108483" duration="6128000" />
+      <workItem from="1729114432992" duration="1594000" />
+      <workItem from="1729154804194" duration="5173000" />
     </task>
     <servers />
   </component>
