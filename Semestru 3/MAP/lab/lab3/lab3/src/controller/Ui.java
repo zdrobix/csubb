@@ -52,6 +52,7 @@ public class Ui {
                                         lastName,
                                         id
                                 );
+                                System.out.println("User added\n");
                             } catch (ValidationException e) {
                                 System.out.println(e.getMessage());
                             }
@@ -68,6 +69,7 @@ public class Ui {
                             }
                             try {
                                 this.serviceUtilizator.deleteUtilizator(id);
+                                System.out.println("User removed\n");
                             } catch (ValidationException e) {
                                 System.out.println(e.getMessage());
                             }

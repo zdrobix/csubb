@@ -23,6 +23,9 @@ public class ServiceUtilizator {
     }
 
     public void deleteUtilizator (long id) {
+        if (this.repo.findOne(id) == null) {
+            throw new ValidationException("User not found");
+        }
         try {
             this.repo.delete(id);
         } catch (ValidationException e) {

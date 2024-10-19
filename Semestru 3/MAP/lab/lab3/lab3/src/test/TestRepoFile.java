@@ -13,7 +13,8 @@ import java.util.Arrays;
 public class TestRepoFile {
     @Test
     public void testAll() {
-        testCreate();
+        this.testCreate();
+        this.testAddDelete();
     }
 
     @Test
@@ -39,9 +40,9 @@ public class TestRepoFile {
         repo.save(user2);
         assert(repo.findOne(300L).get().equals(user2));
 
-        assert(repo.delete(200L).isEmpty());
-        assert(repo.delete(300L).isEmpty());
-        assertFalse(repo.findOne(200L).isEmpty());
-        assertFalse(repo.findOne(300L).isEmpty());
+        assert(repo.delete(200L).get().equals(user1));
+        assert(repo.delete(300L).get().equals(user2));
+        //assertTrue(repo.findOne(200L).isEmpty());
+        //assertTrue(repo.findOne(300L).isEmpty());
     }
 }

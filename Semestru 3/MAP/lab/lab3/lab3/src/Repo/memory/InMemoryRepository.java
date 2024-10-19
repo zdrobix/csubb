@@ -48,7 +48,7 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
     public Optional<E> delete(ID id) {
         if (id == null)
             throw new ValidationException("Entity cannot be null when deleting");
-        if (entities.containsKey(id))
+        if (!entities.containsKey(id))
             return Optional.empty();
         return Optional.ofNullable(entities.remove(id));
     }

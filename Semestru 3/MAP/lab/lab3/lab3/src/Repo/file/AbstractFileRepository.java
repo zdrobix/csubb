@@ -50,7 +50,7 @@ public abstract class AbstractFileRepository<ID, E extends Entity<ID>> extends I
 
     protected void writeToFile(E entity)  {
         try {
-            var fileWriter = new FileWriter(this.fileName);
+            var fileWriter = new FileWriter(this.fileName, true);
             fileWriter.write(
                     createEntityAsString(entity) + '\n');
             fileWriter.close();

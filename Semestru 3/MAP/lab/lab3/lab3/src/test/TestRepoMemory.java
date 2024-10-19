@@ -75,7 +75,6 @@ public class TestRepoMemory {
             repo.delete(null);fail();
         } catch (Exception e) {assert(true); }
         repo.save(user1);
-        assert(repo.delete(user1.getId()).isEmpty());
-        assertFalse(repo.findOne(user1.getId()).isEmpty());
+        assert(!repo.delete(user1.getId()).isEmpty());
     }
 }

@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54bcc3d2-8fc8-4a19-b725-7df326516fee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/Ui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input/inputTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/ServiceUtilizator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestRepoFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/file/UtilizatorFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/file/UtilizatorFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Prietenie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Prietenie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Ui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/inputTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/inputTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/ServiceUtilizator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ServiceUtilizator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestRepoFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRepoFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/TestRepoMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRepoMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../script.sh" beforeDir="false" />
     </list>
@@ -50,8 +45,10 @@
   "keyToString": {
     "Application.Unnamed.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.TestRepoFile.executor": "Run",
     "JUnit.TestRepoFile.testAddDelete.executor": "Run",
     "JUnit.TestRepoFile.testAll.executor": "Run",
+    "JUnit.TestRepoFile.testCreate.executor": "Run",
     "JUnit.TestRepoMemory.executor": "Run",
     "JUnit.TestRepoMemory.testAll.executor": "Run",
     "JUnit.TestRepoMemory.testCreate.executor": "Run",
@@ -92,7 +89,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRepoFile.testAddDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRepoFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
         <pattern>
@@ -102,8 +99,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.TestRepoFile" />
-      <option name="METHOD_NAME" value="testAddDelete" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRepoMemory.testAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRepoFile.testCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
         <pattern>
@@ -133,14 +129,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
-      <option name="METHOD_NAME" value="testAll" />
+      <option name="MAIN_CLASS_NAME" value="test.TestRepoFile" />
+      <option name="METHOD_NAME" value="testCreate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRepoMemory.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRepoMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
         <pattern>
@@ -150,13 +146,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
-      <option name="METHOD_NAME" value="testDelete" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRepoMemory.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
         <pattern>
@@ -165,28 +160,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
-      <option name="METHOD_NAME" value="testUpdate" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="test.TestUser" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="JUnit.TestRepoFile.testAddDelete" />
+      <item itemvalue="JUnit.TestRepoFile" />
+      <item itemvalue="JUnit.TestRepoFile.testCreate" />
+      <item itemvalue="JUnit.TestRepoMemory" />
+      <item itemvalue="JUnit.TestUser" />
       <item itemvalue="JUnit.TestRepoFile.testAll" />
-      <item itemvalue="JUnit.TestRepoMemory.testAll" />
-      <item itemvalue="JUnit.TestRepoMemory.testDelete" />
-      <item itemvalue="JUnit.TestRepoMemory.testUpdate" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestRepoFile.testAddDelete" />
+        <item itemvalue="JUnit.TestRepoFile" />
         <item itemvalue="JUnit.TestRepoFile.testAll" />
-        <item itemvalue="JUnit.TestRepoMemory.testDelete" />
-        <item itemvalue="JUnit.TestRepoMemory.testAll" />
-        <item itemvalue="JUnit.TestRepoMemory.testUpdate" />
+        <item itemvalue="JUnit.TestRepoFile.testCreate" />
+        <item itemvalue="JUnit.TestRepoMemory" />
+        <item itemvalue="JUnit.TestUser" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +204,7 @@
       <workItem from="1729107108483" duration="6128000" />
       <workItem from="1729114432992" duration="1594000" />
       <workItem from="1729154804194" duration="5173000" />
+      <workItem from="1729368951558" duration="1576000" />
     </task>
     <servers />
   </component>
