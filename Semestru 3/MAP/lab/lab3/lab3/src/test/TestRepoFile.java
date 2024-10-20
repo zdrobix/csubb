@@ -20,7 +20,7 @@ public class TestRepoFile {
     @Test
     public void testCreate() {
         var repo = new UtilizatorFile("Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab3\\lab3\\src\\input\\inputTest.txt", new UtilizatorValidator());
-        assert(repo.findOne(100L).get().equals(new Utilizator("Alex", "Zdroba")));
+        assert(repo.findOne(100L).equals(new Utilizator("Alex", "Zdroba")));
         var user = repo.extractEntity(Arrays.asList("100", "Alex", "Zdroba"));
         assertEquals(user.getFirstName(), "Alex");
         assertEquals(user.getLastName(), "Zdroba");
@@ -35,14 +35,14 @@ public class TestRepoFile {
         var user2 = repo.extractEntity(Arrays.asList("300", "George", "George"));
 
         repo.save(user1);
-        assert(repo.findOne(200L).get().equals(user1));
+        assert(repo.findOne(200L).equals(user1));
 
         repo.save(user2);
-        assert(repo.findOne(300L).get().equals(user2));
+        assert(repo.findOne(300L).equals(user2));
 
-        assert(repo.delete(200L).get().equals(user1));
-        assert(repo.delete(300L).get().equals(user2));
-        //assertTrue(repo.findOne(200L).isEmpty());
-        //assertTrue(repo.findOne(300L).isEmpty());
+        assert(repo.delete(200L).equals(user1));
+        assert(repo.delete(300L).equals(user2));
+        assertTrue(repo.findOne(200L) == null);
+        assertTrue(repo.findOne(300L) == null);
     }
 }

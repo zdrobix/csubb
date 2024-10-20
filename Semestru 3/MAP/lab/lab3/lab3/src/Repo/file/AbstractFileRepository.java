@@ -41,17 +41,27 @@ public abstract class AbstractFileRepository<ID, E extends Entity<ID>> extends I
     protected abstract String createEntityAsString(E entity);
 
     @Override
-    public Optional<E> save(E entity) {
+    public E save(E entity) {
         var result = super.save(entity);
-        if (result.isEmpty())
-            this.writeToFile(entity);
+        if (result == null)
+            this.writeToFile();
         return result;
     }
 
-    protected void writeToFile(E entity)  {
+    @Override
+    public E delete(ID id)
+    {
+        var result = super.delete(id);
+        if (result != null)
+            this.writeToFile();
+        return result;
+    }
+
+    protected void writeToFile()  {
         try {
-            var fileWriter = new FileWriter(this.fileName, true);
-            fileWriter.write(
+            var fileWriter = new FileWriter(this.fileName, false);
+            for (var entity : super.findAll())
+                fileWriter.write(
                     createEntityAsString(entity) + '\n');
             fileWriter.close();
         } catch (Exception e) {

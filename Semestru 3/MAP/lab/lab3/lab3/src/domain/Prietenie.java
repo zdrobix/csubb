@@ -13,9 +13,10 @@ public class Prietenie extends Entity<Long> {
         this.date = LocalDateTime.now();
     }
 
-    public Prietenie(Long idFriend1, Long idFriend2) {
-        this.idFriend1 = idFriend1;
-        this.idFriend2 = idFriend2;
+    public Prietenie(Long idFriend1_, Long idFriend2_, LocalDateTime date_) {
+        this.idFriend1 = idFriend1_;
+        this.idFriend2 = idFriend2_;
+        this.date = date_;
     }
 
     public Long getIdFriend1() {

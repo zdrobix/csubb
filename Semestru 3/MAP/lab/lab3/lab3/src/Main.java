@@ -8,11 +8,6 @@ import test.TestUser;
 
 public class Main {
     public static void main(String[] args) {
-
-        new TestUser().testAll();
-        new TestRepoMemory().testAll();
-        new TestRepoFile().testAll();
-
         new Ui(
                 new ServiceUtilizator(
                         new UtilizatorFile(

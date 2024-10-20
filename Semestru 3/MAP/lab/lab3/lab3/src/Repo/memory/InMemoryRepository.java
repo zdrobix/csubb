@@ -23,10 +23,10 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
 
 
     @Override
-    public Optional<E> findOne(ID id) {
+    public E findOne(ID id) {
         if (id == null)
             throw new ValidationException("Cannot find a null id.");
-        return Optional.ofNullable(entities.get(id));
+        return entities.get(id);
     }
 
     @Override
@@ -37,32 +37,30 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
     }
 
     @Override
-    public Optional<E> save(E entity)  {
+    public E save(E entity)  {
         if (entity == null)
             throw new ValidationException("Entity cannot be null when saving");
         this.validator.validate(entity);
-        return Optional.ofNullable(entities.putIfAbsent(entity.getId(), entity));
+        return entities.putIfAbsent(entity.getId(), entity);
     }
 
     @Override
-    public Optional<E> delete(ID id) {
+    public E delete(ID id) {
         if (id == null)
             throw new ValidationException("Entity cannot be null when deleting");
-        if (!entities.containsKey(id))
-            return Optional.empty();
-        return Optional.ofNullable(entities.remove(id));
+        return entities.remove(id);
     }
 
     @Override
-    public Optional<E> update(E entity) {
+    public E update(E entity) {
         if (entity == null)
             throw new ValidationException("Entity cannot be null when updating");
         this.validator.validate(entity);
-        if (this.entities.containsKey(entity.getId())) {
-            this.entities.put(entity.getId(), entity);
-            return Optional.empty();
+        this.entities.put(entity.getId(), entity);
+        if (entities.get(entity.getId()) == null) {
+            return entity;
         }
-        return Optional.of(entity);
+        this.entities.put(entity.getId(), entity);
+        return null;
     }
-
 }

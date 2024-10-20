@@ -2,14 +2,16 @@ package service;
 
 import domain.validators.ValidationException;
 import repo.file.UtilizatorFile;
+import repo.file.PrietenieFile;
 import domain.Utilizator;
-import domain.validators.UtilizatorValidator;
 
 public class ServiceUtilizator {
     private UtilizatorFile repo;
+    private PrietenieFile repoPrieteni;
 
-    public ServiceUtilizator(UtilizatorFile repo_) {
+    public ServiceUtilizator(UtilizatorFile repo_, PrietenieFile repoPrieteni_) {
         this.repo = repo_;
+        this.repoPrieteni = repoPrieteni_;
     }
 
     public void addUtilizator (String firstName, String lastName, long id) {
@@ -27,6 +29,7 @@ public class ServiceUtilizator {
             throw new ValidationException("User not found");
         }
         try {
+
             this.repo.delete(id);
         } catch (ValidationException e) {
             throw new ValidationException(e.getMessage());

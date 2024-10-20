@@ -24,7 +24,7 @@ public class TestRepoMemory {
         var user1 = new Utilizator("Alex", "Zdroba");
         user1.setId(1L);
         repo.save(user1);
-        assert(repo.findOne(user1.getId()).get().equals(user1));
+        assert(repo.findOne(user1.getId()).equals(user1));
         assertNotEquals(repo.findOne(user1.getId()), null);
         assertNotEquals(repo.findOne(2L), user1);
     }
@@ -44,7 +44,7 @@ public class TestRepoMemory {
             repo.save(new Utilizator("", "asdadasdad")); fail();
         } catch (Exception e) { assert(true);}
         repo.save(user1);
-        assert(repo.findOne(user1.getId()).get().equals(user1));
+        assert(repo.findOne(user1.getId()).equals(user1));
     }
 
     @Test
@@ -63,7 +63,7 @@ public class TestRepoMemory {
         } catch (Exception e) { assert(true);}
         repo.save(user1);
         user1.setFirstName("Alexandru");
-        assert(repo.update(user1).isEmpty());
+        assert(repo.update(user1) == null);
     }
 
     @Test
@@ -75,6 +75,6 @@ public class TestRepoMemory {
             repo.delete(null);fail();
         } catch (Exception e) {assert(true); }
         repo.save(user1);
-        assert(!repo.delete(user1.getId()).isEmpty());
+        assert(repo.delete(user1.getId()) != null);
     }
 }
