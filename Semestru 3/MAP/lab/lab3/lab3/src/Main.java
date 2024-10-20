@@ -1,18 +1,21 @@
 import controller.Ui;
+import domain.validators.PrietenieValidator;
 import domain.validators.UtilizatorValidator;
+import repo.file.PrietenieFile;
 import repo.file.UtilizatorFile;
-import service.ServiceUtilizator;
-import test.TestRepoFile;
-import test.TestRepoMemory;
-import test.TestUser;
+import service.Service;
 
 public class Main {
     public static void main(String[] args) {
         new Ui(
-                new ServiceUtilizator(
+                new Service(
                         new UtilizatorFile(
                                 "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab3\\lab3\\src\\input\\input.txt",
                                 new UtilizatorValidator()
+                        ),
+                        new PrietenieFile(
+                                "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab3\\lab3\\src\\input\\inputPrieteni.txt",
+                                new PrietenieValidator()
                         ))).Run();
     }
 }

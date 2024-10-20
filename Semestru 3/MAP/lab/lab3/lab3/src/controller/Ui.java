@@ -1,15 +1,15 @@
 package controller;
 
 import domain.validators.ValidationException;
-import service.ServiceUtilizator;
-import domain.Utilizator;
+import service.Service;
 
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Ui {
-    private ServiceUtilizator serviceUtilizator;
+    private Service serviceUtilizator;
 
-    public Ui(ServiceUtilizator serviceUtilizator_) {
+    public Ui(Service serviceUtilizator_) {
         this.serviceUtilizator = serviceUtilizator_;
     }
     public void Run () {
@@ -90,10 +90,40 @@ public class Ui {
                     var option2 = read.nextLine().trim().toUpperCase();
                     switch (option2) {
                         case "A": {
-
+                            Long id1 = 0L, id2 = 0L;
+                            try {
+                                System.out.print("Enter the ID of the first friend: ");
+                                id1 = Long.parseLong(read.nextLine().trim());
+                                System.out.print("Enter the ID of the second friend: ");
+                                id2 = Long.parseLong(read.nextLine().trim());
+                            } catch (Exception e) {
+                                System.out.println("Invalid ID");
+                            }
+                            try {
+                                this.serviceUtilizator.addPrietenie(id1, id2);
+                                System.out.println("Friendship added\n");
+                            } catch (ValidationException e) {
+                                System.out.println(e.getMessage());
+                            }
+                            break;
                         }
                         case "B": {
-
+                            Long id1 = 0L, id2 = 0L;
+                            try {
+                                System.out.print("Enter the ID of the first friend: ");
+                                id1 = Long.parseLong(read.nextLine().trim());
+                                System.out.print("Enter the ID of the second friend: ");
+                                id2 = Long.parseLong(read.nextLine().trim());
+                            } catch (Exception e) {
+                                System.out.println("Invalid ID");
+                            }
+                            try {
+                                this.serviceUtilizator.deletePrietenie(id1, id2);
+                                System.out.println("Friendship deleted\n");
+                            } catch (ValidationException e) {
+                                System.out.println(e.getMessage());
+                            }
+                            break;
                         }
                         case "X": {
                             break;

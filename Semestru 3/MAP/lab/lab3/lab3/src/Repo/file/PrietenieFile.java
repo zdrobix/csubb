@@ -4,7 +4,7 @@ import domain.Prietenie;
 import domain.Tuple;
 import domain.validators.Validator;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 public class PrietenieFile extends AbstractFileRepository<Tuple<Long, Long>, Prietenie> {
@@ -20,7 +20,7 @@ public class PrietenieFile extends AbstractFileRepository<Tuple<Long, Long>, Pri
                     attributes.get(0)),
             Long.parseLong(
                     attributes.get(1)),
-            LocalDateTime.parse(
+            LocalDate.parse(
                     attributes.get(2))
         );
     }

@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54bcc3d2-8fc8-4a19-b725-7df326516fee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Repo/file/PrietenieFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/validators/PrietenieValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input/inputPrieteni.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../BD/lab/lab1.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/file/PrietenieFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/file/PrietenieFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Ui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/Prietenie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Prietenie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ServiceUtilizator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ServiceUtilizator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestRepoFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRepoFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestRepoMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRepoMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/validators/PrietenieValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/validators/PrietenieValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/inputPrieteni.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/inputPrieteni.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/ServiceUtilizator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../script.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +210,7 @@
       <workItem from="1729114432992" duration="1594000" />
       <workItem from="1729154804194" duration="5173000" />
       <workItem from="1729368951558" duration="1714000" />
-      <workItem from="1729427632113" duration="3406000" />
+      <workItem from="1729427632113" duration="6227000" />
     </task>
     <servers />
   </component>

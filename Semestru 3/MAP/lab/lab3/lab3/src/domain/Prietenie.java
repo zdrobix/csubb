@@ -1,19 +1,19 @@
 package domain;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 
-public class Prietenie extends Entity<Long> {
+public class Prietenie extends Entity<Tuple<Long, Long>> {
 
-    LocalDateTime date;
+    LocalDate date;
     Long idFriend1;
     Long idFriend2;
 
     public Prietenie() {
-        this.date = LocalDateTime.now();
+        this.date = LocalDate.now();
     }
 
-    public Prietenie(Long idFriend1_, Long idFriend2_, LocalDateTime date_) {
+    public Prietenie(Long idFriend1_, Long idFriend2_, LocalDate date_) {
         this.idFriend1 = idFriend1_;
         this.idFriend2 = idFriend2_;
         this.date = date_;
@@ -27,7 +27,7 @@ public class Prietenie extends Entity<Long> {
         return idFriend2;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 }
