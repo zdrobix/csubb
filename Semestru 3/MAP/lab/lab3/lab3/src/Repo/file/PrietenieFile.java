@@ -31,5 +31,7 @@ public class PrietenieFile extends AbstractFileRepository<Tuple<Long, Long>, Pri
                 entity.getIdFriend2() + ";" +
                 entity.getDate();
     }
+
+
 }
 
