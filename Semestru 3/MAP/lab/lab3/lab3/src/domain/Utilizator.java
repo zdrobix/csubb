@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Utilizator extends Entity<Long>{
     private String firstName;
     private String lastName;
-    private List<Utilizator> prieteni;
+    private List<Long> prieteni;
 
     public Utilizator(String firstName, String lastName) {
         this.firstName = firstName;
@@ -31,8 +31,16 @@ public class Utilizator extends Entity<Long>{
         this.lastName = lastName;
     }
 
-    public List<Utilizator> getFriends() {
+    public List<Long> getFriends() {
         return this.prieteni;
+    }
+
+    public void addFriend(Utilizator friend) {
+        this.prieteni.add(friend.getId());
+    }
+
+    public void removeFriend(Utilizator friend) {
+        this.prieteni.remove(friend.getId());
     }
 
     @Override

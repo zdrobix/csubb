@@ -36,6 +36,13 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
         return null;
     }
 
+    public Integer size () {
+        int count = 0;
+        for (var entity : entities.values())
+            count ++;
+        return count;
+    }
+
     @Override
     public E save(E entity)  {
         if (entity == null)

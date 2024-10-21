@@ -14,6 +14,7 @@ public class Ui {
     }
     public void Run () {
         System.out.println("Welcome to SocialNetwork!\n");
+        //this.serviceUtilizator.printAll();
         boolean exit = false;
         while (true) {
             System.out.print("" +
@@ -140,10 +141,14 @@ public class Ui {
                     var option2 = read.nextLine().trim().toUpperCase();
                     switch (option2) {
                         case "A": {
-
+                            var number = this.serviceUtilizator.numberOfCommunities();
+                            if (number == 1)
+                                System.out.println("There is a single community.");
+                            else System.out.println("There are " + number + " communities");
+                            break;
                         }
                         case "B": {
-
+                            break;
                         }
                         case "X": {
                             break;

@@ -1,5 +1,5 @@
 1;Alex;Zdroba
-2;Alex;Popescu
+2;Marius;Popica
 3;Bob;Salut
 4;Lucian;Ranga
 5;Andrei;Ionescu
@@ -19,5 +19,3 @@
 19;Florin;Petrescu
 20;Sorina;Neagu
 21;Cosmin;Tudor
-22;Roxana;Grigore
-23;Bogdan;Oprea
