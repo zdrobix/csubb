@@ -88,13 +88,16 @@ public class Service {
         }
     }
 
-    private void DFS(Long userId, boolean[] visited) {
+    private Integer DFS(Long userId, boolean[] visited, List<Long> userIds) {
         visited[userId.intValue()] = true;
+        int size = 1;
+        userIds.add(userId);
         for (Long friendId : this.repo.findOne(userId).getFriends()) {
             if (!visited[friendId.intValue()]) {
-                DFS(friendId, visited);
+                size += DFS(friendId, visited, userIds);
             }
         }
+        return size;
     }
 
     public Integer numberOfCommunities() {
@@ -103,14 +106,33 @@ public class Service {
         for (var user : this.repo.findAll()) {
             Long userId = user.getId();
             if (!visited[userId.intValue()]) {
-                DFS(userId, visited);
+                DFS(userId, visited, null);
                 count++;
             }
         }
         return count;
     }
 
-    public List<Utilizator> largestCommunity () {
-        return new ArrayList<>();
+    public List<Long> largestCommunity () {
+        boolean[] visited = new boolean[this.repo.size() + 1];
+        List<Long> largestCommunityIds = new ArrayList<>();
+        int maxSize = 0;
+        for (var user : this.repo.findAll()) {
+            Long userId = user.getId();
+            if (!visited[userId.intValue()]) {
+                List<Long> userIds = new ArrayList<>();
+                int size = DFS(userId, visited, userIds);
+                if (size > maxSize) {
+                    maxSize = size;
+                    largestCommunityIds.clear();
+                    largestCommunityIds.addAll(userIds);
+                }
+            }
+        }
+        return largestCommunityIds;
+    }
+
+    public Utilizator getUtilizator(Long id) {
+        return this.repo.findOne(id);
     }
 }

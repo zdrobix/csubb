@@ -148,6 +148,11 @@ public class Ui {
                             break;
                         }
                         case "B": {
+                            System.out.println("The largest community is: ");
+                            for (var userId : this.serviceUtilizator.largestCommunity()) {
+                                System.out.print(this.serviceUtilizator.getUtilizator(userId).getFirstName() + " ");
+                            }
+                            System.out.println();
                             break;
                         }
                         case "X": {
