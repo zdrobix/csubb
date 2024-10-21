@@ -1,0 +1,20 @@
+Problema 8:
+
+a) cel mai mare divizor comun al elementelor unei liste
+
+divizor(lista, div): 0 - daca n = 0
+		     1 - daca div = 1
+		     divizor(l2..ln, cmmdc(l1, div)) - daca div != 1 si n != 0
+
+cmmdc(nr1, nr2): nr1 - daca nr1 = nr2
+	 	 1 - daca nr1 < 1 sau nr2 < 1
+                 cmmdc(nr1 - nr2, nr2) - daca nr1 > nr2
+	    	 cmmdc(nr1, nr2 - nr1) - daca nr1 < nr2
+                 
+
+
+b) sa se insereze un element pe pozitia n
+
+insert(lista, e) : [e] - daca eVida(lista) = true
+  	           l1 + insert(subsir(lista), e) - daca n != 0
+	   
