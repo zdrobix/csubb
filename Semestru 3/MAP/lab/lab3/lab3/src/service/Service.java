@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Service {
-    private UtilizatorFile repo;
-    private PrietenieFile repoPrieteni;
+    private final UtilizatorFile repo;
+    private final PrietenieFile repoPrieteni;
 
     public Service(UtilizatorFile repo_, PrietenieFile repoPrieteni_) {
         this.repo = repo_;
@@ -60,7 +60,7 @@ public class Service {
         try {
             var friends = new Prietenie(id1, id2, LocalDate.now());
             friends.setId(
-                    new Tuple<Long, Long>(
+                    new Tuple<>(
                             id1, id2));
             PrietenieValidator.validate2(friends, this.repoPrieteni, this.repo);
             this.repoPrieteni.save(friends);
@@ -72,10 +72,14 @@ public class Service {
 
     public void deletePrietenie (long id1, long id2) {
         try {
-            var friends = this.repoPrieteni.findOne(new Tuple<Long, Long>(
-                    id1, id2));
             PrietenieValidator.validate3(id1, id2, this.repo);
-            this.repoPrieteni.delete(new Tuple<Long, Long>(
+            var user1 = this.repo.findOne(id1);
+            var user2 = this.repo.findOne(id2);
+            if (user1 == null || user2 == null)
+                throw new ValidationException("User not found");
+            user1.removeFriend(user2);
+            user2.removeFriend(user1);
+            this.repoPrieteni.delete(new Tuple<>(
                     id1, id2));
         } catch (ValidationException e) {
             throw new ValidationException(e.getMessage());
@@ -103,10 +107,11 @@ public class Service {
     public Integer numberOfCommunities() {
         boolean[] visited = new boolean[this.repo.size() + 1];
         int count = 0;
+        List<Long> list = new ArrayList<>();
         for (var user : this.repo.findAll()) {
             Long userId = user.getId();
             if (!visited[userId.intValue()]) {
-                DFS(userId, visited, null);
+                DFS(userId, visited, list);
                 count++;
             }
         }

@@ -9,7 +9,7 @@
 9;Elena;Dumitrescu
 10;Cristian;Stan
 11;Radu;Georgescu
-12;Alina;Nistor
+12;Baws;Georgescu
 13;Vlad;Munteanu
 14;Diana;Nicolae
 15;Iulia;Constantin

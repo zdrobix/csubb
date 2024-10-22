@@ -3,35 +3,39 @@ package controller;
 import domain.validators.ValidationException;
 import service.Service;
 
-import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Ui {
-    private Service serviceUtilizator;
+    private final Service serviceUtilizator;
 
     public Ui(Service serviceUtilizator_) {
         this.serviceUtilizator = serviceUtilizator_;
     }
     public void Run () {
         System.out.println("Welcome to SocialNetwork!\n");
-        //this.serviceUtilizator.printAll();
         boolean exit = false;
-        while (true) {
-            System.out.print("" +
-                    "A. User\n" +
-                    "B. Friends\n" +
-                    "C. Communities\n\n" +
-                    "X. Exit\n\n" +
-                    "Enter option: ");
+        do {
+            System.out.print(
+                    """
+                            A. User
+                            B. Friends
+                            C. Communities
+                            
+                            X. Exit
+                            
+                            Enter option:\s""");
             var read = new Scanner(System.in);
             var option = read.nextLine().trim().toUpperCase();
             switch (option) {
                 case "A": {
-                    System.out.print("" +
-                            "A. Add user\n" +
-                            "B. Remove User\n\n" +
-                            "X. Exit\n\n" +
-                            "Enter option: ");
+                    System.out.print(
+                            """
+                                    A. Add user
+                                    B. Remove User
+                                    
+                                    X. Exit
+                                    
+                                    Enter option:\s""");
                     var option2 = read.nextLine().trim().toUpperCase();
                     switch (option2) {
                         case "A": {
@@ -40,7 +44,7 @@ public class Ui {
                             System.out.print("Last name: ");
                             var lastName = read.nextLine().trim();
                             System.out.print("ID: ");
-                            Long id;
+                            long id;
                             try {
                                 id = Long.parseLong(read.nextLine().trim());
                             } catch (Exception e) {
@@ -61,7 +65,7 @@ public class Ui {
                         }
                         case "B": {
                             System.out.print("Enter the ID of the user you want to remove: ");
-                            Long id;
+                            long id;
                             try {
                                 id = Long.parseLong(read.nextLine().trim());
                             } catch (Exception e) {
@@ -83,15 +87,18 @@ public class Ui {
                     break;
                 }
                 case "B": {
-                    System.out.print("" +
-                            "A. Add friendship\n" +
-                            "B. Remove friendship\n\n" +
-                            "X. Exit\n\n" +
-                            "Enter option: ");
+                    System.out.print(
+                            """
+                                    A. Add friendship
+                                    B. Remove friendship
+                                    
+                                    X. Exit
+                                    
+                                    Enter option:\s""");
                     var option2 = read.nextLine().trim().toUpperCase();
                     switch (option2) {
                         case "A": {
-                            Long id1 = 0L, id2 = 0L;
+                            long id1 = 0L, id2 = 0L;
                             try {
                                 System.out.print("Enter the ID of the first friend: ");
                                 id1 = Long.parseLong(read.nextLine().trim());
@@ -109,7 +116,7 @@ public class Ui {
                             break;
                         }
                         case "B": {
-                            Long id1 = 0L, id2 = 0L;
+                            long id1 = 0L, id2 = 0L;
                             try {
                                 System.out.print("Enter the ID of the first friend: ");
                                 id1 = Long.parseLong(read.nextLine().trim());
@@ -133,11 +140,14 @@ public class Ui {
                     break;
                 }
                 case "C": {
-                    System.out.print("" +
-                            "A. Count communities\n" +
-                            "B. Larges community\n\n" +
-                            "X. Exit\n\n" +
-                            "Enter option: ");
+                    System.out.print(
+                            """
+                                    A. Count communities
+                                    B. Larges community
+                                    
+                                    X. Exit
+                                    
+                                    Enter option:\s""");
                     var option2 = read.nextLine().trim().toUpperCase();
                     switch (option2) {
                         case "A": {
@@ -170,7 +180,6 @@ public class Ui {
                     break;
                 }
             }
-            if (exit) break;
-        }
+        } while (!exit);
     }
 }

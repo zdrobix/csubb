@@ -7,8 +7,11 @@
     <list default="true" id="54bcc3d2-8fc8-4a19-b725-7df326516fee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Ui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/input/inputPrieteni.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/inputPrieteni.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/inputTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/inputTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestRepoMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRepoMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../PLF/lab/lab1.pl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../PLF/lab/lab1.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../PLF/lab/lab1_scris.txt" beforeDir="false" />
@@ -120,7 +123,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRepoMemory.testAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRepoMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
         <pattern>
@@ -130,8 +133,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
-      <option name="METHOD_NAME" value="testAll" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,19 +171,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
+      <item itemvalue="JUnit.TestRepoMemory" />
       <item itemvalue="JUnit.TestRepoFile.testAddDelete" />
-      <item itemvalue="JUnit.TestRepoMemory.testAll" />
       <item itemvalue="JUnit.TestRepoMemory.testCreate" />
       <item itemvalue="JUnit.TestRepoFile" />
       <item itemvalue="JUnit.TestUser" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestRepoFile.testAddDelete" />
         <item itemvalue="JUnit.TestUser" />
-        <item itemvalue="JUnit.TestRepoMemory.testCreate" />
-        <item itemvalue="JUnit.TestRepoMemory.testAll" />
         <item itemvalue="JUnit.TestRepoFile" />
+        <item itemvalue="JUnit.TestRepoMemory" />
+        <item itemvalue="JUnit.TestRepoFile.testAddDelete" />
+        <item itemvalue="JUnit.TestRepoMemory.testCreate" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +208,8 @@
       <workItem from="1729114432992" duration="1594000" />
       <workItem from="1729154804194" duration="5173000" />
       <workItem from="1729368951558" duration="1714000" />
-      <workItem from="1729427632113" duration="14893000" />
+      <workItem from="1729427632113" duration="15040000" />
+      <workItem from="1729572677319" duration="2488000" />
     </task>
     <servers />
   </component>

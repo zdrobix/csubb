@@ -1,7 +1,6 @@
 package test;
 
 import domain.validators.UtilizatorValidator;
-import jdk.jshell.execution.Util;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,7 +19,7 @@ public class TestRepoMemory {
 
     @Test
     public void testCreate(){
-        var repo = new InMemoryRepository<Long, Utilizator>(new UtilizatorValidator());
+        var repo = new InMemoryRepository<>(new UtilizatorValidator());
         var user1 = new Utilizator("Alex", "Zdroba");
         user1.setId(1L);
         repo.save(user1);
@@ -31,7 +30,7 @@ public class TestRepoMemory {
 
     @Test
     public void testSave() {
-        var repo = new InMemoryRepository<Long, Utilizator>(new UtilizatorValidator());
+        var repo = new InMemoryRepository<>(new UtilizatorValidator());
         var user1 = new Utilizator("Alex", "Zdroba");
         user1.setId(1L);
         try {
@@ -49,7 +48,7 @@ public class TestRepoMemory {
 
     @Test
     public void testUpdate() {
-        var repo = new InMemoryRepository<Long, Utilizator>(new UtilizatorValidator());
+        var repo = new InMemoryRepository<>(new UtilizatorValidator());
         var user1 = new Utilizator("Alex", "Zdroba");
         user1.setId(1L);
         try {
@@ -68,7 +67,7 @@ public class TestRepoMemory {
 
     @Test
     public void testDelete() {
-        var repo = new InMemoryRepository<Long, Utilizator>(new UtilizatorValidator());
+        var repo = new InMemoryRepository<>(new UtilizatorValidator());
         var user1 = new Utilizator("Alex", "Zdroba");
         user1.setId(1L);
         try {

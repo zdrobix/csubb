@@ -9,16 +9,15 @@ import repo.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<ID,E> {
 
-    private Validator<E> validator;
+    private final Validator<E> validator;
     Map<ID,E> entities;
 
     public InMemoryRepository(Validator<E> validator) {
         this.validator = validator;
-        entities=new HashMap<ID,E>();
+        entities= new HashMap<>();
     }
 
 
@@ -38,7 +37,7 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
 
     public Integer size () {
         int count = 0;
-        for (var entity : entities.values())
+        for (var _ : entities.values())
             count ++;
         return count;
     }
