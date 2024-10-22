@@ -10,16 +10,36 @@
  * R: lista rezultata in urma intercalarii
  *
  * Model matematic:
- * E U [L1,..,Ln]   -daca P = 1
- * intercalareElement(L2...Ln, E, P - 1, L1 U C) - daca P > 1
+ * intercalareElement(L1...Ln, E, P) =
+ * E U [L1,..,Ln]   - daca P = 1
+ * L1 U intercalareElement(L2...Ln, E, P - 1) - daca P > 1
  */
 
  intercalareElement(L, E, 1, [E|L]):-!.
  intercalareElement([H|T], E, P, [H|R]):-
     P > 1,
-    P1 is P -1,
+    P1 is P - 1,
     intercalareElement(T, E, P1, R).
 
+/* Cel mai mare divizor comun a doua numere
+ *
+ *  cmmdc(A:intreg, B: intreg, Rez: intreg)
+ *
+ *  model de flux(i, i, o)
+ *  A: primul numar
+ *  B: al doilea numar
+ *  Rez: cel mai mare divizor comun al lui a si b
+ *
+ *  Model matematic(A, B):
+ *
+ *  cmmdc(nr1, nr2) : nr1 - daca nr2 = 0
+ *                    cmmdc(nr2, nr1 % nr2) - daca nr2 != 0
+ */
+cmmdc(A, 0, A):-!.
+cmmdc(A, B, Rez):-
+    B > 0,
+    B1 is A mod B,
+    cmmdc(B, B1, Rez).
 
 /*
  * 10b) Definiti un predicat care intoarce cel mai mare divizor comun al
@@ -37,32 +57,12 @@
  * Model matematic:
  * 0          - daca L = []
  * N          - daca L = [N]
- * divizorComun(L2..Ln, cmmdc(D, L1) - daca D != 1
+ * cmmdc(L1, divizorComun(L2..Ln)) - daca D != 1
  */
 
 
-/* Cel mai mare divizor comun a doua numere
- *
- *  cmmdc(A:intreg, B: intreg, Rez: intreg)
- *
- *  model de flux(i, i, o)
- *  A: primul numar
- *  B: al doilea numar
- *  Rez: cel mai mare divizor comun al lui a si b
- *
- *  Model matematic:
- *
- *  cmmdc(nr1, nr2) : nr1 - daca nr2 = 0
- *                    cmmdc(nr2, nr1 % nr2) - daca nr2 != 0
- */
-cmmdc(A, 0, A):-!.
-cmmdc(A, B, Rez):-
-    B > 0,
-    B1 is A mod B,
-    cmmdc(B, B1, Rez).
 
-
-divizorComun([], 0):-!.
+divizorComun([], _):-!.
 divizorComun([H], H):-!.
 divizorComun([H|T], D):-
     divizorComun(T, D1),

@@ -17,29 +17,8 @@
  intercalareElement(L, E, 1, [E|L]):-!.
  intercalareElement([H|T], E, P, [H|R]):-
     P > 1,
-    P1 is P -1,
+    P1 is P - 1,
     intercalareElement(T, E, P1, R).
-
-
-/*
- * 10b) Definiti un predicat care intoarce cel mai mare divizor comun al
- * nr unei liste.
- *
- * divizorComun(L:lista, D:divizor)
- *
- * model de flux(i, o)
- *
- * L: lista pentru care se cauta cel mai mare divizor comun
- * D: parametru in care se va retine divizorul
- *
- * Apel functie: (L2..Ln, L1)
- *
- * Model matematic:
- * 0          - daca L = []
- * N          - daca L = [N]
- * divizorComun(L2..Ln, cmmdc(D, L1) - daca D != 1
- */
-
 
 /* Cel mai mare divizor comun a doua numere
  *
@@ -61,8 +40,27 @@ cmmdc(A, B, Rez):-
     B1 is A mod B,
     cmmdc(B, B1, Rez).
 
+/*
+ * 10b) Definiti un predicat care intoarce cel mai mare divizor comun al
+ * nr unei liste.
+ *
+ * divizorComun(L:lista, D:divizor)
+ *
+ * model de flux(i, o)
+ *
+ * L: lista pentru care se cauta cel mai mare divizor comun
+ * D: parametru in care se va retine divizorul
+ *
+ * Apel functie: (L2..Ln, L1)
+ *
+ * Model matematic:
+ * 0          - daca L = []
+ * N          - daca L = [N]
+ * divizorComun(L2..Ln, cmmdc(D, L1) - daca D != 1
+ */
 
-divizorComun([], 0):-!.
+
+divizorComun([], _):-!.
 divizorComun([H], H):-!.
 divizorComun([H|T], D):-
     divizorComun(T, D1),
@@ -76,5 +74,6 @@ test_All():-
     assertion(divizorComun([10, 20, 30], 10)),
     assertion(divizorComun([1, 2, 34], 1)),
     assertion(not(divizorComun([1, 2, 3], 2))),
-    assertion(not(intercalareElement([1, 2, 3], 1, 1, [1, 2, 3]))).
+    assertion(not(intercalareElement([1, 2, 3], 1, 1, [1, 2, 3]))),
+    assertion(not(intercalareElement([1, 2], 4, 4, [1, 2, 4]))).
 
