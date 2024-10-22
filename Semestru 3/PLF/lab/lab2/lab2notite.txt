@@ -1,0 +1,5 @@
+constructie liste -> revenirea din recursivitate
+			f(l1..ln) = -l1 U f(l2..ln)
+			
+		  -> metoda variabilei colectoare
+			f(l1..ln, C) = f(l2..ln, l1 U C)
