@@ -22,10 +22,10 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
 
 
     @Override
-    public E findOne(ID id) {
+    public Optional<E> findOne(ID id) {
         if (id == null)
             throw new ValidationException("Cannot find a null id.");
-        return entities.get(id);
+        return Optional.ofNullable(entities.get(id));
     }
 
     @Override
@@ -43,18 +43,18 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
     }
 
     @Override
-    public E save(E entity)  {
+    public Optional<E> save(E entity)  {
         if (entity == null)
             throw new ValidationException("Entity cannot be null when saving");
         this.validator.validate(entity);
-        return entities.putIfAbsent(entity.getId(), entity);
+        return Optional.ofNullable(entities.putIfAbsent(entity.getId(), entity));
     }
 
     @Override
-    public E delete(ID id) {
+    public Optional<E> delete(ID id) {
         if (id == null)
             throw new ValidationException("Entity cannot be null when deleting");
-        return entities.remove(id);
+        return Optional.ofNullable(entities.remove(id));
     }
 
     @Override

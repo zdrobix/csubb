@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5f1514bf-137b-4e8c-83d4-f19bf74b987e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/lab3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/Repo/Entity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/Repo/InMemoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/Repo/Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/Repo/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/domain/MyMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/domain/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +17,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2nWeifjujz9FqsjEQBq1rcCXgU9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,10 +31,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "Q:/info/csubb/Semestru 3/MAP/lab/lab3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -68,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729093389785</updated>
       <workItem from="1729093391466" duration="50000" />
+      <workItem from="1729799225525" duration="523000" />
     </task>
     <servers />
   </component>

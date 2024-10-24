@@ -10,11 +10,11 @@ public class Main {
         new Ui(
                 new Service(
                         new UtilizatorFile(
-                                "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab3\\lab3\\src\\input\\input.txt",
+                                "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab3\\lab3\\src\\input\\users.txt",
                                 new UtilizatorValidator()
                         ),
                         new PrietenieFile(
-                                "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab3\\lab3\\src\\input\\inputPrieteni.txt",
+                                "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab3\\lab3\\src\\input\\friendship.txt",
                                 new PrietenieValidator()
                         ))).Run();
     }

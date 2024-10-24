@@ -7,16 +7,16 @@ import java.util.Optional;
 
 public interface Repository<ID, E extends Entity<ID>> {
 
-    E findOne(ID id);
+    Optional<E> findOne(ID id);
 
     Iterable<E> findAll();
 
-    E save(E entity);
+    Optional<E> save(E entity);
 
 
-    E delete(ID id);
+    Optional<E> delete(ID id);
 
-    E update(E entity);
+    Optional<E> update(E entity);
 
 }
 
