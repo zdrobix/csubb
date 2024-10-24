@@ -45,8 +45,8 @@ public class Service {
             }
             for (var delete : toDelete)
                 this.repoPrieteni.delete(delete);
-            for (Long idUser : this.repo.findOne(id).getFriends()) {
-                this.repo.findOne(idUser).removeFriend(this.repo.findOne(id));
+            for (Long idUser : this.repo.findOne(id).get().getFriends()) {
+                this.repo.findOne(idUser).get().removeFriend(this.repo.findOne(id).get());
             }
 
             this.repo.delete(id);
@@ -73,8 +73,8 @@ public class Service {
     public void deletePrietenie (long id1, long id2) {
         try {
             PrietenieValidator.validate3(id1, id2, this.repo);
-            var user1 = this.repo.findOne(id1);
-            var user2 = this.repo.findOne(id2);
+            var user1 = this.repo.findOne(id1).get();
+            var user2 = this.repo.findOne(id2).get();
             if (user1 == null || user2 == null)
                 throw new ValidationException("User not found");
             user1.removeFriend(user2);
@@ -96,7 +96,7 @@ public class Service {
         visited[userId.intValue()] = true;
         int size = 1;
         userIds.add(userId);
-        for (Long friendId : this.repo.findOne(userId).getFriends()) {
+        for (Long friendId : this.repo.findOne(userId).get().getFriends()) {
             if (!visited[friendId.intValue()]) {
                 size += DFS(friendId, visited, userIds);
             }
@@ -138,6 +138,6 @@ public class Service {
     }
 
     public Utilizator getUtilizator(Long id) {
-        return this.repo.findOne(id);
+        return this.repo.findOne(id).get();
     }
 }

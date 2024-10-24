@@ -7,6 +7,7 @@ import repo.memory.InMemoryRepository;
 import java.io.*;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
 
@@ -40,7 +41,7 @@ public abstract class AbstractFileRepository<ID, E extends Entity<ID>> extends I
     protected abstract String createEntityAsString(E entity);
 
     @Override
-    public E save(E entity) {
+    public Optional<E> save(E entity) {
         var result = super.save(entity);
         if (result == null)
             this.writeToFile();
@@ -48,7 +49,7 @@ public abstract class AbstractFileRepository<ID, E extends Entity<ID>> extends I
     }
 
     @Override
-    public E delete(ID id)
+    public Optional<E> delete(ID id)
     {
         var result = super.delete(id);
         if (result != null)

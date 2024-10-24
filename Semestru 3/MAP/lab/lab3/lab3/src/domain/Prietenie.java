@@ -44,8 +44,8 @@ public class Prietenie extends Entity<Tuple<Long, Long>> {
     }
 
     public static void friendEach (Prietenie prietenie, UtilizatorFile repo) {
-        var f1 = repo.findOne(prietenie.getIdFriend1());
-        var f2 = repo.findOne(prietenie.getIdFriend2());
+        var f1 = repo.findOne(prietenie.getIdFriend1()).get();
+        var f2 = repo.findOne(prietenie.getIdFriend2()).get();
         f1.addFriend(f2);
         f2.addFriend(f1);
     }

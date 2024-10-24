@@ -5,10 +5,9 @@ import domain.validators.Validator;
 import domain.validators.ValidationException;
 import repo.Repository;
 
-
-
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<ID,E> {
 
@@ -58,13 +57,13 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
     }
 
     @Override
-    public E update(E entity) {
+    public Optional<E> update(E entity) {
         if (entity == null)
             throw new ValidationException("Entity cannot be null when updating");
         this.validator.validate(entity);
         this.entities.put(entity.getId(), entity);
         if (entities.get(entity.getId()) == null) {
-            return entity;
+            return Optional.ofNullable(entity);
         }
         this.entities.put(entity.getId(), entity);
         return null;

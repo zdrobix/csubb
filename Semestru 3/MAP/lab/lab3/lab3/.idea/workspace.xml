@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54bcc3d2-8fc8-4a19-b725-7df326516fee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Repo/db/AbstractDatabaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logs/logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/inputPrieteni.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/friendship.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Prietenie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Prietenie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestRepoFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRepoFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestRepoMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRepoMemory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,15 +67,15 @@
     "create.test.in.the.same.root": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "Q:/info/csubb/Semestru 3/MAP/lab/lab4",
+    "last_opened_file_path": "C:/Program Files/Microsoft JDBC DRIVER 12.8 for SQL Server/enu/jars/mssql-jdbc-12.8.1.jre11.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -78,7 +86,7 @@
       <recent name="Q:\info\csubb\Semestru 3\MAP\lab\lab3\lab3\src\file" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
+  <component name="RunManager" selected="JUnit.TestUser">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="lab3" />
@@ -86,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRepoFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRepoMemory.testAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
         <pattern>
@@ -95,29 +103,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.TestRepoFile" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestRepoFile.testAddDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.TestRepoFile" />
-      <option name="METHOD_NAME" value="testAddDelete" />
+      <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
+      <option name="METHOD_NAME" value="testAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRepoMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRepoMemory.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
         <pattern>
@@ -127,12 +120,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testDelete" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRepoMemory.testCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRepoMemory.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
         <pattern>
@@ -142,7 +136,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
-      <option name="METHOD_NAME" value="testCreate" />
+      <option name="METHOD_NAME" value="testSave" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRepoMemory.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestRepoMemory" />
+      <option name="METHOD_NAME" value="testUpdate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,19 +175,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="JUnit.TestRepoMemory" />
-      <item itemvalue="JUnit.TestRepoFile.testAddDelete" />
-      <item itemvalue="JUnit.TestRepoMemory.testCreate" />
-      <item itemvalue="JUnit.TestRepoFile" />
+      <item itemvalue="JUnit.TestRepoMemory.testAll" />
+      <item itemvalue="JUnit.TestRepoMemory.testDelete" />
+      <item itemvalue="JUnit.TestRepoMemory.testSave" />
+      <item itemvalue="JUnit.TestRepoMemory.testUpdate" />
       <item itemvalue="JUnit.TestUser" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestUser" />
-        <item itemvalue="JUnit.TestRepoFile" />
-        <item itemvalue="JUnit.TestRepoMemory" />
-        <item itemvalue="JUnit.TestRepoFile.testAddDelete" />
-        <item itemvalue="JUnit.TestRepoMemory.testCreate" />
+        <item itemvalue="JUnit.TestRepoMemory.testAll" />
+        <item itemvalue="JUnit.TestRepoMemory.testDelete" />
+        <item itemvalue="JUnit.TestRepoMemory.testUpdate" />
+        <item itemvalue="JUnit.TestRepoMemory.testSave" />
       </list>
     </recent_temporary>
   </component>
@@ -206,6 +216,7 @@
       <workItem from="1729572677319" duration="3533000" />
       <workItem from="1729696010410" duration="271000" />
       <workItem from="1729696316302" duration="21000" />
+      <workItem from="1729799865857" duration="3505000" />
     </task>
     <servers />
   </component>
