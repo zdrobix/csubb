@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54bcc3d2-8fc8-4a19-b725-7df326516fee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Repo/db/AbstractDatabaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logs/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Prietenie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Prietenie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestRepoFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRepoFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestRepoMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRepoMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/db/AbstractDatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/db/AbstractDatabaseRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +206,7 @@
       <workItem from="1729572677319" duration="3533000" />
       <workItem from="1729696010410" duration="271000" />
       <workItem from="1729696316302" duration="21000" />
-      <workItem from="1729799865857" duration="3505000" />
+      <workItem from="1729799865857" duration="5891000" />
     </task>
     <servers />
   </component>
