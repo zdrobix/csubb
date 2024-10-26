@@ -48,7 +48,6 @@ public class Utilizator extends Entity<Long>{
         return "Utilizator{" +
                 "firstName='" + this.firstName + '\'' +
                 ", lastName='" + this.lastName + '\'' +
-                ", friends=" + this.prieteni +
                 '}';
     }
 

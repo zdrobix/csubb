@@ -2,62 +2,47 @@ package repo.db;
 
 import domain.Utilizator;
 import domain.validators.Validator;
+import logs.Logger;
 import repo.Repository;
 
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.sql.*;
-import java.time.LocalDateTime;
 import java.util.*;
 
 public class UserDatabaseRepository implements Repository<Long, Utilizator> {
 
-    private List<String> connectionCredentials;
-    private Validator<Utilizator> validator;
-    private static String logFilename = "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab3\\lab3\\src\\logs\\logs.txt";
+    private final List<String> connectionListCredentials;
+    private final Validator<Utilizator> validator;
+    private final static Logger logger = new Logger();
 
     public UserDatabaseRepository(String url, String username, String password, Validator<Utilizator> validator_)  {
-        this.connectionCredentials = Arrays.asList(url, username, password);
+        this.connectionListCredentials = Arrays.asList(url, username, password);
         this.validator = validator_;
     }
 
-    public Connection connectToDb () {
+    public static Connection connectToDb (List<String> connectionCredentials)  {
         boolean connected = false;
         Connection connection = null;
         SQLException exception = null;
         try {
             connection = DriverManager
                     .getConnection(
-                            this.connectionCredentials.get(0),
-                            this.connectionCredentials.get(1),
-                            this.connectionCredentials.get(2)
+                            connectionCredentials.get(0),
+                            connectionCredentials.get(1),
+                            connectionCredentials.get(2)
                     );
             connected = true;
-        } catch (SQLException e) {   connected = false; exception = e;
+        } catch (SQLException e) {   exception = e;
         } finally {
-            try {
-                FileWriter fw = new FileWriter(
-                        logFilename,
-                        true);
-                if (connected)
-                    fw.append("Connection established. " + LocalDateTime.now() + '\n');
-                else {
-                    fw.append("Connection failed. " + LocalDateTime.now() + '\n');
-                    fw.append(exception.getSQLState() + '\n');
-                    fw.append(exception.getMessage() + '\n');
-                    exception.printStackTrace();
-                }
-                fw.close();
-            } catch (IOException ie) { throw new FileNotFoundException(logFilename);
-            } finally { return connection; }
+            logger.LogConnection(connected);
+            return connection;
         }
     }
 
     public Optional<Utilizator> findOne(Long id) throws SQLException {
         if (id == null)
             throw new IllegalArgumentException("id is null");
-        var connection = this.connectToDb();
+        var connection = connectToDb(this.connectionListCredentials);
         Utilizator user = null;
         if (connection == null)
             return Optional.empty();
@@ -76,18 +61,20 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
         }
         result.close();
         connection.close();
+        logger.LogModify("findOne", user.toString());
         return Optional.ofNullable(user);
     }
 
     public Iterable<Utilizator> findAll() throws SQLException {
-        var connection = this.connectToDb();
-        Map<Long, Utilizator> users = new HashMap<>();
+        var connection = connectToDb(this.connectionListCredentials);
         if (connection == null)
             return null;
+
         var result = connection
                 .prepareStatement("SELECT * FROM USERS")
                 .executeQuery();
 
+        Map<Long, Utilizator> users = new HashMap<>();
         while (result.next()) {
             users.putIfAbsent(
                     result.getLong(1),
@@ -99,6 +86,7 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
         }
         result.close();
         connection.close();
+        logger.LogModify("findAll", "");
         return users.values();
     }
 
@@ -106,15 +94,17 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
         if (user == null)
             throw new IllegalArgumentException("user is null");
         validator.validate(user);
-        var connection = this.connectToDb();
+        var connection = connectToDb(this.connectionListCredentials);
         if (connection == null)
             return Optional.empty();
+
         PreparedStatement statement = connection
                 .prepareStatement("INSERT INTO USERS (id, first_name, last_name) VALUES (?, ?, ?)");
         statement.setLong(1, user.getId());
         statement.setString(2, user.getFirstName());
         statement.setString(3, user.getLastName());
         statement.executeUpdate();
+        logger.LogModify("save", user.toString());
         return Optional.of(user);
     }
 
@@ -122,17 +112,18 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
     public Optional<Utilizator> delete(Long id) throws SQLException {
         if (id == null)
             throw new IllegalArgumentException("id is null");
-        var userToDelete = this.findOne(id);
-        if (userToDelete.isEmpty())
+        var userToDelete = this.findOne(id).get();
+        if (userToDelete == null)
             return Optional.empty();
-        var connection = this.connectToDb();
+        var connection = connectToDb(this.connectionListCredentials);
         if (connection == null)
             return Optional.empty();
         PreparedStatement statement = connection
                 .prepareStatement("DELETE FROM USERS WHERE ID = ?");
         statement.setLong(1, id);
         statement.executeUpdate();
-        return Optional.of(userToDelete.get());
+        logger.LogModify("delete", userToDelete.toString());
+        return Optional.of(userToDelete);
     }
 
     public Optional<Utilizator> update(Utilizator user) {
@@ -142,6 +133,13 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
         return Optional.empty();
     }
 
+    public int size() throws SQLException {
+        int count = 0;
+        for (var _ : this.findAll()) {
+            count++;
+        }
+        return count;
+    }
 }
 
 

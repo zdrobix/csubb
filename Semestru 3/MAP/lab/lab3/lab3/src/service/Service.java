@@ -4,22 +4,24 @@ import domain.Prietenie;
 import domain.Tuple;
 import domain.validators.PrietenieValidator;
 import domain.validators.ValidationException;
-import repo.file.UtilizatorFile;
-import repo.file.PrietenieFile;
 import domain.Utilizator;
 
+import repo.db.UserDatabaseRepository;
+import repo.db.FriendshipDatabaseRepository;
+
+import java.io.IOException;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Service {
-    private final UtilizatorFile repo;
-    private final PrietenieFile repoPrieteni;
+    private final UserDatabaseRepository repo;
+    private final FriendshipDatabaseRepository repoPrieteni;
 
-    public Service(UtilizatorFile repo_, PrietenieFile repoPrieteni_) {
+    public Service(UserDatabaseRepository repo_, FriendshipDatabaseRepository repoPrieteni_) {
         this.repo = repo_;
         this.repoPrieteni = repoPrieteni_;
-        this.loadFriendsFromBothRepos();
     }
 
     public void addUtilizator (String firstName, String lastName, long id) {
@@ -27,12 +29,12 @@ public class Service {
             var user = new Utilizator(firstName, lastName);
             user.setId(id);
             this.repo.save(user);
-        } catch (ValidationException e) {
+        } catch (ValidationException | SQLException e) {
             throw new ValidationException(e.getMessage());
         }
     }
 
-    public void deleteUtilizator (long id) {
+    public void deleteUtilizator (long id) throws SQLException {
         if (this.repo.findOne(id) == null) {
             throw new ValidationException("User not found");
         }
@@ -50,7 +52,7 @@ public class Service {
             }
 
             this.repo.delete(id);
-        } catch (ValidationException e) {
+        } catch (ValidationException | IOException e) {
             throw new ValidationException(e.getMessage());
         }
     }
@@ -62,10 +64,13 @@ public class Service {
             friends.setId(
                     new Tuple<>(
                             id1, id2));
-            PrietenieValidator.validate2(friends, this.repoPrieteni, this.repo);
+            PrietenieValidator.validate2(friends, this.repo, this.repoPrieteni);
             this.repoPrieteni.save(friends);
-            Prietenie.friendEach(friends, this.repo);
         } catch (ValidationException e) {
+            throw new ValidationException(e.getMessage());
+        } catch (SQLException e) {
+            throw new ValidationException(e.getMessage());
+        } catch (IOException e) {
             throw new ValidationException(e.getMessage());
         }
     }
@@ -81,30 +86,37 @@ public class Service {
             user2.removeFriend(user1);
             this.repoPrieteni.delete(new Tuple<>(
                     id1, id2));
-        } catch (ValidationException e) {
+        } catch (ValidationException | SQLException | IOException e) {
             throw new ValidationException(e.getMessage());
         }
     }
 
-    private void loadFriendsFromBothRepos() {
-        for (var prietenie : this.repoPrieteni.findAll()) {
-            Prietenie.friendEach(prietenie, this.repo);
-        }
-    }
-
-    private Integer DFS(Long userId, boolean[] visited, List<Long> userIds) {
-        visited[userId.intValue()] = true;
-        int size = 1;
-        userIds.add(userId);
-        for (Long friendId : this.repo.findOne(userId).get().getFriends()) {
-            if (!visited[friendId.intValue()]) {
-                size += DFS(friendId, visited, userIds);
+    private Integer DFS(Long userId, boolean[] visited, List<Long> userIds) throws SQLException {
+        try {
+            visited[userId.intValue()] = true;
+            int size = 1;
+            userIds.add(userId);
+            var list_friends = new ArrayList<Long>();
+            for (var friendship : this.repoPrieteni.findAll()) {
+                if (friendship.getIdFriend1() == userId)
+                    list_friends.add(friendship.getIdFriend2());
+                if (friendship.getIdFriend2() == userId)
+                    list_friends.add(friendship.getIdFriend1());
             }
+            for (Long friendId : list_friends) {
+                if (!visited[friendId.intValue()]) {
+                    size += DFS(friendId, visited, userIds);
+                }
+
+            return size;
         }
-        return size;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return 0;
     }
 
-    public Integer numberOfCommunities() {
+    public Integer numberOfCommunities() throws SQLException {
         boolean[] visited = new boolean[this.repo.size() + 1];
         int count = 0;
         List<Long> list = new ArrayList<>();
@@ -118,26 +130,30 @@ public class Service {
         return count;
     }
 
-    public List<Long> largestCommunity () {
-        boolean[] visited = new boolean[this.repo.size() + 1];
-        List<Long> largestCommunityIds = new ArrayList<>();
-        int maxSize = 0;
-        for (var user : this.repo.findAll()) {
-            Long userId = user.getId();
-            if (!visited[userId.intValue()]) {
-                List<Long> userIds = new ArrayList<>();
-                int size = DFS(userId, visited, userIds);
-                if (size > maxSize) {
-                    maxSize = size;
-                    largestCommunityIds.clear();
-                    largestCommunityIds.addAll(userIds);
+    public List<Long> largestCommunity () throws SQLException {
+        try {
+            boolean[] visited = new boolean[this.repo.size() + 1];
+            List<Long> largestCommunityIds = new ArrayList<>();
+            int maxSize = 0;
+            for (var user : this.repo.findAll()) {
+                Long userId = user.getId();
+                if (!visited[userId.intValue()]) {
+                    List<Long> userIds = new ArrayList<>();
+                    int size = DFS(userId, visited, userIds);
+                    if (size > maxSize) {
+                        maxSize = size;
+                        largestCommunityIds.clear();
+                        largestCommunityIds.addAll(userIds);
+                    }
                 }
             }
+            return largestCommunityIds;
+        } catch (SQLException e) {
+            throw new SQLException(e.getMessage());
         }
-        return largestCommunityIds;
     }
 
-    public Utilizator getUtilizator(Long id) {
+    public Utilizator getUtilizator(Long id) throws SQLException {
         return this.repo.findOne(id).get();
     }
 }

@@ -1,22 +1,30 @@
 import controller.Ui;
+
 import domain.validators.PrietenieValidator;
 import domain.validators.UtilizatorValidator;
-import repo.file.PrietenieFile;
-import repo.file.UtilizatorFile;
+
+import repo.db.UserDatabaseRepository;
+import repo.db.FriendshipDatabaseRepository;
+
 import service.Service;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         new Ui(
                 new Service(
-                        new UtilizatorFile(
-                                "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab3\\lab3\\src\\input\\users.txt",
+                        new UserDatabaseRepository(
+                                "jdbc:postgresql://localhost:5432/socialnetwork",
+                                "postgres",
+                                "parola",
                                 new UtilizatorValidator()
                         ),
-                        new PrietenieFile(
-                                "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab3\\lab3\\src\\input\\friendship.txt",
+                        new FriendshipDatabaseRepository(
+                                "jdbc:postgresql://localhost:5432/socialnetwork",
+                                "postgres",
+                                "parola",
                                 new PrietenieValidator()
-                        ))).Run();
+                        )
+                )).Run();
     }
 }
 

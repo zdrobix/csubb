@@ -1,13 +1,13 @@
 package test;
 
-import domain.Utilizator;
+import domain.validators.PrietenieValidator;
 import domain.validators.UtilizatorValidator;
 import repo.db.UserDatabaseRepository;
+import repo.db.FriendshipDatabaseRepository;
 
-import repo.file.UtilizatorFile;
 
+import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Arrays;
 
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,7 +19,7 @@ public class TestDatabase {
     }
 
     @Test
-    public void test_create() throws SQLException {
+    public void test_create() throws SQLException, IOException {
         UserDatabaseRepository repo = new UserDatabaseRepository(
                 "jdbc:postgresql://localhost:5432/socialnetwork",
                 "postgres",
@@ -27,6 +27,12 @@ public class TestDatabase {
                 new UtilizatorValidator()
         );
 
+        FriendshipDatabaseRepository repoPrieteni = new FriendshipDatabaseRepository(
+                "jdbc:postgresql://localhost:5432/socialnetwork",
+                "postgres",
+                "parola",
+                new PrietenieValidator()
+        );
 
     }
 }

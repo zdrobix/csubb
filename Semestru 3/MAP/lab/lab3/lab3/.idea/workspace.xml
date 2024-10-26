@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54bcc3d2-8fc8-4a19-b725-7df326516fee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repo/db/FriendshipDatabaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logs/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logs/logs2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repo/db/UserDatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/db/UserDatabaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Ui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Prietenie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Prietenie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Utilizator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Utilizator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/validators/PrietenieValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/validators/PrietenieValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logs/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs/logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/TestDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +88,7 @@
       <recent name="Q:\info\csubb\Semestru 3\MAP\lab\lab3\lab3\src\file" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestDatabase.test_create">
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="lab3" />
@@ -214,7 +221,7 @@
       <workItem from="1729799865857" duration="6911000" />
       <workItem from="1729930884410" duration="2661000" />
       <workItem from="1729958065551" duration="8378000" />
-      <workItem from="1729967651332" duration="1716000" />
+      <workItem from="1729967651332" duration="7822000" />
     </task>
     <servers />
   </component>

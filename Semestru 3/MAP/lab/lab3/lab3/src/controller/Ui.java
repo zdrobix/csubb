@@ -3,6 +3,7 @@ package controller;
 import domain.validators.ValidationException;
 import service.Service;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Ui {
@@ -11,7 +12,7 @@ public class Ui {
     public Ui(Service serviceUtilizator_) {
         this.serviceUtilizator = serviceUtilizator_;
     }
-    public void Run () {
+    public void Run ()  {
         System.out.println("Welcome to SocialNetwork!\n");
         boolean exit = false;
         do {
@@ -76,6 +77,8 @@ public class Ui {
                                 this.serviceUtilizator.deleteUtilizator(id);
                                 System.out.println("User removed\n");
                             } catch (ValidationException e) {
+                                System.out.println(e.getMessage());
+                            } catch (SQLException e) {
                                 System.out.println(e.getMessage());
                             }
                             break;
@@ -151,16 +154,26 @@ public class Ui {
                     var option2 = read.nextLine().trim().toUpperCase();
                     switch (option2) {
                         case "A": {
-                            var number = this.serviceUtilizator.numberOfCommunities();
+                            Integer number;
+                            try {
+                                number = this.serviceUtilizator.numberOfCommunities();
+                            } catch (SQLException e) {
+                                System.out.println(e.getMessage());
+                                break;
+                            }
                             if (number == 1)
                                 System.out.println("There is a single community.");
                             else System.out.println("There are " + number + " communities");
                             break;
                         }
                         case "B": {
-                            System.out.println("The largest community is: ");
-                            for (var userId : this.serviceUtilizator.largestCommunity()) {
-                                System.out.print(this.serviceUtilizator.getUtilizator(userId).getFirstName() + " ");
+                            try {
+                                System.out.println("The largest community is: ");
+                                for (var userId : this.serviceUtilizator.largestCommunity()) {
+                                    System.out.print(this.serviceUtilizator.getUtilizator(userId).getFirstName() + " ");
+                                }
+                            } catch (SQLException e) {
+                                System.out.println(e.getMessage());
                             }
                             System.out.println();
                             break;
