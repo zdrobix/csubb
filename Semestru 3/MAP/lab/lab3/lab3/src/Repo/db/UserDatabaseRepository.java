@@ -29,7 +29,9 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
         try {
             connection = DriverManager
                     .getConnection(
-                            this.connectionCredentials.get(0)
+                            this.connectionCredentials.get(0),
+                            this.connectionCredentials.get(1),
+                            this.connectionCredentials.get(2)
                     );
             connected = true;
         } catch (SQLException e) {   connected = false; exception = e;
@@ -39,12 +41,12 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
                         logFilename,
                         true);
                 if (connected)
-                    fw.append("Connection established. " + LocalDateTime.now());
+                    fw.append("Connection established. " + LocalDateTime.now() + '\n');
                 else {
                     fw.append("Connection failed. " + LocalDateTime.now() + '\n');
                     fw.append(exception.getSQLState() + '\n');
                     fw.append(exception.getMessage() + '\n');
-                    fw.append(exception.getStackTrace().toString() + '\n');
+                    exception.printStackTrace();
                 }
                 fw.close();
             } catch (IOException ie) { throw new FileNotFoundException(logFilename);
