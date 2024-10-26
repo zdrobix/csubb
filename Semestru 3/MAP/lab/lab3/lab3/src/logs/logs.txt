@@ -1,0 +1,447 @@
+Connection failed. 2024-10-26T19:42:21.025370500
+Connection failed. 2024-10-26T19:42:21.035660
+Connection failed. 2024-10-26T19:42:21.035660
+Connection failed. 2024-10-26T19:42:21.035660
+Connection failed. 2024-10-26T19:42:21.046168700
+Connection failed. 2024-10-26T19:42:21.046168700
+Connection failed. 2024-10-26T19:42:21.046168700
+Connection failed. 2024-10-26T19:42:21.046168700
+Connection failed. 2024-10-26T19:42:21.046168700
+Connection failed. 2024-10-26T19:42:21.046168700
+Connection failed. 2024-10-26T19:42:21.061819400
+Connection failed. 2024-10-26T19:42:21.061819400
+Connection failed. 2024-10-26T19:42:21.061819400
+Connection failed. 2024-10-26T19:42:21.061819400
+Connection failed. 2024-10-26T19:42:21.061819400
+Connection failed. 2024-10-26T19:42:21.078035900
+Connection failed. 2024-10-26T19:42:21.078035900
+Connection failed. 2024-10-26T19:42:21.078035900
+Connection failed. 2024-10-26T19:42:21.078035900
+Connection failed. 2024-10-26T19:42:21.078035900
+Connection failed. 2024-10-26T19:42:21.078035900
+Connection failed. 2024-10-26T19:42:44.910748400
+Connection failed. 2024-10-26T19:42:44.910748400
+Connection failed. 2024-10-26T19:42:44.926373100
+Connection failed. 2024-10-26T19:42:44.926373100
+Connection failed. 2024-10-26T19:42:44.942003200
+Connection failed. 2024-10-26T19:42:44.942003200
+Connection failed. 2024-10-26T19:42:44.942003200
+Connection failed. 2024-10-26T19:42:44.942003200
+Connection failed. 2024-10-26T19:42:44.957620100
+Connection failed. 2024-10-26T19:42:44.973633
+Connection failed. 2024-10-26T19:42:44.973633
+Connection failed. 2024-10-26T19:42:44.973633
+Connection failed. 2024-10-26T19:42:44.989271200
+Connection failed. 2024-10-26T19:42:44.989271200
+Connection failed. 2024-10-26T19:42:44.989271200
+Connection failed. 2024-10-26T19:42:44.989271200
+Connection failed. 2024-10-26T19:42:44.989271200
+Connection failed. 2024-10-26T19:42:44.989271200
+Connection failed. 2024-10-26T19:42:45.004890200
+Connection failed. 2024-10-26T19:42:45.020520800
+Connection failed. 2024-10-26T19:42:45.036138900
+Connection failed. 2024-10-26T19:43:33.749577500
+Connection failed. 2024-10-26T19:43:33.765204400
+Connection failed. 2024-10-26T19:43:33.765204400
+Connection failed. 2024-10-26T19:43:33.765204400
+Connection failed. 2024-10-26T19:43:33.780837700
+Connection failed. 2024-10-26T19:43:33.780837700
+Connection failed. 2024-10-26T19:43:33.780837700
+Connection failed. 2024-10-26T19:43:33.787346800
+Connection failed. 2024-10-26T19:43:33.787346800
+Connection failed. 2024-10-26T19:43:33.787346800
+Connection failed. 2024-10-26T19:43:33.796856400
+Connection failed. 2024-10-26T19:43:33.796856400
+Connection failed. 2024-10-26T19:43:33.796856400
+Connection failed. 2024-10-26T19:43:33.796856400
+Connection failed. 2024-10-26T19:43:33.812495900
+Connection failed. 2024-10-26T19:43:33.812495900
+Connection failed. 2024-10-26T19:43:33.812495900
+Connection failed. 2024-10-26T19:43:33.812495900
+Connection failed. 2024-10-26T19:43:33.812495900
+Connection failed. 2024-10-26T19:43:33.828117
+Connection failed. 2024-10-26T19:43:33.828117
+Connection failed. 2024-10-26T19:48:33.205615600
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6591f517
+Connection failed. 2024-10-26T19:48:33.221239600
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@279ad2e3
+Connection failed. 2024-10-26T19:48:33.236870
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@4461c7e3
+Connection failed. 2024-10-26T19:48:33.236870
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@35fc6dc4
+Connection failed. 2024-10-26T19:48:33.236870
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@731f8236
+Connection failed. 2024-10-26T19:48:33.236870
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6b53e23f
+Connection failed. 2024-10-26T19:48:33.268520200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@4f9a3314
+Connection failed. 2024-10-26T19:48:33.268520200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@176d53b2
+Connection failed. 2024-10-26T19:48:33.268520200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@2b4a2ec7
+Connection failed. 2024-10-26T19:48:33.268520200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@18a70f16
+Connection failed. 2024-10-26T19:48:33.284158600
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6279cee3
+Connection failed. 2024-10-26T19:48:33.284158600
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@57175e74
+Connection failed. 2024-10-26T19:48:33.284158600
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@770c2e6b
+Connection failed. 2024-10-26T19:48:33.299781900
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@61009542
+Connection failed. 2024-10-26T19:48:33.315411900
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@1a38c59b
+Connection failed. 2024-10-26T19:48:33.331034300
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@7f9fcf7f
+Connection failed. 2024-10-26T19:48:33.331034300
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@145eaa29
+Connection failed. 2024-10-26T19:48:33.362672300
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@2d2e5f00
+Connection failed. 2024-10-26T19:48:33.362672300
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@41ee392b
+Connection failed. 2024-10-26T19:48:33.387113600
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@667a738
+Connection failed. 2024-10-26T19:48:33.418365
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6ee12bac
+Connection failed. 2024-10-26T19:49:23.924652200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6591f517
+Connection failed. 2024-10-26T19:49:23.924652200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@279ad2e3
+Connection failed. 2024-10-26T19:49:23.955906200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@4461c7e3
+Connection failed. 2024-10-26T19:49:23.955906200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@35fc6dc4
+Connection failed. 2024-10-26T19:49:23.955906200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@731f8236
+Connection failed. 2024-10-26T19:49:23.955906200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6b53e23f
+Connection failed. 2024-10-26T19:49:23.955906200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@4f9a3314
+Connection failed. 2024-10-26T19:49:23.971525200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@176d53b2
+Connection failed. 2024-10-26T19:49:23.971525200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@2b4a2ec7
+Connection failed. 2024-10-26T19:49:23.971525200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@18a70f16
+Connection failed. 2024-10-26T19:49:23.971525200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6279cee3
+Connection failed. 2024-10-26T19:49:23.986037100
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@57175e74
+Connection failed. 2024-10-26T19:49:23.987584800
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@770c2e6b
+Connection failed. 2024-10-26T19:49:23.987584800
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@61009542
+Connection failed. 2024-10-26T19:49:23.987584800
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@1a38c59b
+Connection failed. 2024-10-26T19:49:23.987584800
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@7f9fcf7f
+Connection failed. 2024-10-26T19:49:23.987584800
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@145eaa29
+Connection failed. 2024-10-26T19:49:24.003227200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@2d2e5f00
+Connection failed. 2024-10-26T19:49:24.003227200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@41ee392b
+Connection failed. 2024-10-26T19:49:24.003227200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@667a738
+Connection failed. 2024-10-26T19:49:24.003227200
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6ee12bac
+Connection failed. 2024-10-26T19:55:23.041040800
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6591f517
+Connection failed. 2024-10-26T19:55:23.056677
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@279ad2e3
+Connection failed. 2024-10-26T19:55:23.056677
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@4461c7e3
+Connection failed. 2024-10-26T19:55:23.056677
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@35fc6dc4
+Connection failed. 2024-10-26T19:55:23.056677
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@731f8236
+Connection failed. 2024-10-26T19:55:23.072301
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6b53e23f
+Connection failed. 2024-10-26T19:55:23.072301
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@4f9a3314
+Connection failed. 2024-10-26T19:55:23.087927400
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@176d53b2
+Connection failed. 2024-10-26T19:55:23.087927400
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@2b4a2ec7
+Connection failed. 2024-10-26T19:55:23.087927400
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@18a70f16
+Connection failed. 2024-10-26T19:55:23.087927400
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6279cee3
+Connection failed. 2024-10-26T19:55:23.087927400
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@57175e74
+Connection failed. 2024-10-26T19:55:23.087927400
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@770c2e6b
+Connection failed. 2024-10-26T19:55:23.103546400
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@61009542
+Connection failed. 2024-10-26T19:55:23.103546400
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@1a38c59b
+Connection failed. 2024-10-26T19:55:23.103546400
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@7f9fcf7f
+Connection failed. 2024-10-26T19:55:23.103546400
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@145eaa29
+Connection failed. 2024-10-26T19:55:23.103546400
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@2d2e5f00
+Connection failed. 2024-10-26T19:55:23.119175900
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@41ee392b
+Connection failed. 2024-10-26T19:55:23.119175900
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@667a738
+Connection failed. 2024-10-26T19:55:23.119175900
+08S01
+The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6ee12bac
+Connection failed. 2024-10-26T19:59:17.359501900
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6591f517
+Connection failed. 2024-10-26T19:59:19.908967300
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@279ad2e3
+Connection failed. 2024-10-26T19:59:22.470219300
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@4461c7e3
+Connection failed. 2024-10-26T19:59:25.007758700
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@35fc6dc4
+Connection failed. 2024-10-26T19:59:27.557495700
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@731f8236
+Connection failed. 2024-10-26T19:59:30.085726
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6b53e23f
+Connection failed. 2024-10-26T19:59:32.632991500
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@4f9a3314
+Connection failed. 2024-10-26T19:59:35.160639200
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@176d53b2
+Connection failed. 2024-10-26T19:59:37.713067400
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@2b4a2ec7
+Connection failed. 2024-10-26T19:59:40.285330400
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@18a70f16
+Connection failed. 2024-10-26T19:59:42.850040800
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6279cee3
+Connection failed. 2024-10-26T19:59:45.394737600
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@57175e74
+Connection failed. 2024-10-26T19:59:47.940762800
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@770c2e6b
+Connection failed. 2024-10-26T19:59:50.488853500
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@61009542
+Connection failed. 2024-10-26T19:59:53.042748400
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@1a38c59b
+Connection failed. 2024-10-26T19:59:55.596491700
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@7f9fcf7f
+Connection failed. 2024-10-26T19:59:58.131457800
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@145eaa29
+Connection failed. 2024-10-26T20:00:00.668007700
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@2d2e5f00
+Connection failed. 2024-10-26T20:01:38.615504600
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6591f517
+Connection failed. 2024-10-26T20:01:41.162464800
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@279ad2e3
+Connection failed. 2024-10-26T20:01:43.685362200
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@4461c7e3
+Connection failed. 2024-10-26T20:01:46.248361900
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@35fc6dc4
+Connection failed. 2024-10-26T20:01:48.786546200
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@731f8236
+Connection failed. 2024-10-26T20:01:51.336614900
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6b53e23f
+Connection failed. 2024-10-26T20:01:53.884742300
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@4f9a3314
+Connection failed. 2024-10-26T20:01:56.438460900
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@176d53b2
+Connection failed. 2024-10-26T20:01:58.980222700
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@2b4a2ec7
+Connection failed. 2024-10-26T20:02:01.533203800
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@18a70f16
+Connection failed. 2024-10-26T20:04:25.004101300
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@6591f517
+Connection failed. 2024-10-26T20:04:27.531202200
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@279ad2e3
+Connection failed. 2024-10-26T20:04:30.077577700
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@4461c7e3
+Connection failed. 2024-10-26T20:04:32.611212700
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@35fc6dc4
+Connection failed. 2024-10-26T20:04:35.129452300
+08S01
+The TCP/IP connection to the host DESKTOP-9PS0RE2, port 1433 has failed. Error: "Connection refused: getsockopt. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+[Ljava.lang.StackTraceElement;@731f8236
