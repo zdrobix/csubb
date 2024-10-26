@@ -10,9 +10,8 @@
  * model matematic:
  *
  * putere2(N) :  true                 - daca n = 1
-                 false                - daca n % 2 = 1
+ *               false                - daca n % 2 = 1
  *               true si putere2(N/2) - daca n % 2 = 0
- *
  */
 
 putere2(1):-!.
@@ -90,10 +89,49 @@ test_adaugaLista():-
  * adauge dupa primul, al 3-lea, al 7-lea element valoarea care se
  * gaseste inainte de sublista in lista eterogena.
  *
- * adaugaListaEterogena(L: lista, E: intreg,
+ * listaE(L: lista, E: intreg, R: lista)
  *
+ * model de flux (i, i) sau (o, i)
  *
+ * L: lista pe care o parcurgem pentru a insera elementul E in subliste
+ * E: elementul pe care il inseram in sublistele listei L
+ * R: lista finala avand ultimul intreg inainte de fiecare lista pe
+ * pozitiile aferente
+ *
+ * model matematic:
+ *
+ * listaE(L1..Ln, E) =
+ *    []                                         - daca n = 0
+ *    listaE(L2..Ln, L1)                         - daca L1 e element
+ *    listaE(adaugaLista(L1, E, 1) U L2..Ln, E)  - daca L1 e lista
  *
  */
+
+
+listaE([], _, []):-!.
+listaE([H|T], _, [H|R]):-
+    integer(H),
+    listaE(T, H, R).
+listaE([H|T], E, [Lnew|R]):-
+    is_list(H),
+    adaugaLista(H, E, 1,Lnew),
+    listaE(T, E, R).
+
+test_listaE():-
+    assertion(listaE([], _, [])),
+    assertion(listaE([1, [1]], _, [1, [1, 1]])),
+    assertion(listaE([0, [1], 9, 0, [1, 1], 9, 8, 0, [1, 1, 1]], _, [0, [1, 0], 9, 0, [1, 0, 1], 9, 8, 0, [1, 0, 1, 1, 0]])),
+    listaE([], _, L1),
+    listaE([1, [1]], _, L2),
+    listaE([0, [1], 9, 0, [1, 1], 9, 8, 0, [1, 1, 1]], _, L3),
+    assertion(L1 = []),
+    assertion(L2 = [1, [1, 1]]),
+    assertion(L3 = [0, [1, 0], 9, 0, [1, 0, 1], 9, 8, 0, [1, 0, 1, 1, 0]]).
+
+test_all():-
+    test_putere(),
+    test_adaugaLista(),
+    test_listaE().
+
 
 
