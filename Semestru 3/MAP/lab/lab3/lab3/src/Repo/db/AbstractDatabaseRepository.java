@@ -5,6 +5,7 @@ import domain.validators.Validator;
 import repo.Repository;
 import repo.memory.InMemoryRepository;
 
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
@@ -22,43 +23,54 @@ public abstract class AbstractDatabaseRepository<ID, E extends Entity<ID>> imple
         this.connectionCredentials = Arrays.asList(url, username, password);
     }
 
-    public Optional<E> findOne(ID id) throws SQLException, IOException {
+    public Connection connectToDb () throws SQLException, IOException{
         boolean connected = false;
-        Optional<E> result = Optional.empty();
+        Connection connection = null;
         try {
-            var connection = DriverManager
+            connection = DriverManager
                     .getConnection(
                             this.connectionCredentials.get(0),
                             this.connectionCredentials.get(1),
                             this.connectionCredentials.get(2)
                     );
-            var resultSet = connection
-                    .prepareStatement("SELECT * FROM USERS WHERE ID = ?")
-                    .executeQuery();
             connected = true;
-            /*
-            De implementat.
-            Returneaza o enitate creata pe baza resultSet-ului.
-             */
-            connection.close();
-        } catch (SQLException e) {
-           connected = false;
+        } catch (SQLException e) {   connected = false;
         } finally {
             try {
-                FileWriter fw = new FileWriter(logFilename, true);
+                FileWriter fw = new FileWriter(
+                        logFilename,
+                        true);
                 if (connected)
                     fw.append("Connection established. " + LocalDateTime.now());
                 else
                     fw.append("Connection failed. " + LocalDateTime.now());
-
-            } catch (IOException ie) {
-                /*
-                De implementat.
-                OK
-                 */
-            }
-            return result;
+                fw.close();
+            } catch (IOException ie) { throw new FileNotFoundException(logFilename);
+            } finally { return connection; }
         }
+    }
+
+    public Optional<E> findOne(ID id) throws SQLException, IOException {
+        var connection = this.connectToDb();
+        var resultReturn = Optional.empty();
+        if (connection == null)
+            return Optional.empty();
+        var result = connection
+                            .prepareStatement("SELECT * FROM USERS WHERE ID = ?")
+                            .executeQuery();
+        if (result.next()) {
+            resultReturn = Optional.of(
+                                    this.extractEntity(
+                                            Arrays.asList(
+                                                    result.getString(1),
+                                                    result.getString(2),
+                                                    result.getString(3)
+                                            )
+                                    )
+            );
+        }
+        result.close();connection.close();
+        return resultReturn;
     }
 
     public Iterable<E> findAll() {
@@ -78,11 +90,7 @@ public abstract class AbstractDatabaseRepository<ID, E extends Entity<ID>> imple
         return null;
     }
 
-
-
-
-
-
+    public abstract E extractEntity(List<String> attributes);
 }
 
 
