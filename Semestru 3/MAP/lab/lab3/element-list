@@ -2,7 +2,9 @@ unnamed package
 controller
 domain
 domain.validators
+logs
 repo
+repo.db
 repo.file
 repo.memory
 service

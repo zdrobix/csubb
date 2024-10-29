@@ -52,7 +52,7 @@ public class ServiceFile {
     }
 
     public Integer numberOfCommunities()  {
-        Set<Long> visited = new HashSet<Long>();
+        Set<Long> visited = new HashSet<>();
         int count = 0;
         List<Long> list = new ArrayList<>();
         for (var user : this.repo.findAll()) {
@@ -66,7 +66,7 @@ public class ServiceFile {
     }
 
     public List<Long> largestCommunity ()  {
-        Set<Long> visited = new HashSet<Long>();
+        Set<Long> visited = new HashSet<>();
         List<Long> largestCommunityIds = new ArrayList<>();
         int maxSize = 0;
         for (var user : this.repo.findAll()) {

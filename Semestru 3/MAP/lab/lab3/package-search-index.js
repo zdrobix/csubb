@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"controller"},{"l":"domain"},{"l":"domain.validators"},{"l":"repo"},{"l":"repo.file"},{"l":"repo.memory"},{"l":"service"},{"l":"test"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"controller"},{"l":"domain"},{"l":"domain.validators"},{"l":"logs"},{"l":"repo"},{"l":"repo.db"},{"l":"repo.file"},{"l":"repo.memory"},{"l":"service"},{"l":"test"}];updateSearchResults();

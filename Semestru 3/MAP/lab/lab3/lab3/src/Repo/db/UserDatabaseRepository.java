@@ -5,7 +5,6 @@ import domain.validators.Validator;
 import logs.Logger;
 import repo.Repository;
 
-import java.io.FileNotFoundException;
 import java.sql.*;
 import java.util.*;
 
@@ -23,7 +22,6 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
     public static Connection connectToDb (List<String> connectionCredentials)  {
         boolean connected = false;
         Connection connection = null;
-        SQLException exception = null;
         try {
             connection = DriverManager
                     .getConnection(
@@ -32,7 +30,7 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
                             connectionCredentials.get(2)
                     );
             connected = true;
-        } catch (SQLException e) {   exception = e;
+        } catch (SQLException e) {   System.out.println(e.getMessage());
         } finally {
             logger.LogConnection(connected);
             return connection;
