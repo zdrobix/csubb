@@ -7,8 +7,9 @@ GROUP BY T.nume
 HAVING COUNT(*) > 1
 
 --2. Clienti tineri (<30), si cate tranzactii au efectuat
-SELECT C.nume, COUNT(*) AS numar_tranzactii FROM CLIENTI C
+SELECT C.nume, COUNT(*) AS numar_tranzactii, SUM(M.pret) AS cost_total FROM CLIENTI C
 INNER JOIN TRANZACTII T on T.id_client = C.id
+INNER JOIN MEDICAMENTE M on M.id = T.id_medicamente
 WHERE C.varsta < 30
 GROUP BY C.nume
 
@@ -19,8 +20,8 @@ INNER JOIN MEDICAMENTE M on T.id_medicamente = M.id
 GROUP BY C.nume
 ORDER BY total
 
---4. Cele mai intalnite cauza printre boli
-SELECT C.cauza, COUNT(*) FROM CAUZE C
+--4. Cele mai intalnite cauze printre boli
+SELECT C.cauza, COUNT(*) AS total_boli FROM CAUZE C
 INNER JOIN BOLI B ON C.id = B.id_cauza
 GROUP BY C.cauza
 
