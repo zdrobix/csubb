@@ -19,7 +19,6 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
         entities= new HashMap<>();
     }
 
-
     @Override
     public Optional<E> findOne(ID id) {
         if (id == null)

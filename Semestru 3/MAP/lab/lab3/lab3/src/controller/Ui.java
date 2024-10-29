@@ -77,9 +77,9 @@ public class Ui {
                                 this.serviceUtilizator.deleteUtilizator(id);
                                 System.out.println("User removed\n");
                             } catch (ValidationException e) {
-                                System.out.println(e.getMessage());
+                                System.out.println("Validation exception" + e.getMessage());
                             } catch (SQLException e) {
-                                System.out.println(e.getMessage());
+                                System.out.println("SQL exception" + e.getMessage());
                             }
                             break;
                         }

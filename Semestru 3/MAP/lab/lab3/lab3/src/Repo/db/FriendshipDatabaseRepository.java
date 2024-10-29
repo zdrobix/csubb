@@ -37,7 +37,7 @@ public class FriendshipDatabaseRepository implements Repository<Tuple<Long, Long
             return Optional.empty();
 
         PreparedStatement statement = connection
-                .prepareStatement("SELECT * FROM friendship WHERE id_friend1 = ? AND id_friend2 = ?");
+                .prepareStatement("SELECT * FROM FRIENDS WHERE id_friend1 = ? AND id_friend2 = ?");
         statement.setLong(1, max(ID.getLeft(),ID.getRight()));
         statement.setLong(2, min(ID.getLeft(),ID.getRight()));
         ResultSet result = statement.executeQuery();
@@ -127,7 +127,7 @@ public class FriendshipDatabaseRepository implements Repository<Tuple<Long, Long
             return Optional.empty();
 
         PreparedStatement statement = connection
-                .prepareStatement("DELETE FROM FRIENDS WHERE id_friend1 = ? AND id_friend2 = ?");
+                .prepareStatement("DELETE FROM FRIENDS WHERE id_friend1 = ? AND id_friend2 = ?;");
         statement.setLong(1,
                 max(ID.getLeft(),
                         ID.getRight()));
@@ -135,6 +135,7 @@ public class FriendshipDatabaseRepository implements Repository<Tuple<Long, Long
                 min(ID.getLeft(),
                         ID.getRight()));
         statement.executeUpdate();
+
         return Optional.of(prietenieToDelete);
     }
 

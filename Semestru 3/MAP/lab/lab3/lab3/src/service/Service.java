@@ -42,11 +42,12 @@ public class Service {
             ArrayList<Tuple<Long, Long>> toDelete = new ArrayList<>();
             for (var prietenie : this.repoPrieteni.findAll())
             {
-                if (prietenie.getIdFriend1() == id || prietenie.getIdFriend2() == id)
-                    toDelete.add(prietenie.getId());
+                if (prietenie.getIdFriend1() == id || prietenie.getIdFriend2() == id) {
+                    this.deletePrietenie(prietenie.getIdFriend1(), prietenie.getIdFriend2());
+                    System.out.println(prietenie.toString());
+                }
+
             }
-            for (var delete : toDelete)
-                this.repoPrieteni.delete(delete);
             for (Long idUser : this.repo.findOne(id).get().getFriends()) {
                 this.repo.findOne(idUser).get().removeFriend(this.repo.findOne(id).get());
             }
@@ -67,11 +68,11 @@ public class Service {
             PrietenieValidator.validate2(friends, this.repo, this.repoPrieteni);
             this.repoPrieteni.save(friends);
         } catch (ValidationException e) {
-            throw new ValidationException(e.getMessage());
+            throw new ValidationException("1." + e.getMessage());
         } catch (SQLException e) {
-            throw new ValidationException(e.getMessage());
+            throw new ValidationException("2." + e.getMessage());
         } catch (IOException e) {
-            throw new ValidationException(e.getMessage());
+            throw new ValidationException("3." + e.getMessage());
         }
     }
 
@@ -86,8 +87,12 @@ public class Service {
             user2.removeFriend(user1);
             this.repoPrieteni.delete(new Tuple<>(
                     id1, id2));
-        } catch (ValidationException | SQLException | IOException e) {
-            throw new ValidationException(e.getMessage());
+        } catch (ValidationException e) {
+            throw new ValidationException("1." + e.getMessage());
+        } catch (SQLException e) {
+            throw new ValidationException("2." + e.getMessage());
+        } catch (IOException e) {
+            throw new ValidationException("3." + e.getMessage());
         }
     }
 

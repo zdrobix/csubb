@@ -9,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import repo.file.PrietenieFile;
 import repo.file.UtilizatorFile;
 import domain.Utilizator;
-import service.Service;
 import service.ServiceFile;
 
 import java.time.LocalDate;

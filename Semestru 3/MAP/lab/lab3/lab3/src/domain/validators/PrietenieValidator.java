@@ -27,7 +27,7 @@ public class PrietenieValidator implements Validator<Prietenie> {
                 errors += "Invalid id. ";
             if (repo.findOne(prietenie.getIdFriend2()) == null)
                 errors += "Invalid id. ";
-            if (repo2.findOne(new Tuple<Long, Long>(prietenie.getIdFriend2(), prietenie.getIdFriend1())) != null)
+            if (repo2.findOne(new Tuple<>(prietenie.getIdFriend2(), prietenie.getIdFriend1())) != null)
                 errors += "Already friends. ";
             if (repo2.findOne(prietenie.getId()) != null)
                 errors += "Already friends. ";

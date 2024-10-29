@@ -14,7 +14,6 @@ public interface Repository<ID, E extends Entity<ID>> {
 
     Optional<E> save(E entity) throws SQLException, IOException;
 
-
     Optional<E> delete(ID id) throws SQLException, IOException;
 
     Optional<E> update(E entity) throws SQLException;
