@@ -22,6 +22,11 @@ public class ServiceFile {
 
                 Acest service contine doar functionalitatile legade de comunitati
 
+
+                TO DO:
+                    -auto increment
+                    -exception handing into file
+
      */
     private final UtilizatorFile repo;
     private final PrietenieFile repoPrieteni;
