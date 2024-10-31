@@ -5,8 +5,9 @@ import sys
 def main():
 
     SIZE = 1024
+    encoding = 'utf-8'
+    
     port = int(sys.argv[1])
-    encoding = 'ascii'
     hostIP = sys.argv[2]
 
     sk =  so.socket(so.AF_INET, so.SOCK_STREAM)

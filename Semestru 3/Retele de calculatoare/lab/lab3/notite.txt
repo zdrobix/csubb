@@ -1,0 +1,53 @@
+TCP, UDP 
+
+asemanari:
+	-protocoale nivel transport
+	-socket-uri
+	-port
+
+
+TCP: transmition communication protocol
+-sigur, dar lent
+-face conexiune cu clientul
+-trateaza erorile
+-numeroteaza pachetele
+-trateaza controlul fluxului (cat de multe mesaje se transmit in retea)
+-foloseste protocolul cu fereastra afisata
+
+	[1][2][3][4][5][6]
+	TCP	   [1]  TCP
+	emitator ---->  receptor
+		 <----
+		am primit pachet 1, astept [2]
+
+-pentru aplicatii: https, ftp
+-antet TCP: numar secventa, numar confirmare, dim fereastra
+
+UDP: user datagram protocol
+-protocol fara conexiune
+-nesigur, dar rapid
+-nu trateaza erori
+-nu trateaza controlul fluxului
+-antet 8 octeti : port sursa, port destinatie, lungime, checksum
+-aplictii: servicii streaming, DHCP, DNS(nume calculator-> adresa ip), NTP(network time protocol, ora)
+-functii c
+	send -> sendto
+	recv -> recvfrom
+	nu avem listen, connect, accept
+-probleme la server concurent, din cauza riscului de amestec al datelor
+	-individualism la porturi (se creaza un port nou pentru fiecare client)
+
+
+Stiva TCP/IP: 
+ _______________
+|App            |
+|---------------|
+|Transport      |
+|---------------|
+|Retea          |
+|---------------|
+|DataLink Fizic |
+|---------------|
+
+
+
