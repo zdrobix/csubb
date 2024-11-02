@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Network</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to SocialNetwork!</h1>
+    <div class="sidebar" id="userSection">
+        <button class = "sidebar_button" onclick="showPanel('users_panel')">Users</button>
+        <button class = "sidebar_button" onclick="showPanel('friends_panel')">Friends</button>
+        <button class = "sidebar_button" onclick="showPanel('community_panel')">Community</button>
+    </div>
+    <div id="output"></div>
+    <div class="panel_wrapper">
+        <div id="users_panel" class = "panel" style="display:none;">
+            <h2>Users</h2>
+            <p>List of users will appear here.</p>
+        </div>
+        <div id="friends_panel" class = "panel" style="display:none;">
+            <h2>Friends</h2>
+            <p>List of friends will appear here.</p>
+        </div>
+        <div id="community_panel" class = "panel" style="display:none;">
+            <h2>Community</h2>
+            <p>Community information will appear here.</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
