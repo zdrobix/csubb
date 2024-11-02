@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="54bcc3d2-8fc8-4a19-b725-7df326516fee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/db/UserDatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/db/UserDatabaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/file/AbstractFileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/memory/InMemoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Ui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logs/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs/logs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logs/logs2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs/logs2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ServiceFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ServiceFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/ServiceFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestRepoFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestRepoFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,22 +94,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDatabase.test_create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.TestDatabase" />
-      <option name="METHOD_NAME" value="test_create" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestRepoFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
@@ -151,6 +141,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestRepoFile.testCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestRepoFile" />
+      <option name="METHOD_NAME" value="testCreate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestRepoMemory.testAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab3" />
       <extension name="coverage">
@@ -169,19 +175,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
+      <item itemvalue="JUnit.TestRepoFile.testCreate" />
       <item itemvalue="JUnit.TestRepoFile.testAll" />
       <item itemvalue="JUnit.TestRepoFile" />
       <item itemvalue="JUnit.TestRepoFile.testCommunityAnalysis" />
-      <item itemvalue="JUnit.TestDatabase.test_create" />
       <item itemvalue="JUnit.TestRepoMemory.testAll" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestRepoFile" />
+        <item itemvalue="JUnit.TestRepoFile.testCreate" />
         <item itemvalue="JUnit.TestRepoFile.testCommunityAnalysis" />
         <item itemvalue="JUnit.TestRepoFile.testAll" />
         <item itemvalue="JUnit.TestRepoMemory.testAll" />
-        <item itemvalue="JUnit.TestDatabase.test_create" />
       </list>
     </recent_temporary>
   </component>
@@ -216,6 +222,8 @@
       <workItem from="1729967651332" duration="8034000" />
       <workItem from="1730145292641" duration="2278000" />
       <workItem from="1730147795065" duration="4373000" />
+      <workItem from="1730443557202" duration="54000" />
+      <workItem from="1730527136363" duration="4605000" />
     </task>
     <servers />
   </component>

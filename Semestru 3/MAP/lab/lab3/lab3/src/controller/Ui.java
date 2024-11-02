@@ -44,19 +44,10 @@ public class Ui {
                             var firstName = read.nextLine().trim();
                             System.out.print("Last name: ");
                             var lastName = read.nextLine().trim();
-                            System.out.print("ID: ");
-                            long id;
-                            try {
-                                id = Long.parseLong(read.nextLine().trim());
-                            } catch (Exception e) {
-                                System.out.println("Invalid ID");
-                                break;
-                            }
                             try {
                                 this.serviceUtilizator.addUtilizator(
                                         firstName,
-                                        lastName,
-                                        id
+                                        lastName
                                 );
                                 System.out.println("User added\n");
                             } catch (ValidationException e) {
@@ -169,9 +160,20 @@ public class Ui {
                         case "B": {
                             try {
                                 System.out.println("The largest community is: ");
-                                for (var userId : this.serviceUtilizator.largestCommunity()) {
-                                    System.out.print(this.serviceUtilizator.getUtilizator(userId).getFirstName() + " ");
-                                }
+                                this.serviceUtilizator
+                                        .largestCommunity()
+                                        .forEach(
+                                                userId -> {
+                                                    try {
+                                                        System.out.print(
+                                                                this.serviceUtilizator
+                                                                        .getUtilizator(userId)
+                                                                        .getFirstName() + " ");
+                                                    } catch (SQLException e) {
+                                                        System.out.println(e.getMessage());
+                                                    }
+                                                }
+                                        );
                             } catch (SQLException e) {
                                 System.out.println(e.getMessage());
                             }

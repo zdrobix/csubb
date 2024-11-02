@@ -173,3 +173,47 @@ Looking for: Utilizator{firstName='Baws', lastName='Georgescu'}2024-10-29T09:06:
 Looking for: Utilizator{firstName='Baws', lastName='Georgescu'}2024-10-29T09:06:03.130198600
 Looking for: Utilizator{firstName='Baws', lastName='Georgescu'}2024-10-29T09:06:03.261255300
 Deleting: Utilizator{firstName='Baws', lastName='Georgescu'}2024-10-29T09:06:03.308130600
+Saving: Utilizator{firstName='pop', lastName='popo'}2024-11-02T08:14:22.808192200
+Looking for: Utilizator{firstName='pop', lastName='popo'}2024-11-02T08:14:32.071089600
+Looking for: Utilizator{firstName='pop', lastName='popo'}2024-11-02T08:14:32.420786500
+Looking for: Utilizator{firstName='pop', lastName='popo'}2024-11-02T08:14:32.481433400
+Deleting: Utilizator{firstName='pop', lastName='popo'}2024-11-02T08:14:32.547743500
+Looking for: null2024-11-02T08:20:00.592950600
+Looking for: null2024-11-02T08:20:00.699321400
+Looking for: null2024-11-02T08:21:15.127984600
+Looking for all: 2024-11-02T08:32:30.786142800
+Looking for all: 2024-11-02T08:32:35.090999800
+Looking for all: 2024-11-02T08:33:36.266482200
+Looking for all: 2024-11-02T08:36:08.369909500
+Looking for all: 2024-11-02T08:36:23.725818300
+Looking for all: 2024-11-02T08:38:40.254646200
+Looking for all: 2024-11-02T08:39:29.167284400
+Looking for all: 2024-11-02T08:40:54.201284200
+Looking for all: 2024-11-02T08:41:50.292966600
+Looking for all: 2024-11-02T08:43:13.560569200
+Looking for all: 2024-11-02T08:43:13.616680700
+Looking for all: 2024-11-02T08:44:36.965911500
+Looking for all: 2024-11-02T08:45:07.278366400
+Looking for all: 2024-11-02T08:49:17.048188600
+Looking for all: 2024-11-02T08:51:08.344118
+Looking for all: 2024-11-02T08:52:10.335242300
+Looking for all: 2024-11-02T08:54:45.842631400
+Looking for all: 2024-11-02T08:55:23.011098500
+Looking for: Utilizator{firstName='Alex', lastName='Zdroba'}2024-11-02T08:55:24.586848800
+Looking for: Utilizator{firstName='Maria', lastName='Popa'}2024-11-02T08:55:24.644464
+Looking for: Utilizator{firstName='Andrei', lastName='Ionescu'}2024-11-02T08:55:24.803834400
+Looking for: Utilizator{firstName='Lucian', lastName='Ranga'}2024-11-02T08:55:24.861532
+Looking for: Utilizator{firstName='Bob', lastName='Salut'}2024-11-02T08:55:24.916376700
+Looking for all: 2024-11-02T09:09:44.468591100
+Saving: Utilizator{firstName='l', lastName='l'}2024-11-02T09:09:44.524185100
+Looking for all: 2024-11-02T09:09:56.353091500
+Looking for: Utilizator{firstName='l', lastName='l'}2024-11-02T09:10:08.264425800
+Looking for: Utilizator{firstName='l', lastName='l'}2024-11-02T09:10:08.348782800
+Looking for: Utilizator{firstName='l', lastName='l'}2024-11-02T09:10:08.501987600
+Deleting: Utilizator{firstName='l', lastName='l'}2024-11-02T09:10:08.546837900
+Looking for all: 2024-11-02T09:11:03.173383600
+Saving: Utilizator{firstName='ae', lastName='e'}2024-11-02T09:11:03.235344
+Looking for all: 2024-11-02T09:15:26.404647700
+Saving: Utilizator{firstName='a', lastName='a'}2024-11-02T09:15:26.480924
+Looking for all: 2024-11-02T09:15:37.391432800
+Saving: Utilizator{firstName='b', lastName='b'}2024-11-02T09:15:37.447998500

@@ -34,10 +34,7 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
     }
 
     public Integer size () {
-        int count = 0;
-        for (var _ : entities.values())
-            count ++;
-        return count;
+        return this.entities.values().size();
     }
 
     @Override

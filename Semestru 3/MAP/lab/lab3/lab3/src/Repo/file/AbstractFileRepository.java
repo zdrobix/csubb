@@ -43,8 +43,13 @@ public abstract class AbstractFileRepository<ID, E extends Entity<ID>> extends I
     @Override
     public Optional<E> save(E entity) {
         var result = super.save(entity);
-        if (result == null)
-            this.writeToFile();
+        if (result == null) {
+            try {
+                this.writeToFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         return result;
     }
 
@@ -52,21 +57,26 @@ public abstract class AbstractFileRepository<ID, E extends Entity<ID>> extends I
     public Optional<E> delete(ID id)
     {
         var result = super.delete(id);
-        if (result != null)
-            this.writeToFile();
+        if (result != null) {
+            try {
+                this.writeToFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         return result;
     }
 
-    protected void writeToFile()  {
-        try {
-            var fileWriter = new FileWriter(this.fileName, false);
-            for (var entity : super.findAll())
-                fileWriter.write(
-                    createEntityAsString(entity) + '\n');
-            fileWriter.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    protected void writeToFile() throws IOException {
+        var fileWriter = new FileWriter(this.fileName, false);
+        super.findAll().forEach(entity -> {
+            try {
+                fileWriter.write(createEntityAsString(entity) + '\n');
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        fileWriter.close();
     }
 }
 

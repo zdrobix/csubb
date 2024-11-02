@@ -13,6 +13,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
@@ -145,5 +146,13 @@ public class FriendshipDatabaseRepository implements Repository<Tuple<Long, Long
             throw new IllegalArgumentException("user is null");
         validator.validate(prietenie);
         return Optional.empty();
+    }
+
+    public int size() throws SQLException, IOException {
+        AtomicInteger count = new AtomicInteger();
+        this.findAll().forEach(
+                _ -> count.getAndIncrement()
+        );
+        return count.get();
     }
 }

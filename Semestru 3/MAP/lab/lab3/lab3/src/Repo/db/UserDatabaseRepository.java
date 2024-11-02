@@ -7,6 +7,7 @@ import repo.Repository;
 
 import java.sql.*;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class UserDatabaseRepository implements Repository<Long, Utilizator> {
 
@@ -59,7 +60,9 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
         }
         result.close();
         connection.close();
-        logger.LogModify("findOne", user.toString());
+        if (user != null )
+            logger.LogModify("findOne", user.toString());
+        else logger.LogModify("findOne", "null");
         return Optional.ofNullable(user);
     }
 
@@ -74,12 +77,14 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
 
         Map<Long, Utilizator> users = new HashMap<>();
         while (result.next()) {
+            var user = new Utilizator(
+                    result.getString(2),
+                    result.getString(3)
+            );
+            user.setId(result.getLong(1));
             users.putIfAbsent(
                     result.getLong(1),
-                    new Utilizator(
-                            result.getString(2),
-                            result.getString(3)
-                    )
+                    user
             );
         }
         result.close();
@@ -132,11 +137,29 @@ public class UserDatabaseRepository implements Repository<Long, Utilizator> {
     }
 
     public int size() throws SQLException {
-        int count = 0;
-        for (var _ : this.findAll()) {
-            count++;
+        AtomicInteger count = new AtomicInteger();
+        this.findAll().forEach(
+                _ -> count.getAndIncrement()
+        );
+        return count.get();
+    }
+
+    public Long generateFirstId() throws SQLException {
+        List<Long> numbers = new ArrayList<>();
+        this.findAll()
+                .forEach(
+                        user -> numbers.add(user.getId())
+                );
+        Collections.sort(numbers);
+        long newId = 1;
+        for (var num : numbers) {
+            if (num == newId)
+                newId++;
+            else
+                if (num > newId)
+                    break;
         }
-        return count;
+        return newId;
     }
 }
 
