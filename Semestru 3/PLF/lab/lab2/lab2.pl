@@ -66,7 +66,7 @@ test_putere():-
 adaugaLista([], _, _, []):-!.
 adaugaLista([H|T], E, P, [H, E|R]):-
     P1 is P + 1,
-    putere2(P1),
+    putere2(P1),!,
     adaugaLista(T, E, P1, R).
 adaugaLista([H|T], E, P, [H|R]):-
     adaugaLista(T, E, P + 1, R).
@@ -110,7 +110,7 @@ test_adaugaLista():-
 
 listaE([], _, []):-!.
 listaE([H|T], _, [H|R]):-
-    integer(H),
+    integer(H),!,
     listaE(T, H, R).
 listaE([H|T], E, [Lnew|R]):-
     is_list(H),
