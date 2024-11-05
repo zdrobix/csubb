@@ -11,7 +11,7 @@
  *
  * putere2(N) :  true                 - daca n = 1
  *               false                - daca n % 2 = 1
- *               true si putere2(N/2) - daca n % 2 = 0
+ *               putere2(N/2) - daca n % 2 = 0
  */
 
 putere2(1):-!.
@@ -20,9 +20,7 @@ putere2(N):-
     0 is N mod 2,
     N2 is N // 2,
     putere2(N2).
-putere2(N):-
-    N > 1,
-    1 is N mod 2,
+putere2():-
     false.
 
 test_putere():-
@@ -71,6 +69,9 @@ adaugaLista([H|T], E, P, [H, E|R]):-
 adaugaLista([H|T], E, P, [H|R]):-
     adaugaLista(T, E, P + 1, R).
 
+apel_adaugaLista([H|T], E, R):-
+    adaugaLista([H|T], E, 1, R).
+
 test_adaugaLista():-
     assertion(adaugaLista([], 1, 1, [])),
     assertion(adaugaLista([1, 3], 2, 1, [1, 2, 3])),
@@ -116,6 +117,10 @@ listaE([H|T], E, [Lnew|R]):-
     is_list(H),
     adaugaLista(H, E, 1,Lnew),
     listaE(T, E, R).
+
+apel_listaE([H|T], R):-
+    listaE([H|T], _, R).
+
 
 test_listaE():-
     assertion(listaE([], _, [])),
