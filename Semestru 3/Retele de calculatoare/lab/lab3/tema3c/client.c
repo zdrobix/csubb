@@ -18,6 +18,7 @@ int main(int argc, char **argv) {
   
   char sirCitit[MAX_SIZE], caracterCitit;
   int pozitiiCaracter[MAX_SIZE];
+  int numarPozitii = 0;
   
   c = socket(AF_INET, SOCK_DGRAM, 0);
   if (c < 0) {
@@ -37,14 +38,30 @@ int main(int argc, char **argv) {
   printf("Caracterul cautat: ");
   caracterCitit = getchar();
 
-  sendto(c, sirCitit, sizeof(sirCitit), 0, (struct sockaddr *) &server, sizeof(server));
-  sendto(c, &caracterCitit, 1, 0, (struct sockaddr *) &server, sizeof(server));
+  if (sendto(c, sirCitit, sizeof(sirCitit), 0, (struct sockaddr *) &server, sizeof(server)) < 0) {
+	  close(c);
+	  return 1;
+  }
+  if (sendto(c, &caracterCitit, 1, 0, (struct sockaddr *) &server, sizeof(server)) < 0) {
+	  close(c);
+	  return 1;
+  }
 
-  recvfrom(c, pozitiiCaracter, sizeof(pozitiiCaracter), MSG_WAITALL, (struct sockaddr *) &client, &l);
-  int numarPozitii;
-  recvfrom(c, &numarPozitii, sizeof(numarPozitii), MSG_WAITALL, (struct sockaddr *) &client, &l);
-
+  if (recvfrom(c, pozitiiCaracter, sizeof(pozitiiCaracter), MSG_WAITALL, (struct sockaddr *) &client, &l) < 0) {
+	  close(c);
+	  return 1;
+  }
+  if (recvfrom(c, &numarPozitii, sizeof(numarPozitii), MSG_WAITALL, (struct sockaddr *) &client, &l) < 0) {
+	  close(c);
+	  return 1;
+  }
+  
   numarPozitii = ntohs(numarPozitii);
+  if (numarPozitii == 0) {
+	  printf("Caracterul %c nu apare pe nicio pozitie", caracterCitit);
+  	  close(c);
+	  return 0;
+  }	  
   printf("Pozitiile pe care apare caracterul %c: ", caracterCitit);
   for ( int i = 0; i < numarPozitii; i ++) {
 	pozitiiCaracter[i] = ntohs(pozitiiCaracter[i]);

@@ -37,8 +37,14 @@ int main(int argc, char **argv) {
  
   memset(&pozitiiCaracter, -1, sizeof(pozitiiCaracter));
   
-  recvfrom(s, sirCitit, sizeof(sirCitit), 0, (struct sockaddr *) &client, &l);
-  recvfrom(s, &caracterCitit, 1, 0, (struct sockaddr *) &client, &l);
+  if (recvfrom(s, sirCitit, sizeof(sirCitit), 0, (struct sockaddr *) &client, &l) < 0) {
+	close(s);
+	return 1;
+  }
+  if (recvfrom(s, &caracterCitit, 1, 0, (struct sockaddr *) &client, &l) < 0) {
+	  close(s);
+	  return 1;
+  }
 
   int index = 0;
   for ( int i = 0; i < MAX_SIZE; i ++ ) 
@@ -49,8 +55,14 @@ int main(int argc, char **argv) {
 	}
   }
   index = htons(index);
-  sendto(s, pozitiiCaracter, sizeof(pozitiiCaracter), 0, (struct sockaddr *) &client, l);
-  sendto(s, &index, sizeof(index), 0, (struct sockaddr *) &client, l);
+  if (sendto(s, pozitiiCaracter, sizeof(pozitiiCaracter), 0, (struct sockaddr *) &client, l) < 0) {
+	  close(s);
+	  return 1;
+  }
+  if (sendto(s, &index, sizeof(index), 0, (struct sockaddr *) &client, l) < 0) {
+	  close(s);
+	  return 1;
+  }
     
   
 
