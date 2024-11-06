@@ -34,37 +34,39 @@ int main(int argc, char **argv) {
     printf("Eroare la bind\n");
     return 1;
   }
- 
-  memset(&pozitiiCaracter, -1, sizeof(pozitiiCaracter));
   
-  if (recvfrom(s, sirCitit, sizeof(sirCitit), 0, (struct sockaddr *) &client, &l) < 0) {
-	close(s);
-	return 1;
-  }
-  if (recvfrom(s, &caracterCitit, 1, 0, (struct sockaddr *) &client, &l) < 0) {
-	  close(s);
-	  return 1;
-  }
+  while(1) { 
+ 	memset(sirCitit, 0, MAX_SIZE - 1); 	
+  	memset(&pozitiiCaracter, -1, sizeof(pozitiiCaracter));
+  
+ 	 if (recvfrom(s, sirCitit, sizeof(sirCitit), 0, (struct sockaddr *) &client, &l) < 0) {
+		close(s);
+		return 1;
+  	}
+  	if (recvfrom(s, &caracterCitit, 1, 0, (struct sockaddr *) &client, &l) < 0) {
+		  close(s);
+	  	return 1;
+  	}
 
-  int index = 0;
-  for ( int i = 0; i < MAX_SIZE; i ++ ) 
-  {
-	if (sirCitit[i] == caracterCitit) {
-		pozitiiCaracter[index] = htons(i);
-		index ++;
-	}
-  }
-  index = htons(index);
-  if (sendto(s, pozitiiCaracter, sizeof(pozitiiCaracter), 0, (struct sockaddr *) &client, l) < 0) {
-	  close(s);
-	  return 1;
-  }
-  if (sendto(s, &index, sizeof(index), 0, (struct sockaddr *) &client, l) < 0) {
-	  close(s);
-	  return 1;
+  	int index = 0;
+  	for ( int i = 0; i < MAX_SIZE; i ++ ) 
+ 	 {
+		if (sirCitit[i] == caracterCitit) {
+			pozitiiCaracter[index] = htons(i);
+			index ++;
+		}
+  	}
+  	index = htons(index);
+  	if (sendto(s, pozitiiCaracter, sizeof(pozitiiCaracter), 0, (struct sockaddr *) &client, l) < 0) {
+		  close(s);
+	  	return 1;
+  	}
+  	if (sendto(s, &index, sizeof(index), 0, (struct sockaddr *) &client, l) < 0) {
+		  close(s);
+	  	return 1;
   }
     
   
-
+  }
   close(s);
 }
