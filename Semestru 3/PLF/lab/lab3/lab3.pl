@@ -43,6 +43,9 @@ test_suma_lista():-
  *
  * model_matematic:
  *
- * submultimi(l1..ln, S) = [],
+ * submultimi(l1..ln, S) = []              - daca n = 0
+ *
  *
  */
+
+

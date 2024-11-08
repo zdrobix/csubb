@@ -54,8 +54,8 @@ test_putere():-
  *
  * adaugaLista (L1..Ln, E, P) =
  *          []                                      - daca n = 0
- *          L1 U E U adaugaLista(L2..Ln, E, P + 1)  - daca P = 2^k - 1
- *          L1 U adaugaLista(L2..Ln, E, P + 1)      - daca P/= 2^k - 1
+ *          L1 U E U adaugaLista(L2..Ln, E, P + 1) - daca putere(P +1) =
+ *          L1 U adaugaLista(L2..Ln, E, P + 1) - daca P/= 2^k - 1
  *
  *          cu k > 0
  */
@@ -103,8 +103,8 @@ test_adaugaLista():-
  *
  * listaE(L1..Ln, E) =
  *    []                                         - daca n = 0
- *    listaE(L2..Ln, L1)                         - daca L1 e element
- *    listaE(adaugaLista(L1, E, 1) U L2..Ln, E)  - daca L1 e lista
+ *    L1 U listaE(L2..Ln, L1)                    - daca L1 e element
+      adaugaLista(L1, E) U listaE(L2..Ln, E)     - daca L1 e lista
  *
  */
 

@@ -217,3 +217,9 @@ Looking for all: 2024-11-02T09:15:26.404647700
 Saving: Utilizator{firstName='a', lastName='a'}2024-11-02T09:15:26.480924
 Looking for all: 2024-11-02T09:15:37.391432800
 Saving: Utilizator{firstName='b', lastName='b'}2024-11-02T09:15:37.447998500
+Looking for all: 2024-11-07T16:11:06.815891600
+Looking for all: 2024-11-07T16:12:17.252540
+Looking for all: 2024-11-07T16:13:20.984448900
+Looking for all: 2024-11-07T16:13:58.606135300
+Looking for all: 2024-11-07T16:15:54.661392500
+Looking for all: 2024-11-07T16:17:06.551848200

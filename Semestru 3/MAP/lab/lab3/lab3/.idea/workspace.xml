@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54bcc3d2-8fc8-4a19-b725-7df326516fee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../BD/lab/lab1/lab1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../BD/lab/lab1/lab1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../curs/a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logs/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs/logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PLF/lab/lab2/lab2.pl" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PLF/lab/lab2/lab2.pl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PLF/lab/lab3/lab3.pl" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PLF/lab/lab3/lab3.pl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +21,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -42,44 +43,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Unnamed.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.TestDatabase.test_create.executor": "Run",
-    "JUnit.TestRepoFile.executor": "Run",
-    "JUnit.TestRepoFile.testAddDelete.executor": "Run",
-    "JUnit.TestRepoFile.testAll.executor": "Run",
-    "JUnit.TestRepoFile.testCommunityAnalysis.executor": "Run",
-    "JUnit.TestRepoFile.testCreate.executor": "Run",
-    "JUnit.TestRepoMemory.executor": "Run",
-    "JUnit.TestRepoMemory.testAll.executor": "Run",
-    "JUnit.TestRepoMemory.testCreate.executor": "Run",
-    "JUnit.TestRepoMemory.testDelete.executor": "Run",
-    "JUnit.TestRepoMemory.testSave.executor": "Run",
-    "JUnit.TestRepoMemory.testUpdate.executor": "Run",
-    "JUnit.TestUser.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "Q:/Downloads/postgresql-42.7.4.jar",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.TestDatabase.test_create.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRepoFile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRepoFile.testAddDelete.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRepoFile.testAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRepoFile.testCommunityAnalysis.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRepoFile.testCreate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRepoMemory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRepoMemory.testAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRepoMemory.testCreate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRepoMemory.testDelete.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRepoMemory.testSave.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRepoMemory.testUpdate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestUser.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;Q:/info/csubb/Semestru 3/MAP/seminar/seminar6/lab6-exemplu-GUI/guiex1&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="Q:\info\csubb\Semestru 3\MAP\lab\lab3\lab3\src\repo" />
@@ -226,6 +227,9 @@
       <workItem from="1730443557202" duration="54000" />
       <workItem from="1730527136363" duration="5091000" />
       <workItem from="1730534576541" duration="6185000" />
+      <workItem from="1730908264155" duration="1050000" />
+      <workItem from="1730917984896" duration="51000" />
+      <workItem from="1730988620998" duration="15000" />
     </task>
     <servers />
   </component>

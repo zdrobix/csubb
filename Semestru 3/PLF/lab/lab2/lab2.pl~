@@ -118,6 +118,9 @@ listaE([H|T], E, [Lnew|R]):-
     adaugaLista(H, E, 1,Lnew),
     listaE(T, E, R).
 
+apel_listaE([H|T], R):-
+    listaE([H|T], _, R).
+
 
 test_listaE():-
     assertion(listaE([], _, [])),
