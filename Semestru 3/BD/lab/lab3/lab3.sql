@@ -2,7 +2,7 @@ USE zdrobix;
 GO
 
 --1. procedura care modifica tipul pretului
-CREATE PROCEDURE modificaTipPretMedicament
+CREATE PROCEDURE procedura_1
 AS
 	BEGIN
 		ALTER TABLE MEDICAMENTE 
@@ -10,11 +10,8 @@ AS
 	END;
 GO
 
-EXEC modificaTipPretMedicament;
-GO
-
 --2. Adauga pretul default pentru obiectul de tip medicament
-CREATE PROCEDURE adaugaConstrangereImplicitMedicamente
+CREATE PROCEDURE procedura_2
 AS 
 	BEGIN
 		ALTER TABLE MEDICAMENTE
@@ -22,11 +19,8 @@ AS
 	END;
 GO
 
-EXEC adaugaConstrangereImplicitMedicamente;
-GO
-
 --3. Creaza un tabel de retete
-CREATE PROCEDURE creazaTabelRetete
+CREATE PROCEDURE procedura_3
 AS 
 	BEGIN
 		CREATE TABLE RETETE (
@@ -38,11 +32,8 @@ AS
 	END;
 GO
 
-EXEC creazaTabelRetete;
-GO
-
 --4. Adauga un camp nou in tabel
-CREATE PROCEDURE adaugaColoanaDate 
+CREATE PROCEDURE procedura_4 
 AS
 	BEGIN 
 		ALTER TABLE RETETE
@@ -50,11 +41,8 @@ AS
 	END;
 GO
 
-EXEC adaugaColoanaDate;
-GO
-
 --5. Adauga foreign key constraint
-CREATE PROCEDURE adaugaFKConstraint 
+CREATE PROCEDURE procedura_5 
 AS
 	BEGIN
 		ALTER TABLE RETETE
@@ -68,6 +56,63 @@ AS
 	END;
 GO
 
-EXEC adaugaFKConstraint;
+
+--Tabela pentru versiunea structurii bazei de date.
+CREATE TABLE VersiuneBazaDeDate (
+	nr_versiune INT
+);
+
+INSERT INTO VersiuneBazaDeDate VALUES(0)
 GO
+
+CREATE PROCEDURE UpdateDB 
+@versiune INT
+AS
+	BEGIN
+		DECLARE @current_version AS INT;
+		SET @current_version = (SELECT nr_versiune FROM VersiuneBazaDeDate);
+		IF @versiune = @current_version
+			RETURN;
+		
+		DELETE FROM VersiuneBazaDeDate;
+		INSERT INTO VersiuneBazaDeDate(nr_versiune) VALUES (@versiune);
+
+		DECLARE @count AS INT;
+		SET @count = 0;
+		DECLARE @procedure VARCHAR(15);
+		DECLARE @procedure_undo VARCHAR(25);
+
+		WHILE (@current_version < @versiune) 
+		BEGIN
+			SET @count = @count + 1;
+			SET @current_version = @current_version + 1;
+			SET @procedure = 'procedura_' + CAST(@current_version AS VARCHAR(1));
+			PRINT('exec procedure ' + CAST(@current_version AS VARCHAR(1)));
+			EXEC @procedure
+		END;
+
+		IF (@count > 0)
+			RETURN;
+
+		WHILE (@current_version > @versiune) 
+		BEGIN
+			SET @count = @count + 1;
+			SET @current_version = @current_version - 1;
+			SET @procedure_undo = 'procedura_undo_' + CAST(@current_version AS VARCHAR(1));
+			PRINT('exec undo procedure ' + CAST(@current_version AS VARCHAR(1)));
+			EXEC @procedure_undo
+		END;
+	END;
+GO
+
+
+
+EXEC UpdateDB @versiune = 1
+EXEC UpdateDB @versiune = 2
+EXEC UpdateDB @versiune = 3
+EXEC UpdateDB @versiune = 4
+EXEC UpdateDB @versiune = 5
+GO
+
+
 

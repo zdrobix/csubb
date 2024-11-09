@@ -2,7 +2,7 @@ USE zdrobix;
 GO
 
 --1. procedura care modifica tipul pretului
-CREATE PROCEDURE modificaTipPretMedicamentInapoiInt
+CREATE PROCEDURE procedura_undo_1
 AS
 	BEGIN
 		ALTER TABLE MEDICAMENTE 
@@ -10,11 +10,8 @@ AS
 	END;
 GO
 
-EXEC modificaTipPretMedicamentInapoiInt;
-GO
-
 --2. Adauga pretul default pentru obiectul de tip medicament
-CREATE PROCEDURE stergeConstrangereImplicitMedicamente
+CREATE PROCEDURE procedura_undo_2
 AS 
 	BEGIN
 		ALTER TABLE MEDICAMENTE
@@ -22,22 +19,16 @@ AS
 	END;
 GO
 
-EXEC stergeConstrangereImplicitMedicamente;
-GO
-
 --3. Creaza un tabel de retete
-CREATE PROCEDURE stergeTabelRetete
+CREATE PROCEDURE procedura_undo_3
 AS 
 	BEGIN
 		DROP TABLE RETETE
 	END;
 GO
 
-EXEC stergeTabelRetete;
-GO
-
 --4. Adauga un camp nou in tabel
-CREATE PROCEDURE stergeColoanaDate 
+CREATE PROCEDURE procedura_undo_4 
 AS
 	BEGIN 
 		ALTER TABLE RETETE
@@ -45,11 +36,8 @@ AS
 	END;
 GO
 
-EXEC stergeColoanaDate;
-GO
-
 --5. Adauga foreign key constraint
-CREATE PROCEDURE stergeFKConstraint 
+CREATE PROCEDURE procedura_undo_5 
 AS
 	BEGIN
 		ALTER TABLE RETETE
@@ -57,8 +45,5 @@ AS
 		ALTER TABLE RETETE
 			DROP CONSTRAINT fk_constraint_id_medicament
 	END;
-GO
-
-EXEC stergeFKConstraint;
 GO
 
