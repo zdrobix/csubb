@@ -96,17 +96,16 @@ AS
 
 		WHILE (@current_version > @versiune) 
 		BEGIN
-			SET @count = @count + 1;
-			SET @current_version = @current_version - 1;
 			SET @procedure_undo = 'procedura_undo_' + CAST(@current_version AS VARCHAR(1));
 			PRINT('exec undo procedure ' + CAST(@current_version AS VARCHAR(1)));
+			SET @current_version = @current_version - 1;
 			EXEC @procedure_undo
 		END;
 	END;
 GO
 
 
-
+EXEC UpdateDB @versiune = 0
 EXEC UpdateDB @versiune = 1
 EXEC UpdateDB @versiune = 2
 EXEC UpdateDB @versiune = 3
