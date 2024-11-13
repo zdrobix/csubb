@@ -34,15 +34,27 @@ test_suma_lista():-
 /*
  * Genereaza submultimile unei liste, daca au suma egala cu S
  *
- * submultimi(L:lista, S:intreg)
+ * submultimi(L:lista, S:intreg, R:lista)
  *
  * model de flux (i, i)
  *
  * L: lista pentru care se genereaza submultimi de suma S
  * S: suma care trebuie sa o aiba elementele submultimiilor generate
+ * R: lista cu submultimile ce au suma elementelor egala cu S
  *
  * model_matematic:
  *
- * submultimi(l1..ln, S) = [],
+ * submultimi(l1..ln, S) =
+ *    []                                             - daca n = 0
+ *    submultimi(l2..ln, S) U {l1 U X}               - daca n > 0
  *
+ *    unde X apartine submultimi(l2..ln, S - l1)
  */
+
+submultimi([], 0, [[]]).
+submultimi([_|T], S, Sub):-
+    submultimi(T, S, Sub).
+submultimi([H|T], S, [H|Sub]):-
+    Snew is S - H,
+    submultimi(T, Snew, Sub).
+
