@@ -1,0 +1,2 @@
+un client da un numar n si serverul returneaza primele n numere prime
+tcp
