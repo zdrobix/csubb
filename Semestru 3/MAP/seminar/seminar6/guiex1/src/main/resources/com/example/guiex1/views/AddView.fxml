@@ -6,9 +6,28 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.chart.LineChart?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+            fx:controller="main.java.com.example.guiex1.controller.AddUserController"
+            stylesheets="@../css/style.css"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox spacing="20.0">
+        <HBox spacing="20.0">
+            <Label></Label>
+            <VBox spacing="10.0">
+                <Label text="Id:" />
+                <Label text="First Name:" />
+                <Label text="Last Name:" />
+            </VBox>
+            <VBox spacing="10.0">
+                <TextField fx:id="idTextField" prefWidth="200.0" />
+                <TextField fx:id="firstNameTextField" prefWidth="200.0" />
+                <TextField fx:id="lastNameTextField" prefWidth="200.0" />
+                <Button fx:id="addButton" text="Add User" onAction="#handleAddUser" prefWidth="200.0"></Button>
+                <Button fx:id="updateButton" text="Update User" onAction="#handleUpdateUser" prefWidth="200.0"></Button>
+            </VBox>
+        </HBox>
 
+    </VBox>
 </AnchorPane>

@@ -34,14 +34,7 @@
                                         </TableView>
                                         <VBox spacing="10.0" layoutX="420.0" layoutY="20.0">
                                             <children>
-                                                <HBox spacing="10.0">
-                                                    <Label text="First Name:" />
-                                                    <TextField fx:id="firstNameTextField" prefWidth="200.0" />
-                                                </HBox>
-                                                <HBox spacing="10.0">
-                                                    <Label text="Last Name:" />
-                                                    <TextField fx:id="lastNameTextField" prefWidth="200.0" />
-                                                </HBox>
+
                                             </children>
                                         </VBox>
                                     </children>
@@ -55,7 +48,7 @@
                         <HBox prefHeight="34.0" prefWidth="655.0" spacing="20.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0">
                             <children>
                                 <Button mnemonicParsing="false" onAction="#handleDeleteUtilizator" text="Delete" />
-                                <Button mnemonicParsing="false" onAction="#handleAddUtilizator" text="Add" />
+                                <Button mnemonicParsing="false" onAction="#openAddUserMenu" text="Add" />
                                 <Button mnemonicParsing="false" onAction="#handleUpdateUtilizator" text="Update" />
                                 <ImageView fitHeight="48.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
                                     <image>

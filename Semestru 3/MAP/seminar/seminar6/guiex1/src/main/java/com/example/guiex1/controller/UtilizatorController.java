@@ -1,8 +1,14 @@
 package main.java.com.example.guiex1.controller;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import main.java.com.example.guiex1.HelloApplication;
 import main.java.com.example.guiex1.domain.Utilizator;
 import main.java.com.example.guiex1.domain.ValidationException;
 import main.java.com.example.guiex1.services.UtilizatorService;
+import main.java.com.example.guiex1.utils.events.ChangeEventType;
 import main.java.com.example.guiex1.utils.events.UtilizatorEntityChangeEvent;
 import main.java.com.example.guiex1.utils.observer.Observer;
 import javafx.collections.FXCollections;
@@ -14,8 +20,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 
-
-
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -28,7 +33,8 @@ public class UtilizatorController implements Observer<UtilizatorEntityChangeEven
     private TextField firstNameTextField;
     @FXML
     private TextField lastNameTextField;
-
+    @FXML
+    private TextField idTextField;
 
     @FXML
     TableView<Utilizator> tableView;
@@ -40,6 +46,7 @@ public class UtilizatorController implements Observer<UtilizatorEntityChangeEven
 
     public void setUtilizatorService(UtilizatorService service) {
         this.service = service;
+        service.addObserver(this);
         initModel();
     }
 
@@ -71,7 +78,22 @@ public class UtilizatorController implements Observer<UtilizatorEntityChangeEven
 
     @Override
     public void update(UtilizatorEntityChangeEvent utilizatorEntityChangeEvent) {
-
+        switch (utilizatorEntityChangeEvent.getType()) {
+            case ADD:
+                this.model.add(
+                        utilizatorEntityChangeEvent.getData()
+                );
+                break;
+            case UPDATE:
+                this.model.set(
+                        this.tableView.getSelectionModel().getSelectedIndex(),
+                        utilizatorEntityChangeEvent.getData()
+                );
+                break;
+            case DELETE:
+                this.model.remove(utilizatorEntityChangeEvent.getData());
+                break;
+        }
     }
 
     public void handleDeleteUtilizator(ActionEvent actionEvent) {
@@ -81,20 +103,35 @@ public class UtilizatorController implements Observer<UtilizatorEntityChangeEven
         }
     }
 
-    public void handleAddUtilizator(ActionEvent actionEvent) {
+    public void handleUpdateUtilizator(ActionEvent actionEvent) throws IOException {
+        var stage = new Stage();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/guiex1/views/AddView.fxml"));
+
+        AnchorPane userLayout = fxmlLoader.load();
+        stage.setScene(new Scene(userLayout));
+
+        AddUserController userController = fxmlLoader.getController();
+        userController.setUtilizatorService(service, tableView.getSelectionModel().getSelectedItem());
+
+        stage.setWidth(400);
+        stage.setHeight(200);
+        stage.show();
     }
 
-    public void handleUpdateUtilizator(ActionEvent actionEvent) {
-        Utilizator selectedUser = tableView.getSelectionModel().getSelectedItem();
-        if (selectedUser != null) {
-            String newFirstName = firstNameTextField.getText();
-            String newLastName = lastNameTextField.getText();
+    public void openAddUserMenu(ActionEvent actionEvent) throws IOException {
+        var stage = new Stage();
 
-            selectedUser.setFirstName(newFirstName);
-            selectedUser.setLastName(newLastName);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/guiex1/views/AddView.fxml"));
 
-            // Update user in the service
-            service.updateUtilizator(selectedUser);
-        }
+        AnchorPane userLayout = fxmlLoader.load();
+        stage.setScene(new Scene(userLayout));
+
+        AddUserController userController = fxmlLoader.getController();
+        userController.setUtilizatorService(service, new Utilizator("", ""));
+
+        stage.setWidth(400);
+        stage.setHeight(200);
+        stage.show();
     }
 }
