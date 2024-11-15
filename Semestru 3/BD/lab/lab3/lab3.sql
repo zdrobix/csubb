@@ -110,6 +110,8 @@ EXEC UpdateDB @versiune = 1
 EXEC UpdateDB @versiune = 2
 EXEC UpdateDB @versiune = 3
 EXEC UpdateDB @versiune = 4
+
+
 EXEC UpdateDB @versiune = 5
 GO
 
