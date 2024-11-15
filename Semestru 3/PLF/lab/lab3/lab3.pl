@@ -32,24 +32,60 @@ test_suma_lista():-
     suma_lista([1, 2, 4], 7).
 
 /*
- * Genereaza submultimile unei liste, daca au suma egala cu S
+ * Genereaza toate submultimile unei liste
  *
- * submultimi(L:lista, S:intreg, R:lista)
+ * submultimi(L:lista, R:lista)
  *
- * model de flux (i, i)
+ * model de flux (i, o)
  *
- * L: lista pentru care se genereaza submultimi de suma S
- * S: suma care trebuie sa o aiba elementele submultimiilor generate
- * R: lista cu submultimile ce au suma elementelor egala cu S
+ * L: lista pentru care se genereaza submultimi
+ * R: lista cu submultimile listei date
  *
  * model_matematic:
  *
- * submultimi(l1..ln, S) =
+ * submultimi(l1..ln) =
  *    []                                             - daca n = 0
- *    submultimi(l2..ln, S) U {l1 U X}               - daca n > 0
- *
- *    unde X apartine submultimi(l2..ln, S - l1)
+ *    {l1 U submultimi(l2..ln)} U submultimi(l2..ln) - daca n > 0
  */
 
+submultimi([], []):-!.
+submultimi([First|Rest], [First|Sub]):-
+    submultimi(Rest, Sub).
+submultimi([_|Rest], Sub):-
+    submultimi(Rest, Sub).
 
+/*
+ * Dintr-o lista de liste, returneaza doar listele care au suma
+ * elementelor S
+ *
+ * verifica_suma(L:lista, S:intreg, R:lista)
+ *
+ * model de flux (i, i, o)
+ *
+ * L:lista din care se extrag listele de suma S
+ * S:suma elementelor cautata
+ * R:lista cu toate listele ce au suma elementelor egala cu S
+ *
+ * model_matematic:
+ *
+ * verifica_suma(l1..ln, S) =
+ *    []                                   - daca n = 0
+ *    l1 U verifica_suma(l2..ln, S)        - daca suma_lista(l1) = S
+ *    verifica_suma(l2..ln, S)             - altfel
+ */
 
+verifica_suma([], _, []):-!.
+verifica_suma([H|T], S, [H|Rez]):-
+    suma_lista(H, S),!,
+    verifica_suma(T, S, Rez).
+verifica_suma([_|T], S, Rez):-
+    verifica_suma(T, S, Rez).
+
+test_verifica_suma():-
+    verifica_suma([], 0, []),
+    verifica_suma([[1], [2], [1]], 2, [[2]]),
+    verifica_suma([[0], [1, 2], [4], [3]], 3, [[1, 2], [3]]).
+
+apel_submultimi(L, S, R):-
+    findall(Sub, submultimi(L, Sub), ToateSub),
+    verifica_suma(ToateSub, S, R).
