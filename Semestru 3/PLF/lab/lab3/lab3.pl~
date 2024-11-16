@@ -23,7 +23,7 @@
  */
 
 
-submultimi_suma([], _, []).
+submultimi_suma([], 0, []).
 submultimi_suma([_|T], S, Sub):-
     submultimi_suma(T, S, Sub).
 submultimi_suma([H|T], S, [H|Sub]):-
