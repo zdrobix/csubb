@@ -1,4 +1,0 @@
-Saptamana 8
-	- test practic(45 min) -> P1, P2a)
-	- tema P3 backtracking (predicate nedeterministe)
- 
