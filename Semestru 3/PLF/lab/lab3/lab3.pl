@@ -18,7 +18,7 @@
  *
  *    []                                - daca n = 0
  *    submultimi(l2..ln, S)
- *    l1 U submultimi(l2..ln, S - l1    - daca n\= 0
+ *    l1 U submultimi(l2..ln, S - l1)   - daca n\= 0
  *
  */
 
