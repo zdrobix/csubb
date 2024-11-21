@@ -30,6 +30,7 @@ submultimi_suma([H|T], S, [H|Sub]):-
     S1 is S - H,
     submultimi_suma(T, S1, Sub).
 
+
 apel_sub(L, S, R):-
     findall(Sub, submultimi_suma(L, S, Sub), R),
     maplist(writeln, R).
