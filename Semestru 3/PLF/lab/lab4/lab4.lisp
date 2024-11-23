@@ -66,11 +66,35 @@
 ;                         [xl1..ln] U insert-all(x, l2..ln)  - daca n > 0
 (defun insert-all (x lista) 
   	(if (null lista) 
-	  	(list (list x))
-		(cons (cons x lista)
-		      	(insert-all x (cdr lista)))))
+	  	(list 
+		  	(list x)
+		)
+		(cons 
+		  	(cons x lista)
+		      	(insert-all x 
+				    (cdr lista)
+			)
+		)
+	)
+)
 		
 
 
 ;12.d) o functie care intoarce T daca o lista are nr par de elem, si NIL in caz contrar. fara sa se numere elementele listei
-
+;model matematic
+; functie(l1..ln) = T                  - daca n = 0
+;                   NIL                - daca n = 1
+;                   functie(l2..ln)    - daca n > 1
+(defun functie (lista)
+	(if (null lista)
+		'T
+		(if (null (cdr lista))
+			'NIL
+			(functie(cdr 
+				  	(cdr lista)
+				)
+					
+		  	)
+	  	)
+ 	)
+)
