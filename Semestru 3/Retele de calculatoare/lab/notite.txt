@@ -1,0 +1,28 @@
+Clase de adrese IP
+
+A: [0][Retea  ][Gazda            ]
+	\8 - 2^24 ip in clasa A
+	0.0.0.0 -> 127.255.255.255
+	128 - 2 = 126
+	127.x.y.z, 0.x.y.z - se scad
+
+B: [10][Retea ][Gazda            ]
+	\16 -> 2^16 ip in clasa B
+	128.0.0.0 -> 191.255.255.255
+	2^14 clase B
+C: [110][Retea      ][Gazda       ]
+	192.0.0.0 -> 223.255.255.255
+	2^8 ->  2^21 clase C
+
+D: [1110][ -adrese multicast]
+	224.0.0.0 -> 239.255.255.255
+
+E: [1111][Rezervat    ]
+	240.0.0.0 -> 255.255.255.255
+
+		*unicast
+		*broadcast
+		*multicast
+		*anycast
+
+	
