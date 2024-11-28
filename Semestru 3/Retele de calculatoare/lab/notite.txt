@@ -24,5 +24,13 @@ E: [1111][Rezervat    ]
 		*broadcast
 		*multicast
 		*anycast
+- A 10.0.0.0 /8
+- B 172.31.0.0 /16
+    172.31.0.0 /16
+	16 clase B
+- C 192.168.0.0 /24
+    192.168.255.0 /24
+	256 clase C
+
 
 	
