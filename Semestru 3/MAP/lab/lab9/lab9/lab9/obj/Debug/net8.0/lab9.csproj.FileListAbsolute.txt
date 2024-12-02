@@ -1,0 +1,15 @@
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\bin\Debug\net8.0\lab9.exe
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\bin\Debug\net8.0\lab9.deps.json
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\bin\Debug\net8.0\lab9.runtimeconfig.json
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\bin\Debug\net8.0\lab9.dll
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\bin\Debug\net8.0\lab9.pdb
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\obj\Debug\net8.0\lab9.GeneratedMSBuildEditorConfig.editorconfig
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\obj\Debug\net8.0\lab9.AssemblyInfoInputs.cache
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\obj\Debug\net8.0\lab9.AssemblyInfo.cs
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\obj\Debug\net8.0\lab9.csproj.CoreCompileInputs.cache
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\obj\Debug\net8.0\lab9.sourcelink.json
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\obj\Debug\net8.0\lab9.dll
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\obj\Debug\net8.0\refint\lab9.dll
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\obj\Debug\net8.0\lab9.pdb
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\obj\Debug\net8.0\lab9.genruntimeconfig.cache
+Q:\info\csubb\Semestru 3\MAP\lab\lab9\lab9\lab9\obj\Debug\net8.0\ref\lab9.dll
