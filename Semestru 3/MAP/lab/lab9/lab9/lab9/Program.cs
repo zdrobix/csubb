@@ -1,13 +1,2 @@
-﻿using lab9;
-
-namespace complex
-{
-	internal class Application
-	{
-		public static int Main(string[] args)
-		{
-			CalculateExpression.Calculate(args);
-			return 0;
-		}
-	}
-}
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
