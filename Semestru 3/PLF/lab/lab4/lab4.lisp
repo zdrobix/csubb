@@ -10,6 +10,18 @@
 	)
 )
 
+; model matematic
+; produs_scalar2(l1..ln, v1..vn) 
+;     0,           daca n = 0
+;     l1 * v1 + produs_scalar2(l2..ln, v2..vn)
+;
+(defun produs_scalar2 (v1 v2) 
+  	(cond 
+	  ((null v1) 0)
+	  ((null v2) 0)
+	  ((+ (* (car v1) (car v2)) (produs_scalar2 (cdr v1) (cdr v2))))
+	  )
+	)
 
 ;12.b) maximul atomilor numerici dintr-o lista, de la orice nivel
 ;model matematic 
