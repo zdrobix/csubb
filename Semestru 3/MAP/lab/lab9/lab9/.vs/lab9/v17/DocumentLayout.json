@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab9\\lab9\\lab9\\model\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|solutionrelative:lab9\\model\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab9\\lab9\\lab9\\container\\taskcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|solutionrelative:lab9\\container\\taskcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab9\\lab9\\lab9\\container\\container.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|solutionrelative:lab9\\container\\container.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab9\\lab9\\lab9\\container\\queuecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|solutionrelative:lab9\\container\\queuecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab9\\lab9\\lab9\\model\\delaytaskrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|solutionrelative:lab9\\model\\delaytaskrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab9\\lab9\\lab9\\model\\itaskrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|solutionrelative:lab9\\model\\itaskrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab9\\lab9\\lab9\\model\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|solutionrelative:lab9\\model\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab9\\lab9\\lab9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,32 +51,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TaskContainer.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\container\\TaskContainer.cs",
+              "RelativeDocumentMoniker": "lab9\\container\\TaskContainer.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\container\\TaskContainer.cs",
+              "RelativeToolTip": "lab9\\container\\TaskContainer.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T11:07:38.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QueueContainer.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\container\\QueueContainer.cs",
+              "RelativeDocumentMoniker": "lab9\\container\\QueueContainer.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\container\\QueueContainer.cs",
+              "RelativeToolTip": "lab9\\container\\QueueContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T11:06:54.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DelayTaskRunner.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\DelayTaskRunner.cs",
+              "RelativeDocumentMoniker": "lab9\\model\\DelayTaskRunner.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\DelayTaskRunner.cs",
+              "RelativeToolTip": "lab9\\model\\DelayTaskRunner.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T11:00:16.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ITaskRunner.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\ITaskRunner.cs",
+              "RelativeDocumentMoniker": "lab9\\model\\ITaskRunner.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\ITaskRunner.cs",
+              "RelativeToolTip": "lab9\\model\\ITaskRunner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T10:57:04.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Task.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\Task.cs",
               "RelativeDocumentMoniker": "lab9\\model\\Task.cs",
               "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\Task.cs",
               "RelativeToolTip": "lab9\\model\\Task.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAADwvysAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T06:30:18.178Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Container.cs",
-              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\container\\Container.cs",
-              "RelativeDocumentMoniker": "lab9\\container\\Container.cs",
-              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\container\\Container.cs",
-              "RelativeToolTip": "lab9\\container\\Container.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:28:19.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\Program.cs",
               "RelativeDocumentMoniker": "lab9\\Program.cs",
