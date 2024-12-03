@@ -10,7 +10,6 @@
   <ItemGroup>
     <Folder Include="decorator\" />
     <Folder Include="factory\" />
-    <Folder Include="model\" />
     <Folder Include="test\" />
   </ItemGroup>
 
