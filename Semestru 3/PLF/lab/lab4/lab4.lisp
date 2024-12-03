@@ -19,7 +19,7 @@
 ;                 max(maxim(l1), maxim(l2..ln) - altfel
 (defun maxim_lista(lista)
 	(if (null lista)
-	  0
+	  -10000
 	  (if (listp (car lista))
 		     (max 
 		      		(maxim_lista 
@@ -39,6 +39,17 @@
 	  )
 )
 
+(defun maxim_lista2(lista) 
+  	(cond 
+		((null lista) -1000)
+		((listp (car lista)) 
+			 (max (maxim_lista2(car lista)) (maxim_lista2(cdr lista))))
+		((numberp (car lista))
+			  (max (car lista) (maxim_lista2 (cdr lista))))
+		(T(maxim_lista2(cdr lista)))
+		
+	  )
+	)
 
 ;12.c) o functie care intoarce lista permutarilor unei liste date
 ;model matematic
