@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53a9835-f125-465c-8840-937b9b4e6c06" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab9/lab9/.vs/lab9/FileContentIndex/f61d3c75-2e95-4ff7-ae1e-225e41883d46.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab9/lab9/lab9/obj/Debug/net8.0/lab9.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab9/lab9/lab9/obj/Debug/net8.0/lab9.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab9/lab9/lab9/obj/Debug/net8.0/lab9.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab9/lab9/lab9/obj/Debug/net8.0/lab9.AssemblyInfoInputs.cache" afterDir="false" />
-    </list>
+    <list default="true" id="a53a9835-f125-465c-8840-937b9b4e6c06" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +105,7 @@
       <workItem from="1728637661416" duration="7449000" />
       <workItem from="1728968861252" duration="3539000" />
       <workItem from="1729086008524" duration="30000" />
-      <workItem from="1733223370901" duration="612000" />
+      <workItem from="1733223370901" duration="852000" />
     </task>
     <servers />
   </component>

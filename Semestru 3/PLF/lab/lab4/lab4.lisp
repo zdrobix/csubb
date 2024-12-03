@@ -65,49 +65,43 @@
 
 ;12.c) o functie care intoarce lista permutarilor unei liste date
 ;model matematic
-; permutari(l1..ln) = []                          - daca n = 0
-; 		      [l1 U permutari(l2..ln)] U  
-;                     permutari(l2..ln)           - daca n > 0
-(defun permutari(lista)
-  	(if (null lista)
-		'(())
-		(append 
-		  	(insert-all 
-			  	(car lista)
-				(cdr lista)
-			)
-			(permutari
-			  	(cdr lista)
-			)
+; permutari(l1..ln) = []                           - daca n = 0
+; 		      insert(l1, X)                - daca n > 0	  
+;                        X : permutari(l2..ln)
+(defun permutari (lista)
+	(cond
+		((null lista) '(()))
+		((null (cdr lista)) (list (car lista)))
+		(T	
+			
+
+
 		)
 	)
 )
 
-;insereaza elementul x pe fiecare pozitie din lista lista
+
 ;model matematic
-; insert-all(x, l1..ln) = (x)                                - daca n = 0
-;                         [xl1..ln] U insert-all(x, l2..ln)  - daca n > 0
-(defun insert-all (x lista) 
-  	(if (null lista) 
-	  	(list 
-		  	(list x)
-		)
-		(cons 
-		  	(cons x lista)
-		      	(insert-all x 
-				    (cdr lista)
-			)
+; insert(e, l1..ln, p) = [e]                        - daca n = 0
+;		        
+;
+
+(defun insert(x lista nr) 
+	(cond 
+		((= nr 0) (list lista))
+		(T
+			(cons x (insert x (cons (cdr lista) (car lista)) (- nr 1))				
+		  
 		)
 	)
 )
-		
 
 
 ;12.d) o functie care intoarce T daca o lista are nr par de elem, si NIL in caz contrar. fara sa se numere elementele listei
 ;model matematic
 ; functie(l1..ln) = T                  - daca n = 0
 ;                   NIL                - daca n = 1
-;                   functie(l2..ln)    - daca n > 1
+;                   functie(l3..ln)    - daca n > 1
 (defun functie (lista)
 	(if (null lista)
 		'T
