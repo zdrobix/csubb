@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Task = lab9.model.Task;
 
-namespace lab9.model
+namespace lab9.decorator
 {
-	internal abstract class AbstractTaskRunner : ITaskRunner
+    internal abstract class AbstractTaskRunner : ITaskRunner
 	{
 		private ITaskRunner taskRunner;
 

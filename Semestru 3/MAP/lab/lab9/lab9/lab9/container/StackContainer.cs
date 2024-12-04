@@ -2,14 +2,14 @@
 
 namespace lab9.container
 {
-	internal class QueueContainer : TaskContainer
+	internal class StackContainer : TaskContainer
 	{
 		public override Task? Remove()
 		{
 			if (!this.IsEmpty())
 			{
-				var toRemove = this.tasks.ElementAt(0);
-				this.tasks.RemoveAt(0);
+				var toRemove = this.tasks.ElementAt(this.Size() - 1);
+				this.tasks.RemoveAt(this.Size() - 1);
 				return toRemove;
 			}
 			return null;

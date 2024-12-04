@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53a9835-f125-465c-8840-937b9b4e6c06" name="Changes" comment="" />
+    <list default="true" id="a53a9835-f125-465c-8840-937b9b4e6c06" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../PLF/lab/lab4/.lab4.lisp.swp" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +107,7 @@
       <workItem from="1728637661416" duration="7449000" />
       <workItem from="1728968861252" duration="3539000" />
       <workItem from="1729086008524" duration="30000" />
-      <workItem from="1733223370901" duration="852000" />
+      <workItem from="1733223370901" duration="1448000" />
     </task>
     <servers />
   </component>

@@ -1,32 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Task = lab9.model.Task;
 
 namespace lab9.container
 {
-	internal class TaskContainer : IContainer
+	internal abstract class TaskContainer : IContainerr
 	{
-		private List<Task> tasks;
-		public void Add(Task task)
-		{
-			throw new NotImplementedException();
-		}
-
-		public bool IsEmpty()
-		{
-			throw new NotImplementedException();
-		}
-
-		public Task Remove()
-		{
-			throw new NotImplementedException();
-		}
-
-		public int Size()
-		{
-			throw new NotImplementedException();
-		}
+		public List<Task> tasks = new List<Task>();
+		public void Add(Task task) => tasks.Add(task);
+		public bool IsEmpty() => tasks.Count == 0;
+		public abstract Task? Remove();
+		public int Size() => tasks.Count;
 	}
 }
