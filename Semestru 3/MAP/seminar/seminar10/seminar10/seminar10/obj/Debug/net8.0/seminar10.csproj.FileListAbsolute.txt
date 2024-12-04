@@ -1,0 +1,15 @@
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\bin\Debug\net8.0\seminar10.exe
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\bin\Debug\net8.0\seminar10.deps.json
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\bin\Debug\net8.0\seminar10.runtimeconfig.json
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\bin\Debug\net8.0\seminar10.dll
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\bin\Debug\net8.0\seminar10.pdb
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\obj\Debug\net8.0\seminar10.GeneratedMSBuildEditorConfig.editorconfig
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\obj\Debug\net8.0\seminar10.AssemblyInfoInputs.cache
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\obj\Debug\net8.0\seminar10.AssemblyInfo.cs
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\obj\Debug\net8.0\seminar10.csproj.CoreCompileInputs.cache
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\obj\Debug\net8.0\seminar10.sourcelink.json
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\obj\Debug\net8.0\seminar10.dll
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\obj\Debug\net8.0\refint\seminar10.dll
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\obj\Debug\net8.0\seminar10.pdb
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\obj\Debug\net8.0\seminar10.genruntimeconfig.cache
+Q:\info\csubb\Semestru 3\MAP\seminar\seminar10\seminar10\seminar10\obj\Debug\net8.0\ref\seminar10.dll

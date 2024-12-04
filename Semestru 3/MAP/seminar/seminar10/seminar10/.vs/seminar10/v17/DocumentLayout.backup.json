@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar10\\seminar10\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2B83D22-9CB4-4C75-81C3-0375AC5B54CF}|..\\..\\seminar\\seminar10\\seminar10\\seminar10\\seminar10.csproj|q:\\info\\csubb\\semestru 3\\map\\seminar\\seminar10\\seminar10\\seminar10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2B83D22-9CB4-4C75-81C3-0375AC5B54CF}|..\\..\\seminar\\seminar10\\seminar10\\seminar10\\seminar10.csproj|solutionrelative:seminar10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2B83D22-9CB4-4C75-81C3-0375AC5B54CF}|..\\..\\seminar\\seminar10\\seminar10\\seminar10\\seminar10.csproj|q:\\info\\csubb\\semestru 3\\map\\seminar\\seminar10\\seminar10\\seminar10\\square.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2B83D22-9CB4-4C75-81C3-0375AC5B54CF}|..\\..\\seminar\\seminar10\\seminar10\\seminar10\\seminar10.csproj|solutionrelative:seminar10\\square.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2B83D22-9CB4-4C75-81C3-0375AC5B54CF}|..\\..\\seminar\\seminar10\\seminar10\\seminar10\\seminar10.csproj|q:\\info\\csubb\\semestru 3\\map\\seminar\\seminar10\\seminar10\\seminar10\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2B83D22-9CB4-4C75-81C3-0375AC5B54CF}|..\\..\\seminar\\seminar10\\seminar10\\seminar10\\seminar10.csproj|solutionrelative:seminar10\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2B83D22-9CB4-4C75-81C3-0375AC5B54CF}|..\\..\\seminar\\seminar10\\seminar10\\seminar10\\seminar10.csproj|q:\\info\\csubb\\semestru 3\\map\\seminar\\seminar10\\seminar10\\seminar10\\ishape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2B83D22-9CB4-4C75-81C3-0375AC5B54CF}|..\\..\\seminar\\seminar10\\seminar10\\seminar10\\seminar10.csproj|solutionrelative:seminar10\\ishape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 232,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Circle.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar10\\seminar10\\seminar10\\Circle.cs",
+              "RelativeDocumentMoniker": "seminar10\\Circle.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar10\\seminar10\\seminar10\\Circle.cs",
+              "RelativeToolTip": "seminar10\\Circle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T16:07:25.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Square.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar10\\seminar10\\seminar10\\Square.cs",
+              "RelativeDocumentMoniker": "seminar10\\Square.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar10\\seminar10\\seminar10\\Square.cs",
+              "RelativeToolTip": "seminar10\\Square.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T16:05:57.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IShape.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar10\\seminar10\\seminar10\\IShape.cs",
+              "RelativeDocumentMoniker": "seminar10\\IShape.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar10\\seminar10\\seminar10\\IShape.cs",
+              "RelativeToolTip": "seminar10\\IShape.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T16:05:17.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar10\\seminar10\\seminar10\\Program.cs",
+              "RelativeDocumentMoniker": "seminar10\\Program.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar10\\seminar10\\seminar10\\Program.cs",
+              "RelativeToolTip": "seminar10\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T16:04:32.896Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
