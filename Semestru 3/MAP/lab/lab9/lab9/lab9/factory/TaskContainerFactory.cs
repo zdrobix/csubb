@@ -9,7 +9,6 @@ namespace lab9.factory
 	class TaskContainerFactory : IFactory
 	{
 		private static TaskContainerFactory instance = new TaskContainerFactory();
-
 		private TaskContainerFactory() { }
 
 		public static TaskContainerFactory getInstance() => instance!;

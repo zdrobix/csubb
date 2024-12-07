@@ -1,3 +1,6 @@
+USE zdrobix;
+GO
+
 --Tabele de test
 INSERT INTO Tables(Name) VALUES
 ('CLIENTI'),
@@ -370,7 +373,7 @@ CREATE OR ALTER PROCEDURE TestAll @Table VARCHAR(50)
 					EXEC (@insert + ' BENEFICII_MEDICAMENTE')
 					EXEC (@delete + ' BENEFICII_MEDICAMENTE')
 					SET @date2 = GETDATE()
-					EXEC Usp_run_view MEDICAMENTE
+					EXEC Usp_run_view BENEFICII_MEDICAMENTE
 					SET @date3 = GETDATE()
 					SET @text = @insert + N' ' + @delete + ', and view: ' + @Table 
 					INSERT INTO TestRuns VALUES (@text, @date1, @date3)
@@ -410,6 +413,8 @@ CREATE OR ALTER PROCEDURE Main
 
 EXEC Main
 
+
+select * from Tables
 
 select * from TestRuns
 select * from TestRunTables
