@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|solutionrelative:lab9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab9\\lab9\\lab9\\model\\sortingtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|solutionrelative:lab9\\model\\sortingtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab9\\lab9\\lab9\\model\\sortingmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|solutionrelative:lab9\\model\\sortingmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab9\\lab9\\lab9\\decorator\\strategytaskrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{648193B1-98D9-4B10-BC27-4EB4832A4919}|lab9\\lab9.csproj|solutionrelative:lab9\\decorator\\strategytaskrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -70,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 232,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,7 +94,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "SortingTask.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\SortingTask.cs",
+              "RelativeDocumentMoniker": "lab9\\model\\SortingTask.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\SortingTask.cs",
+              "RelativeToolTip": "lab9\\model\\SortingTask.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAmwFEAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T10:36:35.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SortingMethod.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\SortingMethod.cs",
+              "RelativeDocumentMoniker": "lab9\\model\\SortingMethod.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\SortingMethod.cs",
+              "RelativeToolTip": "lab9\\model\\SortingMethod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T10:36:10.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Strategy.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\factory\\Strategy.cs",
               "RelativeDocumentMoniker": "lab9\\factory\\Strategy.cs",
@@ -94,12 +128,11 @@
               "RelativeToolTip": "lab9\\factory\\Strategy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T17:23:29.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T17:23:29.993Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "StrategyTaskRunner.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\decorator\\StrategyTaskRunner.cs",
               "RelativeDocumentMoniker": "lab9\\decorator\\StrategyTaskRunner.cs",
@@ -107,12 +140,11 @@
               "RelativeToolTip": "lab9\\decorator\\StrategyTaskRunner.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAIAwwBYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T17:04:52.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T17:04:52.103Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TaskContainerFactory.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\factory\\TaskContainerFactory.cs",
               "RelativeDocumentMoniker": "lab9\\factory\\TaskContainerFactory.cs",
@@ -120,12 +152,11 @@
               "RelativeToolTip": "lab9\\factory\\TaskContainerFactory.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwBUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T16:56:59.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T16:56:59.256Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "DelayTaskRunner.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\decorator\\DelayTaskRunner.cs",
               "RelativeDocumentMoniker": "lab9\\decorator\\DelayTaskRunner.cs",
@@ -137,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ITaskRunner.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\decorator\\ITaskRunner.cs",
               "RelativeDocumentMoniker": "lab9\\decorator\\ITaskRunner.cs",
@@ -145,8 +176,7 @@
               "RelativeToolTip": "lab9\\decorator\\ITaskRunner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T10:57:04.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T10:57:04.133Z"
             },
             {
               "$type": "Document",
@@ -154,16 +184,16 @@
               "Title": "Program.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\Program.cs",
               "RelativeDocumentMoniker": "lab9\\Program.cs",
-              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\Program.cs",
-              "RelativeToolTip": "lab9\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCEAAAAAAAAAAAAAAA==",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\Program.cs*",
+              "RelativeToolTip": "lab9\\Program.cs*",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwC8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T06:27:01.18Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AbstractTaskRunner.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\decorator\\AbstractTaskRunner.cs",
               "RelativeDocumentMoniker": "lab9\\decorator\\AbstractTaskRunner.cs",
@@ -171,12 +201,11 @@
               "RelativeToolTip": "lab9\\decorator\\AbstractTaskRunner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T17:04:18.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T17:04:18.639Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "StackContainer.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\container\\StackContainer.cs",
               "RelativeDocumentMoniker": "lab9\\container\\StackContainer.cs",
@@ -188,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "TaskContainer.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\container\\TaskContainer.cs",
               "RelativeDocumentMoniker": "lab9\\container\\TaskContainer.cs",
@@ -200,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "IFactory.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\factory\\IFactory.cs",
               "RelativeDocumentMoniker": "lab9\\factory\\IFactory.cs",
@@ -208,12 +237,11 @@
               "RelativeToolTip": "lab9\\factory\\IFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T16:47:07.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T16:47:07.064Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "QueueContainer.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\container\\QueueContainer.cs",
               "RelativeDocumentMoniker": "lab9\\container\\QueueContainer.cs",
@@ -225,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "PrinterTaskRunner.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\decorator\\PrinterTaskRunner.cs",
               "RelativeDocumentMoniker": "lab9\\decorator\\PrinterTaskRunner.cs",
@@ -237,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Task.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\Task.cs",
               "RelativeDocumentMoniker": "lab9\\model\\Task.cs",
@@ -249,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "IContainer.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\container\\IContainer.cs",
               "RelativeDocumentMoniker": "lab9\\container\\IContainer.cs",
@@ -261,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "MessageTask.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab9\\lab9\\lab9\\model\\MessageTask.cs",
               "RelativeDocumentMoniker": "lab9\\model\\MessageTask.cs",

@@ -31,6 +31,25 @@ namespace lab9
 
 			Console.WriteLine("\nExecutarea in coada: ");
 			queue.ExecuteAll();
+
+
+			var sortingTask1 = new SortingTask("1", "Sortarea numerelor: 1 9 4 2 5 -1 2 6 folosing quick sort",
+				SortingMethod.QuickSort, new List<int> { 1, 9, 4, 2, 5, -1, 2, 6 });
+			var sortingTask2 = new SortingTask("1", "Sortarea numerelor: 1 9 4 2 5 -1 2 6 folosing bubble sort",
+				SortingMethod.BubbleSort, new List<int> { 1, 9, 4, 2, 5, -1, 2, 6 });
+
+            Console.Write("Numerele nesortate sunt: ");
+			sortingTask1.getNumbers().ForEach(nr => Console.Write(nr + " "));
+			Console.WriteLine();
+
+			sortingTask1.execute();
+			sortingTask2.execute();
+
+			Console.Write("Numerele sortate descrescator sunt: \n");
+			sortingTask1.getNumbers().ForEach(nr => Console.Write(nr + " "));
+			Console.WriteLine();
+			sortingTask2.getNumbers().ForEach(nr => Console.Write(nr + " "));
+			Console.WriteLine();
 		}
 	}
 }
