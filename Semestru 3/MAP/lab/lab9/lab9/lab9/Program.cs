@@ -32,13 +32,12 @@ namespace lab9
 			Console.WriteLine("\nExecutarea in coada: ");
 			queue.ExecuteAll();
 
-
 			var sortingTask1 = new SortingTask("1", "Sortarea numerelor: 1 9 4 2 5 -1 2 6 folosing quick sort",
 				SortingMethod.QuickSort, new List<int> { 1, 9, 4, 2, 5, -1, 2, 6 });
 			var sortingTask2 = new SortingTask("1", "Sortarea numerelor: 1 9 4 2 5 -1 2 6 folosing bubble sort",
 				SortingMethod.BubbleSort, new List<int> { 1, 9, 4, 2, 5, -1, 2, 6 });
 
-            Console.Write("Numerele nesortate sunt: ");
+            Console.Write("\nNumerele nesortate sunt: ");
 			sortingTask1.getNumbers().ForEach(nr => Console.Write(nr + " "));
 			Console.WriteLine();
 
@@ -50,6 +49,15 @@ namespace lab9
 			Console.WriteLine();
 			sortingTask2.getNumbers().ForEach(nr => Console.Write(nr + " "));
 			Console.WriteLine();
+
+			DelayTaskRunner delayTaskRuner = new DelayTaskRunner(stiva);
+			stiva.AddTask(task1);
+			stiva.AddTask(task2);
+			stiva.AddTask(task3);
+
+            Console.WriteLine("Executarea cu delay a task-urilor: \n");
+			while(delayTaskRuner.HasTask())
+				delayTaskRuner.ExecuteOneTask();
 		}
 	}
 }

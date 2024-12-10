@@ -19,7 +19,7 @@ namespace lab9.decorator
         public void ExecuteOneTask()
         {
             Thread.Sleep(miliseconds);
-            ExecuteOneTask();
+            base.ExecuteOneTask();
         }
     }
 }
