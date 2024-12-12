@@ -1,0 +1,4 @@
+sarcina1,Usoara,10
+sarcina2,Usoara,16
+sarcina3,Usoara,15
+sarcina4,Usoara,12

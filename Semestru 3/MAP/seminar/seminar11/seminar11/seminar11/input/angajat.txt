@@ -1,0 +1,4 @@
+1,Alex,30,Senior
+2,Mihai,20,Senior
+3,Paul,50,Junior
+4,SanPetru,50,Junior
