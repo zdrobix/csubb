@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A11BA268-0F40-4295-A94C-9F4D1AE51137}|lab10\\lab10.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab10\\lab10\\lab10\\service\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A11BA268-0F40-4295-A94C-9F4D1AE51137}|lab10\\lab10.csproj|solutionrelative:lab10\\service\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A11BA268-0F40-4295-A94C-9F4D1AE51137}|lab10\\lab10.csproj|q:\\info\\csubb\\semestru 3\\map\\lab\\lab10\\lab10\\lab10\\repo\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A11BA268-0F40-4295-A94C-9F4D1AE51137}|lab10\\lab10.csproj|solutionrelative:lab10\\repo\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -71,19 +75,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Service.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\service\\Service.cs",
+              "RelativeDocumentMoniker": "lab10\\service\\Service.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\service\\Service.cs",
+              "RelativeToolTip": "lab10\\service\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T15:59:24.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Repository.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\repo\\Repository.cs",
               "RelativeDocumentMoniker": "lab10\\repo\\Repository.cs",
               "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\repo\\Repository.cs",
               "RelativeToolTip": "lab10\\repo\\Repository.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAwFEAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvzcAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T17:20:20.33Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TypeMatching.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\repo\\TypeMatching.cs",
               "RelativeDocumentMoniker": "lab10\\repo\\TypeMatching.cs",
@@ -91,12 +108,11 @@
               "RelativeToolTip": "lab10\\repo\\TypeMatching.cs",
               "ViewState": "AgIAAG8AAAAAAAAAAAAowIMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T17:14:06.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T17:14:06.117Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Meci.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\domain\\Meci.cs",
               "RelativeDocumentMoniker": "lab10\\domain\\Meci.cs",
@@ -104,12 +120,11 @@
               "RelativeToolTip": "lab10\\domain\\Meci.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T17:13:09.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T17:13:09.723Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "JucatorActiv.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\domain\\JucatorActiv.cs",
               "RelativeDocumentMoniker": "lab10\\domain\\JucatorActiv.cs",
@@ -117,12 +132,11 @@
               "RelativeToolTip": "lab10\\domain\\JucatorActiv.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T17:11:25.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T17:11:25.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Elev.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\domain\\Elev.cs",
               "RelativeDocumentMoniker": "lab10\\domain\\Elev.cs",
@@ -130,12 +144,11 @@
               "RelativeToolTip": "lab10\\domain\\Elev.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T17:10:57.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T17:10:57.906Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Entity.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\domain\\Entity.cs",
               "RelativeDocumentMoniker": "lab10\\domain\\Entity.cs",
@@ -143,12 +156,11 @@
               "RelativeToolTip": "lab10\\domain\\Entity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T17:08:47.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T17:08:47.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IRepository.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\repo\\IRepository.cs",
               "RelativeDocumentMoniker": "lab10\\repo\\IRepository.cs",
@@ -156,12 +168,11 @@
               "RelativeToolTip": "lab10\\repo\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T17:01:44.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T17:01:44.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Tip.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\domain\\enum\\Tip.cs",
               "RelativeDocumentMoniker": "lab10\\domain\\enum\\Tip.cs",
@@ -169,12 +180,11 @@
               "RelativeToolTip": "lab10\\domain\\enum\\Tip.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T16:32:20.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:32:20.696Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Echipa.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\domain\\Echipa.cs",
               "RelativeDocumentMoniker": "lab10\\domain\\Echipa.cs",
@@ -182,12 +192,11 @@
               "RelativeToolTip": "lab10\\domain\\Echipa.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T16:26:12.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:26:12.767Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Jucator.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\domain\\Jucator.cs",
               "RelativeDocumentMoniker": "lab10\\domain\\Jucator.cs",
@@ -195,12 +204,11 @@
               "RelativeToolTip": "lab10\\domain\\Jucator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T16:26:05.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:26:05.358Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\lab\\lab10\\lab10\\lab10\\Program.cs",
               "RelativeDocumentMoniker": "lab10\\Program.cs",
@@ -208,8 +216,7 @@
               "RelativeToolTip": "lab10\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T16:16:48.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:16:48.314Z"
             }
           ]
         }

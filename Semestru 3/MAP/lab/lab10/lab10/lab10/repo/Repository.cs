@@ -51,7 +51,7 @@ namespace lab10.repo
 						{
 							List<string> resultlist = new List<string>();
 							for (int i = 0; i < reader.FieldCount; i++)
-								resultlist.Add(reader[i].ToString());
+								resultlist.Add(reader[i].ToString()!);
 							return TypeMatching<E, ID>.CreateEntityFromList(resultlist);
 						}
 					}
@@ -93,7 +93,7 @@ namespace lab10.repo
 			using (var connection = this.getConnection())
 			{
 				connection.Open();
-				string query = $"INSERT INTO " + this.TableName + $" VALUES " + TypeMatching<E, ID>.createListFromEntity(Entity) + ";";
+				string query = $"INSERT INTO " + this.TableName + $" VALUES " + TypeMatching<E, ID>.CreateListFromEntity(Entity) + ";";
 				using (var command = new NpgsqlCommand(query, connection))
 				{
 					rowsAffected = command.ExecuteNonQuery();

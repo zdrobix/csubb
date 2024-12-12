@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="ui\" />
-    <Folder Include="service\" />
   </ItemGroup>
 
   <ItemGroup>
