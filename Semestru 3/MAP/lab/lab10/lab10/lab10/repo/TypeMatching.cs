@@ -55,7 +55,7 @@ namespace lab10.repo
 			}
 			else if (Entity is JucatorActiv jucatorActiv)
 			{
-				resultList += $"{jucatorActiv.getId()}, ";
+				resultList += $"{jucatorActiv.getId().Item1}, ";
 				resultList += $"{jucatorActiv.getIdMeci()}, ";
 				resultList += $"{jucatorActiv.getPuncteInscrise()}, ";
 				resultList += $"\'{jucatorActiv.getTipJucator()}\')";
@@ -94,9 +94,9 @@ namespace lab10.repo
 			{
 				return new Jucator(
 					int.Parse(args[0]),
-					args[1],
-					args[2],
-					int.Parse(args[3])
+					"default",
+					"default",
+					int.Parse(args[1])
 				) as E;
 			}
 			else if (typeof(E) == typeof(JucatorActiv))
@@ -114,7 +114,7 @@ namespace lab10.repo
 					int.Parse(args[0]),
 					int.Parse(args[1]),
 					int.Parse(args[2]),
-					DateOnly.Parse(args[3])
+					DateOnly.FromDateTime(DateTime.Parse(args[3]))
 				) as E;
 			}
 			else throw new ArgumentException("Invalid type given.");

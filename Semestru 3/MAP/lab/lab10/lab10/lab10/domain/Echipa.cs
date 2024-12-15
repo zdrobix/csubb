@@ -16,5 +16,7 @@ namespace lab10.domain
 			this.Nume = nume;
 		}
 		public string getName() => this.Nume;
+
+		public override string ToString() => this.Nume;
 	}
 }
