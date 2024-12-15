@@ -77,7 +77,10 @@ CREATE OR ALTER PROCEDURE usp_client_operations (@operation VARCHAR(20), @id INT
 						DECLARE @result6 BIT
 						EXEC usp_validate_id @id = @id, @table = 'CLIENTI', @result = @result6 OUTPUT
 						IF (@result6 = 1)
-							DELETE FROM CLIENTI WHERE id = @id;
+							BEGIN
+								DELETE FROM TRANZACTII WHERE id_client = @id
+								DELETE FROM CLIENTI WHERE id = @id;
+							END
 						IF (@result6 = 0)
 							PRINT('Nu exista niciun Client cu id-ul dat.')
 					END

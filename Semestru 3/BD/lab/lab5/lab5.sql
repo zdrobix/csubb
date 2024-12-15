@@ -59,7 +59,43 @@ CREATE OR ALTER PROCEDURE usp_validate_pret (@pret MONEY, @result BIT OUTPUT)
 		END
 	GO
 
+CREATE OR ALTER PROCEDURE usp_validate_date (@date DATE, @result BIT OUTPUT)
+	AS
+		BEGIN
+			SET @result = 1;
+			IF (@date > GETDATE())
+			BEGIN
+				SET @result = 0;
+				RETURN;
+			END
+			IF (@date < '1999-01-01')
+				BEGIN
+					SET @result = 0;
+					RETURN;
+				END
+		END
+	GO
 
-	
 
+CREATE OR ALTER VIEW vw_tranzactii AS
+	SELECT T.id AS id, C.nume AS Client, M.nume AS Medicament, M.pret AS Pret, T.data_tranzactie AS Data
+	FROM TRANZACTII T
+	INNER JOIN CLIENTI C ON C.id = T.id_client
+	INNER JOIN MEDICAMENTE M ON M.id = T.id_medicamente
+GO
 
+CREATE NONCLUSTERED INDEX nc_index_client_tranzaction ON TRANZACTII(id_client)
+GO
+
+CREATE OR ALTER VIEW vw_medicamente AS
+	SELECT M.nume AS Medicament, M.pret AS Pret, P.nume AS Producator, T.nume AS Tara
+	FROM MEDICAMENTE M
+	INNER JOIN PRODUCATORI P ON P.id = M.id_producator 
+	INNER JOIN TARI T ON P.id_tara = T.id
+
+GO
+
+CREATE NONCLUSTERED INDEX nc_index_nume_medicamente ON MEDICAMENTE(nume)
+
+SELECT * FROM TRANZACTII ORDER BY id_client
+SELECT * FROM MEDICAMENTE ORDER BY nume
