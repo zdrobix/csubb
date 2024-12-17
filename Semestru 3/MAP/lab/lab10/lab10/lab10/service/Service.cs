@@ -28,8 +28,8 @@ namespace lab10.service
 
 		public IEnumerable<Echipa> GetEchipe() => this.RepoEchipe.FindAll();
 		public IEnumerable<Jucator> GetJucatori() => this.RepoJucator.FindAll()
-			.Select(j => new Jucator(this.RepoElevi.Find(j.getId())!, j.getIdEchipaJucator()))
-			.Where(j => j != null);
+				.Select(j => new Jucator(this.RepoElevi.Find(j.getId())!, j.getIdEchipaJucator()))
+				.Where(j => j != null);
 		public IEnumerable<Meci> GetMeciuri() => this.RepoMeci.FindAll();
 		public IEnumerable<JucatorActiv> GetJucatoriActivi() => this.RepoJucatorActiv.FindAll();
 		public Echipa? GetEchipa(int id) => this.RepoEchipe.Find(id);
