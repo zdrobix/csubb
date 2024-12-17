@@ -23,6 +23,16 @@
 ; A u G u afiseaza_cale(K (K O))
 ; A u G u K
 
+
+;(afiseaza_cale 'O '(A (B (C D) (E F)) (G (H J) (K (O) (L)))))
+;              A
+;	      / \
+; 	     B   G
+; 	    /\   /\
+;          C  E H  K
+;         /  / /  / \
+;	 D  F J  O  L
+
 (defun gaseste (X L) 
   	(cond
 	  	((null L) nil)
@@ -41,7 +51,7 @@
 
 (defun afiseaza_cale (X L) 
 	(cond
-	  	((null L) NIL)
+	  	((null L) (error "Not found."))
 		((and (not (listp L)) (equal X L)) (list X))
 	  	((equal X (car L)) (list X))
 		((gaseste X (cadr L)) (cons (car L) (afiseaza_cale X (cadr L))))
