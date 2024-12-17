@@ -86,7 +86,10 @@ CREATE OR ALTER PROCEDURE usp_medicamente_operations (@operation VARCHAR(20), @i
 						DECLARE @result8 BIT
 						EXEC usp_validate_id @id = @id, @table = 'MEDICAMENTE', @result = @result8 OUTPUT
 						IF (@result8 = 1)
-							DELETE FROM MEDICAMENTE WHERE id = @id;
+							BEGIN 
+								DELETE FROM TRANZACTII WHERE id_medicamente = @id
+								DELETE FROM MEDICAMENTE WHERE id = @id;
+							END
 						IF (@result8 = 0)
 							PRINT('Nu exista niciun Medicament cu id-ul dat.')
 					END
@@ -95,9 +98,11 @@ CREATE OR ALTER PROCEDURE usp_medicamente_operations (@operation VARCHAR(20), @i
 	GO
 
 EXEC usp_medicamente_operations @operation = 'insert', @nume = 'Metoclopramid A', @pret = 10.50, @id_producator = 1
+EXEC usp_medicamente_operations @operation = 'insert', @nume = 'Vitamina J', @pret = 10.50, @id_producator = 1
 EXEC usp_medicamente_operations @operation = 'insert', @nume = 'MetoclopramidA', @pret = 10.50, @id_producator = 1
 EXEC usp_medicamente_operations @operation = 'insert', @nume = 'MetoclopramidA', @pret = 1050, @id_producator = 1
 EXEC usp_medicamente_operations @operation = 'insert', @nume = 'MetoclopramidA', @pret = 1050, @id_producator = 119824
+EXEC usp_medicamente_operations @operation = 'insert', @nume = 'RAndom MEDicament', @pret = 10.50, @id_producator = 1
 
 EXEC usp_medicamente_operations @operation = 'select', @id = 1
 EXEC usp_medicamente_operations @operation = 'select', @id = 1245
@@ -108,6 +113,6 @@ EXEC usp_medicamente_operations @operation = 'update', @id = 1, @nume = 'Paracet
 EXEC usp_medicamente_operations @operation = 'update', @id = 1, @nume = 'Paracetamol', @pret = 1500, @id_producator = 1
 EXEC usp_medicamente_operations @operation = 'update', @id = 1, @nume = 'Paracetamol', @pret = 1500, @id_producator = 1135325
 
-EXEC usp_medicamente_operations @operation = 'delete', @id = 20001
+EXEC usp_medicamente_operations @operation = 'delete', @id = 20002
 
 SELECT * FROM MEDICAMENTE

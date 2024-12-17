@@ -78,18 +78,19 @@ CREATE OR ALTER PROCEDURE usp_validate_date (@date DATE, @result BIT OUTPUT)
 
 
 CREATE OR ALTER VIEW vw_tranzactii AS
-	SELECT id 
-	FROM TRANZACTII 
-	WHERE id_client = 1
+	SELECT T.id 
+	FROM TRANZACTII T
+	INNER JOIN CLIENTI C ON C.id = id_client
+	WHERE C.nume = 'Alex Zdroba'
 GO
 
 CREATE NONCLUSTERED INDEX nc_index_client_tranzaction ON TRANZACTII(id_client)
 GO
 
 CREATE OR ALTER VIEW vw_medicamente AS
-	SELECT id 
-	FROM MEDICAMENTE 
-	WHERE nume LIKE 'Vitamina%'
+	SELECT M.id
+	FROM MEDICAMENTE M
+	WHERE M.nume LIKE 'Vitamina%'
 GO
 
 CREATE NONCLUSTERED INDEX nc_index_nume_medicamente ON MEDICAMENTE(nume)
