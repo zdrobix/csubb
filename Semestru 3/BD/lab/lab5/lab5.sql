@@ -78,27 +78,24 @@ CREATE OR ALTER PROCEDURE usp_validate_date (@date DATE, @result BIT OUTPUT)
 
 
 CREATE OR ALTER VIEW vw_tranzactii AS
-	SELECT T.id AS id, C.nume AS Client, M.nume AS Medicament, M.pret AS Pret, T.data_tranzactie AS Data
-	FROM TRANZACTII T
-	INNER JOIN CLIENTI C ON C.id = T.id_client
-	INNER JOIN MEDICAMENTE M ON M.id = T.id_medicamente
+	SELECT id 
+	FROM TRANZACTII 
+	WHERE id_client = 1
 GO
 
 CREATE NONCLUSTERED INDEX nc_index_client_tranzaction ON TRANZACTII(id_client)
 GO
 
 CREATE OR ALTER VIEW vw_medicamente AS
-	SELECT M.nume AS Medicament, M.pret AS Pret, P.nume AS Producator, T.nume AS Tara
-	FROM MEDICAMENTE M
-	INNER JOIN PRODUCATORI P ON P.id = M.id_producator 
-	INNER JOIN TARI T ON P.id_tara = T.id
-
+	SELECT id 
+	FROM MEDICAMENTE 
+	WHERE nume LIKE 'Vitamina%'
 GO
 
 CREATE NONCLUSTERED INDEX nc_index_nume_medicamente ON MEDICAMENTE(nume)
 
-SELECT * FROM TRANZACTII ORDER BY id_client
-SELECT * FROM MEDICAMENTE ORDER BY nume
+SELECT * FROM vw_medicamente;
+SELECT * FROM vw_tranzactii;
 
-SELECT id FROM MEDICAMENTE WHERE nume LIKE 'Vitamina%'
-SELECT id FROM TRANZACTII WHERE id_client = 1
+SELECT id FROM TRANZACTII ORDER BY id_client
+SELECT id, nume FROM MEDICAMENTE ORDER BY nume
