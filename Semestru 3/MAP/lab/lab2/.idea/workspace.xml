@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a53a9835-f125-465c-8840-937b9b4e6c06" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../PLF/lab/lab4/.lab4.lisp.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../BD/lab/lab5/lab5.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../BD/lab/lab5/lab5.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../BD/lab/lab5/tranzactii_operations.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../BD/lab/lab5/tranzactii_operations.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/.vs/seminar11/FileContentIndex/275a4bdb-361f-4581-a6b8-2c61664610b6.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/.vs/seminar11/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/.vs/seminar11/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/.vs/seminar11/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/.vs/seminar11/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/.vs/seminar11/v17/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/.vs/seminar11/v17/DocumentLayout.backup.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/.vs/seminar11/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/.vs/seminar11/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/bin/Debug/net8.0/seminar11.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/bin/Debug/net8.0/seminar11.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/bin/Debug/net8.0/seminar11.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/bin/Debug/net8.0/seminar11.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/bin/Debug/net8.0/seminar11.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/bin/Debug/net8.0/seminar11.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/ref/seminar11.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/ref/seminar11.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/refint/seminar11.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/refint/seminar11.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/seminar11.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/seminar11.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/seminar11.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/seminar11.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/seminar11.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/seminar11.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/seminar11.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/seminar11.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/seminar11.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/obj/Debug/net8.0/seminar11.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/ui/Ui.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../seminar/seminar11/seminar11/seminar11/ui/Ui.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +40,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "zdrobix"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/zdrobix/csubb.git",
+    "accountId": "f61486f0-c8f5-4ca3-affb-e7ee9e1ddf11"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -108,6 +138,7 @@
       <workItem from="1728968861252" duration="3539000" />
       <workItem from="1729086008524" duration="30000" />
       <workItem from="1733223370901" duration="1448000" />
+      <workItem from="1734770562944" duration="41000" />
     </task>
     <servers />
   </component>

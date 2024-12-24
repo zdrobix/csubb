@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|solutionrelative:seminar11\\ui\\ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|q:\\info\\csubb\\semestru 3\\map\\seminar\\seminar11\\seminar11\\seminar11\\domain\\pontaj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|solutionrelative:seminar11\\domain\\pontaj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|q:\\info\\csubb\\semestru 3\\map\\seminar\\seminar11\\seminar11\\seminar11\\domain\\enums\\nivel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|solutionrelative:seminar11\\domain\\enums\\nivel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|q:\\info\\csubb\\semestru 3\\map\\seminar\\seminar11\\seminar11\\seminar11\\service\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|solutionrelative:seminar11\\service\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,16 +47,8 @@
       "RelativeMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|solutionrelative:seminar11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|q:\\info\\csubb\\semestru 3\\map\\seminar\\seminar11\\seminar11\\seminar11\\domain\\sarcina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|solutionrelative:seminar11\\domain\\sarcina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|q:\\info\\csubb\\semestru 3\\map\\seminar\\seminar11\\seminar11\\seminar11\\input\\sarcina.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|solutionrelative:seminar11\\input\\sarcina.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|q:\\info\\csubb\\semestru 3\\map\\seminar\\seminar11\\seminar11\\seminar11\\domain\\pontaj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|solutionrelative:seminar11\\domain\\pontaj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CB4C4B1-2829-4C36-8A47-AAA631B9B724}|seminar11\\seminar11.csproj|q:\\info\\csubb\\semestru 3\\map\\seminar\\seminar11\\seminar11\\seminar11\\domain\\angajat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 232,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,20 +78,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pontaj.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\domain\\Pontaj.cs",
+              "RelativeDocumentMoniker": "seminar11\\domain\\Pontaj.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\domain\\Pontaj.cs",
+              "RelativeToolTip": "seminar11\\domain\\Pontaj.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:23:57.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Nivel.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\domain\\enums\\Nivel.cs",
+              "RelativeDocumentMoniker": "seminar11\\domain\\enums\\Nivel.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\domain\\enums\\Nivel.cs",
+              "RelativeToolTip": "seminar11\\domain\\enums\\Nivel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:17:15.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Ui.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\ui\\Ui.cs",
               "RelativeDocumentMoniker": "seminar11\\ui\\Ui.cs",
               "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\ui\\Ui.cs",
               "RelativeToolTip": "seminar11\\ui\\Ui.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwDUAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwD4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T16:52:35.1Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "IRepository.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\repo\\IRepository.cs",
               "RelativeDocumentMoniker": "seminar11\\repo\\IRepository.cs",
@@ -99,12 +125,11 @@
               "RelativeToolTip": "seminar11\\repo\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T16:36:41.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:36:41.243Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "InMemoryRepository.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\repo\\InMemoryRepository.cs",
               "RelativeDocumentMoniker": "seminar11\\repo\\InMemoryRepository.cs",
@@ -112,12 +137,11 @@
               "RelativeToolTip": "seminar11\\repo\\InMemoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T16:38:22.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:38:22.314Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TypeMatching.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\repo\\TypeMatching.cs",
               "RelativeDocumentMoniker": "seminar11\\repo\\TypeMatching.cs",
@@ -125,12 +149,11 @@
               "RelativeToolTip": "seminar11\\repo\\TypeMatching.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwCoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T16:24:39.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:24:39.474Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Service.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\service\\Service.cs",
               "RelativeDocumentMoniker": "seminar11\\service\\Service.cs",
@@ -138,12 +161,11 @@
               "RelativeToolTip": "seminar11\\service\\Service.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAzwB8AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T16:48:38.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:48:38.16Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "InFileRepository.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\repo\\InFileRepository.cs",
               "RelativeDocumentMoniker": "seminar11\\repo\\InFileRepository.cs",
@@ -151,12 +173,11 @@
               "RelativeToolTip": "seminar11\\repo\\InFileRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwBkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T16:40:19.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:40:19.252Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Entity.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\domain\\Entity.cs",
               "RelativeDocumentMoniker": "seminar11\\domain\\Entity.cs",
@@ -164,12 +185,11 @@
               "RelativeToolTip": "seminar11\\domain\\Entity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T17:06:23.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T17:06:23.25Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "pontaj.txt",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\input\\pontaj.txt",
               "RelativeDocumentMoniker": "seminar11\\input\\pontaj.txt",
@@ -177,12 +197,11 @@
               "RelativeToolTip": "seminar11\\input\\pontaj.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-12-11T16:56:09.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:56:09.538Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\Program.cs",
               "RelativeDocumentMoniker": "seminar11\\Program.cs",
@@ -190,12 +209,11 @@
               "RelativeToolTip": "seminar11\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T16:01:40.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:01:40.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "sarcina.txt",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\input\\sarcina.txt",
               "RelativeDocumentMoniker": "seminar11\\input\\sarcina.txt",
@@ -203,34 +221,7 @@
               "RelativeToolTip": "seminar11\\input\\sarcina.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-12-11T16:56:50.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Pontaj.cs",
-              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\domain\\Pontaj.cs",
-              "RelativeDocumentMoniker": "seminar11\\domain\\Pontaj.cs",
-              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\domain\\Pontaj.cs",
-              "RelativeToolTip": "seminar11\\domain\\Pontaj.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T16:49:28.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Sarcina.cs",
-              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\domain\\Sarcina.cs",
-              "RelativeDocumentMoniker": "seminar11\\domain\\Sarcina.cs",
-              "ToolTip": "Q:\\info\\csubb\\Semestru 3\\MAP\\seminar\\seminar11\\seminar11\\seminar11\\domain\\Sarcina.cs",
-              "RelativeToolTip": "seminar11\\domain\\Sarcina.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBoAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T16:58:27.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:56:50.768Z"
             },
             {
               "$type": "Document",
@@ -242,8 +233,7 @@
               "RelativeToolTip": "seminar11\\domain\\Angajat.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAkwB8AAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T16:08:16.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:08:16.1Z"
             }
           ]
         }

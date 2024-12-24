@@ -18,7 +18,8 @@ namespace seminar11.ui
             Console.WriteLine("1. Afisare angajati\n" +
 				"2. Afisare pontaje\n" +
 				"3. Afisare sarcini\n" +
-				"4. Afisare angajati cu peste X sarcini\n");
+				"4. Afisare angajati cu peste X sarcini\n" +
+				"5. Afisare angajati grupati\n");
 			var option = Console.ReadLine();
 
 			if (option == "1")
@@ -51,7 +52,22 @@ namespace seminar11.ui
 			{
 				var number = int.Parse(Console.ReadLine()!);
 				Console.WriteLine($"\nAngajati cu peste {number} sarcini");
-				
+			}
+			if (option == "5")
+			{
+                Console.WriteLine(
+					string.Join('\n',
+						this.ServiceA.GetAngajati()!
+							.OrderBy(x => x.NivelAngajat)
+							.OrderBy(
+								x => 
+													
+							)
+					)	
+				);
+			}
+			if (option == "6")
+			{
 
 			}
 		}
