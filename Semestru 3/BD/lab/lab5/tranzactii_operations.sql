@@ -40,11 +40,13 @@ CREATE OR ALTER PROCEDURE usp_tranzactie_operations (@operation VARCHAR(20), @id
 						DECLARE @result BIT
 						EXEC usp_validate_id @id = @id, @table = 'TRANZACTII', @result = @result OUTPUT
 						IF (@result = 1)
-							SELECT C.nume AS Client, M.nume AS Medicament, M.pret AS PRET, T.data_tranzactie AS Data
-							FROM TRANZACTII T
-							INNER JOIN CLIENTI C ON C.id = T.id_client
-							INNER JOIN MEDICAMENTE M ON M.id = T.id_medicamente
-							WHERE T.id = @id;
+							BEGIN
+								SELECT C.nume AS Client, M.nume AS Medicament, M.pret AS PRET, T.data_tranzactie AS Data
+								FROM TRANZACTII T
+								INNER JOIN CLIENTI C ON C.id = T.id_client
+								INNER JOIN MEDICAMENTE M ON M.id = T.id_medicamente
+								WHERE T.id = @id;
+							END
 						IF (@result = 0)
 							PRINT('Nu exista nicio tranzactie cu id-ul dat.')
 					END
@@ -97,6 +99,7 @@ CREATE OR ALTER PROCEDURE usp_tranzactie_operations (@operation VARCHAR(20), @id
 		END
 	GO
 
+EXEC usp_tranzactie_operations @operation = 'insert', @id_client = 1, @id_medicamente = 4, @data_tranzactie = '2024-11-11';
 EXEC usp_tranzactie_operations @operation = 'insert', @id_client = 1, @id_medicamente = 1, @data_tranzactie = '2024-11-11';
 EXEC usp_tranzactie_operations @operation = 'insert', @id_client = 12341, @id_medicamente = 1, @data_tranzactie = '2024-11-11';
 EXEC usp_tranzactie_operations @operation = 'insert', @id_client = 12341, @id_medicamente = 3463461, @data_tranzactie = '2024-11-11';

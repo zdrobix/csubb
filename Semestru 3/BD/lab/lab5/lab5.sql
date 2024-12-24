@@ -8,7 +8,7 @@ CREATE OR ALTER PROCEDURE usp_validate_id (@id INT, @table VARCHAR(30), @result 
 			DECLARE @sql NVARCHAR(MAX)
 			SET @sql = 'IF EXISTS( 
 							SELECT * FROM ' + QUOTENAME(@table) + ' WHERE id = ' + CAST(@id AS NVARCHAR) + '
-						)s
+						)
 							BEGIN
 								SET @result = 1
 							END'	
@@ -78,7 +78,7 @@ CREATE OR ALTER PROCEDURE usp_validate_date (@date DATE, @result BIT OUTPUT)
 
 
 CREATE OR ALTER VIEW vw_tranzactii AS
-	SELECT T.id 
+	SELECT T.data_tranzactie
 	FROM TRANZACTII T
 	INNER JOIN CLIENTI C ON C.id = id_client
 	WHERE C.nume = 'Alex Zdroba'
