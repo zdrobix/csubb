@@ -2,16 +2,33 @@
 ;(subarbore1) (subarbore2) .. (subarboren)) 
 
 ;model matematic:
-;exista (X Ab) = Fals 		                       , daca n = 0, Ab =l1..ln
-;		 Adevarat 			       , daca l1 = X, Ab = l1..ln
-;		 exista(X l1) sau exista (X l2..ln)    , daca n /= 0, Ab = l1..ln 
+;liniarizare(l1..ln) = l1 				      ,daca l1 - numeric
+;		       liniarizare(l1) U liniarizare(l2..ln)  ,daca l2 - lista
 
-(defun exista(Nod Arbore)
+(defun liniarizare (Lista) 
   	(cond
-		((null Arbore) nil)
-		((atom Arbore) (equal Nod Arbore))
-		(t (or (exista Nod (car Arbore)) (exista Nod (cdr Arbore))))
+		((atom Lista) (list Lista))
+		(t (apply #'append(mapcar #'liniarizare Lista)))
 	)
 )
 
+;model matematic:
+;exista(l1..ln, E) = false 			,daca n = 0
+;		     true 			,daca l1 = E
+;		     exista(ln..ln, E) 		,altfel
 
+(defun exista (Lista Elem) 
+  	(cond 
+	  	((null Lista) nil)
+		((eq (car Lista) Elem) t)
+		(t (exista (cdr Lista) Elem))
+	)
+)
+
+;apel functie
+(defun exista_in_arbore (Arbore Nod) 
+  	(cond
+	  	((exista (liniarizare Arbore) Nod) t)
+		(t nil)
+	)
+)
