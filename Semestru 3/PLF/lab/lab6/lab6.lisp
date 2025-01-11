@@ -2,7 +2,7 @@
 ;(subarbore1) (subarbore2) .. (subarboren)) 
 
 ;model matematic:
-;liniarizare(l1..ln) = l1 				      ,daca l1 - numeric
+;liniarizare(l1..ln) = l1 				      ,daca l1 - atom
 ;		       liniarizare(l1) U liniarizare(l2..ln)  ,daca l2 - lista
 
 (defun liniarizare (Lista) 
