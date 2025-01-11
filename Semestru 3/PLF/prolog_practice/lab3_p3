@@ -1,0 +1,12 @@
+%se da sirul a1..an, sa se determine toate subsirurile strict crescatoare
+%ale sirului a
+
+%insert(E:intreg, L:lista)
+%model matematic
+% insert(E, l1..ln) = E U l1..ln                ,daca E < l1
+%		      l1 U insert(E, l2..ln)    ,daca l1 >= E
+%insereaza elementul e pe fiecare pozitie din lista daca e < l1
+
+
+
+%
