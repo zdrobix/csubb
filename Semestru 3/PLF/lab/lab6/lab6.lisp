@@ -3,7 +3,8 @@
 
 ;model matematic:
 ;liniarizare(l1..ln) = l1 				      ,daca l1 - atom
-;		       liniarizare(l1) U liniarizare(l2..ln)  ,daca l2 - lista
+;		       liniarizare(l1) U liniarizare(l2)
+; 				U .. liniarizare(ln)          , altfel
 
 (defun liniarizare (Lista) 
   	(cond
@@ -31,4 +32,5 @@
 	  	((exista (liniarizare Arbore) Nod) t)
 		(t nil)
 	)
+	
 )
