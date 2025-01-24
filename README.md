@@ -2,14 +2,14 @@
 
 Git Repository for all the homework and projects.
 
-## Semester 1
+## [Semester 1](https://github.com/zdrobix/csubb/tree/master/Semestru%201)
   - ASC
   - FP
   - LC
   - Analiza
   - Algebra
 
-## Semester 2
+## [Semester 2](https://github.com/zdrobix/csubb/tree/master/Semestru%202)
   - SO
   - AG
   - OOP
@@ -17,7 +17,7 @@ Git Repository for all the homework and projects.
   - SD
   - Geometrie
 
-## Semester 3
+## [Semester 3](https://github.com/zdrobix/csubb/tree/master/Semestru%203)
   - Retele
   - PLF
   - BD
