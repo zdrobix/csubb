@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ComboBox?>
+
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.Controller"
+      stylesheets="@../../../css/styles.css"
+      prefHeight="400.0" prefWidth="600.0">
+    <AnchorPane>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+
+        <StackPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+            <VBox fx:id="loginVbox" alignment="CENTER" spacing="10.0">
+                <TextField fx:id="usernameTextFieldLogIn" promptText="username" maxWidth="200.0"/>
+                <PasswordField fx:id="passwordTextFieldLogIn" promptText="password" maxWidth="200.0"/>
+                <Button text="Log In" onAction="#handleLogin" prefWidth="200.0"/>
+            </VBox>
+
+            <VBox fx:id="signupVbox" alignment="CENTER" spacing="10.0" visible="false">
+                <TextField fx:id="usernameTextFieldSignUp" promptText="username" maxWidth="200.0"/>
+                <TextField fx:id="firstNameTextFieldSignUp" promptText="first name" maxWidth="200.0"/>
+                <TextField fx:id="lastNameTextFieldSignUp" promptText="last name" maxWidth="200.0"/>
+                <PasswordField fx:id="passwordTextFieldSignUp" promptText="password" maxWidth="200.0"/>
+                <Button text="Sign Up"  prefWidth="200.0"/>
+            </VBox>
+        </StackPane>
+        <HBox alignment="CENTER" spacing="7.0">
+            <Label></Label>
+            <Label fx:id="labelLogIn" text="LogIn" underline="true" onMouseClicked="#showLoginVbox"></Label>
+            <Label fx:id="labelSignUp" text="SignUp" onMouseClicked="#showSignupVbox"></Label>
+        </HBox>
+    </VBox>
+    </AnchorPane>
+</VBox>

@@ -1,0 +1,20 @@
+{
+"configurations": [
+  {
+    "type": "java",
+    "name": "App",
+    "request": "launch",
+    "mainClass": "App",
+    "projectName": "fapte_bune_3cada502"
+  },
+  {
+    "type": "java",
+    "name": "Launch JavaFX",
+    "request": "launch",
+    "mainClass": "App",
+    "vmArgs": "--module-path Q:/kit/JavaFX/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml",
+    "projectName": "fapte_bune"
+  }
+]
+
+}
