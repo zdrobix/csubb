@@ -31,7 +31,7 @@ public class MenuItem {
         return Price;
     }
 
-    public String getString() {
+    public String getCurency() {
         return Currency;
     }
 }

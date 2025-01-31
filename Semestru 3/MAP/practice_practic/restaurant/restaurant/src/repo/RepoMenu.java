@@ -31,7 +31,6 @@ public class RepoMenu {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        this.Menu.sort((a, b) -> a.getCategory().compareTo(b.getCategory()));
     }
 
     public List<MenuItem> GetMenu(){

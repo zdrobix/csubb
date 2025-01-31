@@ -47,6 +47,7 @@ public class RepoOrders {
 
     public void AddOrder (Order order){
         Orders.add(order);
+        this.NextOrderID ++;
         try {
             var fileWriter = new FileWriter("Q:\\info\\csubb\\Semestru 3\\MAP\\practice_practic\\restaurant\\restaurant\\src\\input\\orders.txt", true);
             fileWriter.write(order.getID() + "," + order.getTableID() + "," + order.getDate() + "," + order.getStatus() + "\n");

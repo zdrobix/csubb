@@ -22,7 +22,7 @@
         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0"
           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
           AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
-
+            <Label text="Staff"/>
             <TableView fx:id="ordersTable" maxHeight="200.0" prefWidth="200.0" >
                                 <columns>
                                     <TableColumn fx:id="orderTableNumber" text="Table" />
@@ -30,6 +30,7 @@
                                     <TableColumn fx:id="orderItems" text="Items" />
                                 </columns>
                             </TableView>
+            <HBox fx:id="tableHBox"/>
         </VBox>
     </AnchorPane>
 </VBox>

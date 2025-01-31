@@ -16,21 +16,15 @@
 
 
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controller.Controller1"
+      fx:controller="controller.Controller2"
       prefHeight="400.0" prefWidth="600.0">
     <AnchorPane>
         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0"
           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
           AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
-            <Label text="Staff"/>
-            <TableView fx:id="ordersTable" maxHeight="200.0" prefWidth="200.0" >
-                                <columns>
-                                    <TableColumn fx:id="orderTableNumber" text="Table" />
-                                    <TableColumn fx:id="orderDate" text="Placed at" />
-                                    <TableColumn fx:id="orderItems" text="Items" />
-                                </columns>
-                            </TableView>
-            <HBox fx:id="tableHBox"/>
+            <VBox fx:id="menuVBox"  prefWidth="300.0" />
+            <Button fx:id="placeOrder" text="Place Order"/>
+            <Button fx:id="clearOrder" text="Clear Order"/>
         </VBox>
     </AnchorPane>
 </VBox>

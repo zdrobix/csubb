@@ -1,3 +1,4 @@
+package restaurant;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -25,7 +26,7 @@ public class App extends Application{
     }
 
     private void initView(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/view-1.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/views/view-1.fxml"));
 
         primaryStage.setScene(new Scene(fxmlLoader.load()));
         ((Controller1)fxmlLoader.getController()).setService(new Service(new RepoOrders(), new RepoMenu(), new RepoTables()));

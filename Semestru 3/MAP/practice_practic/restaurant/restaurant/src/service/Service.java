@@ -1,6 +1,7 @@
 package service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import domain.MenuItem;
@@ -10,11 +11,14 @@ import domain.Table;
 import repo.RepoMenu;
 import repo.RepoOrders;
 import repo.RepoTables;
+import observer.*;
 
-public class Service {
+public class Service implements Observable<OrderAddedEvent> {
     private RepoOrders Repo;
     private RepoMenu Menu;
     private RepoTables Tables;
+
+    private List<Observer<OrderAddedEvent>> observers=new ArrayList<>();
 
     public Service (RepoOrders repo, RepoMenu menu, RepoTables tables){
         this.Repo = repo;
@@ -36,6 +40,7 @@ public class Service {
             OrderStatus.Placed
         );
         this.Repo.AddOrder(order);
+        this.notifyObservers(new OrderAddedEvent(order));
     }
 
     public List<MenuItem> GetMenu() {
@@ -48,5 +53,19 @@ public class Service {
 
     public List<Table> GetTables() {
         return this.Tables.GetTables();
+    }
+
+    @Override
+    public void addObserver(Observer<OrderAddedEvent> e) {
+        observers.add(e);
+    }
+
+    @Override
+    public void removeObserver(Observer<OrderAddedEvent> e) {
+    }
+
+    @Override
+    public void notifyObservers(OrderAddedEvent t) {
+        observers.stream().forEach(x->x.update(t));
     }
 }
