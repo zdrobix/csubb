@@ -1,0 +1,20 @@
+23,Antreuri,Salata de vinete,18,RON
+24,Fel Principal,Lasagna,35,RON
+25,Desert,Profiterol,20,RON
+26,Bauturi,Ceai verde,7,RON
+27,Bauturi,Limonada,12,RON
+28,Antreuri,Bruschete cu avocado,20,RON
+29,Fel Principal,Pizza Margherita,28,RON
+30,Fel Principal,Pizza Quattro Stagioni,32,RON
+31,Desert,Mousse de ciocolata,18,RON
+32,Bauturi,Cocktail Mojito,22,RON
+33,Bauturi,Cocktail Pina Colada,24,RON
+34,Antreuri,Salata de cruditati,15,RON
+35,Fel Principal,Burger de vita,35,RON
+36,Fel Principal,Peste la cuptor,38,RON
+37,Desert,Tarta cu fructe,22,RON
+38,Bauturi,Smoothie de fructe,15,RON
+39,Bauturi,Espresso,10,RON
+40,Antreuri,Creveti tempura,28,RON
+41,Fel Principal,Curry de pui,30,RON
+42,Desert,Ecler,16,RON
