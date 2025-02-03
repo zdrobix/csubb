@@ -11,14 +11,8 @@ import backend.domain.Animal;
 import backend.domain.AnimalType;
 
 public class RepoCenterAnimal {
-    private List<String> connectionCredentials = new ArrayList<>();
 
     public RepoCenterAnimal() {
-        this.connectionCredentials = List.of(
-                "jdbc:postgresql://localhost:5432/socialnetwork",
-                "postgres",
-                "password"
-        );
     }
 
     public Connection connectToDb ()  {
@@ -26,9 +20,9 @@ public class RepoCenterAnimal {
         try {
             connection = DriverManager
                     .getConnection(
-                        connectionCredentials.get(0),
-                        connectionCredentials.get(1),
-                        connectionCredentials.get(2)
+                        "jdbc:postgresql://localhost:5432/animals",
+                        "postgres",
+                        "password"
                     );
         } catch (SQLException e) {   System.out.println(e.getMessage());
         }
@@ -39,8 +33,8 @@ public class RepoCenterAnimal {
         List<Animal> animals = new ArrayList<>();
         var connection = connectToDb();
         var query = connection
-            .prepareStatement("SELECT * FROM animals " +
-                "WHERE center_id = ?");
+            .prepareStatement("SELECT * FROM animalsplaced " +
+                "WHERE centerid = ?");
         query.setInt(1, centerID);
         var result = query.executeQuery();
         while(result.next())
@@ -63,7 +57,7 @@ public class RepoCenterAnimal {
         List<AdoptionCenter> centers = new ArrayList<>();
         var connection = connectToDb();
         var query = connection
-            .prepareStatement("SELECT * FROM AdoptionCenters");
+            .prepareStatement("SELECT * FROM adoptioncenters");
         var result = query.executeQuery();
         while(result.next())
         {
