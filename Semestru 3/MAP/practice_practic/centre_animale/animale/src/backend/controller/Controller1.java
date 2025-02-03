@@ -34,7 +34,7 @@ public class Controller1 implements Observer<EventChange> {
 
     public void setService(Service service, AdoptionCenter center) {
         ServiceA = service;
-        ServiceA.addObserver(this);
+        ServiceA.addObserver(this); 
         this.Center = center;
         this.model.setAll(ServiceA.getAnimalsFromCenter(this.Center.getID()));
         this.initialize2();
@@ -97,6 +97,7 @@ public class Controller1 implements Observer<EventChange> {
                      alert.setContentText("Do you want to transfer " + e.getData().getName() + " to " + this.Center.getName() + "?");
                      var result = alert.showAndWait();
                      if (result.get() == ButtonType.OK) {
+                        this.ServiceA.TransferAnimal(e.getData(), Center);
                      }
                 break;
               }

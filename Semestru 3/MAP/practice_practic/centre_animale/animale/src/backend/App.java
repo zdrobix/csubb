@@ -21,15 +21,15 @@ public class App extends Application{
         var service = new Service(new RepoCenterAnimal());
         for (var center : service.getCenters()) {
             var stage = new Stage();
-            initView(stage, center);
+            initView(stage, service, center);
             stage.setWidth(800);
             stage.show();
         }
     }
 
-    private void initView(Stage primaryStage, AdoptionCenter center) throws IOException {
+    private void initView(Stage primaryStage, Service service, AdoptionCenter center) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/view/view-center.fxml"));
         primaryStage.setScene(new Scene(fxmlLoader.load()));
-        ((Controller1) fxmlLoader.getController()).setService(new Service(new RepoCenterAnimal()), center);
+        ((Controller1) fxmlLoader.getController()).setService(service, center);
     }
 }
