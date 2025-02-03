@@ -2,42 +2,41 @@ package backend.controller;
 
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
+import javafx.scene.layout.VBox;
 
-import java.time.LocalDateTime;
 
 import backend.domain.*;
 import backend.service.Service;
-import backend.App;
+import backend.utils.EventChange;
+import backend.utils.Observer;
 
-public class Controller1  { 
+public class Controller1 implements Observer<EventChange> { 
     private Service ServiceA;
     private AdoptionCenter Center;
+    private Animal SelectedAnimal;
 
     ObservableList<Animal> model = FXCollections.observableArrayList();
 
-    private Animal SelectedAnimal;
-
     @FXML
-    private Label centerLabel,addressLabel,occupancyLabel;
-
+    private Label centerLabel, addressLabel, occupancyLabel;
     @FXML 
     private TableView<Animal> animalTable;
     @FXML
     private TableColumn<Animal, String> animalName;
     @FXML
     private TableColumn<Animal, String> animalType;
+    @FXML 
+    private VBox mainVBox;
 
     public void setService(Service service, AdoptionCenter center) {
-        this.ServiceA = service;
+        ServiceA = service;
+        ServiceA.addObserver(this);
         this.Center = center;
-        this.model.setAll(this.ServiceA.getAnimalsFromCenter(this.Center.getID()));
+        this.model.setAll(ServiceA.getAnimalsFromCenter(this.Center.getID()));
         this.initialize2();
     }
 
@@ -54,7 +53,54 @@ public class Controller1  {
                 System.out.println(this.SelectedAnimal.getName());
             }
         });
-        this.animalTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
-        System.out.println(this.centerLabel.getText());
+        var animalTypeCombo = new ComboBox<String>();
+        animalTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
+        animalTypeCombo.getItems().addAll("DOG", "CAT", "BIRD", "RODENT", "FISH", "ALL");
+        animalTypeCombo.getSelectionModel().select("ALL");
+        animalTypeCombo.setOnAction(e -> {
+            if (animalTypeCombo.getValue().equals("ALL")) 
+                this.model.setAll(ServiceA.getAnimalsFromCenter(this.Center.getID()));
+            else 
+                this.model.setAll(ServiceA.getAnimalsOfTypeFromCenter(AnimalType.valueOf(animalTypeCombo.getValue()), this.Center.getID()));
+            
+        });
+        animalTypeCombo.setPrefWidth(250);
+        this.mainVBox.getChildren().add(animalTypeCombo);
+        var button = new Button("Request");
+        button.setOnAction(e -> {
+            ServiceA.InitializeTransfer(this.SelectedAnimal);
+        });
+        button.setPrefWidth(250);
+        this.mainVBox.getChildren().add(button);
+    }
+
+    @Override
+    public void update(EventChange e) {
+        switch (e.getType()) {
+            case "transfer":
+            {
+                if (this.Center.getID() == e.getData().getCenterID()) {
+                    this.model.add(e.getData());
+                }
+                if (this.Center.getID() == e.getOldData().getCenterID()) {
+                    this.model.remove(e.getOldData());
+                }
+                this.occupancyLabel.setText("Occupancy: " + this.ServiceA.getAnimalsFromCenter(this.Center.getID()).size() * 1.0 /this.Center.getCapacity() * 100 + "% full");
+                break;
+            }
+            case "request":
+            {
+                if (this.Center.getID() != e.getData().getCenterID()) {
+                     var alert = new Alert(Alert.AlertType.CONFIRMATION);
+                     alert.setTitle("Transfer Request");
+                     alert.setHeaderText("Transfer Request");
+                     alert.setContentText("Do you want to transfer " + e.getData().getName() + " to " + this.Center.getName() + "?");
+                     var result = alert.showAndWait();
+                     if (result.get() == ButtonType.OK) {
+                     }
+                break;
+              }
+            }
+        }
     }
 }

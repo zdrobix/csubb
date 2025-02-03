@@ -75,4 +75,40 @@ public class RepoCenterAnimal {
         return centers;
     }
 
+    public List<Animal> getAnimalsOfTypeFromCenter(AnimalType type, int centerID) throws SQLException {
+        List<Animal> animals = new ArrayList<>();
+        var connection = connectToDb();
+        var query = connection
+            .prepareStatement("SELECT * FROM animalsplaced " +
+                "WHERE centerid = ? AND type = ?");
+        query.setInt(1, centerID);
+        query.setString(2, type.toString());
+        var result = query.executeQuery();
+        while(result.next())
+        {
+            animals.add(
+                new Animal(
+                    result.getInt(1),
+                    result.getString(2),
+                    result.getInt(3),
+                    AnimalType.valueOf(result.getString(4))
+                    )
+            );
+        }
+        result.close();
+        connection.close();
+        return animals;
+    }
+
+    public void TransferAnimal(Animal animal, AdoptionCenter center) throws SQLException{
+        var connection = connectToDb();
+        var query = connection
+            .prepareStatement("UPDATE animalsplaced " +
+                "SET centerid = ? " +
+                "WHERE id = ?");
+            query.setInt(1, center.getID());
+            query.setInt(2, animal.getID());
+        query.executeUpdate();
+        connection.close();    
+    }
 }

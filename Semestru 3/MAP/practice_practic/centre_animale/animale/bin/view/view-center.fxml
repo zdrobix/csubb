@@ -19,16 +19,16 @@
       fx:controller="backend.controller.Controller1"
       prefHeight="400.0" prefWidth="600.0">
     <AnchorPane>
-        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0"
+        <VBox fx:id="mainVBox" spacing="5.0" alignment="CENTER" prefHeight="400.0" prefWidth="400.0"
           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
           AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
             <Label fx:id="centerLabel" text =""/>
             <Label fx:id="addressLabel" text =""/>
             <Label fx:id="occupancyLabel" text =""/>
-            <TableView fx:id="animalTable" maxHeight="200.0" prefWidth="50.0" >
+            <TableView fx:id="animalTable" prefHeight="100.0" prefWidth="50.0" >
                                 <columns>
-                                    <TableColumn fx:id="animalName" text="Name" />
-                                    <TableColumn fx:id="animalType" text="Type" />
+                                    <TableColumn fx:id="animalName" text="Name" prefWidth="25.0"/>
+                                    <TableColumn fx:id="animalType" text="Type" prefWidth="25.0"/>
                                 </columns>
             </TableView>
         </VBox>
