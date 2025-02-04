@@ -1,21 +1,23 @@
 package utils;
 
-public class EventChange implements IEvent {
-    private Object Data;        //boxing
-    private Object OldData;     
+import domain.Order;
+
+public class EventChange implements IEvent{
+    private Order Data;        
+    private Order OldData;     
     private String Type;
     
-    public EventChange(String type, Object data, Object oldData) {
+    public EventChange(String type, Order data, Order oldData) {
         this.Type = type;
         this.Data = data;
         this.OldData = oldData;
     }
 
-    public Object getData() {
+    public Order getData() {
         return Data;
     }
 
-    public Object getOldData() {
+    public Order getOldData() {
         return OldData;
     }
 

@@ -60,6 +60,10 @@ public class Service implements Observable<EventChange>{
         }
     }
 
+    public void addRequest (Person person, Chauffer chauffer) {
+        notifyObservers(new EventChange("order", new Order(person, chauffer, null), null));
+    }
+
     @Override
     public void addObserver(Observer<EventChange> e) {
         observers.add(e);

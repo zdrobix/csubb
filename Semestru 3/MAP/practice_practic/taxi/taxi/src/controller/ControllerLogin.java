@@ -32,7 +32,7 @@ public class ControllerLogin {
     private void initElements () {
         this.usernameTextField = new TextField();
         usernameTextField.setPromptText("Username");
-        usernameTextField.setPrefWidth(100);
+        usernameTextField.setMaxWidth(100);
 
         var button = new Button("Login");
         button.setOnAction(e -> {

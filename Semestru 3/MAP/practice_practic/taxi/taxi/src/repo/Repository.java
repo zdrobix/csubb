@@ -31,7 +31,7 @@ public class Repository {
         List<Person> persons = new ArrayList<>();
         var connection = connectToDb();
         var query = connection
-            .prepareStatement("SELECT * FROM persons");
+            .prepareStatement("SELECT * FROM persons WHERE car IS NULL");
         var result = query.executeQuery();
         while(result.next())
         {
@@ -53,7 +53,7 @@ public class Repository {
         while(result.next())
         {
             chauffers.add(
-                (Chauffer) new Chauffer(result.getString(2), result.getString(3), result.getString(3)).setId(result.getLong(1))
+                (Chauffer) new Chauffer(result.getString(2), result.getString(3), result.getString(4)).setId(result.getLong(1))
             );
         }
         result.close();
@@ -100,7 +100,7 @@ public class Repository {
     public void addOrder (Order order) throws SQLException {
         var connection = connectToDb();
         var query = connection
-            .prepareStatement("INSERT INTO orders (person_id, chauffer_id, date) VALUES (?, ?, ?)");
+            .prepareStatement("INSERT INTO orders (id_person, id_chauffer, date) VALUES (?, ?, ?)");
         query.setLong(1, order.getPerson().getId());
         query.setLong(2, order.getChauffer().getId());
         query.setTimestamp(3, java.sql.Timestamp.valueOf(order.getDate()));

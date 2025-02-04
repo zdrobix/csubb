@@ -22,6 +22,12 @@
         <VBox fx:id="mainVBox" spacing="5.0" alignment="CENTER" prefHeight="400.0" prefWidth="400.0"
           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
           AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+          <TableView fx:id="tableView" maxHeight="200.0" prefWidth="200.0" >
+                                <columns>
+                                    <TableColumn fx:id="nameColumn" text="Name" />
+                                    <TableColumn fx:id="dateColumn" text="Date" />
+                                </columns>
+                            </TableView>
         </VBox>
     </AnchorPane>
 </VBox>
