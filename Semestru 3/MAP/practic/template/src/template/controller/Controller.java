@@ -2,6 +2,7 @@ package template.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 import template.service.Service;
 import template.utils.EventChange;
 import template.utils.Observer;
@@ -14,9 +15,10 @@ public class Controller implements Observer<EventChange> {
         this.ServiceA = service;
         this.ServiceA.addObserver(this);
         //this.model.setAll(this.ServiceA.getAll());
+        //new FXMLLoader().setLocation(getClass().getResource("/template/view/View.fxml"));
     }
 
-    
+
 
     @Override
     public void update (EventChange e) {
