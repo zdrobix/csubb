@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Rent-a-car Form</title>
+</head>
+
+<body> 
+    <div align="center">
+        <h1>Form</h1>
+        <h2>X Auto Renting</h2>
+        <center><img width="70" height="50" src="../img/logo.jpg" alt="logo"></center>
+        <h3>Please complete this form carefully.</h3>
+        
+        <div align="center">
+            <table border="12" align="center">
+                <tr>
+                    <td>
+                        <form action="/action_page.php" method="get">
+                            <h4>Complete with valid information.</h4>
+                            <h5>Or else you will be put on a blacklist.</h5>
+                            <h6>Forever.</h6>
+                            <fieldset>
+                                <legend><strong>Person: </strong></legend>
+                                <label>Name:</label> <br>
+                                <input type="text" maxlength="100"><br>
+                                <label>Birthday:</label><br>
+                                <input type="text"> <br>
+                                <label>Address:</label><br>
+                                <input type="text"> <br>
+                                <label>Country:</label><br>
+                                <input type="text" value="România" readonly><br>
+                                <label>Gender:</label><br>
+                                <input type="radio" name="gender" value="male"> Male<br>
+                                <input type="radio" name="gender" value="female"> Female<br>
+                                <input type="radio" name="gender" value="other"> Other<br>
+                                <input type="radio" name="gender" value="not" checked="checked"> Prefer not to specify<br>
+                                <br>
+                                <input type="checkbox" checked="checked" disabled>My data can be used by X Auto Renting.
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <legend><strong>Available cars:</strong></legend>
+                                <table border="2" align="left">
+                                    <tr> 
+                                        <th>Id </th>
+                                        <th>Model</th>
+                                        <th>Color</th>
+                                        <th>Link</th>
+                                        <th>Clients</th>
+                                    </tr>
+                                    <tr> 
+                                        <td rowspan="1" colspan="1">1</td>
+                                        <td rowspan="1" colspan="1">Bmw x6</td>
+                                        <td rowspan="1" colspan="1" bgcolor="black"></td>
+                                        <td rowspan="1" colspan="1"><a href="https://www.autovit.ro/autoturisme/anunt/bmw-x6-ver-xdrive30d-at-mhev-ID7HvVuZ.html" target="_blank">Click to see me!</a></td>
+                                        <td rowspan="1" colspan="1">
+                                            <table>
+                                                <tr>
+                                                    <th>From</th>
+                                                    <th>To</th>
+                                                    <th>Name</th>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="1" colspan="1">10/10/2024</td>
+                                                    <td rowspan="1" colspan="1">11/10/2024</td>
+                                                    <td rowspan="1" colspan="1">Maria</td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="1" colspan="1">09/10/2024</td>
+                                                    <td rowspan="1" colspan="1">19/10/2024</td>
+                                                    <td rowspan="1" colspan="1">Alin</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr> 
+                                        <td>2</td>
+                                        <td>Alfa Romeo Giulietta</td>
+                                        <td bgcolor="white"></td>
+                                        <td><a href="https://www.carbids.com.au/c/allbids-car-auctions/small-cars/3-2013-alfa-romeo-giulietta-distinctive-jt-1429493" target="_blank">Click to see me!</a></td>
+                                    </tr>
+                                    <tr> 
+                                        <td>3</td>
+                                        <td>Tesla Model 3</td>
+                                        <td bgcolor="orange"></td>
+                                        <td><a href="https://tsportline.com/blogs/custom-tesla-model-3/3m-matte-orange-tesla-model-3-with-19-tsv-wheels?srsltid=AfmBOooo6zNSJCxqioeG04HhF0GeSoQMoX0Og99AgoijebSAwdHo6UWX" target="_blank">Click to see me!</a></td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <th>From</th>
+                                                    <th>To</th>
+                                                    <th>Name</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>19/12/2024</td>
+                                                    <td>21/12/2024</td>
+                                                    <td>Alex</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>01/12/2024</td>
+                                                    <td>31/12/2024</td>
+                                                    <td>Oana</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <legend><strong>Car details:</strong></legend>
+                                <label>Car of choice:</label><br>
+                                <select multiple>
+                                    <option selected value="BMW">BMW</option>
+                                    <option value="Alfa-Romeo">Alfa-Romeo</option>
+                                    <option value="Tesla">Tesla</option>
+                                </select><br>
+                                <label>Driver's license number:</label><br>
+                                <input type="text"><br>
+                                <label>Places you will visit:</label><br>
+                                <textarea rows="4" cols="30"></textarea><br>
+                                <label>Max speed:</label><br>
+                                <input type="text"><br> <br>
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <legend><strong>Time periods:</strong></legend>
+                                <label>Start date:</label><br>
+                                <input type="text"> <br>
+                                <label>End date:</label><br>
+                                <input type="text"><br> <br>
+                                <label>Preferred hour of pick-up:</label><br>
+                                <input type="text" size="4"><br> <br>
+                            </fieldset>
+                            <br>
+                            <div>
+                                <label>Client obligations are: </label>
+                                <ul>
+                                    <li>Fill the gas tank <i>with the correct type of</i><em> fuel</em></li>
+                                    <li>Return the care unwrecked</li>
+                                    <li>Pay any fines</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <label>The car must be: </label>
+                                <ul>
+                                    <li>In the same exact state we rented it to you</li>
+                                    <li>No parts exchanged, so we will check for
+                                        <ol type="A">
+                                            <li>Tyres</li>
+                                            <li>Seats</li>
+                                            <li>Gearbox</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div>
+                                <strong><label>The procedure for an accident is: </label></strong>
+                                <ol start = "1">
+                                    <li>Call this number: 0777-777-777</li>
+                                    <li>Keep calm</li>
+                                    <li>We'll do the rest
+                                        <ul>
+                                            <li>Call the ambulance if needed</li>
+                                            <li>Paperwork</li>
+                                            <li>Cry to/ Call/ Prank loved ones</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                            <br>
+                            <br>
+                            <fieldset>
+                                <legend><strong>Medical details:</strong></legend>
+                                <small>In case of emergency.</small><br><br>
+                                <label>Sanguine group:</label><br>
+                                <input type="text" id="fname" name="fname"><br>
+                                <label>Allergies:</label><br>
+                                <textarea rows="4" cols="30"></textarea><br>
+                            </fieldset>
+                            <br>
+                            <input type="checkbox">
+                            <label>By checking this you agree to the </label>
+                            <a href="https://en.wikipedia.org/wiki/Terms_of_service" target="_blank">Terms of service.</a><br>
+                            <center><button title="Press this button when you have finished">Send</button></center>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
