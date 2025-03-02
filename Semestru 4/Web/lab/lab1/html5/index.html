@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Rent-a-car Form</title>
 </head>
 
 <body> 
-    <div align="center">
+    <div>
         <h1>Form</h1>
         <h2>X Auto Renting</h2>
-        <center><img width="70" height="50" src="../img/logo.jpg" alt="logo"></center>
+        <img width="70" height="50" src="../img/logo.jpg" alt="logo">
         <h3>Please complete this form carefully.</h3>
         
-        <div align="center">
-            <table border="12" align="center">
+        <div>
+            <table>
                 <tr>
                     <td>
                         <form action="/action_page.php" method="get">
@@ -25,7 +25,7 @@
                                 <label>Name:</label> <br>
                                 <input type="text" maxlength="100"><br>
                                 <label>Birthday:</label><br>
-                                <input type="text"> <br>
+                                <input type="date"> <br>
                                 <label>Address:</label><br>
                                 <input type="text"> <br>
                                 <label>Country:</label><br>
@@ -41,7 +41,7 @@
                             <br>
                             <fieldset>
                                 <legend><strong>Available cars:</strong></legend>
-                                <table border="2" align="left">
+                                <table>
                                     <tr> 
                                         <th>Id </th>
                                         <th>Model</th>
@@ -52,7 +52,7 @@
                                     <tr> 
                                         <td rowspan="1" colspan="1">1</td>
                                         <td rowspan="1" colspan="1">Bmw x6</td>
-                                        <td rowspan="1" colspan="1" bgcolor="black"></td>
+                                        <td rowspan="1" colspan="1">Black</td>
                                         <td rowspan="1" colspan="1"><a href="https://www.autovit.ro/autoturisme/anunt/bmw-x6-ver-xdrive30d-at-mhev-ID7HvVuZ.html" target="_blank">Click to see me!</a></td>
                                         <td rowspan="1" colspan="1">
                                             <table>
@@ -77,13 +77,32 @@
                                     <tr> 
                                         <td>2</td>
                                         <td>Alfa Romeo Giulietta</td>
-                                        <td bgcolor="white"></td>
+                                        <td>White</td>
                                         <td><a href="https://www.carbids.com.au/c/allbids-car-auctions/small-cars/3-2013-alfa-romeo-giulietta-distinctive-jt-1429493" target="_blank">Click to see me!</a></td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <th>From</th>
+                                                    <th>To</th>
+                                                    <th>Name</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>19/12/2024</td>
+                                                    <td>21/12/2024</td>
+                                                    <td>Marius</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>01/12/2024</td>
+                                                    <td>31/12/2024</td>
+                                                    <td>Emilia</td>
+                                                </tr>
+                                            </table>
+                                        </td>
                                     </tr>
                                     <tr> 
                                         <td>3</td>
                                         <td>Tesla Model 3</td>
-                                        <td bgcolor="orange"></td>
+                                        <td>Orange</td>
                                         <td><a href="https://tsportline.com/blogs/custom-tesla-model-3/3m-matte-orange-tesla-model-3-with-19-tsv-wheels?srsltid=AfmBOooo6zNSJCxqioeG04HhF0GeSoQMoX0Og99AgoijebSAwdHo6UWX" target="_blank">Click to see me!</a></td>
                                         <td>
                                             <table>
@@ -127,11 +146,11 @@
                             <fieldset>
                                 <legend><strong>Time periods:</strong></legend>
                                 <label>Start date:</label><br>
-                                <input type="text"> <br>
+                                <input type="date"> <br>
                                 <label>End date:</label><br>
-                                <input type="text"><br> <br>
+                                <input type="date"><br> <br>
                                 <label>Preferred hour of pick-up:</label><br>
-                                <input type="text" size="4"><br> <br>
+                                <input type="time" size="4"><br> <br>
                             </fieldset>
                             <br>
                             <div>
@@ -184,7 +203,7 @@
                             <input type="checkbox">
                             <label>By checking this you agree to the </label>
                             <a href="https://en.wikipedia.org/wiki/Terms_of_service" target="_blank">Terms of service.</a><br>
-                            <center><button title="Press this button when you have finished">Send</button></center>
+                            <button title="Press this button when you have finished">Send</button>
                         </form>
                     </td>
                 </tr>
