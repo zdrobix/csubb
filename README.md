@@ -24,3 +24,10 @@ Git Repository for all the homework and projects.
   - PS
   - MAP
 
+## [Semester 4](https://github.com/zdrobix/csubb/tree/master/Semestru%204)
+  - IA
+  - MPP
+  - Programare Web
+  - ISS
+  - SGBD
+
