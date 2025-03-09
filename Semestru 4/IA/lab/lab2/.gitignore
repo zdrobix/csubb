@@ -3,3 +3,4 @@ etc/
 Scripts/
 share/
 pyenv.cfg
+.idea/
