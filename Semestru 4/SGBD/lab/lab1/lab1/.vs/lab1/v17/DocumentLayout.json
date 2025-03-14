@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab1\\lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab1\\lab1.csproj|q:\\info\\csubb\\semestru 4\\sgbd\\lab\\lab1\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab1\\lab1.csproj|Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab1\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab1\\lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -58,8 +58,7 @@
               "ToolTip": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab1\\lab1\\lab1\\Form1.cs [Design]",
               "RelativeToolTip": "lab1\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T12:23:26.692Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-04T12:23:26.692Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "lab1\\Form1.Designer.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwBAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T12:20:15.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T12:20:15.971Z"
             }
           ]
         }
