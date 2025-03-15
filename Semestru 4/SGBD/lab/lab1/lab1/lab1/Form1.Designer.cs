@@ -44,9 +44,10 @@
 			// 
 			// GetDrugsButton
 			// 
-			GetDrugsButton.Location = new Point(47, 399);
+			GetDrugsButton.Location = new Point(41, 299);
+			GetDrugsButton.Margin = new Padding(3, 2, 3, 2);
 			GetDrugsButton.Name = "GetDrugsButton";
-			GetDrugsButton.Size = new Size(300, 29);
+			GetDrugsButton.Size = new Size(322, 22);
 			GetDrugsButton.TabIndex = 0;
 			GetDrugsButton.Text = "drugs";
 			GetDrugsButton.UseVisualStyleBackColor = true;
@@ -55,41 +56,46 @@
 			// drugsGridView
 			// 
 			drugsGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			drugsGridView.Location = new Point(47, 124);
+			drugsGridView.Location = new Point(41, 93);
+			drugsGridView.Margin = new Padding(3, 2, 3, 2);
 			drugsGridView.Name = "drugsGridView";
 			drugsGridView.RowHeadersWidth = 51;
-			drugsGridView.Size = new Size(300, 188);
+			drugsGridView.Size = new Size(322, 202);
 			drugsGridView.TabIndex = 1;
 			// 
 			// nameTextBox
 			// 
-			nameTextBox.Location = new Point(400, 124);
+			nameTextBox.Location = new Point(405, 93);
+			nameTextBox.Margin = new Padding(3, 2, 3, 2);
 			nameTextBox.Name = "nameTextBox";
 			nameTextBox.PlaceholderText = "Name";
-			nameTextBox.Size = new Size(123, 27);
+			nameTextBox.Size = new Size(108, 23);
 			nameTextBox.TabIndex = 2;
 			// 
 			// priceTextBox
 			// 
-			priceTextBox.Location = new Point(400, 157);
+			priceTextBox.Location = new Point(405, 129);
+			priceTextBox.Margin = new Padding(3, 2, 3, 2);
 			priceTextBox.Name = "priceTextBox";
 			priceTextBox.PlaceholderText = "Price";
-			priceTextBox.Size = new Size(123, 27);
+			priceTextBox.Size = new Size(108, 23);
 			priceTextBox.TabIndex = 3;
 			// 
 			// producerComboBox
 			// 
 			producerComboBox.FormattingEnabled = true;
-			producerComboBox.Location = new Point(400, 190);
+			producerComboBox.Location = new Point(405, 170);
+			producerComboBox.Margin = new Padding(3, 2, 3, 2);
 			producerComboBox.Name = "producerComboBox";
-			producerComboBox.Size = new Size(123, 28);
+			producerComboBox.Size = new Size(108, 23);
 			producerComboBox.TabIndex = 4;
 			// 
 			// addDrugButton
 			// 
-			addDrugButton.Location = new Point(400, 329);
+			addDrugButton.Location = new Point(405, 247);
+			addDrugButton.Margin = new Padding(3, 2, 3, 2);
 			addDrugButton.Name = "addDrugButton";
-			addDrugButton.Size = new Size(123, 29);
+			addDrugButton.Size = new Size(108, 22);
 			addDrugButton.TabIndex = 5;
 			addDrugButton.Text = "add drug";
 			addDrugButton.UseVisualStyleBackColor = true;
@@ -98,27 +104,30 @@
 			// producerGridView
 			// 
 			producerGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			producerGridView.Location = new Point(710, 124);
+			producerGridView.Location = new Point(564, 93);
+			producerGridView.Margin = new Padding(3, 2, 3, 2);
 			producerGridView.Name = "producerGridView";
 			producerGridView.RowHeadersWidth = 51;
-			producerGridView.Size = new Size(300, 188);
+			producerGridView.Size = new Size(322, 202);
 			producerGridView.TabIndex = 7;
 			// 
 			// getProducersButton
 			// 
-			getProducersButton.Location = new Point(710, 399);
+			getProducersButton.Location = new Point(564, 299);
+			getProducersButton.Margin = new Padding(3, 2, 3, 2);
 			getProducersButton.Name = "getProducersButton";
-			getProducersButton.Size = new Size(300, 29);
+			getProducersButton.Size = new Size(322, 22);
 			getProducersButton.TabIndex = 6;
 			getProducersButton.Text = "producers";
 			getProducersButton.UseVisualStyleBackColor = true;
-			getProducersButton.Click += getProducersButton_Click;
+			getProducersButton.Click += GetProducersButton_Click;
 			// 
 			// deleteDrugButton
 			// 
-			deleteDrugButton.Location = new Point(400, 364);
+			deleteDrugButton.Location = new Point(405, 273);
+			deleteDrugButton.Margin = new Padding(3, 2, 3, 2);
 			deleteDrugButton.Name = "deleteDrugButton";
-			deleteDrugButton.Size = new Size(123, 29);
+			deleteDrugButton.Size = new Size(108, 22);
 			deleteDrugButton.TabIndex = 8;
 			deleteDrugButton.Text = "delete drug";
 			deleteDrugButton.UseVisualStyleBackColor = true;
@@ -126,9 +135,10 @@
 			// 
 			// updateDrugButton
 			// 
-			updateDrugButton.Location = new Point(400, 399);
+			updateDrugButton.Location = new Point(405, 299);
+			updateDrugButton.Margin = new Padding(3, 2, 3, 2);
 			updateDrugButton.Name = "updateDrugButton";
-			updateDrugButton.Size = new Size(123, 29);
+			updateDrugButton.Size = new Size(108, 22);
 			updateDrugButton.TabIndex = 9;
 			updateDrugButton.Text = "update drug";
 			updateDrugButton.UseVisualStyleBackColor = true;
@@ -136,9 +146,9 @@
 			// 
 			// Form1
 			// 
-			AutoScaleDimensions = new SizeF(8F, 20F);
+			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(1182, 600);
+			ClientSize = new Size(1034, 450);
 			Controls.Add(updateDrugButton);
 			Controls.Add(deleteDrugButton);
 			Controls.Add(producerGridView);
@@ -149,6 +159,7 @@
 			Controls.Add(nameTextBox);
 			Controls.Add(drugsGridView);
 			Controls.Add(GetDrugsButton);
+			Margin = new Padding(3, 2, 3, 2);
 			Name = "Form1";
 			Text = "Form1";
 			((System.ComponentModel.ISupportInitialize)drugsGridView).EndInit();
