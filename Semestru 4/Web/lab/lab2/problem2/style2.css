@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 50px;
+    background-color: red;
+}
+
+.nav_and_content {
+    display: flex;
+    height: 500px;
+    background-color: yellow;
+    
+}
+
+.ul {
+    margin-top: 0;
+    width: 300px; 
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.li {
+    padding: 5px 10px;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.content {
+    flex: 1; 
+    background-color: green;
+}
+
+.footer {
+    height: 50px;
+    background-color: pink;
+}
+
+.header, .content, .footer{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.footer, .header {
+    width: 100%;
+}

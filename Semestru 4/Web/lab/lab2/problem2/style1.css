@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+}
+
+.header, .ul, .content{
+    width: 100%;  
+}
+
+.header, .content, .footer {
+    display: flex;
+    align-items: center; 
+    padding-left: 10px; 
+}
+
+.header {
+    height: 50px;
+    background-color: red;
+}
+
+.ul {
+    margin-top:0;
+    margin-bottom:0;
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+}
+
+.li {
+    padding: 5px 10px;
+    flex: 1;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.content {
+    height: 500px;
+    background-color: green;
+}
+
+.footer {
+    height: 50px;
+    background-color: pink;
+}
