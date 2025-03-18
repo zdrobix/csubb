@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab1\\lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab1\\lab1.csproj|Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab1\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab1\\lab1.csproj|q:\\info\\csubb\\semestru 4\\sgbd\\lab\\lab1\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab1\\lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 254,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,6 +37,10 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
@@ -44,7 +48,7 @@
               "RelativeDocumentMoniker": "lab1\\Form1.cs",
               "ToolTip": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab1\\lab1\\lab1\\Form1.cs",
               "RelativeToolTip": "lab1\\Form1.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwDwAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAADgvxwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T12:25:01.317Z",
               "EditorCaption": ""

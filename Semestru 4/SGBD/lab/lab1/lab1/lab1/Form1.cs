@@ -7,12 +7,12 @@ namespace lab1
 {
 	public partial class Form1 : Form
 	{
-		private BindingSource bindingSource = new BindingSource();
 		private int IdSelectedProducer = -1;
 		private int IdSelectedDrug = -1;
 		private SqlConnection connection = new SqlConnection("Server=DESKTOP-9PS0RE2;Database=zdrobix;Trusted_Connection=True;TrustServerCertificate=True;");
 		private SqlDataAdapter dataAdapter = new SqlDataAdapter();
 		private DataSet dataSet = new DataSet();
+
 		public Form1()
 		{
 			InitializeComponent();
@@ -24,8 +24,11 @@ namespace lab1
 					this.IdSelectedProducer = -1;
 					return;
 				}
-				IdSelectedProducer = Convert.ToInt32(producerGridView.SelectedRows[0].Cells["id"].Value);
-				this.GetDrugsButton_Click(null, null);
+				else if (producerGridView.SelectedRows.Count == 1)
+				{
+					IdSelectedProducer = Convert.ToInt32(producerGridView.SelectedRows[0].Cells["id"].Value);
+					this.GetDrugsButton_Click(null, null);
+				}
 			};
 			this.drugsGridView.SelectionChanged += (sender, e) =>
 			{
@@ -99,18 +102,25 @@ namespace lab1
 
 		private void addDrugButton_Click(object sender, EventArgs e)
 		{
-			dataAdapter.InsertCommand = new SqlCommand("INSERT INTO MEDICAMENTE(nume, pret, id_producator) VALUES (@nume, @pret, @id_producator)", connection);
-			if (nameTextBox.Text.IsNullOrEmpty() || priceTextBox.Text.IsNullOrEmpty() || producerComboBox.SelectedValue == null)
-			{
-				MessageBox.Show("Please fill in all the fields");
-				return;
+			try { 
+				dataAdapter.InsertCommand = new SqlCommand("INSERT INTO MEDICAMENTE(nume, pret, id_producator) VALUES (@nume, @pret, @id_producator)", connection);
+				if (nameTextBox.Text.IsNullOrEmpty() || priceTextBox.Text.IsNullOrEmpty() || producerComboBox.SelectedValue == null)
+				{
+					MessageBox.Show("Please fill in all the fields");
+					return;
+				}
+				dataAdapter.InsertCommand.Parameters.Add("@nume", SqlDbType.VarChar).Value = nameTextBox.Text;
+				dataAdapter.InsertCommand.Parameters.Add("@pret", SqlDbType.Float).Value = float.Parse(priceTextBox.Text);
+				dataAdapter.InsertCommand.Parameters.Add("@id_producator", SqlDbType.Int).Value = producerComboBox.SelectedValue;
+				connection.Open();
+				dataAdapter.InsertCommand.ExecuteNonQuery();
+				connection.Close();
 			}
-			dataAdapter.InsertCommand.Parameters.Add("@nume", SqlDbType.VarChar).Value = nameTextBox.Text;
-			dataAdapter.InsertCommand.Parameters.Add("@pret", SqlDbType.Float).Value = float.Parse(priceTextBox.Text);
-			dataAdapter.InsertCommand.Parameters.Add("@id_producator", SqlDbType.Int).Value = producerComboBox.SelectedValue;
-			connection.Open();
-			dataAdapter.InsertCommand.ExecuteNonQuery();
-			connection.Close();
+			catch (Exception ex)
+			{
+				MessageBox.Show("An error occurred while populating the producer combo box: " + ex.Message);
+			}
+
 			this.GetDrugsButton_Click(sender, e);
 			nameTextBox.Text = "";
 			priceTextBox.Text = "";
@@ -123,11 +133,18 @@ namespace lab1
 				MessageBox.Show("Please select a row to delete");
 				return;
 			}
-			dataAdapter.DeleteCommand = new SqlCommand("DELETE FROM MEDICAMENTE WHERE id = @id", connection);
-			dataAdapter.DeleteCommand.Parameters.Add("@id", SqlDbType.Int).Value = this.IdSelectedDrug;
-			connection.Open();
-			dataAdapter.DeleteCommand.ExecuteNonQuery();
-			connection.Close();
+			try { 
+				dataAdapter.DeleteCommand = new SqlCommand("DELETE FROM MEDICAMENTE WHERE id = @id", connection);
+				dataAdapter.DeleteCommand.Parameters.Add("@id", SqlDbType.Int).Value = this.IdSelectedDrug;
+				connection.Open();
+				dataAdapter.DeleteCommand.ExecuteNonQuery();
+				connection.Close();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("An error occurred while populating the producer combo box: " + ex.Message);
+			}
+
 			this.GetDrugsButton_Click(sender, e);
 		}
 
@@ -143,14 +160,22 @@ namespace lab1
 				MessageBox.Show("Please fill in all the fields");
 				return;
 			}
-			dataAdapter.UpdateCommand = new SqlCommand("UPDATE MEDICAMENTE SET nume = @nume, pret = @pret, id_producator = @id_producator WHERE id = @id", connection);
-			dataAdapter.UpdateCommand.Parameters.Add("@nume", SqlDbType.VarChar).Value = nameTextBox.Text;
-			dataAdapter.UpdateCommand.Parameters.Add("@pret", SqlDbType.Float).Value = float.Parse(priceTextBox.Text);
-			dataAdapter.UpdateCommand.Parameters.Add("@id_producator", SqlDbType.Int).Value = producerComboBox.SelectedValue;
-			dataAdapter.UpdateCommand.Parameters.Add("@id", SqlDbType.Int).Value = this.IdSelectedDrug;
-			connection.Open();
-			dataAdapter.UpdateCommand.ExecuteNonQuery();
-			connection.Close();
+
+			try
+			{
+				dataAdapter.UpdateCommand = new SqlCommand("UPDATE MEDICAMENTE SET nume = @nume, pret = @pret, id_producator = @id_producator WHERE id = @id", connection);
+				dataAdapter.UpdateCommand.Parameters.Add("@nume", SqlDbType.VarChar).Value = nameTextBox.Text;
+				dataAdapter.UpdateCommand.Parameters.Add("@pret", SqlDbType.Float).Value = float.Parse(priceTextBox.Text);
+				dataAdapter.UpdateCommand.Parameters.Add("@id_producator", SqlDbType.Int).Value = producerComboBox.SelectedValue;
+				dataAdapter.UpdateCommand.Parameters.Add("@id", SqlDbType.Int).Value = this.IdSelectedDrug;
+				connection.Open();
+				dataAdapter.UpdateCommand.ExecuteNonQuery();
+				connection.Close();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("An error occurred while populating the producer combo box: " + ex.Message);
+			}
 			this.GetDrugsButton_Click(sender, e);
 			nameTextBox.Text = "";
 			priceTextBox.Text = "";
