@@ -1,0 +1,28 @@
+.input-name {
+    font-family: monospace; 
+    font-size: 20px;
+    height: 30px;
+    width: calc(20ch + 380px); /* Scade -10px ca sa arate frumos*/
+    letter-spacing: 19px; 
+    padding: 0px 0px 0px 10px;
+    background-image: url("img/patratel.png");
+    background-repeat: repeat-x;
+    background-size: 30px 30px;
+}
+
+.input-cnp {
+    font-family: monospace; 
+    font-size: 20px;
+    height: 30px;
+    width: calc(13ch + 247px); /* Scade -10px ca sa arate frumos*/
+    letter-spacing: 19px; 
+    padding: 0px 0px 0px 10px;
+    background-image: url("img/patratel.png");
+    background-repeat: repeat-x;
+    background-size: 30px 30px;
+}
+
+
+.name-div, .cnp-div {
+    margin: 20px;
+}
