@@ -1,0 +1,36 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+img {
+    height: 200px;
+    margin-top: 20px;
+    width: 200px;
+    background-color:ghostwhite;
+}
+
+.content {
+    margin: 20px;
+    width: 50%;
+    border: 1px solid black;
+    min-width: 400px;
+    padding: 5px;
+}
+
+.image_div {
+    background-color: aqua;
+    margin: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.image_list {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    justify-content: center;
+}
