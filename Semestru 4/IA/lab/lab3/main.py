@@ -45,7 +45,7 @@ def run_folder2(folder_name, language):
     for image_filename in os.listdir(folder_name):
         image = cv2.imread(f"{folder_name}/{image_filename}")
         actual_text = image_filename.split('.')[0]
-        results = pytesseract.image_to_data(image, lang=language, output_type=Output.DICT)
+        results = pytesseract.image_to_data(image, lang=language, config=r'--psm 7 --oem 3', output_type=Output.DICT)
         for i in range(len(results["text"])):
             left = results["left"][i]
             top = results["top"][i]
@@ -53,6 +53,9 @@ def run_folder2(folder_name, language):
             height = results["height"][i]
             detected_text = results["text"][i]
             conf = int(results["conf"][i])
+
+            if conf == -1:
+                continue
 
             print(f"Confidence: {conf}")
             print(f"Detected: {detected_text}")
@@ -65,14 +68,13 @@ def run_folder2(folder_name, language):
                 print(f"Hamming distance: {hamming_distance(detected_text, actual_text)}")
             else:
                 print(f"Jaccard similarity: {jaccard_similarity(detected_text, actual_text)}")
-            print(f"Difference: {', '.join(difflib.ndiff(detected_text, actual_text))}\n")
-            print(f"Levenshtein distance: {Levenshtein.distance(detected_text, actual_text)}")
+            print(f"Difference: {', '.join(difflib.ndiff(detected_text, actual_text))}")
+            print(f"Levenshtein distance: {Levenshtein.distance(detected_text, actual_text)}\n")
 
         cv2.imshow("Detected Text", image)
         cv2.waitKey(0)
 
     cv2.destroyAllWindows()
-
 
 # run_folder(image_words_thin_ro_folder, "ron")
 # run_folder(image_words_solid_ro_folder, "ron")
@@ -86,3 +88,4 @@ run_folder2(image_words_thin_ro_folder, "ron")
 run_folder2(image_words_solid_ro_folder, "ron")
 run_folder2(image_words_thin_eng_folder, "eng")
 run_folder2(image_words_solid_eng_folder, "eng")
+
