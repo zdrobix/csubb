@@ -1,0 +1,110 @@
+.social_icons_menu {
+    margin-top: 100px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.social_icons_menu a {
+    width: 84px;
+    height: 84px;
+    background-image: url(img/social_icons.png);
+}
+
+#facebook {
+    background-position: 0px -84px
+}
+
+#facebook:hover {
+    background-position: 0px 0px;
+}
+
+
+#twopoints {
+    background-position: -84px -84px;
+}
+
+#twopoints:hover {
+    background-position: -84px 0px;
+}
+
+
+#basketball {
+    background-position: -168px -84px;
+}
+
+#basketball:hover {
+    background-position: -168px -168px;
+}
+
+
+#google {
+    background-position: -252px -252px;
+}
+
+#google:hover {
+    background-position: -252px -168px;
+}
+
+
+#linkedin {
+    background-position: -336px -252px;
+}
+
+#linkedin:hover {
+    background-position: -336px -336px;
+}
+
+
+#pinterest {
+    background-position: -420px -420px;
+}
+
+#pinterest:hover {
+    background-position: -420px -336px;
+}
+
+
+#wifi {
+    background-position: -504px -420px;
+}
+
+#wifi:hover {
+    background-position: -504px -504px;
+}
+
+
+#skype {
+    background-position: -588px -588px;
+}
+
+#skype:hover {
+    background-position: -588px -504px;
+}
+
+
+#twitter {
+    background-position: -672px -588px;
+}
+
+#twitter:hover {
+    background-position: -672px -672px;
+}
+
+
+#viber {
+    background-position: -756px -756px;
+}
+
+#viber:hover {
+    background-position: -756px -672px;
+}
+
+
+#youtube {
+    background-position: -840px -756px;
+}
+
+#youtube:hover {
+    background-position: -840px -840px;
+}
