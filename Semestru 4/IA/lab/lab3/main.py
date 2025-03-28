@@ -69,12 +69,15 @@ def run_folder2(folder_name, language):
             else:
                 print(f"Jaccard similarity: {jaccard_similarity(detected_text, actual_text)}")
             print(f"Difference: {', '.join(difflib.ndiff(detected_text, actual_text))}")
-            print(f"Levenshtein distance: {Levenshtein.distance(detected_text, actual_text)}\n")
+            print(f"Levenshtein distance: {Levenshtein.distance(detected_text, actual_text)}")
+
+            print(f"CER: {Levenshtein.distance(detected_text, actual_text) / len(actual_text)}\n")
 
         cv2.imshow("Detected Text", image)
         cv2.waitKey(0)
 
     cv2.destroyAllWindows()
+
 
 # run_folder(image_words_thin_ro_folder, "ron")
 # run_folder(image_words_solid_ro_folder, "ron")
@@ -88,4 +91,3 @@ def run_folder2(folder_name, language):
 # run_folder2(image_words_solid_ro_folder, "ron")
 run_folder2(image_words_thin_eng_folder, "eng")
 run_folder2(image_words_solid_eng_folder, "eng")
-
