@@ -57,12 +57,12 @@ def run_folder2(folder_name, language):
             if conf == -1:
                 continue
 
+            cv2.rectangle(image, (left, top), (left + width, top + height), (106, 13, 173), 2)
+            cv2.putText(image, detected_text, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 2)
+
             print(f"Confidence: {conf}")
             print(f"Detected: {detected_text}")
             print(f"Actual: {actual_text}")
-
-            cv2.rectangle(image, (left, top), (left + width, top + height), (106, 13, 173), 2)
-            cv2.putText(image, detected_text, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 2)
 
             if len(detected_text) == len(actual_text):
                 print(f"Hamming distance: {hamming_distance(detected_text, actual_text)}")
@@ -84,8 +84,8 @@ def run_folder2(folder_name, language):
 
 # run_folder2(image_cursive_folder, "eng")
 # run_folder2(image_normal_folder, "eng")
-run_folder2(image_words_thin_ro_folder, "ron")
-run_folder2(image_words_solid_ro_folder, "ron")
+# run_folder2(image_words_thin_ro_folder, "ron")
+# run_folder2(image_words_solid_ro_folder, "ron")
 run_folder2(image_words_thin_eng_folder, "eng")
 run_folder2(image_words_solid_eng_folder, "eng")
 
