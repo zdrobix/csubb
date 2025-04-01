@@ -2,7 +2,7 @@
     font-family: monospace; 
     font-size: 20px;
     height: 30px;
-    width: calc(20ch + 380px); /* Scade -10px ca sa arate frumos*/
+    width: calc(20ch + 380px); 
     letter-spacing: 19px; 
     padding: 0px 0px 0px 10px;
     background-image: url("img/patratel.png");
@@ -14,7 +14,7 @@
     font-family: monospace; 
     font-size: 20px;
     height: 30px;
-    width: calc(13ch + 247px); /* Scade -10px ca sa arate frumos*/
+    width: calc(13ch + 247px); 
     letter-spacing: 19px; 
     padding: 0px 0px 0px 10px;
     background-image: url("img/patratel.png");

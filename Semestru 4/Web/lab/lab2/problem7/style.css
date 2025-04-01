@@ -1,3 +1,30 @@
+ul.dialog {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
 
+.dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 0;
+    margin: 20px;
+}
 
+.alice, .bob {
+    width: 72px;
+    height: 72px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    background-image: url(img/alice-bob-srl.png);
+}
 
+.alice {
+    background-position: -19px -41px;
+}
+
+.bob {
+    background-position: -23px -160px;
+}
