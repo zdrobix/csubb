@@ -82,8 +82,8 @@ def run_folder2(folder_name, language):
                 print(f"Jaccard similarity: {jaccard_similarity(detected_text, actual_text)}")
             print(f"Difference: {', '.join(difflib.ndiff(detected_text, actual_text))}")
             print(f"Levenshtein distance: {Levenshtein.distance(detected_text, actual_text)}")
-            print(f"CER: {Levenshtein.distance(detected_text, actual_text) / len(actual_text)}\n")
-            print(f"IoU: {get_iou(box(left, top, left+width, top+ height), box(x1, y1, y2, x2))}")
+            print(f"CER: {Levenshtein.distance(detected_text, actual_text) / len(actual_text)}")
+            print(f"IoU: {get_iou(box(left, top, left+width, top+ height), box(x1, y1, y2, x2))}\n")
 
         cv2.imshow("Detected Text", image)
         cv2.waitKey(0)
