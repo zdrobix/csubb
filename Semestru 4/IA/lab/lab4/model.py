@@ -9,6 +9,7 @@ from sklearn.metrics import accuracy_score
 
 vectorizer = TfidfVectorizer(max_features=1000)
 
+
 def load_images(folder, image_size=(100, 100)):
     images = []
     labels = []
@@ -19,6 +20,7 @@ def load_images(folder, image_size=(100, 100)):
             images.append(resized.flatten())
             labels += ['bike' in filename]
     return np.array(images), np.array(labels)
+
 
 image_data, labels = load_images("./images/bikes")
 
