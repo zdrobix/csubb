@@ -7,12 +7,24 @@
       "RelativeMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|solutionrelative:lab2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|q:\\info\\csubb\\semestru 4\\sgbd\\lab\\lab2\\lab2\\lab2\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|solutionrelative:lab2\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|q:\\info\\csubb\\semestru 4\\sgbd\\lab\\lab2\\lab2\\lab2\\appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|solutionrelative:lab2\\appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|q:\\info\\csubb\\semestru 4\\sgbd\\lab\\lab2\\lab2\\lab2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|solutionrelative:lab2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|q:\\info\\csubb\\semestru 4\\sgbd\\lab\\lab2\\lab2\\lab2\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|solutionrelative:lab2\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|q:\\info\\csubb\\semestru 4\\sgbd\\lab\\lab2\\lab2\\lab2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|solutionrelative:lab2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|q:\\info\\csubb\\semestru 4\\sgbd\\lab\\lab2\\lab2\\lab2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6AF84906-5B2D-4F43-B00F-D0988CE76CEA}|lab2\\lab2.csproj|solutionrelative:lab2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +50,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab2\\lab2\\lab2\\Form1.cs",
+              "RelativeDocumentMoniker": "lab2\\Form1.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab2\\lab2\\lab2\\Form1.cs [Design]",
+              "RelativeToolTip": "lab2\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:31:02.947Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppConfig.cs",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab2\\lab2\\lab2\\AppConfig.cs",
+              "RelativeDocumentMoniker": "lab2\\AppConfig.cs",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab2\\lab2\\lab2\\AppConfig.cs",
+              "RelativeToolTip": "lab2\\AppConfig.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowB4AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:15:26.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab2\\lab2\\lab2\\appsettings.json",
+              "RelativeDocumentMoniker": "lab2\\appsettings.json",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab2\\lab2\\lab2\\appsettings.json",
+              "RelativeToolTip": "lab2\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-10T11:13:39.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab2\\lab2\\lab2\\Program.cs",
               "RelativeDocumentMoniker": "lab2\\Program.cs",
@@ -57,20 +107,20 @@
               "RelativeDocumentMoniker": "lab2\\Form1.cs",
               "ToolTip": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab2\\lab2\\lab2\\Form1.cs",
               "RelativeToolTip": "lab2\\Form1.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAgwDkAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAANEAAAAAAAAAAAAuwOMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T10:14:38.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab2\\lab2\\lab2\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "lab2\\Form1.Designer.cs",
               "ToolTip": "Q:\\info\\csubb\\Semestru 4\\SGBD\\lab\\lab2\\lab2\\lab2\\Form1.Designer.cs",
               "RelativeToolTip": "lab2\\Form1.Designer.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwKAAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAowG0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T10:13:56.388Z",
               "EditorCaption": ""

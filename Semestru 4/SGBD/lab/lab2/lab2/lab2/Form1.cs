@@ -17,7 +17,7 @@ namespace lab2
 		public Form1()
 		{
 			InitializeComponent();
-			this.populateParentComboBox();
+			InitializeComponentsDynamic();
 			this.parentsGridView.SelectionChanged += (sender, e) =>
 			{
 				if (parentsGridView.SelectedRows.Count == 0)
@@ -39,9 +39,15 @@ namespace lab2
 					return;
 				}
 				IdSelectedChild = Convert.ToInt32(childrenGridView.SelectedRows[0].Cells["id"].Value);
-				nameTextBox.Text = childrenGridView.SelectedRows[0].Cells["nume"].Value.ToString();
-				priceTextBox.Text = childrenGridView.SelectedRows[0].Cells["pret"].Value.ToString();
-				parentComboBox.SelectedValue = Convert.ToInt32(childrenGridView.SelectedRows[0].Cells["id_producator"].Value);
+				foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
+				{
+					if (column_name == "id")
+						continue;
+					if (column_name.Contains("id_"))
+						((ComboBox)this.inputPanel.Controls[$"{column_name}TextBox"]!).SelectedValue = Convert.ToInt32(childrenGridView.SelectedRows[0].Cells[column_name].Value);
+
+					this.inputPanel.Controls[$"{column_name}TextBox"]!.Text = childrenGridView.SelectedRows[0].Cells[column_name].Value.ToString()!;
+				}
 			};
 			this.GetChildrenButton_Click(null, null);
 			this.GetParentsButton_Click(null, null);
@@ -82,7 +88,7 @@ namespace lab2
 				row.Tag = row.Cells["id"].Value;
 		}
 
-		private void populateParentComboBox()
+		private void populateParentComboBox(ComboBox comboBox)
 		{
 			try
 			{
@@ -91,9 +97,9 @@ namespace lab2
 					dataSet.Tables["Producers"]!.Clear();
 				dataAdapter.Fill(dataSet, "Producers");
 
-				parentComboBox.DataSource = dataSet.Tables["Producers"];
-				parentComboBox.DisplayMember = "nume";
-				parentComboBox.ValueMember = "id";
+				comboBox.DataSource = dataSet.Tables["Producers"];
+				comboBox.DisplayMember = "nume";
+				comboBox.ValueMember = "id";
 			}
 			catch (Exception ex)
 			{
@@ -105,14 +111,25 @@ namespace lab2
 		{
 			try { 
 				dataAdapter.InsertCommand = new SqlCommand("INSERT INTO MEDICAMENTE(nume, pret, id_producator) VALUES (@nume, @pret, @id_producator)", connection);
-				if (nameTextBox.Text.IsNullOrEmpty() || priceTextBox.Text.IsNullOrEmpty() || parentComboBox.SelectedValue == null)
+				foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
 				{
-					MessageBox.Show("Please fill in all the fields");
-					return;
+					if (column_name == "id")
+						continue;
+					if (column_name.Contains("id_"))
+						if (((ComboBox)this.inputPanel.Controls[$"{column_name}TextBox"]!).SelectedValue == null)
+						{
+							MessageBox.Show("Please fill in all the fields");
+							return;
+						}
+					if (this.inputPanel.Controls[$"{column_name}TextBox"]!.Text.IsNullOrEmpty())
+					{
+						MessageBox.Show("Please fill in all the fields");
+						return;
+					}
 				}
-				dataAdapter.InsertCommand.Parameters.Add("@nume", SqlDbType.VarChar).Value = nameTextBox.Text;
-				dataAdapter.InsertCommand.Parameters.Add("@pret", SqlDbType.Float).Value = float.Parse(priceTextBox.Text);
-				dataAdapter.InsertCommand.Parameters.Add("@id_producator", SqlDbType.Int).Value = parentComboBox.SelectedValue;
+				//dataAdapter.InsertCommand.Parameters.Add("@nume", SqlDbType.VarChar).Value = nameTextBox.Text;
+				//dataAdapter.InsertCommand.Parameters.Add("@pret", SqlDbType.Float).Value = float.Parse(priceTextBox.Text);
+				//dataAdapter.InsertCommand.Parameters.Add("@id_producator", SqlDbType.Int).Value = parentComboBox.SelectedValue;
 				connection.Open();
 				dataAdapter.InsertCommand.ExecuteNonQuery();
 				connection.Close();
@@ -123,10 +140,18 @@ namespace lab2
 			}
 
 			this.GetChildrenButton_Click(sender, e);
-			nameTextBox.Text = "";
-			priceTextBox.Text = "";
+			foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
+			{
+				if (column_name == "id")
+					continue;
+				if (column_name.Contains("id_"))
+				{
+					((ComboBox)this.inputPanel.Controls[$"{column_name}TextBox"]!).SelectedValue = null;
+					continue;
+				}
+				this.inputPanel.Controls[$"{column_name}TextBox"]!.Text = "";
+			}
 		}
-
 		private void deleteChildButton_Click(object sender, EventArgs e)
 		{
 			if (this.IdSelectedChild == -1)
@@ -156,19 +181,19 @@ namespace lab2
 				MessageBox.Show("Please select a row to delete");
 				return;
 			}
-			if (nameTextBox.Text.IsNullOrEmpty() || priceTextBox.Text.IsNullOrEmpty() || parentComboBox.SelectedValue == null)
-			{
-				MessageBox.Show("Please fill in all the fields");
-				return;
-			}
+			//if (nameTextBox.Text.IsNullOrEmpty() || priceTextBox.Text.IsNullOrEmpty() || parentComboBox.SelectedValue == null)
+			//{
+			//	MessageBox.Show("Please fill in all the fields");
+			//	return;
+			//}
 
 			try
 			{
-				dataAdapter.UpdateCommand = new SqlCommand("UPDATE MEDICAMENTE SET nume = @nume, pret = @pret, id_producator = @id_producator WHERE id = @id", connection);
-				dataAdapter.UpdateCommand.Parameters.Add("@nume", SqlDbType.VarChar).Value = nameTextBox.Text;
-				dataAdapter.UpdateCommand.Parameters.Add("@pret", SqlDbType.Float).Value = float.Parse(priceTextBox.Text);
-				dataAdapter.UpdateCommand.Parameters.Add("@id_producator", SqlDbType.Int).Value = parentComboBox.SelectedValue;
-				dataAdapter.UpdateCommand.Parameters.Add("@id", SqlDbType.Int).Value = this.IdSelectedChild;
+				//dataAdapter.UpdateCommand = new SqlCommand("UPDATE MEDICAMENTE SET nume = @nume, pret = @pret, id_producator = @id_producator WHERE id = @id", connection);
+				//dataAdapter.UpdateCommand.Parameters.Add("@nume", SqlDbType.VarChar).Value = nameTextBox.Text;
+				//dataAdapter.UpdateCommand.Parameters.Add("@pret", SqlDbType.Float).Value = float.Parse(priceTextBox.Text);
+				//dataAdapter.UpdateCommand.Parameters.Add("@id_producator", SqlDbType.Int).Value = parentComboBox.SelectedValue;
+				//dataAdapter.UpdateCommand.Parameters.Add("@id", SqlDbType.Int).Value = this.IdSelectedChild;
 				connection.Open();
 				dataAdapter.UpdateCommand.ExecuteNonQuery();
 				connection.Close();
@@ -178,8 +203,46 @@ namespace lab2
 				MessageBox.Show("An error occurred while populating the producer combo box: " + ex.Message);
 			}
 			this.GetChildrenButton_Click(sender, e);
-			nameTextBox.Text = "";
-			priceTextBox.Text = "";
+			//nameTextBox.Text = "";
+			//priceTextBox.Text = "";
+		}
+
+		private void InitializeComponentsDynamic()
+		{
+			GetChildrenButton.Text = AppConfig.GetChildTableName();
+			addChildButton.Text = $"add {AppConfig.GetChildTableName().ToLower()}";
+			getParentsButton.Text = AppConfig.GetParentTableName();
+			deleteChildButton.Text = $"delete {AppConfig.GetChildTableName().ToLower()}";
+			updateChildButton.Text = $"update {AppConfig.GetChildTableName().ToLower()}";
+			int count = 0;
+			foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
+			{
+				Debug.WriteLine(column_name);
+				if (column_name == "id")
+					continue;
+
+				if (column_name.Contains("id_"))
+				{
+					ComboBox comboBox = new ComboBox();
+					comboBox.Name = column_name + "ComboBox";
+					comboBox.Location = new Point(0, (23 + 10) * count);
+					comboBox.Size = new Size(inputPanel.Size.Width, 23);
+					comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+					this.populateParentComboBox(comboBox);
+					this.inputPanel.Controls.Add(comboBox);
+					count++;
+					continue;
+				}
+
+				TextBox textBox = new TextBox();
+				textBox.Name = column_name + "TextBox";
+				textBox.PlaceholderText = char.ToUpper(column_name[0]) + column_name.Substring(1);
+				textBox.Location = new Point(0, (23 + 10) * count);
+				textBox.Size = new Size(inputPanel.Size.Width, 23);
+				this.inputPanel.Controls.Add(textBox);
+				count++;
+			}
+
 		}
 	}
 }

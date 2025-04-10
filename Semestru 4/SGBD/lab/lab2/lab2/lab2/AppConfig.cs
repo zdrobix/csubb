@@ -21,5 +21,17 @@ namespace lab2
 
 		public static string GetConnectionString(string name = "DefaultConnection") =>
 			Configuration.GetSection("ConnectionStrings")[name]!;
+
+		public static string GetParentTableName(string config = "Config1") =>
+			Configuration.GetSection(config)["ParentTable"]!;
+
+		public static string GetChildTableName(string config = "Config1") =>
+			Configuration.GetSection(config)["ChildTable"]!;
+
+		public static string GetChildTableColumnNames(string config = "Config1") =>
+			Configuration.GetSection(config)["ChildTableColumnNames"]!;
+
+		public static string GetParentTableColumnNames(string config = "Config1") =>
+			Configuration.GetSection(config)["ParentTableColumnNames"]!;
 	}
 }
