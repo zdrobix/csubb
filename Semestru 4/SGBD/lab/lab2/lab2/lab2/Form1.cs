@@ -27,7 +27,7 @@ namespace lab2
 				}
 				else if (parentsGridView.SelectedRows.Count == 1)
 				{
-					IdSelectedParent = Convert.ToInt32(parentsGridView.SelectedRows[0].Cells["id"].Value);
+					IdSelectedParent = Convert.ToInt32(parentsGridView.SelectedRows[0].Cells[AppConfig.GetParentTablePrimaryKey()].Value);
 					this.GetChildrenButton_Click(null, null);
 				}
 			};
@@ -38,16 +38,13 @@ namespace lab2
 					this.IdSelectedChild = -1;
 					return;
 				}
-				IdSelectedChild = Convert.ToInt32(childrenGridView.SelectedRows[0].Cells["id"].Value);
-				foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
-				{
-					if (column_name == "id")
-						continue;
-					if (column_name.Contains("id_"))
-						((ComboBox)this.inputPanel.Controls[$"{column_name}TextBox"]!).SelectedValue = Convert.ToInt32(childrenGridView.SelectedRows[0].Cells[column_name].Value);
+				IdSelectedChild = Convert.ToInt32(childrenGridView.SelectedRows[0].Cells[AppConfig.GetChildTablePrimaryKey()].Value);
 
+				foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
 					this.inputPanel.Controls[$"{column_name}TextBox"]!.Text = childrenGridView.SelectedRows[0].Cells[column_name].Value.ToString()!;
-				}
+
+				foreach (var column_name in AppConfig.GetChildTableForeignKey().Split(',')) 
+					((ComboBox)this.inputPanel.Controls[$"{column_name}ComboBox"]!).SelectedValue = Convert.ToInt32(childrenGridView.SelectedRows[0].Cells[column_name].Value);
 			};
 			this.GetChildrenButton_Click(null, null);
 			this.GetParentsButton_Click(null, null);
@@ -56,101 +53,151 @@ namespace lab2
 		private void GetChildrenButton_Click(object sender, EventArgs e)
 		{
 			if (this.IdSelectedParent == -1)
-				dataAdapter.SelectCommand = new SqlCommand("SELECT id, nume, pret, id_producator FROM MEDICAMENTE", connection);
+				dataAdapter.SelectCommand = new SqlCommand(
+										Commands.GetSelectCommand(
+											AppConfig.GetChildTableName(), 
+											$"{AppConfig.GetChildTablePrimaryKey()},{AppConfig.GetChildTableColumnNames()}," +
+											$"{AppConfig.GetChildTableForeignKey()}")
+										, connection);
 			else
 			{
-				dataAdapter.SelectCommand = new SqlCommand("SELECT id, nume, pret, id_producator FROM MEDICAMENTE WHERE id_producator = @id_producator", connection);
-				dataAdapter.SelectCommand.Parameters.Add("@id_producator", SqlDbType.Int).Value = this.IdSelectedParent;
+				dataAdapter.SelectCommand = new SqlCommand(
+					Commands.GetSelectCommand(AppConfig.GetChildTableName(), $"{AppConfig.GetChildTablePrimaryKey()},{AppConfig.GetChildTableColumnNames()}," +
+											$"{AppConfig.GetChildTableForeignKey()}") + 
+					" WHERE " + AppConfig.GetChildTableForeignKey() + " = @parent_id", connection);
+				Debug.WriteLine(dataAdapter.SelectCommand.CommandText);
+				dataAdapter.SelectCommand.Parameters.Add("@parent_id", SqlDbType.Int).Value = this.IdSelectedParent;
 			}
-			if (dataSet.Tables["Drugs"] != null)
-				dataSet.Tables["Drugs"]!.Clear();
-			dataAdapter.Fill(dataSet, "Drugs");
-			childrenGridView.DataSource = dataSet.Tables["Drugs"];
+			if (dataSet.Tables[AppConfig.GetChildTableName()] != null)
+				dataSet.Tables[AppConfig.GetChildTableName()]!.Clear();
+			dataAdapter.Fill(dataSet, AppConfig.GetChildTableName());
+			childrenGridView.DataSource = dataSet.Tables[AppConfig.GetChildTableName()];
 
-			childrenGridView.Columns["id"].Visible = false;
-			childrenGridView.Columns["id_producator"].Visible = false;
+			childrenGridView.Columns[AppConfig.GetChildTableForeignKey()].Visible = false;
+			childrenGridView.Columns[AppConfig.GetChildTablePrimaryKey()].Visible = false;
 
 			foreach (DataGridViewRow row in childrenGridView.Rows)
-				row.Tag = row.Cells["id"].Value;
+				row.Tag = row.Cells[AppConfig.GetChildTablePrimaryKey()].Value;
 		}
 
 		private void GetParentsButton_Click(object sender, EventArgs e)
 		{
-			dataAdapter.SelectCommand = new SqlCommand("SELECT P.id, P.nume, T.nume AS tara  FROM PRODUCATORI P INNER JOIN TARI T ON T.id = P.id_tara", connection);
-			if (dataSet.Tables["Producers"] != null)
-				dataSet.Tables["Producers"]!.Clear();
-			dataAdapter.Fill(dataSet, "Producers");
-			parentsGridView.DataSource = dataSet.Tables["Producers"];
+			dataAdapter.SelectCommand = new SqlCommand(
+				Commands.GetSelectCommand(
+					AppConfig.GetParentTableName(),
+					$"{AppConfig.GetParentTablePrimaryKey()},{AppConfig.GetParentTableColumnNames()}")
+				, connection);
+			if (dataSet.Tables[AppConfig.GetParentTableName()] != null)
+				dataSet.Tables[AppConfig.GetParentTableName()]!.Clear();
+			dataAdapter.Fill(dataSet, AppConfig.GetParentTableName());
+			parentsGridView.DataSource = dataSet.Tables[AppConfig.GetParentTableName()];
 
-			parentsGridView.Columns["id"].Visible = false;
+			parentsGridView.Columns[AppConfig.GetParentTablePrimaryKey()].Visible = false;
 
 			foreach (DataGridViewRow row in parentsGridView.Rows)
-				row.Tag = row.Cells["id"].Value;
+				row.Tag = row.Cells[AppConfig.GetParentTablePrimaryKey()].Value;
 		}
 
 		private void populateParentComboBox(ComboBox comboBox)
 		{
 			try
 			{
-				dataAdapter.SelectCommand = new SqlCommand("SELECT nume, id FROM PRODUCATORI", connection);
-				if (dataSet.Tables["Producers"] != null)
-					dataSet.Tables["Producers"]!.Clear();
-				dataAdapter.Fill(dataSet, "Producers");
+				dataAdapter.SelectCommand = new SqlCommand(
+					Commands.GetSelectCommand(
+						AppConfig.GetParentTableName(), 
+						$"{AppConfig.GetParentTableColumnNames()},{AppConfig.GetParentTablePrimaryKey()}")
+					, connection);
+				if (dataSet.Tables[AppConfig.GetParentTableName()] != null)
+					dataSet.Tables[AppConfig.GetParentTableName()]!.Clear();
+				dataAdapter.Fill(dataSet, AppConfig.GetParentTableName());
 
-				comboBox.DataSource = dataSet.Tables["Producers"];
-				comboBox.DisplayMember = "nume";
-				comboBox.ValueMember = "id";
+				comboBox.DataSource = dataSet.Tables[AppConfig.GetParentTableName()];
+				comboBox.DisplayMember = AppConfig.GetParentTableColumnNames().Split(',').First();
+				comboBox.ValueMember = AppConfig.GetParentTablePrimaryKey();
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("An error occurred while populating the producer combo box: " + ex.Message);
+				MessageBox.Show("An error occurred while populating the combo box: " + ex.Message);
 			}
 		}
 
 		private void addChildButton_Click(object sender, EventArgs e)
 		{
-			try { 
-				dataAdapter.InsertCommand = new SqlCommand("INSERT INTO MEDICAMENTE(nume, pret, id_producator) VALUES (@nume, @pret, @id_producator)", connection);
-				foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
+			foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
+				if (this.inputPanel.Controls[$"{column_name}TextBox"]!.Text.IsNullOrEmpty())
 				{
-					if (column_name == "id")
-						continue;
-					if (column_name.Contains("id_"))
-						if (((ComboBox)this.inputPanel.Controls[$"{column_name}TextBox"]!).SelectedValue == null)
-						{
-							MessageBox.Show("Please fill in all the fields");
-							return;
-						}
-					if (this.inputPanel.Controls[$"{column_name}TextBox"]!.Text.IsNullOrEmpty())
+					MessageBox.Show("Please fill in all the fields");
+					return;
+				}
+			foreach (var column_name in AppConfig.GetChildTableForeignKey().Split(','))
+				if (((ComboBox)this.inputPanel.Controls[$"{column_name}ComboBox"]!).SelectedValue == null)
+				{
+					MessageBox.Show("Please fill in all the fields");
+					return;
+				}
+			try {
+				dataAdapter.InsertCommand = new SqlCommand(
+					Commands.GetInsertCommand(AppConfig.GetChildTableName(),
+						$"{AppConfig.GetChildTableColumnNames()},{AppConfig.GetChildTableForeignKey()}")
+					, connection);
+
+				var columns = AppConfig.GetChildTableColumnNames().Split(',');
+				var types = AppConfig.GetChildTableColumnTypes().Split(',');
+
+				for (int i = 0; i < columns.Length; i++)
+				{
+					switch (types[i])
 					{
-						MessageBox.Show("Please fill in all the fields");
-						return;
+						case "Int":
+							dataAdapter.InsertCommand.Parameters.Add($"@{columns[i]}", SqlDbType.Int).Value = int.Parse(this.inputPanel.Controls[$"{columns[i]}TextBox"]!.Text);
+							break;
+						case "Float":
+							dataAdapter.InsertCommand.Parameters.Add($"@{columns[i]}", SqlDbType.Float).Value = float.Parse(this.inputPanel.Controls[$"{columns[i]}TextBox"]!.Text);
+							break;
+						case "VarChar":
+							dataAdapter.InsertCommand.Parameters.Add($"@{columns[i]}", SqlDbType.VarChar).Value = this.inputPanel.Controls[$"{columns[i]}TextBox"]!.Text;
+							break;
+						case "Date":
+							dataAdapter.InsertCommand.Parameters.Add($"@{columns[i]}", SqlDbType.Date).Value = DateTime.Parse(this.inputPanel.Controls[$"{columns[i]}TextBox"]!.Text);
+							break;
 					}
 				}
-				//dataAdapter.InsertCommand.Parameters.Add("@nume", SqlDbType.VarChar).Value = nameTextBox.Text;
-				//dataAdapter.InsertCommand.Parameters.Add("@pret", SqlDbType.Float).Value = float.Parse(priceTextBox.Text);
-				//dataAdapter.InsertCommand.Parameters.Add("@id_producator", SqlDbType.Int).Value = parentComboBox.SelectedValue;
+
+				var foreignKeys = AppConfig.GetChildTableForeignKey().Split(',');
+				var foreignKeyTypes = AppConfig.GetChildTableForeignKeyType().Split(',');
+
+				for (int i = 0; i < foreignKeys.Length; i++)
+				{
+					switch (foreignKeyTypes[i])
+					{
+						case "Int":
+							dataAdapter.InsertCommand.Parameters.Add($"@{foreignKeys[i]}", SqlDbType.Int).Value = int.Parse(((ComboBox)this.inputPanel.Controls[$"{foreignKeys[i]}ComboBox"]!).SelectedValue!.ToString()!);
+							break;
+						case "Float":
+							dataAdapter.InsertCommand.Parameters.Add($"@{foreignKeys[i]}", SqlDbType.Float).Value = float.Parse(((ComboBox)this.inputPanel.Controls[$"{foreignKeys[i]}ComboBox"]!).SelectedValue!.ToString()!);
+							break;
+						case "VarChar":
+							dataAdapter.InsertCommand.Parameters.Add($"@{foreignKeys[i]}", SqlDbType.VarChar).Value = ((ComboBox)this.inputPanel.Controls[$"{foreignKeys[i]}ComboBox"]!).SelectedValue!.ToString()!;
+							break;
+						case "Date":
+							dataAdapter.InsertCommand.Parameters.Add($"@{columns[i]}", SqlDbType.Date).Value = DateTime.Parse(this.inputPanel.Controls[$"{columns[i]}TextBox"]!.Text);
+							break;
+					}
+				}
+
 				connection.Open();
 				dataAdapter.InsertCommand.ExecuteNonQuery();
 				connection.Close();
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("An error occurred while populating the producer combo box: " + ex.Message);
+				MessageBox.Show("An error occurred while adding: " + ex.Message);
 			}
 
 			this.GetChildrenButton_Click(sender, e);
 			foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
-			{
-				if (column_name == "id")
-					continue;
-				if (column_name.Contains("id_"))
-				{
-					((ComboBox)this.inputPanel.Controls[$"{column_name}TextBox"]!).SelectedValue = null;
-					continue;
-				}
 				this.inputPanel.Controls[$"{column_name}TextBox"]!.Text = "";
-			}
+
 		}
 		private void deleteChildButton_Click(object sender, EventArgs e)
 		{
@@ -160,15 +207,18 @@ namespace lab2
 				return;
 			}
 			try { 
-				dataAdapter.DeleteCommand = new SqlCommand("DELETE FROM MEDICAMENTE WHERE id = @id", connection);
-				dataAdapter.DeleteCommand.Parameters.Add("@id", SqlDbType.Int).Value = this.IdSelectedChild;
+				dataAdapter.DeleteCommand = new SqlCommand(
+					Commands.GetDeleteCommand(AppConfig.GetChildTableName(), AppConfig.GetChildTablePrimaryKey())
+					, connection);
+
+				dataAdapter.DeleteCommand.Parameters.Add($"@{AppConfig.GetChildTablePrimaryKey()}", SqlDbType.Int).Value = this.IdSelectedChild;
 				connection.Open();
 				dataAdapter.DeleteCommand.ExecuteNonQuery();
 				connection.Close();
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("An error occurred while populating the producer combo box: " + ex.Message);
+				MessageBox.Show("An error occurred while deleting: " + ex.Message);
 			}
 
 			this.GetChildrenButton_Click(sender, e);
@@ -181,30 +231,80 @@ namespace lab2
 				MessageBox.Show("Please select a row to delete");
 				return;
 			}
-			//if (nameTextBox.Text.IsNullOrEmpty() || priceTextBox.Text.IsNullOrEmpty() || parentComboBox.SelectedValue == null)
-			//{
-			//	MessageBox.Show("Please fill in all the fields");
-			//	return;
-			//}
+			foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
+				if (this.inputPanel.Controls[$"{column_name}TextBox"]!.Text.IsNullOrEmpty())
+				{
+					MessageBox.Show("Please fill in all the fields");
+					return;
+				}
+			foreach (var column_name in AppConfig.GetChildTableForeignKey().Split(','))
+				if (((ComboBox)this.inputPanel.Controls[$"{column_name}ComboBox"]!).SelectedValue == null)
+				{
+					MessageBox.Show("Please fill in all the fields");
+					return;
+				}
 
 			try
 			{
-				//dataAdapter.UpdateCommand = new SqlCommand("UPDATE MEDICAMENTE SET nume = @nume, pret = @pret, id_producator = @id_producator WHERE id = @id", connection);
-				//dataAdapter.UpdateCommand.Parameters.Add("@nume", SqlDbType.VarChar).Value = nameTextBox.Text;
-				//dataAdapter.UpdateCommand.Parameters.Add("@pret", SqlDbType.Float).Value = float.Parse(priceTextBox.Text);
-				//dataAdapter.UpdateCommand.Parameters.Add("@id_producator", SqlDbType.Int).Value = parentComboBox.SelectedValue;
-				//dataAdapter.UpdateCommand.Parameters.Add("@id", SqlDbType.Int).Value = this.IdSelectedChild;
+				dataAdapter.UpdateCommand = new SqlCommand(
+					Commands.GetUpdateCommand(AppConfig.GetChildTableName(),
+						$"{AppConfig.GetChildTableColumnNames()},{AppConfig.GetChildTableForeignKey()}",
+						AppConfig.GetChildTablePrimaryKey())
+					, connection);
+
+
+				var columns = AppConfig.GetChildTableColumnNames().Split(',');
+				var types = AppConfig.GetChildTableColumnTypes().Split(',');
+
+				for (int i = 0; i < columns.Length; i++)
+				{
+					switch (types[i])
+					{
+						case "Int":
+							dataAdapter.UpdateCommand.Parameters.Add($"@{columns[i]}", SqlDbType.Int).Value = int.Parse(this.inputPanel.Controls[$"{columns[i]}TextBox"]!.Text);
+							break;
+						case "Float":
+							dataAdapter.UpdateCommand.Parameters.Add($"@{columns[i]}", SqlDbType.Float).Value = float.Parse(this.inputPanel.Controls[$"{columns[i]}TextBox"]!.Text);
+							break;
+						case "VarChar":
+							dataAdapter.UpdateCommand.Parameters.Add($"@{columns[i]}", SqlDbType.VarChar).Value = this.inputPanel.Controls[$"{columns[i]}TextBox"]!.Text;
+							break;
+					}
+				}
+
+				var foreignKeys = AppConfig.GetChildTableForeignKey().Split(',');
+				var foreignKeyTypes = AppConfig.GetChildTableForeignKeyType().Split(',');
+
+				for (int i = 0; i < foreignKeys.Length; i++)
+				{
+					switch (foreignKeyTypes[i])
+					{
+						case "Int":
+							dataAdapter.UpdateCommand.Parameters.Add($"@{foreignKeys[i]}", SqlDbType.Int).Value = int.Parse(((ComboBox)this.inputPanel.Controls[$"{foreignKeys[i]}ComboBox"]!).SelectedValue!.ToString()!);
+							break;
+						case "Float":
+							dataAdapter.UpdateCommand.Parameters.Add($"@{foreignKeys[i]}", SqlDbType.Float).Value = float.Parse(((ComboBox)this.inputPanel.Controls[$"{foreignKeys[i]}ComboBox"]!).SelectedValue!.ToString()!);
+							break;
+						case "VarChar":
+							dataAdapter.UpdateCommand.Parameters.Add($"@{foreignKeys[i]}", SqlDbType.VarChar).Value = ((ComboBox)this.inputPanel.Controls[$"{foreignKeys[i]}ComboBox"]!).SelectedValue!.ToString()!;
+							break;
+					}
+				}
+
+				dataAdapter.UpdateCommand.Parameters.Add($"@{AppConfig.GetChildTablePrimaryKey()}", SqlDbType.Int).Value = this.IdSelectedChild;
+
+
 				connection.Open();
 				dataAdapter.UpdateCommand.ExecuteNonQuery();
 				connection.Close();
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("An error occurred while populating the producer combo box: " + ex.Message);
+				MessageBox.Show("An error occurred while updating: " + ex.Message);
 			}
 			this.GetChildrenButton_Click(sender, e);
-			//nameTextBox.Text = "";
-			//priceTextBox.Text = "";
+			foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
+				this.inputPanel.Controls[$"{column_name}TextBox"]!.Text = "";
 		}
 
 		private void InitializeComponentsDynamic()
@@ -214,26 +314,10 @@ namespace lab2
 			getParentsButton.Text = AppConfig.GetParentTableName();
 			deleteChildButton.Text = $"delete {AppConfig.GetChildTableName().ToLower()}";
 			updateChildButton.Text = $"update {AppConfig.GetChildTableName().ToLower()}";
+
 			int count = 0;
 			foreach (var column_name in AppConfig.GetChildTableColumnNames().Split(','))
 			{
-				Debug.WriteLine(column_name);
-				if (column_name == "id")
-					continue;
-
-				if (column_name.Contains("id_"))
-				{
-					ComboBox comboBox = new ComboBox();
-					comboBox.Name = column_name + "ComboBox";
-					comboBox.Location = new Point(0, (23 + 10) * count);
-					comboBox.Size = new Size(inputPanel.Size.Width, 23);
-					comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-					this.populateParentComboBox(comboBox);
-					this.inputPanel.Controls.Add(comboBox);
-					count++;
-					continue;
-				}
-
 				TextBox textBox = new TextBox();
 				textBox.Name = column_name + "TextBox";
 				textBox.PlaceholderText = char.ToUpper(column_name[0]) + column_name.Substring(1);
@@ -241,6 +325,19 @@ namespace lab2
 				textBox.Size = new Size(inputPanel.Size.Width, 23);
 				this.inputPanel.Controls.Add(textBox);
 				count++;
+			}
+
+			foreach (var column_name in AppConfig.GetChildTableForeignKey().Split(','))
+			{
+				ComboBox comboBox = new ComboBox();
+				comboBox.Name = column_name + "ComboBox";
+				comboBox.Location = new Point(0, (23 + 10) * count);
+				comboBox.Size = new Size(inputPanel.Size.Width, 23);
+				comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+				this.populateParentComboBox(comboBox);
+				this.inputPanel.Controls.Add(comboBox);
+				count++;
+				continue;
 			}
 
 		}
