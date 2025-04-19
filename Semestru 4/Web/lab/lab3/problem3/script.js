@@ -1,15 +1,15 @@
-const numbers = [];
+var numbers = [];
 for (let i = 1; i <= 18; i++) {
   numbers.push(i, i);
 }
 
 for (let i = 0; i < numbers.length; i++) {
-    const j = Math.floor(Math.random() * (i + 1));
+    var j = Math.floor(Math.random() * (i + 1));
     [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
 }
 
-const gameBoard = document.getElementById("board");
-const revealed = [];
+var gameBoard = document.getElementById("board");
+var revealed = [];
 let lock = false;
 
 function handleClickButton (button) {
@@ -21,7 +21,7 @@ function handleClickButton (button) {
 
     if (revealed.length === 2) {
         lock = true;
-        const [btn1, btn2] = revealed;
+        var [btn1, btn2] = revealed;
 
         if (btn1.dataset.value === btn2.dataset.value) {
             btn1.disabled = true;
@@ -40,7 +40,7 @@ function handleClickButton (button) {
 }
 
 function createButton(value, index) {
-    const button = document.createElement("button");
+    var button = document.createElement("button");
     button.dataset.value = value;
     button.dataset.index = index;
     button.textContent = "*"; 
@@ -53,7 +53,7 @@ function createButton(value, index) {
     
         if (revealed.length === 2) {
             lock = true;
-            const [btn1, btn2] = revealed;
+            var [btn1, btn2] = revealed;
     
             if (btn1.dataset.value === btn2.dataset.value) {
                 btn1.disabled = true;
@@ -74,11 +74,11 @@ function createButton(value, index) {
 }
 
 for (let row = 0; row < 6; row++) {
-    const tr = document.createElement("tr");
+    var tr = document.createElement("tr");
     for (let col = 0; col < 6; col++) {
-        const td = document.createElement("td");
-        const index = row * 6 + col;
-        const btn = createButton(numbers[index], index);
+        var td = document.createElement("td");
+        var index = row * 6 + col;
+        var btn = createButton(numbers[index], index);
         td.appendChild(btn);
         tr.appendChild(td);
     }
