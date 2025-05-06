@@ -1,77 +1,76 @@
-CREATE OR ALTER PROCEDURE usp_validate_id (@id INT, @table VARCHAR(30), @result BIT OUTPUT)
-	AS
-		BEGIN
+CREATE OR ALTER FUNCTION uf_validate_id_producator (@id INT)
+RETURNS BIT
+AS
+	BEGIN
+		DECLARE @result BIT = 0
+		IF EXISTS (SELECT 1 FROM PRODUCATORI WHERE id = @id)
+			SET @result = 1
+		RETURN @result
+	END
+GO
+
+CREATE OR ALTER FUNCTION uf_validate_name_client (@name VARCHAR(100))
+RETURNS BIT
+AS
+	BEGIN
+		DECLARE @result BIT = 1
+		IF (@name NOT LIKE '[A-Z]% [A-Z]%') OR (@name LIKE '%[0-9]%')
 			SET @result = 0
-			DECLARE @sql NVARCHAR(MAX)
-			SET @sql = 'IF EXISTS( 
-							SELECT * FROM ' + QUOTENAME(@table) + ' WHERE id = ' + CAST(@id AS NVARCHAR) + '
-						)
-							BEGIN
-								SET @result = 1
-							END'	
-			EXEC sp_executesql @sql, N'@result BIT OUTPUT', @result OUTPUT
-		END
-	GO
+		IF EXISTS (SELECT 1 FROM CLIENTI WHERE nume = @name)
+			SET @result = 0
+		RETURN @result
+	END
+GO
 
-CREATE OR ALTER PROCEDURE usp_validate_name (@name VARCHAR(100), @table VARCHAR(100) = NULL, @result BIT OUTPUT) 
-	AS
-		BEGIN
-			SET @result = 1
-			IF (@name NOT LIKE '[A-Z]% [A-Z]%')
-				SET @result = 0
-			IF (@name LIKE '%[0-9]%')
-				SET @result = 0
-			DECLARE @sql NVARCHAR(MAX)
-			IF (@table IS NULL)
-				RETURN;
-			SET @sql = 'IF EXISTS( 
-							SELECT * FROM ' + QUOTENAME(@table) + ' WHERE nume = @name
-						)
-							BEGIN
-								SET @result = 0
-							END'	
-			EXEC sp_executesql @sql, N'@name NVARCHAR(MAX), @result BIT OUTPUT',@name, @result OUTPUT
-		END
-	GO
+CREATE OR ALTER FUNCTION uf_validate_name_medicament (@name VARCHAR(100))
+RETURNS BIT
+AS
+	BEGIN
+		DECLARE @result BIT = 1
+		IF EXISTS (SELECT 1 FROM MEDICAMENTE WHERE nume = @name)
+			SET @result = 0
+		RETURN @result
+	END
+GO
 
-CREATE OR ALTER PROCEDURE usp_validate_age (@varsta INT, @result BIT OUTPUT) 
-	AS
-		BEGIN
-			SET @result = 1
-			IF (@varsta < 0)
-				SET @result = 0
-			IF (@varsta > 100)
-				SET @result = 0
-		END
-	GO
+CREATE OR ALTER FUNCTION uf_validate_age (@varsta INT)
+RETURNS BIT
+AS
+	BEGIN
+		DECLARE @result BIT = 1;
+    
+		IF (@varsta < 0 OR @varsta > 100)
+			SET @result = 0;
+    
+		RETURN @result;
+	END;
+GO
 
-CREATE OR ALTER PROCEDURE usp_validate_pret (@pret MONEY, @result BIT OUTPUT) 
-	AS
-		BEGIN
-			SET @result = 1
-			IF (@pret < 0)
-				SET @result = 0
-			IF (@pret > 1000)
-				SET @result = 0
-		END
-	GO
+CREATE OR ALTER FUNCTION uf_validate_pret (@pret MONEY)
+RETURNS BIT
+AS
+	BEGIN
+		DECLARE @result BIT = 1;
+    
+		IF (@pret < 0 OR @pret > 1000)
+			SET @result = 0;
+    
+		RETURN @result;
+	END;
+GO
 
-CREATE OR ALTER PROCEDURE usp_validate_date (@date DATE, @result BIT OUTPUT)
-	AS
-		BEGIN
-			SET @result = 1;
-			IF (@date > GETDATE())
-			BEGIN
-				SET @result = 0;
-				RETURN;
-			END
-			IF (@date < '1999-01-01')
-				BEGIN
-					SET @result = 0;
-					RETURN;
-				END
-		END
-	GO
+CREATE OR ALTER FUNCTION uf_validate_date (@date DATE)
+RETURNS BIT
+AS
+	BEGIN
+		DECLARE @result BIT = 1;
+    
+		IF (@date > GETDATE() OR @date < '1999-01-01')
+			SET @result = 0;
+    
+		RETURN @result;
+	END;
+GO
 
 CREATE TABLE _Log (
 	id INT PRIMARY KEY IDENTITY,
@@ -89,18 +88,12 @@ CREATE OR ALTER PROCEDURE usp_insert_tranzactii (
 	BEGIN
 		BEGIN TRANSACTION
 		BEGIN TRY
-			DECLARE @nume_client_valid BIT
-			DECLARE @varsta_client_valid BIT
-			DECLARE @nume_medicament_valid BIT
-			DECLARE @pret_valid BIT
-			DECLARE @id_producator_valid BIT
-			DECLARE @data_tranzactie_valid BIT
-			EXEC usp_validate_name @name = @nume_client, @table = 'CLIENTI', @result = @nume_client_valid OUTPUT
-			EXEC usp_validate_age @varsta = @varsta_client, @result = @varsta_client_valid OUTPUT
-			EXEC usp_validate_name @name = @nume_medicament_valid, @table = 'MEDICAMENTE', @result = @nume_medicament_valid OUTPUT
-			EXEC usp_validate_pret @pret = @pret_valid, @result = @pret_valid OUTPUT
-			EXEC usp_validate_id @id = @id_producator, @table = 'PRODUCATORI', @result = @id_producator_valid OUTPUT
-			EXEC usp_validate_date @date = @data_tranzactie, @result = @data_tranzactie_valid OUTPUT
+			DECLARE @nume_client_valid BIT = dbo.uf_validate_name_client(@nume_client);
+			DECLARE @varsta_client_valid BIT = dbo.uf_validate_age(@varsta_client);
+			DECLARE @nume_medicament_valid BIT = dbo.uf_validate_name_medicament(@nume_medicament);
+			DECLARE @pret_valid BIT = dbo.uf_validate_pret(@pret);
+			DECLARE @id_producator_valid BIT = dbo.uf_validate_id_producator(@id_producator);
+			DECLARE @data_tranzactie_valid BIT = dbo.uf_validate_date(@data_tranzactie);
 			
 			IF (@nume_client_valid <> 1)
 				BEGIN
@@ -152,9 +145,9 @@ CREATE OR ALTER PROCEDURE usp_insert_tranzactii (
 GO;
 
 EXEC usp_insert_tranzactii 
-	@nume_client = 'Alex Alexasdasd',
+	@nume_client = 'Alex Paul',
 	@varsta_client = 20,
-	@nume_medicament = 'Metoclopramid',
+	@nume_medicament = 'Metoclopramiddddd',
 	@pret = 10.50,
 	@id_producator = 1,
 	@data_tranzactie = '2025-05-04'
@@ -177,10 +170,8 @@ CREATE OR ALTER PROCEDURE usp_insert_tranzactii_rollback_selectiv (
 		DECLARE @id_medicament INT
 		BEGIN TRY
 			BEGIN TRAN
-				DECLARE @nume_client_valid BIT
-				DECLARE @varsta_client_valid BIT
-				EXEC usp_validate_name @name = @nume_client, @table = 'CLIENTI', @result = @nume_client_valid OUTPUT
-				EXEC usp_validate_age @varsta = @varsta_client, @result = @varsta_client_valid OUTPUT
+				DECLARE @nume_client_valid BIT = dbo.uf_validate_name_client(@nume_client);
+				DECLARE @varsta_client_valid BIT = dbo.uf_validate_age(@varsta_client);
 				IF (@nume_client_valid <> 1)
 					BEGIN
 						RAISERROR('Nume client invalid', 16, 1)
@@ -205,12 +196,9 @@ CREATE OR ALTER PROCEDURE usp_insert_tranzactii_rollback_selectiv (
 
 		BEGIN TRY
 			BEGIN TRAN
-				DECLARE @nume_medicament_valid BIT
-				DECLARE @pret_valid BIT
-				DECLARE @id_producator_valid BIT
-				EXEC usp_validate_name @name = @nume_medicament, @table = 'MEDICAMENTE', @result = @nume_medicament_valid OUTPUT
-				EXEC usp_validate_pret @pret = @pret_valid, @result = @pret_valid OUTPUT
-				EXEC usp_validate_id @id = @id_producator, @table = 'PRODUCATORI', @result = @id_producator_valid OUTPUT
+				DECLARE @nume_medicament_valid BIT = dbo.uf_validate_name_medicament(@nume_medicament);
+				DECLARE @pret_valid BIT = dbo.uf_validate_pret(@pret);
+				DECLARE @id_producator_valid BIT = dbo.uf_validate_id_producator(@id_producator);
 				IF (@nume_medicament_valid <> 1)
 					BEGIN
 						RAISERROR('Nume medicament invalid', 16, 1)
@@ -239,9 +227,7 @@ CREATE OR ALTER PROCEDURE usp_insert_tranzactii_rollback_selectiv (
 
 		BEGIN TRY
 			BEGIN TRAN
-			DECLARE @data_tranzactie_valid BIT
-
-			EXEC usp_validate_date @date = @data_tranzactie, @result = @data_tranzactie_valid OUTPUT
+			DECLARE @data_tranzactie_valid BIT = dbo.uf_validate_date(@data_tranzactie);
 			IF (@data_tranzactie_valid <> 1)
 				BEGIN
 					RAISERROR('Data tranzactie invalid.', 16, 1)
@@ -263,12 +249,12 @@ GO
 
 
 EXEC usp_insert_tranzactii_rollback_selectiv
-	@nume_client = 'Ppopopo Popopo',
+	@nume_client = 'Mihail Laurentiu',
 	@varsta_client = 20,
-	@nume_medicament = 'Metoclopramid1',
+	@nume_medicament = 'Algocestiomin',
 	@pret = 10.50,
-	@id_producator = 1,
-	@data_tranzactie = '2025-05-05'
+	@id_producator = 2,
+	@data_tranzactie = '2025-05-09'
 
 
 SELECT * FROM _Log
