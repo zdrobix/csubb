@@ -145,9 +145,9 @@ CREATE OR ALTER PROCEDURE usp_insert_tranzactii (
 GO;
 
 EXEC usp_insert_tranzactii 
-	@nume_client = 'Alex Paul',
+	@nume_client = 'Alex Paulllllllll',
 	@varsta_client = 20,
-	@nume_medicament = 'Metoclopramiddddd',
+	@nume_medicament = 'Metoclopramiddddddddd',
 	@pret = 10.50,
 	@id_producator = 1,
 	@data_tranzactie = '2025-05-04'
@@ -249,12 +249,13 @@ GO
 
 
 EXEC usp_insert_tranzactii_rollback_selectiv
-	@nume_client = 'Mihail Laurentiu',
+	@nume_client = 'Mihail Popaaaaaaaaaaa',
 	@varsta_client = 20,
-	@nume_medicament = 'Algocestiomin',
+	@nume_medicament = 'Algocaminnnnnnnnnn1234n',
 	@pret = 10.50,
 	@id_producator = 2,
 	@data_tranzactie = '2025-05-09'
 
 
 SELECT * FROM _Log
+
