@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Statii Tren</title>
+    <script>
+        function getPlecari() {
+            console.log("get plecari apelat");
+            const xmlhttp = new XMLHttpRequest();
+            const url = "get-plecari.php";
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
+                    document.getElementById("plecari").innerHTML = xmlhttp.responseText;
+                } 
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send(null);
+        }
+
+        function getSosiri(elem) {
+            console.log("get sosiri apelat");
+            const xmlhttp = new XMLHttpRequest();
+            const url = "get-sosiri.php?name=" + encodeURIComponent(elem.value);
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
+                    document.getElementById("sosiri").innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send(null);
+        }
+
+    </script>
+</head>
+
+<body onload="getPlecari()">
+    <p>Plecari</p>
+    <select id="plecari" onchange="getSosiri(this)">
+
+    </select>
+    <br>
+    <p>Sosiri</p>
+    <select id="sosiri">
+        <option>None</option>
+    </select>
+</body>
+
+</html>

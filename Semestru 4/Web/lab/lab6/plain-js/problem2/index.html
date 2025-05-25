@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Persoane</title>
+    <script>
+        const lungimePagina = 3;
+        var paginaCurent = 0;
+        var numarPagini;
+
+        function getNumarPagini() {
+            const xmlhttp = new XMLHttpRequest();
+            const url = "get-nr-persoane.php";
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
+                    numarPagini = parseInt(xmlhttp.responseText, 10) / lungimePagina;
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send(null);
+        }
+
+        function getPersoane(nrPagina) {
+            console.log(nrPagina);
+            xmlhttp = new XMLHttpRequest();
+            const url = "get-persoane.php?number=" + nrPagina;
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState==4) {
+				    document.getElementById("personsTable").innerHTML=xmlhttp.responseText;
+					document.getElementById('prev').disabled = (paginaCurent === 0);
+                    document.getElementById('next').disabled = (paginaCurent >= numarPagini - 1);
+				}
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send(null);
+        }
+
+        function prevPage() {
+            paginaCurent--;
+            getPersoane(paginaCurent);
+        }
+
+        function nextPage() {
+            paginaCurent++;
+            getPersoane(paginaCurent);
+        }
+
+        function init() {
+            getNumarPagini();
+            getPersoane(0);
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div>
+        <table id="personsTable">
+        </table>
+        <div>
+            <button id="prev" onclick="prevPage()">Previous</button>
+            <button id="next" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+
+</html>

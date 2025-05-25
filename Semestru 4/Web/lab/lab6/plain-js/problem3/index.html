@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Persoane Id</title>
+    <script>
+        let selectedId = null;
+        let changed = false;
+
+        function getIds() {
+            const xmlhttp = new XMLHttpRequest();
+            const url = "get-ids.php";
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
+                    document.getElementById('persoane').innerHTML += xmlhttp.responseText;
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send(null);
+        }
+
+        function getById(id) {
+            if (changed) {
+                if (!confirm("Campurile au fost schimbate. Vrei sa salvezi?"))
+                {
+                    changed = false;
+                    loadPerson(id)
+                }
+                else {
+                    savePerson(() => loadPerson(id))
+                }
+            } else loadPerson(id);
+        }
+
+        function loadPerson(id) {
+            selectedId = id;
+            const xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                    document.getElementById("formular").innerHTML = xmlhttp.responseText;
+                    formChanged = false;
+                    document.getElementById("save").disabled = true;
+                    const inputs = document.querySelectorAll("#formular input");
+                    inputs.forEach(input => {
+                        input.addEventListener("input", function () {
+                            changed = true;
+                            document.getElementById("save").disabled = false;
+                        });
+                    });
+                }
+            };
+            xmlhttp.open("GET", "get-by-id.php?id=" + id, true);
+            xmlhttp.send();
+        }
+
+        function savePerson(callback) {
+            const name = document.querySelector("input[name='name']").value;
+            const varsta = document.querySelector("input[name='varsta']").value;
+            const xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                    changed = false;
+                    document.getElementById("save").disabled = true;
+                    if (callback) callback();
+                }
+            };
+
+            xmlhttp.open("POST", "update-persoana.php", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send("id=" + selectedId + "&name=" + encodeURIComponent(name) + "&varsta=" + encodeURIComponent(varsta));
+        }
+
+        function init() {
+            getIds();
+            document.getElementById('persoane').addEventListener('change', function () {
+                const id = this.value;
+                if (!isNaN(id)) {
+                    getById(id);
+                }
+            });
+            document.getElementById('save').addEventListener('click', function () {
+                savePerson();
+            });
+            document.getElementById('save').disabled = true;
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <select id="persoane">
+        <option>Select id</option>
+    </select>
+    <div id="formular">
+
+    </div>
+    <button id="save">Save</button>
+</body>

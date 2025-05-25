@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>xo</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 60px;
+            height: 60px;
+            font-size: 40px;
+            text-align: center;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>xo</h2>
+    <p id="msg">se incarca</p>
+    <table id="board"></table>
+
+    <script>
+        let board = Array(9).fill("");
+        let player = Math.random() < 0.5 ? "X" : "O";
+        let ai = player === "X" ? "O" : "X";
+        let turn = player === "X" ? "player" : "ai";
+        let msg = document.getElementById("msg");
+        let gameOver = false;
+
+        function draw() {
+            let t = document.getElementById("board");
+            t.innerHTML = "";
+            for (let i = 0; i < 3; i++) {
+                let r = t.insertRow();
+                for (let j = 0; j < 3; j++) {
+                    let c = r.insertCell();
+                    let idx = i * 3 + j;
+                    c.textContent = board[idx];
+                    c.onclick = () => move(idx);
+                }
+            }
+        }
+
+        function move(i) {
+            if (gameOver) 
+                return;
+            if (turn !== "player" || board[i]) 
+                return;
+            board[i] = player;
+            draw();
+            if (checkEnd()) 
+                return;
+            turn = "ai";
+            setTimeout(send, 300);
+        }
+
+        function send() {
+            let x = new XMLHttpRequest();
+            x.open("POST", "move.php");
+            x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            x.onload = () => {
+                let r = JSON.parse(x.responseText);
+                board = r.board;
+                draw();
+                msg.textContent = r.msg;
+                if (!r.over) turn = "player";
+            };
+            x.send("b=" + JSON.stringify(board) + "&ai=" + ai);
+        }
+
+        function checkEnd() {
+            let w = win(board);
+            if (w) { 
+                msg.textContent = (w === player ? "ai castigat" : "ai a castigat"); 
+                gameOver = true;
+                return true; 
+            }
+            if (!board.includes("")) { 
+                msg.textContent = "remiza"; 
+                return true; 
+            }
+            return false;
+        }
+
+        function win(board) {
+            let l = [
+                [0, 1, 2], 
+                [3, 4, 5], 
+                [6, 7, 8], 
+                [0, 3, 6], 
+                [1, 4, 7], 
+                [2, 5, 8], 
+                [0, 4, 8], 
+                [2, 4, 6]
+            ];
+            for (let p of l) {
+                let [a, b, c] = p;
+                if (board[a] && board[a] === board[b] && board[a] === board[c]) 
+                return board[a];
+            }
+            return null;
+        }
+
+        function init() {
+            draw();
+            msg.textContent = (turn === "player") ? "randul tau" : "randul ai";
+            if (turn === "ai") send();
+        }
+
+        window.onload = init;
+    </script>
+</body>
+
+</html>
