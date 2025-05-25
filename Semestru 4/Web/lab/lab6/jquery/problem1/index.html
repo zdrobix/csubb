@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Statii Tren</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function getPlecari() {
+            console.log("get plecari apelat");
+            $.get("get-plecari.php", function (data) {
+                $("#plecari").html(data);
+            });
+        }
+
+        function getSosiri(elem) {
+            console.log("get sosiri apelat");
+            const selectedValue = $(elem).val();
+            $.get("get-sosiri.php", { name: selectedValue }, function (data) {
+                $("#sosiri").html(data);
+            });
+        }
+
+        $(document).ready(function () {
+            getPlecari();
+        });
+    </script>
+</head>
+
+<body>
+    <p>Plecari</p>
+    <select id="plecari" onchange="getSosiri(this)">
+    </select>
+    <br>
+    <p>Sosiri</p>
+    <select id="sosiri">
+        <option>None</option>
+    </select>
+</body>
+
+</html>

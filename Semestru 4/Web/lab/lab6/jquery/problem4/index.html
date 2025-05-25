@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>xo</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 60px;
+            height: 60px;
+            font-size: 40px;
+            text-align: center;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>xo</h2>
+    <p id="msg">se incarca</p>
+    <table id="board"></table>
+
+    <script>
+        let board = Array(9).fill("");
+        let player = Math.random() < 0.5 ? "X" : "O";
+        let ai = player === "X" ? "O" : "X";
+        let turn = player === "X" ? "player" : "ai";
+        let gameOver = false;
+
+        function draw() {
+            const $board = $("#board");
+            $board.empty();
+            for (let i = 0; i < 3; i++) {
+                let $row = $("<tr></tr>");
+                for (let j = 0; j < 3; j++) {
+                    let idx = i * 3 + j;
+                    let $cell = $("<td></td>").text(board[idx]);
+                    $cell.on("click", () => move(idx));
+                    $row.append($cell);
+                }
+                $board.append($row);
+            }
+        }
+
+        function move(i) {
+            if (gameOver || turn !== "player" || board[i]) return;
+            board[i] = player;
+            draw();
+            if (checkEnd()) return;
+            turn = "ai";
+            setTimeout(send, 300);
+        }
+
+        function send() {
+            $.post("move.php", {
+                b: JSON.stringify(board),
+                ai: ai
+            }, function (response) {
+                const r = response;
+                board = r.board;
+                draw();
+                $("#msg").text(r.msg);
+                if (!r.over) turn = "player";
+                else gameOver = true;
+            });
+        }
+
+        function checkEnd() {
+            let winner = win(board);
+            if (winner) {
+                $("#msg").text(winner === player ? "ai castigat" : "ai a castigat");
+                gameOver = true;
+                return true;
+            }
+            if (!board.includes("")) {
+                $("#msg").text("remiza");
+                gameOver = true;
+                return true;
+            }
+            return false;
+        }
+
+        function win(b) {
+            const lines = [
+                [0, 1, 2], 
+                [3, 4, 5], 
+                [6, 7, 8],
+                [0, 3, 6], 
+                [1, 4, 7], 
+                [2, 5, 8],
+                [0, 4, 8], 
+                [2, 4, 6]
+            ];
+            for (const [a, b1, c] of lines) {
+                if (b[a] && b[a] === b[b1] && b[a] === b[c]) {
+                    return b[a];
+                }
+            }
+            return null;
+        }
+
+        function init() {
+            draw();
+            $("#msg").text(turn === "player" ? "randul tau" : "randul ai");
+            if (turn === "ai") send();
+        }
+
+        $(document).ready(init);
+    </script>
+</body>
+
+</html>

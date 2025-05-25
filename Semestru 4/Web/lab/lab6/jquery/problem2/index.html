@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Persoane</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const lungimePagina = 3;
+        let paginaCurent = 0;
+        let numarPagini = 0;
+
+        function getNumarPagini() {
+            $.get("get-nr-persoane.php", function (data) {
+                numarPagini = parseInt(data, 10) / lungimePagina;
+                updateButtons();
+            });
+        }
+
+        function getPersoane(nrPagina) {
+            console.log("Pagina:", nrPagina);
+            $.get("get-persoane.php", { number: nrPagina }, function (data) {
+                $("#personsTable").html(data);
+                updateButtons();
+            });
+        }
+
+        function updateButtons() {
+            $("#prev").prop("disabled", paginaCurent === 0);
+            $("#next").prop("disabled", paginaCurent >= numarPagini - 1);
+        }
+
+        function prevPage() {
+            if (paginaCurent > 0) {
+                paginaCurent--;
+                getPersoane(paginaCurent);
+            }
+        }
+
+        function nextPage() {
+            if (paginaCurent < numarPagini - 1) {
+                paginaCurent++;
+                getPersoane(paginaCurent);
+            }
+        }
+
+        $(document).ready(function () {
+            getNumarPagini();
+            getPersoane(paginaCurent);
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <table id="personsTable">
+        </table>
+        <div>
+            <button id="prev" onclick="prevPage()">Previous</button>
+            <button id="next" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+
+</html>

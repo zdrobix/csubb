@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Persoane Id</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let selectedId = null;
+        let changed = false;
+
+        function getIds() {
+            $.get("get-ids.php", function (data) {
+                $('#persoane').append(data);
+            });
+        }
+
+        function getById(id) {
+            if (changed) {
+                if (!confirm("Campurile au fost schimbate. Vrei sa salvezi?")) {
+                    changed = false;
+                    loadPerson(id);
+                } else {
+                    savePerson(() => loadPerson(id));
+                }
+            } else {
+                loadPerson(id);
+            }
+        }
+
+        function loadPerson(id) {
+            selectedId = id;
+            $.get("get-by-id.php", { id: id }, function (data) {
+                $("#formular").html(data);
+                changed = false;
+                $("#save").prop("disabled", true);
+
+                $("#formular input").on("input", function () {
+                    changed = true;
+                    $("#save").prop("disabled", false);
+                });
+            });
+        }
+
+        function savePerson(callback) {
+            const name = $("input[name='name']").val();
+            const varsta = $("input[name='varsta']").val();
+
+            $.post("update-persoana.php", {
+                id: selectedId,
+                name: name,
+                varsta: varsta
+            }, function () {
+                changed = false;
+                $("#save").prop("disabled", true);
+                if (callback) callback();
+            });
+        }
+
+        $(document).ready(function () {
+            getIds();
+
+            $('#persoane').on('change', function () {
+                const id = $(this).val();
+                if (!isNaN(id)) {
+                    getById(id);
+                }
+            });
+
+            $('#save').on('click', function () {
+                savePerson();
+            }).prop("disabled", true);
+        });
+    </script>
+</head>
+
+<body>
+    <select id="persoane">
+        <option>Select id</option>
+    </select>
+    <div id="formular">
+    </div>
+    <button id="save">Save</button>
+</body>
+
+</html>
