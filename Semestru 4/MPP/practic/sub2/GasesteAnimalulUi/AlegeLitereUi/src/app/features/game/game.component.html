@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+    <div class="container" style="max-width: 300px;">
+        <h1 class="text-center mb-4">Score the most points!</h1>
+        <h3 id="pointHeader" class="text-center mb-4">Points: 0</h3>
+        <div id="letterChoice" class="d-flex gap-1">
+
+        </div>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td *ngFor="let letter of configuration?.letters!.split(','); let i = index">
+                        <button #cellBtn class="btn btn-primary" style="height: 50px; width: 60px;" (click)="onCellClick(i, cellBtn)">{{letter}}:{{configuration?.points!.split(',').at(i)}}</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p id="infoHeader" class="text-center mb-4"></p>
+        <div class="d-flex justify-content-center w-auto">
+        <button class="primary btn-primary w-auto" (click)="navigateToRanks()">See ranks!</button>
+    </div>
+    </div>
+</div>

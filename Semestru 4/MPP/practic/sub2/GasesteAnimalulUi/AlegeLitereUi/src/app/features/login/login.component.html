@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <div class="container" style="max-width: 300px;">
+    <h1 class="text-center mb-4">Log in</h1>
+    <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+      <div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="nickname" name="nickname" placeholder="nickname"
+            required [(ngModel)]="model.nickname" />
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+        <div class="d-grid mt-3">
+          <button class="btn btn-primary" (click)="navigateToConfig()">Configuration</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
