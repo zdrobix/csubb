@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <div class="container" style="max-width: 300px;">
+    <h1 class="text-center mb-4">Log in</h1>
+    <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+      <div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="xCoord" name="xCoord" placeholder="X Coord"
+            required [(ngModel)]="model.xCoord" />
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="yCoord" name="yCoord" placeholder="Y Coord"
+            required [(ngModel)]="model.yCoord" />
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="animal" name="animal" placeholder="Animal"
+            required [(ngModel)]="model.animal" />
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="photoUrl" name="photoUrl" placeholder="Photo url"
+            required/>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Add Configuration</button>
+        </div>
+        <div class="d-grid mt-3">
+          <button class="btn btn-primary" (click)="navigateToLogin()">Login</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

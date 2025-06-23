@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+    <div class="container" style="max-width: 300px;">
+        <h1 class="text-center mb-4">Find the animal!</h1>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let row of matrix; let rowIndex = index">
+                    <td *ngFor="let cell of row; let colIndex = index">
+                        <button #cellBtn class="btn btn-primary" style="background-color: greenyellow; height: 50px; width: 100px;" (click)="onCellClick(colIndex, rowIndex, cellBtn)"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p id="infoHeader" class="text-center mb-4"></p>
+        <button class="primary btn-primary w-100" (click)="navigateToRanks()">See ranks!</button>
+    </div>
+</div>

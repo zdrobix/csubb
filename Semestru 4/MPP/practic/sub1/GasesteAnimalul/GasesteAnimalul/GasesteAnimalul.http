@@ -1,0 +1,6 @@
+@GasesteAnimalul_HostAddress = http://localhost:5252
+
+GET {{GasesteAnimalul_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
