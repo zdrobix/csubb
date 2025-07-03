@@ -1,0 +1,108 @@
+syntax = "proto3";
+
+package children_events;
+
+option csharp_namespace = "networking.grpc";
+
+option java_package = "networking.grpc";
+option java_multiple_files = true;
+
+service ChildrenEventsService {
+	rpc Login (Request) returns (Response);
+	rpc Logout (Request) returns (Response);
+	rpc GetLogin (Request) returns (Response);
+
+
+	rpc AddChild (Request) returns (Response);
+	rpc AddEvent (Request) returns (Response);
+	rpc AddSignup (Request) returns (Response);
+
+	rpc GetChildren (Request) returns (Response);
+	rpc GetEvents (Request) returns (Response);
+	rpc GetSignups (Request) returns (Response);
+
+	rpc Subscribe(Request) returns (stream Response);
+	rpc Unsubscribe(Request) returns (stream Response);
+}
+
+message Child {
+	int64 Id = 1;
+	string Name = 2;
+	string Cnp = 3;
+}
+
+message Event {
+	int64 Id = 1;
+	string Name = 2;
+	int64 MinAge = 3;
+	int64 MaxAge = 4;
+}
+
+message Tuple {
+	int64 First = 1;
+	int64 Second = 2;
+}
+
+message Signup {
+	Tuple Id = 1;
+	Child Child = 2;
+	Event Event = 3;
+}
+
+
+message LoginInfo {
+	int64 Id = 1;
+	string Username = 2;
+	string Password = 3;
+}
+
+message Entity {
+  oneof entity {
+    Child child = 1;
+    Event event = 2;
+    Signup signup = 3;
+	LoginInfo loginInfo = 4;
+  }
+}
+
+enum RequestType {
+	UNKNOWNrequest = 0;
+	LOGIN = 1; 
+	LOGOUT = 2;
+	ADD_CHILD = 3;
+	ADD_EVENT = 4;
+	ADD_SIGNUP = 5; 
+	GET_CHILDREN = 6; 
+	GET_EVENTS = 7;
+	GET_SIGNUPS = 8;
+	SUBSCRIBE = 9;
+	UNSUBSCRIBE = 10;
+	GET_LOGIN = 11;
+}
+
+message Request {
+  RequestType type = 1;
+  Entity entity = 2;
+  repeated Entity entities = 3;
+  string message = 4;
+}
+
+enum ResponseType {
+	UNKNOWNresponse = 0;
+	OK = 1; 
+	ERROR = 2; 
+	CHILD_ADDED = 3; 
+	EVENT_ADDED = 4; 
+	SIGNUP_ADDED = 5; 
+	CHILDREN_RECEIVED = 6; 
+	EVENTS_RECEIVED = 7; 
+	SIGNUPS_RECEIVED = 8;
+	LOGIN_RECEIVED = 9;
+}
+
+message Response {
+	ResponseType type = 1;
+	Entity entity = 2;
+	repeated Entity entities = 3;
+	string message = 4;
+}

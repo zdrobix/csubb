@@ -1,0 +1,11 @@
+rootProject.name = 'children_events'
+include 'Model'
+include 'Persistence'
+include 'Services'
+include 'Server'
+include 'Network'
+include 'Client'
+include 'Server'
+include 'Protos'
+include 'GRPCClient'
+

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "org.example";
+option java_outer_classname = "SalutProto";
+
+service SalutService {
+  rpc SpuneSalut (SalutRequest) returns (SalutResponse);
+}
+
+message SalutRequest {
+  string nume = 1;
+}
+
+message SalutResponse {
+  string mesaj = 1;
+}
+

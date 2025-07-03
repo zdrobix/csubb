@@ -1,0 +1,5 @@
+package org.example.protocol;
+
+public enum ResponseType {
+    OK, ERROR, CHILD_ADDED, EVENT_ADDED, SIGNUP_ADDED, CHILDREN_RECEIVED, EVENTS_RECEIVED, SIGNUPS_RECEIVED
+}

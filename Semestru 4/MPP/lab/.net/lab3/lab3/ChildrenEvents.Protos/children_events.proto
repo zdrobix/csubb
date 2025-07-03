@@ -1,0 +1,81 @@
+syntax = "proto3";
+
+option c_sharp_namespace = "Networking.grpc";
+
+package children_events;
+
+service ChildrenEventsService {
+	rpc Login (Request) returns (Response);
+	rpc Logout (Request) returns (Response);
+
+	rpc AddChild (Request) returns (Response);
+	rpc AddEvent (Request) returns (Response);
+	rpc AddSignup (Request) returns (Response);
+
+	rpc GetChildren (Request) returns (Response);
+	rpc GetEvents (Request) returns (Response);
+	rpc GetSignups (Request) returns (Response);
+}
+
+message Child {
+	int64 Id = 1;
+	string Name = 2;
+	string Cnp = 3;
+}
+
+message Event {
+	int64 Id = 1;
+	string Name = 2;
+	string MinAge = 3;
+	string MaxAge = 4;
+}
+
+message Signup {
+	int64 Id = 1;
+	int64 ChildId = 2;
+	int64 EventId = 3;
+}
+
+message Entity {
+  oneof entity {
+    Child child = 1;
+    Event event = 2;
+    Signup signup = 3;
+  }
+}
+
+enum RequestType {
+	LOGIN = 1; 
+	LOGOUT = 2;
+	ADD_CHILD = 3;
+	ADD_EVENT = 4;
+	ADD_SIGNUP = 5; 
+	GET_CHILDREN = 6; 
+	GET_EVENTS = 7;
+	GET_SIGNUPS = 8;
+}
+
+message Request {
+  RequestType type = 1;
+  Entity entity = 2;
+  repeated Entity entities = 3;
+  string message = 4;
+}
+
+enum ResponseType {
+	OK = 1; 
+	ERROR = 2; 
+	CHILD_ADDED = 3; 
+	EVENT_ADDED = 4; 
+	SIGNUP_ADDED = 5; 
+	CHILDREN_RECEIVED = 6; 
+	EVENTS_RECEIVED = 7; 
+	SIGNUPS_RECEIVED = 8;
+}
+
+message Response {
+	ResponseType type = 1;
+	Entity entity = 2;
+	repetead Entity entities = 3;
+	string message = 4;
+}

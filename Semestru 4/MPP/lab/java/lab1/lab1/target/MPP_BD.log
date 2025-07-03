@@ -1,0 +1,161 @@
+10 Mar 2025 16:39:37,204 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:Q:/info/mpp/lab1/cars.db'} 
+10 Mar 2025 16:39:37,218 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:39:37,219 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:39:37,219 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:39:37,220 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:Q:/info/mpp/lab1/cars.db'
+10 Mar 2025 16:39:37,220 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:39:37,221 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:39:37,251 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:Q:/info/mpp/lab1/cars.db'
+10 Mar 2025 16:39:37,252 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:40:25,255 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:Q:/info/mpp/lab1/cars.db'} 
+10 Mar 2025 16:40:25,274 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:40:25,275 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:40:25,276 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:40:25,276 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:Q:/info/mpp/lab1/cars.db'
+10 Mar 2025 16:40:25,277 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:40:25,277 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:40:25,300 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:Q:/info/mpp/lab1/cars.db'
+10 Mar 2025 16:40:25,302 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:43:25,103 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:Q:\info\mpp\lab1\lab1\cars.db'} 
+10 Mar 2025 16:43:25,117 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:43:25,119 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:43:25,119 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:43:25,119 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:Q:\info\mpp\lab1\lab1\cars.db'
+10 Mar 2025 16:43:25,120 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:43:25,120 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:43:25,148 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:Q:\info\mpp\lab1\lab1\cars.db'
+10 Mar 2025 16:43:25,150 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:45:02,447 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:Q:\info\mpp\lab1\lab1\cars.db'} 
+10 Mar 2025 16:45:02,460 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:45:02,461 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:45:02,461 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:45:02,462 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:Q:\info\mpp\lab1\lab1\cars.db'
+10 Mar 2025 16:45:02,462 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:45:02,463 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:45:02,484 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:Q:\info\mpp\lab1\lab1\cars.db'
+10 Mar 2025 16:45:02,485 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:46:21,884 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.user='', jdbc.url='jdbc:sqlite:Q:\info\mpp\lab1\lab1\cars.db', jdbc.pass=''} 
+10 Mar 2025 16:46:21,898 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:46:21,899 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:46:21,899 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:46:21,900 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:Q:\info\mpp\lab1\lab1\cars.db'
+10 Mar 2025 16:46:21,900 INFO  org.example.JdbcUtils 31 getNewConnection - user: ''
+10 Mar 2025 16:46:21,901 INFO  org.example.JdbcUtils 32 getNewConnection - pass: ''
+10 Mar 2025 16:46:21,925 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:Q:\info\mpp\lab1\lab1\cars.db'
+10 Mar 2025 16:46:21,926 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:47:35,669 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.user='', jdbc.url='jdbc:sqlite:Q:/info/mpp/lab1/lab1/cars.db', jdbc.pass=''} 
+10 Mar 2025 16:47:35,683 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:47:35,684 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:47:35,684 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:47:35,685 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:Q:/info/mpp/lab1/lab1/cars.db'
+10 Mar 2025 16:47:35,685 INFO  org.example.JdbcUtils 31 getNewConnection - user: ''
+10 Mar 2025 16:47:35,685 INFO  org.example.JdbcUtils 32 getNewConnection - pass: ''
+10 Mar 2025 16:47:35,707 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:Q:/info/mpp/lab1/lab1/cars.db'
+10 Mar 2025 16:47:35,708 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:48:30,452 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.user='', jdbc.url='jdbc:sqlite:Q:/info/mpp/lab1/lab1/cars.db', jdbc.pass=''} 
+10 Mar 2025 16:48:30,466 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:48:30,466 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:48:30,467 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:48:30,467 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:Q:/info/mpp/lab1/lab1/cars.db'
+10 Mar 2025 16:48:30,468 INFO  org.example.JdbcUtils 31 getNewConnection - user: ''
+10 Mar 2025 16:48:30,468 INFO  org.example.JdbcUtils 32 getNewConnection - pass: ''
+10 Mar 2025 16:48:30,497 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:Q:/info/mpp/lab1/lab1/cars.db'
+10 Mar 2025 16:48:30,498 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:53:14,734 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:Q:/info/mpp/lab1/lab1/cars.db'} 
+10 Mar 2025 16:53:14,752 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:53:14,754 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:53:14,754 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:53:14,755 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:Q:/info/mpp/lab1/lab1/cars.db'
+10 Mar 2025 16:53:14,755 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:53:14,755 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:53:14,786 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:Q:/info/mpp/lab1/lab1/cars.db'
+10 Mar 2025 16:53:14,787 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:53:36,749 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:./cars.db'} 
+10 Mar 2025 16:53:36,761 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:53:36,762 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:53:36,762 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:53:36,763 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:./cars.db'
+10 Mar 2025 16:53:36,763 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:53:36,764 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:53:36,789 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:./cars.db'
+10 Mar 2025 16:53:36,790 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:53:47,699 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:cars.db'} 
+10 Mar 2025 16:53:47,718 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:53:47,719 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:53:47,719 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:53:47,720 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:cars.db'
+10 Mar 2025 16:53:47,720 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:53:47,720 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:53:47,751 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:cars.db'
+10 Mar 2025 16:53:47,752 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:53:59,879 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:lab2/cars.db'} 
+10 Mar 2025 16:53:59,894 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:53:59,895 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:53:59,895 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:53:59,895 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:lab2/cars.db'
+10 Mar 2025 16:53:59,896 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:53:59,897 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:53:59,928 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:lab2/cars.db'
+10 Mar 2025 16:53:59,929 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:54:51,480 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'} 
+10 Mar 2025 16:54:51,497 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:54:51,498 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:54:51,499 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:54:51,499 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'
+10 Mar 2025 16:54:51,499 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:54:51,500 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:54:51,527 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'
+10 Mar 2025 16:54:51,529 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:55:59,215 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'} 
+10 Mar 2025 16:55:59,230 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:55:59,231 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:55:59,231 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:55:59,232 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'
+10 Mar 2025 16:55:59,232 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:55:59,233 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:55:59,257 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'
+10 Mar 2025 16:55:59,258 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:56:54,845 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'} 
+10 Mar 2025 16:56:54,859 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:56:54,859 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:56:54,860 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:56:54,860 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'
+10 Mar 2025 16:56:54,861 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:56:54,861 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:56:54,882 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'
+10 Mar 2025 16:56:54,883 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 16:58:48,610 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'} 
+10 Mar 2025 16:58:48,625 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 16:58:48,625 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 16:58:48,626 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 16:58:48,626 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'
+10 Mar 2025 16:58:48,627 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 16:58:48,627 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 16:58:48,649 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'
+10 Mar 2025 16:58:48,650 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 17:00:37,058 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url='jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'} 
+10 Mar 2025 17:00:37,074 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 17:00:37,075 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 17:00:37,075 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 17:00:37,076 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... 'jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'
+10 Mar 2025 17:00:37,076 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 17:00:37,076 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 17:00:37,096 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: No suitable driver found for 'jdbc:sqlite:C:/Users/Alex/Desktop/sqlite/cars.db'
+10 Mar 2025 17:00:37,098 TRACE org.example.JdbcUtils 57 getConnection - Exit
+10 Mar 2025 17:02:20,105 INFO  org.example.repo.CarsDBRepository 22 <init> - Initializing CarsDBRepository with properties: {jdbc.url=jdbc:sqlite:cars.db} 
+10 Mar 2025 17:02:20,145 TRACE org.example.repo.CarsDBRepository 60 add - Enter Saving car Id=0 Tesla Model S 2019
+10 Mar 2025 17:02:20,147 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 17:02:20,148 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+10 Mar 2025 17:02:20,149 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:cars.db
+10 Mar 2025 17:02:20,150 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+10 Mar 2025 17:02:20,150 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+10 Mar 2025 17:02:20,663 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4b0d79fc)
+10 Mar 2025 17:02:20,687 TRACE org.example.repo.CarsDBRepository 73 add - Exit
+10 Mar 2025 17:02:20,687 TRACE org.example.repo.CarsDBRepository 97 findAll - Enter Getting all the cars
+10 Mar 2025 17:02:20,688 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 17:02:20,688 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4b0d79fc)
+10 Mar 2025 17:02:20,692 TRACE org.example.repo.CarsDBRepository 116 findAll - Exit
+10 Mar 2025 17:02:20,693 TRACE org.example.repo.CarsDBRepository 28 findByManufacturer - Enter Getting all the cars from Tesla
+10 Mar 2025 17:02:20,693 TRACE org.example.JdbcUtils 48 getConnection - Enter
+10 Mar 2025 17:02:20,694 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4b0d79fc)
+10 Mar 2025 17:02:20,694 TRACE org.example.repo.CarsDBRepository 48 findByManufacturer - Exit

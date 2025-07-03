@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+    <div class="container" style="max-width: 300px;">
+        <h1 class="text-center mb-4">Ranks!</h1>
+        <div *ngIf="games as games">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nr. Crt</th>
+                        <th>Nickname</th>
+                        <th>Points</th>
+                        <th>Config</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let game of games; let crt = index">
+                        <td>{{ crt + 1 }}</td>
+                        <td>{{game.nickname}}</td>
+                        <td>{{game.points}}</td>
+                        <td>{{game.gameConfigAnimals}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

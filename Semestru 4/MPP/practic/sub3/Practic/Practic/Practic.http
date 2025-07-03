@@ -1,0 +1,6 @@
+@AlegeLitere_HostAddress = http://localhost:5252
+
+GET {{AlegeLitere_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

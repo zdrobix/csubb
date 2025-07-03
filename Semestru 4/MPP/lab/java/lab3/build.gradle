@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'org.apache.logging.log4j:log4j-api:2.24.3'
+    implementation 'org.apache.logging.log4j:log4j-core:2.24.3'
+
+    runtimeOnly group: 'org.xerial', name: 'sqlite-jdbc', version :'3.45.1.0'
+    implementation 'org.slf4j:slf4j-simple:2.0.12'
+
+    implementation 'org.openjfx:javafx-base:21.0.1:win'
+    implementation 'org.openjfx:javafx-controls:21.0.1:win'
+    implementation 'org.openjfx:javafx-fxml:21.0.1:win'
+    implementation 'org.openjfx:javafx-graphics:21.0.1:win'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(23)
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClassName = 'org.example.Main'
+}
+
+run {
+    jvmArgs = [
+            '--module-path', configurations.runtimeClasspath.asPath,
+            '--add-modules', 'javafx.controls,javafx.fxml'
+    ]
+}
+

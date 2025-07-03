@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <div class="container" style="max-width: 300px;">
+    <h1 class="text-center mb-4">Edit config</h1>
+    <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+        <div class="mb-3" style="width: 300px">
+          <input type="text" style="width: 300px" class="form-control" id="animals" name="animals" placeholder="enter animals"
+            required [(ngModel)]="model!.animals" />
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary" style="width: 300px">Update</button>
+        </div>
+      </form>
+      </div>
+</div>

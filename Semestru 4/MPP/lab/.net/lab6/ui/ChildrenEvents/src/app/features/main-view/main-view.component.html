@@ -1,0 +1,75 @@
+<div class="container">
+    <h1 class="mt-3">Children events application</h1>
+    <div class="d-flex justify-content-center gap-4">
+        <ng-container *ngIf="children$ | async as children">
+            <div class="mt-3">
+                <h3>Children</h3>
+                <div class="min-width-auto mt-3" style="max-height: 200px; overflow-y: auto;">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Cnp</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let child of children">
+                                <td>{{child.name}}</td>
+                                <td>{{child.cnp}}</td>
+                                <td>
+                                    <div class="d-flex justify-content-center gap-3">
+                                        <button class="btn btn-primary" style=" width: 75px" [routerLink]="['child/edit', child.id]">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <input type="text" class="form-control mt-3" id="childName" name="childName" placeholder="Name" required
+                    [(ngModel)]="addChildRequest.name" style="width: 100%;" />
+                <input type="text" class="form-control mt-3" style="width: 100%;" id="childCnp" name="childCnp"
+                    placeholder="Cnp" required [(ngModel)]="addChildRequest.cnp" />
+                <button class="btn btn-primary mt-3" style="width: 100%;" (click)="addChild()">Add</button>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="events$ | async as events">
+            <div class="mt-3">
+                <h3>Events</h3>
+                <div class="min-width-auto mt-3" style="max-height: 200px; overflow-y: auto;">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age Interval</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let event of events">
+                                <td>{{event.name}}</td>
+                                <td>{{event.minAge}}-{{event.maxAge}}</td>
+                                <td>
+                                    <div class="d-flex justify-content-center gap-3">
+                                        <button class="btn btn-primary" style=" width: 75px" [routerLink]="['event/edit', event.id]">Edit</button>
+                                        <button class="btn btn-danger" style="width: 75px" (click)="deleteEvent(event.id)">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <input type="text" class="form-control mt-3" id="eventName" name="eventName" placeholder="Name" required
+                    [(ngModel)]="addEventRequest.name" style="width: 100%;" />
+                <div class="d-flex gap-2" style="width: 100%">
+                    <input type="number" class="form-control mt-3" id="eventMinAge" name="eventMinAge"
+                        placeholder="Min age" required [(ngModel)]="addEventRequest.minAge" style="width: 50%;" />
+                    <input type="number" class="form-control mt-3" id="eventMaxAge" name="eventMaxAge"
+                        placeholder="Max age" required [(ngModel)]="addEventRequest.maxAge" style="width: 50%;" />
+                </div>
+                <button class="btn btn-primary mt-3" style="width: 100%;" (click)="addEvent()">Add</button>
+                <button class="btn btn-primary mt-3" style="width: 100%;" (click)="logout()">Logout</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

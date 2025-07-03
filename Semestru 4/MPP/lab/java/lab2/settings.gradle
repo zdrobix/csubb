@@ -1,0 +1,9 @@
+rootProject.name = 'lab1'
+include 'StartGradle'
+include 'StartGradle:src:test:java'
+findProject(':StartGradle:src:test:java')?.name = 'java'
+include 'StartGradle:src:test'
+findProject(':StartGradle:src:test')?.name = 'test'
+include 'StartGradle:src:test'
+findProject(':StartGradle:src:test')?.name = 'test'
+
