@@ -17,7 +17,7 @@ Tipuri de date:
 - comparare: ==, !=, <, >, <=, >=
 - misc: ,
 - separatori: ;, {}, ()
-- cuvinte cheie: int, double, while, if, else
+- cuvinte cheie: int, double, while, if, else, Using
                 + afiseaza(...) = Console.WriteLine(...)
                 + citire_int() = return int.Parse(Console.ReadLine()!)
                 + citire_double() = return double.Parse(Console.ReadLine()!)
@@ -202,3 +202,14 @@ int main() {
     afiseaza(a++);    //eroare, nu este definita operatia
 }
 ```
+
+<br>
+
+## Activitate in-class
+
+##### Colegul a avut mlp derivat din C++
+
+- do while
+- loop-ul for
+- nu exista structura '++'/ '--'
+- nu exista structura *= / += / -=
