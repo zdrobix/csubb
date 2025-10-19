@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Toyota Corollaaa",
+        "registration_number": "AB123CD",
+        "accident_count": 3
+    },
+    {
+        "id": 2,
+        "name": "Honda Civic",
+        "registration_number": "EF456GH",
+        "accident_count": 2
+    },
+    {
+        "id": 3,
+        "name": "Ford Focus",
+        "registration_number": "IJ789KL",
+        "accident_count": 0
+    },
+    {
+        "id": 4,
+        "name": "Volkswagen Golf",
+        "registration_number": "MN012OP",
+        "accident_count": 1
+    },
+    {
+        "id": 5,
+        "name": "BMW 3 Series",
+        "registration_number": "QR345ST",
+        "accident_count": 0
+    },
+    {
+        "id": 6,
+        "name": "Audi A4",
+        "registration_number": "UV678WX",
+        "accident_count": 1
+    },
+    {
+        "id": 7,
+        "name": "Mercedes-Benz C-Class",
+        "registration_number": "YZ901AB",
+        "accident_count": 1
+    },
+    {
+        "id": 8,
+        "name": "Hyundai Elantra",
+        "registration_number": "CD234EF",
+        "accident_count": 0
+    },
+    {
+        "id": 9,
+        "name": "Kia Optima",
+        "registration_number": "GH567IJ",
+        "accident_count": 0
+    },
+    {
+        "id": 10,
+        "name": "Mazda 3",
+        "registration_number": "KL890MN",
+        "accident_count": 1
+    },
+    {
+        "id": 11,
+        "name": "Chevrolet Cruze",
+        "registration_number": "OP123QR",
+        "accident_count": 0
+    },
+    {
+        "id": 12,
+        "name": "Nissan Sentra",
+        "registration_number": "ST456UV",
+        "accident_count": 1
+    },
+    {
+        "id": 13,
+        "name": "Renault Megane",
+        "registration_number": "WX789YZ",
+        "accident_count": 0
+    },
+    {
+        "id": 14,
+        "name": "Peugeot 308",
+        "registration_number": "AB012CD",
+        "accident_count": 0
+    },
+    {
+        "id": 15,
+        "name": "Skoda Octaviaa",
+        "registration_number": "EF345GH",
+        "accident_count": 1
+    }
+]
