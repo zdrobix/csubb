@@ -30,12 +30,10 @@
           <tr>
             <th>ID</th>
             <th>Name</th>
-            <th></th>
           </tr>
-          <tr *ngFor="let car of cars$ | async">
+          <tr *ngFor="let car of cars">
             <td>{{ car.id }}</td>
-            <td>{{ car.name }}</td>
-            <td> <button class="btn btn-primary m-2 w-50" (click)="setInfoCar(car)"> Info </button> </td>
+            <td> <button class="btn btn-primary m-2 w-50" (click)="setInfoCar(car)"> {{ car.name }} </button> </td>
           </tr>
         </tbody>
       </table>

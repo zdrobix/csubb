@@ -14,9 +14,11 @@ import { CarService } from '../services/car-service';
 })
 export class HomePage implements OnInit, OnDestroy {
 
-  data: any
-  cars$?: Observable<Car[]>;
+  //  data: any
+  //  cars$?: Observable<Car[]>;
+  cars: Car[] = [];
   getAllSubscription?: Subscription;
+  updateAllSubscription?: Subscription;
 
   selectedCar$?: Observable<Car>;
 
@@ -24,22 +26,28 @@ export class HomePage implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.getAllSubscription = this.carService.getAllCars().subscribe(result => {
-      this.data = result;
-      const cars: Car[] = (this.data.data ?? []).map(
-        (element: { 
-          id: any; 
-          name: any; 
-          registration_number: any; 
-          accident_count: any; 
-        }) => ({
-          id: parseInt(element.id, 10), 
-          name: element.name, 
-          registration_number: element.registration_number, 
-          accident_count: element.accident_count
-        })
-      );
-      this.cars$ = of(cars)
+      // this.data = result;
+      // const cars: Car[] = (this.data.data ?? []).map(
+      //   (element: { 
+      //     id: any; 
+      //     name: any; 
+      //     registration_number: any; 
+      //     accident_count: any; 
+      //   }) => ({
+      //     id: parseInt(element.id, 10), 
+      //     name: element.name, 
+      //     registration_number: element.registration_number, 
+      //     accident_count: element.accident_count
+      //   })
+      //   );
+      this.cars = result.data;
     });
+
+    this.updateAllSubscription = this.carService.listenForUpdates().subscribe( payload => {
+      this.cars = payload.data;
+      this.selectedCar$ = of();
+      console.log("Received update via WebSocket.");
+     });
   }
 
   setInfoCar(car: any) {
@@ -48,6 +56,7 @@ export class HomePage implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.getAllSubscription?.unsubscribe();
+    this.updateAllSubscription?.unsubscribe();
   }
 
 }
