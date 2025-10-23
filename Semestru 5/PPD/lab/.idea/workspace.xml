@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0f258ae7-24a0-4914-862f-e8002f77798b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../LFTC/lab/lab1/lab1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LFTC/lab/lab1/p3/analizator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../LFTC/lab/lab1/p3/analizator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LFTC/lab/lab1/p3/input/Program.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../LFTC/lab/lab1/p3/input/Program.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LFTC/lab/lab1/p3/output/FIP.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../LFTC/lab/lab1/p3/output/FIP.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LFTC/lab/lab1/p3/output/TS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../LFTC/lab/lab1/p3/output/TS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LFTC/lab/lab1/parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PDM/lab/lab1/pdm_lab_ionic/src/app/home/home.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../PDM/lab/lab1/pdm_lab_ionic/src/app/home/home.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PDM/lab/lab1/pdm_lab_ionic_server/data/Cars.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../PDM/lab/lab1/pdm_lab_ionic_server/data/Cars.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-in-class/lab1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-in-class/lab1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1-java/stats/stat.md" beforeDir="false" afterPath="$PROJECT_DIR$/lab1-java/stats/stat.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "zdrobix"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/zdrobix/csubb.git",
+    "accountId": "f61486f0-c8f5-4ca3-affb-e7ee9e1ddf11"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="34MqDUpRXP9vy2Aiojpco0YzWrA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "Q:/info/csubb/Semestru 5/PPD/lab",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f258ae7-24a0-4914-862f-e8002f77798b" name="Changes" comment="" />
+      <created>1761033672841</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761033672841</updated>
+      <workItem from="1761033674136" duration="30000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
