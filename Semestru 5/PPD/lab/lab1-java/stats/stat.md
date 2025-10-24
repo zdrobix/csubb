@@ -66,6 +66,7 @@
 |16|10000 |10000|5 |8 |**1480072180** |
 |17|10000 |10000|5 |16 |1487302450 |
 
+---
 
 # C++
 
@@ -78,6 +79,8 @@
 |4 |10000 |10 |5 |8015850 |
 |5 |10000 |10000 |5 |7201215300 |
 
+---
+
 ## 2. Dynamic sequential run
 
 |No. |N |M |k |Time |
@@ -87,6 +90,8 @@
 |3 |10 |10000 |5 |5963480 |
 |4 |10000 |10 |5 |7905970 |
 |5 |10000 |10000 |5 |7140726400 |
+
+----
 
 ## 3. Static paralel horizontal run
 
@@ -114,6 +119,8 @@
 |16 |10000 |10000 |5 |8 |64837434590 |
 |17 |10000 |10000 |5 |16 |81818178500 |
 
+----
+
 ## 4. Static paralel vertical run
 
 |No. |N |M |k |p |Time |
@@ -138,6 +145,8 @@
 |15 |10000 |10000 |5 |4 |54890889200 |
 |16 |10000 |10000 |5 |8 |73294157300 |
 |17 |10000 |10000 |5 |16 |92328666460 |
+
+---
 
 ## 5. Dynamic paralel horizontal run
 
@@ -164,6 +173,8 @@
 |16 |10000 |10000 |5 |8 |31528821880 |
 |17 |10000 |10000 |5 |16 |39530570510 |
 
+---
+
 ## 6. Dynamic paralel vertical run
 
 |No. |N |M |k |p |Time |
@@ -189,6 +200,7 @@
 |16 |10000 |10000 |5 |8 |46566492490 |
 |17 |10000 |10000 |5 |16 |57578150070 |
 
+---
 
 ### Concluzii
 
@@ -202,3 +214,10 @@ La parametrii mici, paralelizarea influenteaza negativ timpul de executie.
 Executile secventiale statice/dinamice au timp similari de executie.
 Paralelizarea nu are efectul dorit, timpul creste odata cu numarul de thread-uri alocat. Performanta scade odata cu cresterea parametrilor.
 Pentru paralelism, versiunile dinamice sunt mai rapide.
+
+#### Java vs C++
+
+Timpii de executie sunt mai buni pentru java. Spre deosebire de c++, in java paralelismul isi arata efectul odata cu cresterea numarului de thread-uri.
+
+#### Orizontal vs Vertical
+Diferenta depinde de la caz la caz, deoarece thread-urile sunt imprevizibile, conteaza mult si forma matricii si a kernelului.
