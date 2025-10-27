@@ -1,0 +1,13 @@
+<file> ::= "states:" <state_list> "\n"
+           "alphabet:" <symbol_list> "\n"
+           "start:" <state> "\n"
+           "finals:" <state_list> "\n"
+           "transitions:\n" <transition_list>
+
+<state_list> ::= <state> | <state> "," <state_list>
+<symbol_list> ::= <symbol> | <symbol> "," <symbol_list>
+<state> ::= <id>
+<id> ::= [abz0-9][abz0-9]*]
+<symbol> ::= [abz0-9]
+<transition_list> ::= <transition> | <transition> <transition_list>
+<transition> ::= <state> " " <state> " " <symbol> "\n"
