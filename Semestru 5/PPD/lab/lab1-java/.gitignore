@@ -3,6 +3,11 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+./output
+./input
+/output/
+/input/
+
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

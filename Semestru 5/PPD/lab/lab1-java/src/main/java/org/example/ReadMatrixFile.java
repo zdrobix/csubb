@@ -9,26 +9,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadMatrixFile {
-    static String FileName = "input/data.txt";
+    static class Data {
+        public int N, M, k;
+        public int[][] matrix, kernel;
+    }
 
-    public static int[][] Run() throws IOException {
-        List<int[]> rows = new ArrayList<int[]>();
-
-        try (BufferedReader br = new BufferedReader(new FileReader(FileName))) {
+    public static Data Read(String filename) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+            Data data = new Data();
             String line = br.readLine();
-            while (line != null) {
-                String[] data = line.split(" ");
-                int[] row = new int[data.length];
-                for (int i = 0; i < data.length; i++) {
-                    row[i] = Integer.parseInt(data[i]);
-                }
-                rows.add(row);
-                line = br.readLine();
+            data.N = Integer.parseInt(line.split(" ")[0]);
+            data.M = Integer.parseInt(line.split(" ")[1]);
+            data.k = Integer.parseInt(line.split(" ")[2]);
+            data.matrix = new int[data.N][data.M];
+            data.kernel = new int[data.k][data.k];
+            int index = 0;
+            while ((line = br.readLine()) != null) {
+               var elems = line.split(" ");
+               if (index < data.N) {
+                   for (int i = 0; i < data.M; i++) {
+                       data.matrix[index][i] = Integer.parseInt(elems[i]);
+                   }
+               } else {
+                   for (int i = 0; i < data.k; i++) {
+                       data.kernel[index - data.N][i] = Integer.parseInt(elems[i]);
+                   }
+               }
+                index++;
             }
+            return data;
         }
-
-        int[][] Matrix = rows.toArray(new int[rows.size()][]);
-
-        return Matrix;
     }
 }

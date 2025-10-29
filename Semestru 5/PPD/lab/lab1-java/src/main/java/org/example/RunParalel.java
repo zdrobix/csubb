@@ -1,6 +1,8 @@
 package org.example;
 
 public class RunParalel {
+    public static int[][] Result;
+
     public static long RunHorizontal (int p, int[][] Matrix, int[][] Kernel) throws InterruptedException {
         long t0 = System.nanoTime();
 
@@ -32,8 +34,20 @@ public class RunParalel {
         }
 
         for (int id = 0; id < p; id++) {
+
             threads[id].join();
         }
+
+        Result = new int[resultNrRow][Matrix[0].length - Kernel.length + 1];
+
+        int index = 0;
+        for (int id = 0; id < p; id ++) {
+            if (threads[id].Result == null) continue;
+            for (int i = 0; i < threads[id].Result.length; i++) {
+                Result[index++] = threads[id].Result[i];
+            }
+        }
+
         long t1 = System.nanoTime();
         return t1 - t0;
     }
@@ -70,6 +84,18 @@ public class RunParalel {
         for (int id = 0; id < p; id++) {
             threads[id].join();
         }
+
+        Result = new int[Matrix.length - Kernel.length + 1][resultNrCol];
+
+        int index = 0;
+        for (int id = 0; id < p; id ++) {
+            if (threads[id].Result == null) continue;
+            for (int i = (id == 0) ? 0 : Kernel.length - 1;  i < threads[id].Result.length; i++) {
+                if (index >= Result.length) break;
+                Result[index++] = threads[id].Result[i];
+            }
+        }
+
         long t1 = System.nanoTime();
         return t1 - t0;
     }
