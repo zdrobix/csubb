@@ -1,9 +1,15 @@
 import Router from 'koa-router';
-import dataStore from 'nedb-promise';
+import DataStore from '@seald-io/nedb';
+
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+import { type } from 'os';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export class CarStore {
     constructor({ filename, autoload }) {
-        this.store = dataStore({ filename, autoload });
+        this.store = new DataStore({ filename, autoload });
     }
 
     async find(properties) {
@@ -34,7 +40,7 @@ export class CarStore {
     }
 }
 
-const carStore = new CarStore({ filename: './data/Cars.json', autoload: true });
+const carStore = new CarStore({ filename: join(__dirname, 'data', 'Cars.db'), autoload: true });
 
 export const carRouter = new Router();
 
@@ -42,4 +48,28 @@ carRouter.get('/', async ctx => {
     ctx.body = await carStore.findAll();
     ctx.response.status = 200;
 });
+
+carRouter.get('/:id_user', async ctx => {
+    const id = parseInt(ctx.params.id_user);
+    const cars = await carStore.find({ id_user: id });
+    ctx.body = cars;
+    ctx.response.status = 200;
+});
+
+carRouter.post('/', async ctx => {
+    const newCar = ctx.request.body;
+    if (!newCar.id || !newCar.name || !newCar.registration_number) {
+        ctx.response.status = 400;
+        ctx.body = { error: 'Invalid car data' };
+        return;
+    } 
+    const insertedCar = await carStore.insert(newCar);
+
+    BroadcastChannel({type: 'car_added', payload: insertedCar});
+
+    ctx.response.status = 201;
+    ctx.body = insertedCar;
+});
+
+
 
