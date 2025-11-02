@@ -8,6 +8,8 @@ import { initializeWebSocketServer } from './web-socket-server.js';
 import { carRouter } from './car.js';
 import { authRouter } from './auth.js';
 
+import { jwtAuth } from './utils.js';
+
 const app = new Koa();
 const server = http.createServer(app.callback());
 const webSocketServer = new WebSocket.Server({ server});
@@ -31,7 +33,7 @@ app
 const protectedApiRouter = new Router();
 protectedApiRouter.prefix('/api');
 protectedApiRouter
-    .use('/cars', carRouter.routes());
+    .use('/cars', jwtAuth, carRouter.routes());
 
 app
     .use(protectedApiRouter.routes())
