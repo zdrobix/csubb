@@ -1,12 +1,17 @@
 import Router from 'koa-router';
 import jwt from 'jsonwebtoken';
-import DataStore from 'nedb-promise';
+import DataStore from '@seald-io/nedb';
 import { jwtConfiguration } from './utils.js';
+
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 
 export class UserStore {
     constructor({ filename, autoload }) {
-        this.store = DataStore({ filename, autoload });
+        this.store = new DataStore({ filename, autoload });
     }
 
     async findOne(properties) {
@@ -26,10 +31,11 @@ export class UserStore {
     }
 }
 
-const userStore = new UserStore({ filename: './data/Users.json', autoload: true });
+
+const userStore = new UserStore({ filename: join(__dirname, 'data', 'Users.db'), autoload: true });
 
 const createToken = (user) => {
-    return jwt.sign({ username: user.username, id:user.id }, jwtConfiguration.secret, { expiresIn: 60 * 60 * 60});
+    return jwt.sign({ username: user.username, id:user._id }, jwtConfiguration.secret, { expiresIn: 60 * 60 * 60});
 };
 
 export const authRouter = new Router();
@@ -40,7 +46,7 @@ authRouter.post('/login', async (ctx) => {
     const user = await userStore.findOne({ username: credentials.username });
 
     if (user && credentials.password === user.password) {
-        ctx.response.body = { token: createToken(user ) };
+        ctx.response.body = { token: createToken(user ), user_id: user._id };
         ctx.response.status = 201;
     } else {
         ctx.response.body = { error: 'Invalid credentials.' };
