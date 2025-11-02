@@ -1,0 +1,33 @@
+<div class="justify-content-center align-items-center m-5" style="height: 80vh;" id="container">
+
+  <div class="d-flex">
+    <input type="text" id="nameInput" class="form-control me-2" placeholder="Search car" style="width: 75%" />
+    <button class="btn btn-secondary m-1" (click)="searchCars()">Search</button>
+  </div>
+  <div id="filters" class="mt-2">
+    <input id="accidentCountInput" type="number" class="form-control me-2" placeholder="Accident count" />
+    <div class="d-flex">
+      <p class="me-2">Registered after:</p>
+      <input id="registredAfterInput" type="date" class="form-control me-2" />
+    </div>
+    <div class="d-flex">
+      <p class="me-2">Registered before:</p>
+      <input id="registredBeforeInput" type="date" class="form-control me-2" />
+    </div>
+  </div>
+
+  <div class="mt-2 overflow-auto w" style="max-height: 500px;">
+    <table class="table table-bordered m-2">
+      <tbody>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+        </tr>
+        <tr *ngFor="let car of cars">
+          <td>{{ car._id }}</td>
+          <td> <button class="btn btn-primary m-2 w-75"> {{ car.name }} </button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { LoginRequest } from 'src/app/models/login-request.model';
 import { Service } from 'src/app/services/user/service';
+import { Service as CarService } from 'src/app/services/car/service';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
@@ -19,7 +20,7 @@ export class LoginComponent  implements OnInit, OnDestroy {
   model: LoginRequest;
   private loginSubscription?: Subscription;
 
-  constructor(private userService: Service, private router: Router) { 
+  constructor(private carService: CarService, private userService: Service, private router: Router) { 
     this.model = {
       username: '',
       password: ''
@@ -29,7 +30,10 @@ export class LoginComponent  implements OnInit, OnDestroy {
   onFormSubmit() {
     this.loginSubscription = this.userService.login(this.model.username, this.model.password).subscribe({
       next: (response) => {
+        console.log('User logged in successfully. user_id: ' + response.user_id);
+
         this.userService.saveToken(response.token);
+        this.userService.saveUserId(response.user_id);
         this.router.navigate(['/cars']);
       },
       error: (err) => {
@@ -38,7 +42,8 @@ export class LoginComponent  implements OnInit, OnDestroy {
     })
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   ngOnDestroy(): void {
     this.loginSubscription?.unsubscribe();

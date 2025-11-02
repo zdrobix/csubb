@@ -1,15 +1,18 @@
 <div class="justify-content-center align-items-center m-5" style="height: 80vh;" id="container">
 
     <div *ngIf="selectedCar$ | async as selectedCar" class="card">
-      <div class="justify-content-center align-items-start">
+      <div class="justify-content-center align-items-start p-2">
         <h5 class="card-title">{{selectedCar.name}}</h5>
         <p  class="card-title">Reg: {{selectedCar.registration_number}}</p>
         <p  class="card-title">Accidents: {{selectedCar.accident_count}}</p>
         <p  class="card-title">Date: {{selectedCar.registration_date}}</p>
       </div>
     </div>
-
-    <div class="mt-3 overflow-auto w" style="max-height: 500px;">
+    <div class="d-flex">
+      <button class="btn btn-secondary m-1" (click)="goToSearch()">Search & filter</button>
+      <button class="btn btn-secondary m-1" (click)="goToAccount()">Account</button>
+    </div>
+    <div class="mt-2 overflow-auto w" style="max-height: 500px;">
       <table class="table table-bordered m-2">
         <tbody>
           <tr>
@@ -17,10 +20,14 @@
             <th>Name</th>
           </tr>
           <tr *ngFor="let car of cars">
-            <td>{{ car.id }}</td>
-            <td> <button class="btn btn-primary m-2 w-50" (click)="setInfoCar(car)"> {{ car.name }} </button> </td>
+            <td>{{ car._id }}</td>
+            <td> <button class="btn btn-primary m-2 w-75" (click)="setInfoCar(car)"> {{ car.name }} </button> </td>
           </tr>
         </tbody>
       </table>
+      <div class="d-flex justify-content-between align-items-center m-2">
+        <button class="btn btn-secondary" (click)="previousPage()" [disabled]="page <= 1">Previous</button>
+        <span>Page {{ page }} of {{ totalPages }}</span>
+        <button class="btn btn-secondary" (click)="nextPage()" [disabled]="page >= totalPages">Next</button>
     </div>
 </div>
