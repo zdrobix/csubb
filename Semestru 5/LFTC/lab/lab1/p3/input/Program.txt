@@ -1,6 +1,7 @@
 int main() {
     int n;
     int s;
+    int a;
 
     n = citire_int();
     s = 0;

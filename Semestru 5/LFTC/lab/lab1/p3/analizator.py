@@ -1,3 +1,4 @@
+import os
 import re
 
 token_table = {
@@ -35,6 +36,48 @@ token_table = {
     "return": 31
 }
 
+class Table:
+    def __init__(self, size=211):
+        self.size = size
+        self.table = [[] for _ in range(size)]
+        self.entries = []       
+        self.positions = {}    
+ 
+    def _hash(self, key):
+        return hash(key) % self.size
+ 
+    def insert(self, key):
+        if key in self.positions:
+            return self.positions[key]
+ 
+        index = self._hash(key)
+        self.table[index].append(key)
+ 
+        self.entries.append(key)
+        pos = len(self.entries)    
+        self.positions[key] = pos
+        self.sort()
+        return pos
+ 
+    def lookup(self, key):
+        return self.positions.get(key, None)
+ 
+    def to_file(self, filename):
+        with open(filename, "w", encoding="utf-8") as f:
+            count = 1
+            for key in self.entries:
+                f.write(f"{count} {key}\n")
+                count += 1
+
+    def sort(self):
+        self.entries.sort()
+        self.positions = {key: index + 1 for index, key in enumerate(self.entries)}
+ 
+    def __str__(self):
+        return "\n".join(self.entries)
+
+
+
 identifier_pattern = re.compile(r'^[a-zA-Z_]\w*$')
 const_pattern = re.compile(r'^\d+(\.\d+)?$')
 
@@ -42,7 +85,7 @@ def tokenize(code):
     return re.findall(r'==|!=|<=|>=|[()\{\};,+\-*/%?=<>"]|\w+', code)
 
 def analyze_tokens(code):
-    TS = []
+    TS = Table()
     FIP = []
 
     for index, code in enumerate(code, start = 1):
@@ -51,16 +94,14 @@ def analyze_tokens(code):
             if token in token_table:
                 FIP.append((token_table[token], -1))
             elif re.match(identifier_pattern, token):
-                if token not in TS:
-                    TS.append(token)
-                    TS.sort()
-                position = TS.index(token) + 1
+                if TS.lookup(token) is None:
+                    TS.insert(token)
+                position = TS.lookup(token)
                 FIP.append((token_table["ID"], position))
             elif re.match(const_pattern, token):
-                if token not in TS:
-                    TS.append(token)
-                    TS.sort()
-                position = TS.index(token) + 1
+                if TS.lookup(token) is None:
+                    TS.insert(token)
+                position = TS.lookup(token)
                 FIP.append((token_table["CONST"], position))
 
             else:
@@ -69,18 +110,17 @@ def analyze_tokens(code):
     return TS, FIP
 
 if __name__ == "__main__":
-    with open("./input/Program.txt") as file:
+    dir = os.path.dirname(os.path.abspath(__file__))
+
+    with open(os.path.join(dir, "input/Program.txt")) as file:
         code_lines = file.readlines()
 
     TS, FIP = analyze_tokens(code_lines)
 
-    with open("./output/FIP.txt", "w") as file:
+    with open(os.path.join(dir, ("./output/FIP.txt")), "w") as file:
         for cod, pos in FIP:
             file.write(f"({cod}, {pos})\n")
 
-    with open("./output/TS.txt", "w") as file:
-        for index, token in enumerate(TS, start = 1):
-            file.write(f"{index} {token}\n")
-
+    TS.to_file(os.path.join(dir, "./output/TS.txt"))
 
 print("Done.")

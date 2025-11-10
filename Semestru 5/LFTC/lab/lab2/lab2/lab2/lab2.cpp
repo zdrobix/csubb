@@ -95,7 +95,7 @@ struct AFD {
 
 void run_file() {
 	AFD afd;
-	std::ifstream fin("automat.txt");
+	std::ifstream fin("inclass.txt");
 	afd.read_from_file(fin);
 	afd.print();
 
@@ -138,8 +138,8 @@ void run_keyboard() {
 
 int main()
 {
-	//run_file();
-	run_keyboard();
+	run_file();
+	//run_keyboard();
 }
 
 

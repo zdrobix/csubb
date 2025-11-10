@@ -1,0 +1,10 @@
+states: q0 q1 q2 q3
+alphabet: a b
+start: q0
+finals: q0 q2
+transitions:
+q0 b q0
+q0 a q1
+q1 b q2
+q2 a q3
+q3 a q2
