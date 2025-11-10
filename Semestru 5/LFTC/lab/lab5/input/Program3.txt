@@ -1,0 +1,17 @@
+int main() {
+    double raza;
+    double pi;
+
+    raza = 0;
+    raza = 3.14;
+
+    raza = citire_double();
+
+    double aria = pi * raza * raza;
+    double circumferinta = 2 * pi * raza;
+
+    afiseaza(aria);
+    afiseaza(circumferinta);
+
+    return raza;
+}

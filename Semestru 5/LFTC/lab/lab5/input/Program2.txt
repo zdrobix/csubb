@@ -1,0 +1,18 @@
+int main() {
+    int a;
+    int b;
+
+    a = citire_int();
+    b = citire_int()
+
+    while (a != b)
+    {
+        if (a > b)
+            a = a - b;
+        else
+            b = b - a;
+    }
+
+    afiseaza(a);
+return a;
+}

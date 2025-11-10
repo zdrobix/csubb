@@ -1,0 +1,15 @@
+int main() {
+    int n;
+    int s;
+    int a;
+
+    n = citire_int();
+    s = 0;
+
+    while (n > 0) {
+        s += citire_int()
+    }
+
+    afiseaza(s);
+    return s;
+}
