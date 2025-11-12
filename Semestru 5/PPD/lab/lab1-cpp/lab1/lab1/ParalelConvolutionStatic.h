@@ -5,10 +5,11 @@
 
 class ParalelConvolutionStatic {
 public:
+	std::vector<int> Result;
 	long long ConvoluteHorizontal(const std::vector<int> matrix, const std::vector<int> kernel, int N, int M, int k, int p) {
 		auto t0 = std::chrono::high_resolution_clock::now();
 
-		std::vector<int> result(N * M, 0);
+		Result.resize(N * M, 0);
 
 
 		auto worker = [&](int startRow, int endRow) {
@@ -24,7 +25,7 @@ public:
 							}
 						}
 					}
-					result[i * M + j] = sum;
+					Result[i * M + j] = sum;
 				}
 			}
 			};
@@ -48,7 +49,7 @@ public:
 	long long ConvoluteVertical(std::vector<int> matrix, std::vector<int> kernel, int N, int M, int k, int p) {
 		auto t0 = std::chrono::high_resolution_clock::now();
 
-		std::vector<int> result(N * M, 0);
+		Result.resize(N * M, 0);
 
 		auto worker = [&](int startCol, int endCol) {
 			for (int j = startCol; j < endCol; j++) {
@@ -63,7 +64,7 @@ public:
 							}
 						}
 					}
-					result[i * M + j] = sum;
+					Result[i * M + j] = sum;
 				}
 			}
 			};

@@ -32,4 +32,11 @@ public:
 		auto t1 = std::chrono::high_resolution_clock::now();
 		return std::chrono::duration_cast<std::chrono::nanoseconds>(t1 - t0).count();
 	}
+
+	void DeleteResult(int N) {
+		for (int i = 0; i < N; i++) {
+			delete[] Result[i];
+		}
+		delete[] Result;
+	}
 };

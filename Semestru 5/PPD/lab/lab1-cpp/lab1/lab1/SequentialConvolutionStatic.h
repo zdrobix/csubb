@@ -4,10 +4,11 @@
 
 class SequentialConvolutionStatic {
 public:
+	std::vector<int> Result;
 	long long Convolute(std::vector<int> matrix, std::vector<int> kernel, int N, int M, int k) {
 		auto t0 = std::chrono::high_resolution_clock::now();
 
-		std::vector<int> result(N * M, 0);
+		Result.resize(N * M, 0);
 
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < M; j++) {
@@ -21,7 +22,7 @@ public:
 						}
 					}
 				}
-				result[i * M + j] = sum;
+				Result[i * M + j] = sum;
 			}
 		}
 

@@ -1,0 +1,4 @@
+﻿  msmpi.cpp
+Q:\info\csubb\Semestru 5\PPD\lab-in-class\lab3\msmpi\msmpi\msmpi.cpp(36,37): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+Q:\info\csubb\Semestru 5\PPD\lab-in-class\lab3\msmpi\msmpi\msmpi.cpp(91,38): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  msmpi.vcxproj -> Q:\info\csubb\Semestru 5\PPD\lab-in-class\lab3\msmpi\x64\Debug\msmpi.exe

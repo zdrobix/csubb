@@ -21,11 +21,11 @@ public:
 		return matrix;
 	}
 
-	static std::string MatrixToString(const std::vector<std::vector<int>>& matrix, int rows, int cols) {
+	static std::string MatrixToString(std::vector<int>& matrix, int rows, int cols) {
 		std::ostringstream oss;
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
-				oss << matrix[i][j];
+				oss << matrix[i * cols + j];
 				if (j < cols - 1) oss << " ";
 			}
 			oss << "\n";

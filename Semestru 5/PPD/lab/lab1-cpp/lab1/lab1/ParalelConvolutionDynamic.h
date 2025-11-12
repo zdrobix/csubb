@@ -5,12 +5,13 @@
 
 class ParalelConvolutionDynamic {
 public:
+	int** Result;
 	long long ConvoluteHorizontal(int** matrix, int** kernel, int N, int M, int k, int p) {
 		auto t0 = std::chrono::high_resolution_clock::now();
 
-		int** result = new int* [N];
+		Result = new int* [N];
 		for (int i = 0; i < N; i++) {
-			result[i] = new int[M];
+			Result[i] = new int[M];
 		}
 
 		auto worker = [&](int startRow, int endRow) {
@@ -26,7 +27,7 @@ public:
 							}
 						}
 					}
-					result[i][j] = sum;
+					Result[i][j] = sum;
 				}
 			}
 			};
@@ -44,10 +45,10 @@ public:
 		}
 
 
-		for (int i = 0; i < N; i++) {
-			delete[] result[i];
-		}
-		delete[] result;
+		//for (int i = 0; i < N; i++) {
+		//	delete[] Result[i];
+		//}
+		//delete[] Result;
 
 		auto t1 = std::chrono::high_resolution_clock::now();
 		return std::chrono::duration_cast<std::chrono::nanoseconds>(t1 - t0).count();
@@ -56,9 +57,9 @@ public:
 	long long ConvoluteVertical(int** matrix, int** kernel, int N, int M, int k, int p) {
 		auto t0 = std::chrono::high_resolution_clock::now();
 
-		int** result = new int* [N];
+		Result = new int* [N];
 		for (int i = 0; i < N; i++) {
-			result[i] = new int[M];
+			Result[i] = new int[M];
 		}
 
 		auto worker = [&](int startCol, int endCol) {
@@ -74,7 +75,7 @@ public:
 							}
 						}
 					}
-					result[i][j] = sum;
+					Result[i][j] = sum;
 				}
 			}
 			};
@@ -91,12 +92,19 @@ public:
 			t.join();
 		}
 
-		for (int i = 0; i < N; i++) {
-			delete[] result[i];
-		}
-		delete[] result;
+		//for (int i = 0; i < N; i++) {
+		//	delete[] result[i];
+		//}
+		//delete[] result;
 
 		auto t1 = std::chrono::high_resolution_clock::now();
 		return std::chrono::duration_cast<std::chrono::nanoseconds>(t1 - t0).count();
+	}
+
+	void DeleteResult(int N) {
+		for (int i = 0; i < N; i++) {
+			delete[] Result[i];
+		}
+		delete[] Result;
 	}
 };
