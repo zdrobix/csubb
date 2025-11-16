@@ -1,0 +1,42 @@
+
+Linia 1: int x = 10;
+  int        -> 3
+  ID         -> 0
+  =          -> 25
+  CONST      -> 1
+  ;          -> 2
+
+Linia 2: double y = 3.14;
+  double     -> 4
+  ID         -> 0
+  =          -> 25
+  CONST      -> 1
+  ;          -> 2
+
+Linia 3: citire_int(x);
+  citire_int -> 13
+  (          -> 6
+  ID         -> 0
+  )          -> 7
+  ;          -> 2
+
+Linia 4: if (y >= 2.5) {
+  if         -> 28
+  (          -> 6
+  ID         -> 0
+  >=         -> 24
+  CONST      -> 1
+  )          -> 7
+  {          -> 15
+
+Linia 5: afiseaza(x + y);
+  afiseaza   -> 27
+  (          -> 6
+  ID         -> 0
+  +          -> 8
+  ID         -> 0
+  )          -> 7
+  ;          -> 2
+
+Linia 6: }
+  }          -> 16

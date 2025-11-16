@@ -1,0 +1,6 @@
+int x = 10;
+double y = 3.14;
+citire_int(x);
+if (y >= 2.5) {
+    afiseaza(x + y);
+}

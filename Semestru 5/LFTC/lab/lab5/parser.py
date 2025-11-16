@@ -1,6 +1,6 @@
-# analyzer_af.py
+from afd import AFD
 
-token_table = {
+TOKENS = {
     "ID": 0, "CONST": 1, ";": 2, "int": 3, "double": 4, "string": 5,
     "(": 6, ")": 7, "+": 8, "*": 9, "-": 10, "/": 11, "%": 12,
     "citire_int": 13, "citire_double": 14, "{": 15, "}": 16, ",": 17,
@@ -9,113 +9,68 @@ token_table = {
     "return": 31
 }
 
-def is_identifier(s: str):
-    if not s: return False
-    state = "q0"
-    for ch in s:
-        if state == "q0":
-            if ch.isalpha() or ch == "_":
-                state = "q1"
-            else:
-                return False
-        elif state == "q1":
-            if not (ch.isalnum() or ch == "_"):
-                return False
-    return state == "q1"
+MULTI_CHAR_OPS = {"==", "!=", "<=", ">="}
+SINGLE_CHAR_OPS = {';', ',', '(', ')', '{', '}', '+', '-', '*', '/', '%', '?', '<', '>', '=', '"'}
 
-def is_int_const(s: str):
-    if not s: return False
-    state = "q0"
-    for ch in s:
-        if state == "q0" and ch.isdigit():
-            state = "q1"
-        elif state == "q1" and ch.isdigit():
-            continue
-        else:
-            return False
-    return state == "q1"
+def build_automata():
+    afd_id = AFD(); afd_id.read_from_file("identificatori.txt")
+    afd_int = AFD(); afd_int.read_from_file("int_const.txt")
+    afd_real = AFD(); afd_real.read_from_file("real_const.txt")
+    return afd_id, afd_int, afd_real
 
-def is_real_const(s: str):
-    if not s: return False
-    state = "q0"
-    for ch in s:
-        if state == "q0" and ch.isdigit():
-            state = "q1"
-        elif state == "q1":
-            if ch.isdigit():
-                continue
-            elif ch == ".":
-                state = "q2"
-            else:
-                return False
-        elif state == "q2":
-            if ch.isdigit():
-                state = "q3"
-            else:
-                return False
-        elif state == "q3" and ch.isdigit():
-            continue
-        else:
-            return False
-    return state == "q3"
-
-def tokenize_line(line):
-    tokens, current, i = [], "", 0
+def split_tokens(line):
+    tokens = []
+    i = 0
     while i < len(line):
-        ch = line[i]
-        if ch.isspace():
-            if current:
-                tokens.append(current)
-                current = ""
-        elif ch in [';', ',', '(', ')', '{', '}', '+', '-', '*', '/', '%', '=', '<', '>', '!', '?', '"']:
-            if current:
-                tokens.append(current)
-                current = ""
-            if i + 1 < len(line) and line[i:i+2] in ["==", "!=", "<=", ">="]:
-                tokens.append(line[i:i+2])
-                i += 1
-            else:
-                tokens.append(ch)
-        else:
-            current += ch
-        i += 1
-    if current:
-        tokens.append(current)
+        c = line[i]
+        if c.isspace():
+            i += 1
+            continue
+        if i + 1 < len(line) and line[i:i+2] in MULTI_CHAR_OPS:
+            tokens.append(line[i:i+2])
+            i += 2
+            continue
+        if c in SINGLE_CHAR_OPS:
+            tokens.append(c)
+            i += 1
+            continue
+        start = i
+        while i < len(line) and not line[i].isspace() and line[i] not in SINGLE_CHAR_OPS and line[i:i+2] not in MULTI_CHAR_OPS:
+            i += 1
+        tokens.append(line[start:i])
+
     return tokens
 
-def analyze_tokens(lines):
-    TS, FIP = [], []
-    for index, line in enumerate(lines, start=1):
-        tokens = tokenize_line(line)
-        for token in tokens:
-            if token in token_table:
-                FIP.append((token_table[token], -1))
-            elif is_identifier(token):
-                if token not in TS:
-                    TS.append(token)
-                    TS.sort()
-                FIP.append((token_table["ID"], TS.index(token) + 1))
-            elif is_int_const(token) or is_real_const(token):
-                if token not in TS:
-                    TS.append(token)
-                    TS.sort()
-                FIP.append((token_table["CONST"], TS.index(token) + 1))
-            else:
-                print(f"Eroare lexicala la linia {index}: token necunoscut '{token}'")
-    return TS, FIP
 
-if __name__ == "__main__":
-    with open("./input/Program2.txt") as f:
-        code_lines = f.readlines()
+def tokenize_line(line, afd_id, afd_int, afd_real):
+    tokens = []
+    parts = split_tokens(line)
 
-    TS, FIP = analyze_tokens(code_lines)
+    for part in parts:
+        if part in TOKENS:
+            tokens.append((part, TOKENS[part]))
+        elif afd_id.accept(part):
+            tokens.append(("ID", TOKENS["ID"]))
+        elif afd_real.accept(part) or afd_int.accept(part):
+            tokens.append(("CONST", TOKENS["CONST"]))
+        else:
+            tokens.append(("EROARE", part))
+    return tokens
 
-    with open("./output/FIP2.txt", "w") as f:
-        for cod, pos in FIP:
-            f.write(f"({cod}, {pos})\n")
 
-    with open("./output/TS2.txt", "w") as f:
-        for i, token in enumerate(TS, start=1):
-            f.write(f"{i} {token}\n")
-
-    print("Analiza lexicala finalizata.")
+def lex_file(filename):
+    afd_id, afd_int, afd_real = build_automata()
+    result = ""
+    with open(filename, "r", encoding="utf-8") as f:
+        for nr_linie, linie in enumerate(f, start=1):
+            linie = linie.strip()
+            if not linie:
+                continue
+            print(f"\nLinia {nr_linie}: {linie}")
+            result += f"\nLinia {nr_linie}: {linie}\n"
+            tokens = tokenize_line(linie, afd_id, afd_int, afd_real)
+            for t in tokens:
+                print(f"  {t[0]:<10} -> {t[1]}")
+                result += f"  {t[0]:<10} -> {t[1]}\n"
+    with open("output.txt", "w", encoding="utf-8") as out_file:
+        out_file.write(result)
