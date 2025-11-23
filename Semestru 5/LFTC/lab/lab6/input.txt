@@ -1,0 +1,10 @@
+int x               = 10;
+double y            = 3.14;
+citire_int(x);
+if (y >= 2a.5) {
+    afiseaza(x + y);
+}
+
+cattimp (x) executa {
+    afiseaza(x);
+} sfcattimp

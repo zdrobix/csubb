@@ -1,0 +1,51 @@
+INT(1)
+ID(1)
+=
+CONST_INT(1)
+;
+DOUBLE(2)
+ID(2)
+=
+CONST_DOUBLE(2)
+;
+CITIRE_INT(3)
+(
+ID(3)
+)
+;
+IF(4)
+(
+ID(4)
+>=
+CONST_INT(4)
+ID(4)
+EROARE LEXICALA linia 4: .
+CONST_INT(4)
+)
+{
+AFISEAZA(5)
+(
+ID(5)
++
+ID(5)
+)
+;
+}
+CATTIMP(8)
+(
+ID(8)
+)
+EXECUTA(8)
+{
+AFISEAZA(9)
+(
+ID(9)
+)
+;
+}
+SFCATTIMP(10)
+
+------
+x : #1
+y : #2
+a : #4
