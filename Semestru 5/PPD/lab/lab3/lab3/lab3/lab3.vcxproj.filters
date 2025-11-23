@@ -18,5 +18,27 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="numar3_v3.txt">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="numar1.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="numar3_v0.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="numar2.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="numar3_v2.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="numar3_v1.txt">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

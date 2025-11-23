@@ -5,6 +5,30 @@
     {
       "AbsoluteMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|solutionrelative:lab3\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|solutionrelative:lab3\\numar1.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v3.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|solutionrelative:lab3\\numar3_v3.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|solutionrelative:lab3\\numar3_v1.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v2.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|solutionrelative:lab3\\numar3_v2.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v0.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|solutionrelative:lab3\\numar3_v0.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar2.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D0809770-1BB1-496D-A2B8-E5CECE123194}|lab3\\lab3.vcxproj|solutionrelative:lab3\\numar2.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 186,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,13 +58,91 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "numar3_v3.txt",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v3.txt",
+              "RelativeDocumentMoniker": "lab3\\numar3_v3.txt",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v3.txt",
+              "RelativeToolTip": "lab3\\numar3_v3.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-20T17:21:54.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "numar3_v2.txt",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v2.txt",
+              "RelativeDocumentMoniker": "lab3\\numar3_v2.txt",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v2.txt",
+              "RelativeToolTip": "lab3\\numar3_v2.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-20T17:00:24.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "numar3_v1.txt",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v1.txt",
+              "RelativeDocumentMoniker": "lab3\\numar3_v1.txt",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v1.txt",
+              "RelativeToolTip": "lab3\\numar3_v1.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-20T17:00:04.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "numar3_v0.txt",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v0.txt",
+              "RelativeDocumentMoniker": "lab3\\numar3_v0.txt",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar3_v0.txt",
+              "RelativeToolTip": "lab3\\numar3_v0.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-20T16:59:42.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "numar2.txt",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar2.txt",
+              "RelativeDocumentMoniker": "lab3\\numar2.txt",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar2.txt",
+              "RelativeToolTip": "lab3\\numar2.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-20T16:57:53.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "numar1.txt",
+              "DocumentMoniker": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar1.txt",
+              "RelativeDocumentMoniker": "lab3\\numar1.txt",
+              "ToolTip": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\numar1.txt",
+              "RelativeToolTip": "lab3\\numar1.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-12T12:04:58.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\main.cpp",
               "RelativeDocumentMoniker": "lab3\\main.cpp",
               "ToolTip": "Q:\\info\\csubb\\Semestru 5\\PPD\\lab\\lab3\\lab3\\lab3\\main.cpp",
               "RelativeToolTip": "lab3\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAAACwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-12T11:41:30.964Z",
               "EditorCaption": ""
