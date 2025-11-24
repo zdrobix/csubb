@@ -68,7 +68,7 @@
 /* Copy the first part of user declarations.  */
 
 /* Line 189 of yacc.c  */
-#line 1 ".\\parser.y"
+#line 1 "parser.y"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -160,7 +160,7 @@ typedef union YYSTYPE
 {
 
 /* Line 214 of yacc.c  */
-#line 21 ".\\parser.y"
+#line 21 "parser.y"
 
     char *str;
 
@@ -483,11 +483,11 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    43,    43,    49,    51,    55,    59,    60,    61,    64,
-      66,    70,    71,    72,    73,    74,    78,    79,    80,    84,
-      88,    89,    93,    98,    99,   100,   101,   102,   103,   104,
-     105,   106,   107,   108,   109,   110,   114,   115,   116,   117,
-     121,   125
+       0,    42,    42,    48,    50,    54,    58,    59,    60,    63,
+      65,    69,    70,    71,    72,    73,    77,    78,    79,    83,
+      87,    88,    92,    96,    97,    98,    99,   100,   101,   102,
+     103,   104,   105,   106,   107,   108,   112,   113,   114,   115,
+     119,   123
 };
 #endif
 
@@ -1461,7 +1461,7 @@ yyreduce:
         case 2:
 
 /* Line 1455 of yacc.c  */
-#line 44 ".\\parser.y"
+#line 43 "parser.y"
     {
         printf("Programul este corect din punct de vedere sintactic.\n");
     ;}
@@ -1682,7 +1682,7 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 128 ".\\parser.y"
+#line 126 "parser.y"
 
 
 void yyerror(const char *s) {

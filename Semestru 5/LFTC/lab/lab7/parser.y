@@ -30,7 +30,6 @@ void yyerror(const char *s);
 %token PLUS MINUS MUL DIV MOD
 %token EQ NEQ LT GT LTE GTE ASSIGN
 
-/* Definim precedenta si asociativitatea operatorilor */
 %left EQ NEQ
 %left LT GT LTE GTE
 %left PLUS MINUS
@@ -93,7 +92,6 @@ conditie:
     expresie
     ;
 
-/* Expresii cu precedenta corecta */
 expresie:
     expresie PLUS expresie
     | expresie MINUS expresie
