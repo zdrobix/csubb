@@ -144,7 +144,7 @@ int main(int argc, char **argv) {
     int result = yyparse();
     
     if (result == 0) {
-        printf("\n--- Tabela de Simboluri ---\n");
+        printf("\nTabela de Simboluri:\n");
         for (int i = 0; i < symbol_count; i++) {
             printf("%s : linia #%d\n", table[i].name, table[i].line);
         }
