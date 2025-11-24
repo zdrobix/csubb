@@ -5,6 +5,7 @@ import { AuthGuard } from './guards/auth-guard';
 import { CarListComponent } from './features/car/car-list/car-list/car-list.component';
 import { CarSearchComponent } from './features/car/car-search/car-search/car-search.component';
 import { LogoutComponent } from './features/logout/logout/logout.component';
+import { CarAddComponent } from './features/car/car-add/car-add/car-add.component';
 
 export const routes: Routes = [
   {
@@ -34,5 +35,10 @@ export const routes: Routes = [
     path: 'account',
     component: LogoutComponent,
     canActivate: [AuthGuard]
-  }
+  },
+  {
+    path: 'cars/add',
+    component: CarAddComponent,
+    canActivate: [AuthGuard]
+  },
 ];

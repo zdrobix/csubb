@@ -4,6 +4,7 @@ import DataStore from '@seald-io/nedb';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { type } from 'os';
+import { randomInt } from 'crypto';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -25,7 +26,7 @@ export class CarStore {
     }
 
     async insert(car) {
-        if (!car.id || !car.name || !car.registration_number) {
+        if ( !car.name || !car.registration_number) {
             throw new Error('Invalid car data');
         }
         return this.store.insert(car);
@@ -58,13 +59,14 @@ carRouter.get('/:id_user', async ctx => {
 
 carRouter.post('/', async ctx => {
     const newCar = ctx.request.body;
-    if (!newCar.id || !newCar.name || !newCar.registration_number) {
+    console.log('Received new car data:', newCar);
+    if ( !newCar.name || !newCar.registration_number) {
         ctx.response.status = 400;
         ctx.body = { error: 'Invalid car data' };
         return;
     } 
-    const insertedCar = await carStore.insert(newCar);
 
+    const insertedCar = await carStore.insert(newCar);
     BroadcastChannel({type: 'car_added', payload: insertedCar});
 
     ctx.response.status = 201;

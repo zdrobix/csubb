@@ -1,5 +1,5 @@
 export interface Car {
-    _id: number;
+    _id: number | undefined;
     id_user: number;
     name: string;
     registration_number: string;

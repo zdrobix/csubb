@@ -15,7 +15,7 @@ import { IonicModule } from '@ionic/angular';
   styleUrls: ['./login.component.scss'],
   imports: [IonicModule, FormsModule]
 })
-export class LoginComponent  implements OnInit, OnDestroy {
+export class LoginComponent  implements OnDestroy {
 
   model: LoginRequest;
   private loginSubscription?: Subscription;
@@ -42,8 +42,6 @@ export class LoginComponent  implements OnInit, OnDestroy {
     })
   }
 
-  ngOnInit() {
-  }
 
   ngOnDestroy(): void {
     this.loginSubscription?.unsubscribe();

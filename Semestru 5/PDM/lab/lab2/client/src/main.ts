@@ -7,6 +7,13 @@ import { AppComponent } from './app/app.component';
 import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AuthInterceptor } from './app/interceptors/auth-interceptor';
 import { AuthGuard } from './app/guards/auth-guard';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
+import { environment } from './environments/environment';
+import { enableProdMode } from '@angular/core';
+defineCustomElements(window);
+if (environment.production) {
+  enableProdMode();
+}
 
 bootstrapApplication(AppComponent, {
   providers: [

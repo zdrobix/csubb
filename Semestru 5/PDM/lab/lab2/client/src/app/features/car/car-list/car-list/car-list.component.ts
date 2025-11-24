@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Observable, of, Subscription } from 'rxjs';
 import { Car } from 'src/app/models/car.model';
 import { Service } from 'src/app/services/car/service';
+import { Service as UserService } from 'src/app/services/user/service';
 import { WebSocketService } from 'src/app/services/car/websocket.service';
 
 @Component({
@@ -17,16 +18,13 @@ export class CarListComponent  implements OnInit, OnDestroy {
 
   cars: Car[] = [];
 
-  page: number = 1;
-  pageSize: number = 5;
-  totalPages: number = 0;
-
   webSocketSubscription?: Subscription;
   getAllSubscription?: Subscription;
   updateAllSubscription?: Subscription;
   selectedCar$?: Observable<Car>;
+  userStatus$ = this.userService.onlineStatus$;
 
-  constructor(private carService: Service, private wsService: WebSocketService, private router: Router) { }
+  constructor(private userService: UserService, private carService: Service, private wsService: WebSocketService, private router: Router) { }
   
   ngOnInit() {
     console.log('CarListComponent initialized for user_id: ' + localStorage.getItem('user_id'));
@@ -34,13 +32,11 @@ export class CarListComponent  implements OnInit, OnDestroy {
     this.getAllSubscription = this.carService.fetchCarsFromServer().subscribe({
       next: () => {
         const allCars = this.carService.loadLocalCars();
-        this.totalPages = Math.ceil(allCars.length / this.pageSize);
-        this.loadPage(this.page);
+        this.cars = this.carService.getCarsNext();
       },
       error: (err) => {
         const allCars = this.carService.loadLocalCars();
-        this.totalPages = Math.ceil(allCars.length / this.pageSize);
-        this.loadPage(this.page);
+        this.cars = this.carService.getCarsNext();
         console.error('Failed to fetch cars from server:', err);
       }
     });
@@ -66,20 +62,19 @@ export class CarListComponent  implements OnInit, OnDestroy {
     });
   }
 
-  loadPage(page: number) {
-    this.page = page;
-    this.cars = this.carService.getCarsPage(this.page, this.pageSize);
-  }
-
-  nextPage() {
-    if (this.page < this.totalPages) {
-      this.loadPage(this.page + 1);
+  onScroll() {
+    const nextCars = this.carService.getCarsNext();
+    if (nextCars.length > 0) {
+      this.cars = [...this.cars, ...nextCars];
     }
   }
 
-  previousPage() {
-    if (this.page > 1) {
-      this.loadPage(this.page - 1);
+  onScrollContainer(event: any) {
+    const element = event.target;
+    const atBottom = element.scrollHeight - element.scrollTop <= element.clientHeight + 50;
+
+    if (atBottom) {
+      this.onScroll();
     }
   }
 
@@ -100,5 +95,17 @@ export class CarListComponent  implements OnInit, OnDestroy {
 
   goToAccount() {
     this.router.navigate(['/account']);
+  }
+
+  goToAlbum() {
+    this.router.navigate(['/album']);
+  }
+
+  goToMaps() {
+    this.router.navigate(['/maps']);
+  }
+
+  goToAdd() {
+    this.router.navigate(['/cars/add']);
   }
 }

@@ -11,27 +11,31 @@ export class Service {
 
   private carsSubject = new BehaviorSubject<Car[]>(this.loadLocalCars());
   public cars$ = this.carsSubject.asObservable();
+  public currentPage: number = 1;
+  public pageSize: number = 5;
 
   constructor(private http: HttpClient) { 
 
   }
 
   loadLocalCars(): Car[] {
-    console.log('Loading cars from local storage for user_id: ' + localStorage.getItem('user_id'));
     const data = localStorage.getItem('cars');
     return data ? JSON.parse(data) : [];
   }
 
-  getCars(): Observable<Car[]> {
-    console.log('Getting cars from server for user_id: ' + localStorage.getItem('user_id'));
-    return this.http.get<Car[]>(`${environment.apiBaseUrl}/cars/${localStorage.getItem('user_id')!}`);
-  }
-
-  getCarsPage(page: number, pageSize: number): Car[] {
+  getCarsNext(): Car[] {
     const cars = this.loadLocalCars();
-    const startIndex = (page - 1) * pageSize;
-    return cars.slice(startIndex, startIndex + pageSize);
+    const startIndex = (this.currentPage - 1) * this.pageSize;
+    const next = cars.slice(startIndex, startIndex + this.pageSize);
+    if (next.length > 0) {
+      this.currentPage++;
+    }
+    return next;
   } 
+
+  resetPagination() {
+    this.currentPage = 1;
+  }
 
   private saveCarsToLocalStorage(cars: Car[]) {
     localStorage.setItem('cars', JSON.stringify(cars));
@@ -51,11 +55,18 @@ export class Service {
     );
   }
 
-  addCar(car: Car) {
-    return this.http.post<Car>(`${environment.apiBaseUrl}/cars`, car).subscribe(newCar => {
-      const cars = this.loadLocalCars();
-      cars.push(newCar);
-      this.saveCarsToLocalStorage(cars);
-    });
+  saveNewCarLocally(car: Car) {
+    const cars = this.loadLocalCars();
+    cars.push(car);
+    this.saveCarsToLocalStorage(cars);
+  }
+
+  addCar(car: Car): Observable<Car> {
+    console.log('Adding car to server for user_id: ' + localStorage.getItem('user_id'));
+    return this.http.post<Car>(`${environment.apiBaseUrl}/cars`, car).pipe(
+      tap((addedCar) => {
+        this.saveNewCarLocally(addedCar);
+      }
+    ));
   }
 }

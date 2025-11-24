@@ -14,3 +14,5 @@
 {"_id":14,"id_user":1,"name":"Peugeot 308","registration_number":"AB012CD","accident_count":0,"registration_date":"2020-02-10"}
 {"_id":15,"id_user":1,"name":"Skoda Octaviaa","registration_number":"EF345GH","accident_count":1,"registration_date":"2020-02-10"}
 {"_id":16,"id_user":2,"name":"MasinaUser2","registration_number":"EF345GH","accident_count":1,"registration_date":"2020-02-10"}
+{"id_user":2,"name":"asd","registration_number":"123j","accident_count":"0","registration_date":"2011-12-12","_id":"8JWymxKQIZWkBNuT"}
+{"id_user":2,"name":"asd","registration_number":"12asdkja","accident_count":"0","registration_date":"2011-12-12","_id":"W9AmSi3JhiC5wErx"}
