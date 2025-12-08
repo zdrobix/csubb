@@ -1,0 +1,4 @@
+S
+a b
+S
+S -> aS b | ab

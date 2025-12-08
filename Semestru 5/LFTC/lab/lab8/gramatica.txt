@@ -1,0 +1,6 @@
+S A B          
+a b            
+S              
+S->aA|bB     
+A->aA|a
+B->bB|b
