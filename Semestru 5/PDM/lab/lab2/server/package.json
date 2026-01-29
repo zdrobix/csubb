@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.4.3",
+    "@seald-io/nedb": "^4.1.2",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.16.3",
+    "koa-bodyparser": "^4.4.1",
+    "koa-jwt": "^3.6.0",
+    "koa-router": "^8.0.8",
+    "ws": "^7.5.10"
+  },
+  "description": "",
+  "type": "module"
+}
