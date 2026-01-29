@@ -1,7 +1,0 @@
-{
-  "name": "client",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
