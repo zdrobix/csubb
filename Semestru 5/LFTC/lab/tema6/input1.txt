@@ -1,0 +1,4 @@
+int x, y;
+read(x);
+y <- x+x*x+x+5-5;
+write(y);

@@ -1,0 +1,17 @@
+# Video files
+*.mkv
+*.mp4
+
+# Python junk
+__pycache__/
+*.pyc
+
+# C++/Compiled junk
+*.exe
+*.obj
+*.o
+*.bin
+
+# IDE junk
+.idea/
+.vscode/

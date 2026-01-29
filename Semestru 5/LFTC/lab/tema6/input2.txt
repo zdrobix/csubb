@@ -1,0 +1,3 @@
+int a;
+read(a);
+write(a);

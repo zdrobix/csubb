@@ -1,0 +1,1 @@
+int main ( ) { int ID ; ID = CONST ; }

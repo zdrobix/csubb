@@ -1,0 +1,8 @@
+PRODUCTII APLICATE (in ordinea derivarii):
+1. <program> -> int main ( ) { <stmts> }
+2. <stmts> -> <stmt> <stmts>
+3. <stmt> -> <decl>
+4. <decl> -> int ID ;
+5. <stmts> -> <stmt>
+6. <stmt> -> <assign>
+7. <assign> -> ID = CONST ;

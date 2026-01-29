@@ -1,0 +1,785 @@
+
+VERIFICARE 
+Ora: 12:33:13
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+Programari neplatite:
+  ID:9, CNP:1000101090009, Locatie:1, Tratament:1, Ora:14:30, Status:rezervare
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 40.0 RON
+Programari neplatite:
+  ID:5, CNP:1000101050005, Locatie:3, Tratament:3, Ora:13:15, Status:rezervare
+  ID:6, CNP:1000101060006, Locatie:3, Tratament:4, Ora:16:00, Status:rezervare
+  ID:7, CNP:1000101070007, Locatie:3, Tratament:2, Ora:11:30, Status:rezervare
+  ID:8, CNP:1000101080008, Locatie:3, Tratament:0, Ora:10:00, Status:rezervare
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:33:18
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+Programari neplatite:
+  ID:9, CNP:1000101090009, Locatie:1, Tratament:1, Ora:14:30, Status:rezervare
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+Programari neplatite:
+  ID:6, CNP:1000101060006, Locatie:3, Tratament:4, Ora:16:00, Status:rezervare
+  ID:7, CNP:1000101070007, Locatie:3, Tratament:2, Ora:11:30, Status:rezervare
+  ID:8, CNP:1000101080008, Locatie:3, Tratament:0, Ora:10:00, Status:rezervare
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:33:23
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+Programari neplatite:
+  ID:9, CNP:1000101090009, Locatie:1, Tratament:1, Ora:14:30, Status:rezervare
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+Programari neplatite:
+  ID:6, CNP:1000101060006, Locatie:3, Tratament:4, Ora:16:00, Status:rezervare
+  ID:7, CNP:1000101070007, Locatie:3, Tratament:2, Ora:11:30, Status:rezervare
+  ID:8, CNP:1000101080008, Locatie:3, Tratament:0, Ora:10:00, Status:rezervare
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:33:28
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+Programari neplatite:
+  ID:9, CNP:1000101090009, Locatie:1, Tratament:1, Ora:14:30, Status:rezervare
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+Programari neplatite:
+  ID:6, CNP:1000101060006, Locatie:3, Tratament:4, Ora:16:00, Status:rezervare
+  ID:7, CNP:1000101070007, Locatie:3, Tratament:2, Ora:11:30, Status:rezervare
+  ID:8, CNP:1000101080008, Locatie:3, Tratament:0, Ora:10:00, Status:rezervare
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:33:33
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+Programari neplatite:
+  ID:9, CNP:1000101090009, Locatie:1, Tratament:1, Ora:14:30, Status:rezervare
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+Programari neplatite:
+  ID:6, CNP:1000101060006, Locatie:3, Tratament:4, Ora:16:00, Status:rezervare
+  ID:7, CNP:1000101070007, Locatie:3, Tratament:2, Ora:11:30, Status:rezervare
+  ID:8, CNP:1000101080008, Locatie:3, Tratament:0, Ora:10:00, Status:rezervare
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:33:38
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+Programari neplatite:
+  ID:9, CNP:1000101090009, Locatie:1, Tratament:1, Ora:14:30, Status:rezervare
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+Programari neplatite:
+  ID:6, CNP:1000101060006, Locatie:3, Tratament:4, Ora:16:00, Status:rezervare
+  ID:7, CNP:1000101070007, Locatie:3, Tratament:2, Ora:11:30, Status:rezervare
+  ID:8, CNP:1000101080008, Locatie:3, Tratament:0, Ora:10:00, Status:rezervare
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:33:43
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+Programari neplatite:
+  ID:9, CNP:1000101090009, Locatie:1, Tratament:1, Ora:14:30, Status:rezervare
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+Programari neplatite:
+  ID:6, CNP:1000101060006, Locatie:3, Tratament:4, Ora:16:00, Status:rezervare
+  ID:7, CNP:1000101070007, Locatie:3, Tratament:2, Ora:11:30, Status:rezervare
+  ID:8, CNP:1000101080008, Locatie:3, Tratament:0, Ora:10:00, Status:rezervare
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:33:48
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+Programari neplatite:
+  ID:9, CNP:1000101090009, Locatie:1, Tratament:1, Ora:14:30, Status:rezervare
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+Programari neplatite:
+  ID:6, CNP:1000101060006, Locatie:3, Tratament:4, Ora:16:00, Status:rezervare
+  ID:7, CNP:1000101070007, Locatie:3, Tratament:2, Ora:11:30, Status:rezervare
+  ID:8, CNP:1000101080008, Locatie:3, Tratament:0, Ora:10:00, Status:rezervare
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:33:53
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:33:58
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:03
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:08
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:13
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:18
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:23
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:28
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:33
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:38
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:43
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:48
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:53
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:34:58
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:03
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:08
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:13
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:18
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:23
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:28
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:33
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:38
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:43
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:48
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:53
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:35:58
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:36:03
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 12:36:08
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 70.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 140.0 RON
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 14:15:18
+
+--- Locatie 1 ---
+Sold total: 0.0 RON
+Programari neplatite:
+  ID:8, CNP:1000101080008, Locatie:0, Tratament:1, Ora:12:15, Status:rezervare
+  ID:9, CNP:1000101090009, Locatie:0, Tratament:1, Ora:14:15, Status:rezervare
+
+--- Locatie 2 ---
+Sold total: 0.0 RON
+Programari neplatite:
+  ID:7, CNP:1000101070007, Locatie:1, Tratament:3, Ora:16:45, Status:rezervare
+
+--- Locatie 3 ---
+Sold total: 130.0 RON
+
+--- Locatie 4 ---
+Sold total: 120.0 RON
+Programari neplatite:
+  ID:6, CNP:1000101060006, Locatie:3, Tratament:0, Ora:11:45, Status:rezervare
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+
+
+VERIFICARE 
+Ora: 14:15:23
+
+--- Locatie 1 ---
+Sold total: 0.0 RON
+Programari neplatite:
+  ID:8, CNP:1000101080008, Locatie:0, Tratament:1, Ora:12:15, Status:rezervare
+  ID:9, CNP:1000101090009, Locatie:0, Tratament:1, Ora:14:15, Status:rezervare
+
+--- Locatie 2 ---
+Sold total: 0.0 RON
+Programari neplatite:
+  ID:7, CNP:1000101070007, Locatie:1, Tratament:3, Ora:16:45, Status:rezervare
+
+--- Locatie 3 ---
+Sold total: 130.0 RON
+
+--- Locatie 4 ---
+Sold total: 120.0 RON
+Programari neplatite:
+  ID:6, CNP:1000101060006, Locatie:3, Tratament:0, Ora:11:45, Status:rezervare
+
+--- Locatie 5 ---
+Sold total: 0.0 RON
+

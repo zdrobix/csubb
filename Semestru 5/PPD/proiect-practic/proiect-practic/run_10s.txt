@@ -1,0 +1,486 @@
+Sistem programari clinica
+PARAMETRI TESTARE:
+numar threaduri server: 10
+numar clienti:10
+numar locatii (n):5
+numar tipuri tratamente (m):5
+timp rulare server 3 minute
+
+TRATAMENTE:
+  Tratament 1: Cost= 50.00 RON, Durata=120 minute
+  Tratament 2: Cost= 20.00 RON, Durata= 20 minute
+  Tratament 3: Cost= 40.00 RON, Durata= 30 minute
+  Tratament 4: Cost=100.00 RON, Durata= 60 minute
+  Tratament 5: Cost= 30.00 RON, Durata= 30 minute
+
+CAPACITATE MAXIMA (Număr clienți simultan N(i,j)):
+           T1   T2   T3   T4   T5
+Locatia 1: 3    1    1    2    1
+Locatia 2: 3    1    1    2    1
+Locatia 3: 6    2    2    4    2
+Locatia 4: 9    3    3    6    3
+Locatia 5: 12   4    4    8    4
+
+FORMULA CAPACITATE:
+  N(1,1)=3, N(1,2)=1, N(1,3)=1, N(1,4)=2, N(1,5)=1
+  N(i,j) = N(1,j) * (i-1) pentru toti i>1 și 0<j<=5
+
+COMPORTAMENT CLIENTI:
+-Fiecare client genereaza cereri la fiecare 2 secunde
+-Date generate aleatoriu: locatie, tip tratament, ora
+-Plata se face automat după programare reusita
+-Programul functioneaza intre orele 10:00-18:00
+
+VERIFICARI PERIODICE:
+-Interval verificare:  10 secunde
+-Verificare suprapuneri: DA
+-Verificare plati:   DA
+-Timeout plati: 30 secunde
+-Salvare rezultate: verificari.txt
+PORNIRE APLICATIE
+
+Main: asteptare pornire serve
+
+Main: pornire server
+
+Server Clinica Medicala Pornit
+Port: 8888
+Max threaduri: 10
+Interval verificare: 10 secunde
+Timpul de rulare: 180 secunde
+
+Server asculta pe portul 8888...
+
+[Main: pornire 10 clienti
+
+[Client_1] Conectat la server
+Programare reusita: ID:1, CNP:1000101010001, Locatie:4, Tratament:0, Ora:17:15, Status:rezervare
+[Client_1] Cerere programare - Locatie:5, Tratament:1, Ora:17:15
+[Client_1] PROGRAMARE REUSITA - ID:1, Cost:50.0 RON
+[Client_2] Conectat la server
+Programare reusita: ID:2, CNP:1000101020002, Locatie:0, Tratament:0, Ora:14:30, Status:rezervare
+[Client_2] Cerere programare - Locatie:1, Tratament:1, Ora:14:30
+[Client_2] PROGRAMARE REUSITA - ID:2, Cost:50.0 RON
+[Client_3] Conectat la server
+Programare reusita: ID:3, CNP:1000101030003, Locatie:1, Tratament:0, Ora:13:30, Status:rezervare
+[Client_3] Cerere programare - Locatie:2, Tratament:1, Ora:13:30
+[Client_3] PROGRAMARE REUSITA - ID:3, Cost:50.0 RON
+[Client_4] Conectat la server
+Programare reusita: ID:4, CNP:1000101040004, Locatie:1, Tratament:2, Ora:12:30, Status:rezervare
+[Client_4] Cerere programare - Locatie:2, Tratament:3, Ora:12:30
+[Client_4] PROGRAMARE REUSITA - ID:4, Cost:40.0 RON
+[Client_5] Conectat la server
+Programare reusita: ID:5, CNP:1000101050005, Locatie:3, Tratament:3, Ora:10:45, Status:rezervare
+[Client_5] Cerere programare - Locatie:4, Tratament:4, Ora:10:45
+[Client_5] PROGRAMARE REUSITA - ID:5, Cost:100.0 RON
+[Client_6] Conectat la server
+Programare reusita: ID:6, CNP:1000101060006, Locatie:3, Tratament:0, Ora:13:00, Status:rezervare
+[Client_6] Cerere programare - Locatie:4, Tratament:1, Ora:13:00
+[Client_6] PROGRAMARE REUSITA - ID:6, Cost:50.0 RON
+Plata inregistrata: ID:1, CNP:1000101010001, Suma:50.00, Data:2026-01-25T12:28:15.271843700
+[Client_1] PLATA REUSITA - Suma:50.0 RON
+Plata inregistrata: ID:2, CNP:1000101020002, Suma:50.00, Data:2026-01-25T12:28:15.429620400
+[Client_2] PLATA REUSITA - Suma:50.0 RON
+[Client_7] Conectat la server
+Programare reusita: ID:7, CNP:1000101070007, Locatie:0, Tratament:0, Ora:11:45, Status:rezervare
+[Client_7] Cerere programare - Locatie:1, Tratament:1, Ora:11:45
+[Client_7] PROGRAMARE REUSITA - ID:7, Cost:50.0 RON
+Plata inregistrata: ID:3, CNP:1000101030003, Suma:50.00, Data:2026-01-25T12:28:15.646291100
+[Client_3] PLATA REUSITA - Suma:50.0 RON
+[Client_8] Conectat la server
+Programare reusita: ID:8, CNP:1000101080008, Locatie:0, Tratament:3, Ora:10:15, Status:rezervare
+[Client_8] Cerere programare - Locatie:1, Tratament:4, Ora:10:15
+[Client_8] PROGRAMARE REUSITA - ID:8, Cost:100.0 RON
+Plata inregistrata: ID:4, CNP:1000101040004, Suma:40.00, Data:2026-01-25T12:28:15.846781200
+[Client_4] PLATA REUSITA - Suma:40.0 RON
+[Client_9] Conectat la server
+Programare reusita: ID:9, CNP:1000101090009, Locatie:2, Tratament:2, Ora:11:30, Status:rezervare
+[Client_9] Cerere programare - Locatie:3, Tratament:3, Ora:11:30
+[Client_9] PROGRAMARE REUSITA - ID:9, Cost:40.0 RON
+Main: toti clientii au fost porniti!
+Main: serverul va rula 3 minute
+
+Plata inregistrata: ID:5, CNP:1000101050005, Suma:100.00, Data:2026-01-25T12:28:16.049411
+[Client_5] PLATA REUSITA - Suma:100.0 RON
+[Client_10] Conectat la server
+
+VERIFICARE PERIODICA
+Ora: 12:28:20
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+Programari neplatite: 2
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+Programari neplatite: 1
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+Programari neplatite: 1
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:28:30
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+Programari neplatite: 2
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+Programari neplatite: 1
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+Programari neplatite: 1
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:28:40
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+Programari neplatite: 2
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+Programari neplatite: 1
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+Programari neplatite: 1
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:28:50
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+Programari neplatite: 2
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+Programari neplatite: 1
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+Programari neplatite: 1
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+Programare expirata (neplatita): ID 6
+Programare expirata (neplatita): ID 7
+Programare expirata (neplatita): ID 8
+Programare expirata (neplatita): ID 9
+
+VERIFICARE PERIODICA
+Ora: 12:29:00
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:29:10
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:29:20
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:29:30
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:29:40
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:29:50
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:30:00
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:30:10
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:30:20
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:30:30
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:30:40
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:30:50
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:31:00
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+VERIFICARE PERIODICA
+Ora: 12:31:10
+
+--- Locatie 1 ---
+Sold total: 50.0 RON
+
+--- Locatie 2 ---
+Sold total: 90.0 RON
+
+--- Locatie 3 ---
+Sold total: 0.0 RON
+
+--- Locatie 4 ---
+Sold total: 100.0 RON
+
+--- Locatie 5 ---
+Sold total: 50.0 RON
+
+
+=== Timpul de rulare expirat. Oprire server... ===
+Server oprit.
+[Client_10] Server inchis
+[Client_3] Server inchis
+[Client_1] Server inchis
+[Client_5] Server inchis
+[Client_6] Server inchis
+[Client_9] Server inchis
+[Client_8] Server inchis
+[Client_1] Deconectat
+[Client_10] Deconectat
+[Client_5] Deconectat
+[Client_2] Server inchis
+[Client_3] Deconectat
+[Client_2] Deconectat
+[Client_4] Server inchis
+[Client_4] Deconectat
+[Client_7] Server inchis
+[Client_8] Deconectat
+[Client_7] Deconectat
+[Client_6] Deconectat
+[Client_9] Deconectat

@@ -1,0 +1,7 @@
+<program> -> int main ( ) { <stmts> }
+<stmts> -> <stmt>
+<stmts> -> <stmt> <stmts>
+<stmt> -> <decl>
+<stmt> -> <assign>
+<decl> -> int ID ;
+<assign> -> ID = CONST ;
