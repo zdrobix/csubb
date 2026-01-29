@@ -280,7 +280,7 @@ Fluxul funcțional:
     - Auditiv: Muzică de fundal adaptivă (relaxantă în meniu, tensionată în timpul testului) și efecte sonore distincte pentru acțiunile corecte/greșite.
     - Progres: Scorurile și numărul de puncte sunt afișate permanent în partea superioară a ecranelor relevante.
 
-#### 6.2 Imagini ale Ecranelor (Descriere pentru capturi de ecran)
+#### 6.2 Imagini ale Ecranelor 
 
 <p align="center">
     <img src="./resources/home-screen.png" alt="Meniu Principal" width="500">
