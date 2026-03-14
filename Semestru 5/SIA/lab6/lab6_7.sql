@@ -167,3 +167,4 @@ SELECT DISTINCT R.tip_camera, COUNT(R.id) AS numar_rezervari, SUM(R.numar_camere
 INNER JOIN InfoClienti I ON I.id = R.id_client
 GROUP BY R.tip_camera
 
+

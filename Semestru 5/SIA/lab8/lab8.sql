@@ -65,4 +65,4 @@ UPDATE Copie_Rezervari SET numar_camere = numar_camere * 2 WHERE tip_camera = 'a
 --IX. Repartiţia clienţilor după vârsta, sex şi cetăţenie
 SELECT YEAR(GETDATE()) - YEAR(data_nasterii) AS varsta, sex, cetatenie FROM InfoClienti
 
---X. Lista clienţilor care au mai mult de o rezervare.SELECT DISTINCT I.id as id, I.nume + ' ' + I.prenume as nume FROM InfoClienti IINNER JOIN Rezervari R ON I.id = R.id_clientGROUP BY I.nume, I.prenume, I.idHAVING COUNT(*) > 1--XI. Lista clienţilor care nu au rezervări.SELECT DISTINCT I.id as id, I.nume + ' ' + I.prenume as nume FROM InfoClienti IINNER JOIN Rezervari R ON I.id = R.id_clientGROUP BY I.nume, I.prenume, I.idHAVING COUNT(*) = 0
+SELECT DISTINCT I.id as id, I.nume + ' ' + I.prenume as nume FROM InfoClienti IINNER JOIN Rezervari R ON I.id = R.id_clientGROUP BY I.nume, I.prenume, I.idHAVING COUNT(*) > 1--XI. Lista clienţilor care nu au rezervări.SELECT DISTINCT I.id as id, I.nume + ' ' + I.prenume as nume FROM InfoClienti IINNER JOIN Rezervari R ON I.id = R.id_clientGROUP BY I.nume, I.prenume, I.idHAVING COUNT(*) = 0

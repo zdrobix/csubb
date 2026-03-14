@@ -19,7 +19,8 @@ CREATE TABLE InfoClienti (									--1. Să se creeze tabelul InfoClienti cu câ
 	localitate VARCHAR(50),
 	id_tara INT FOREIGN KEY REFERENCES Tari(id),			--3. Câmpul CodTara să permită introducerea unor valori cuprinse intre 1 şi 6. 
 	id_judet INT FOREIGN KEY REFERENCES Judete(id),			--4. Creați o lista pentru indicativul județului (SB – Sibiu, BN – Bistriţa Năsăud, CJ- Cluj etc.). Valorile vor fi preluate dintr-un tabel cu denumirea Judete. Adăugați în tabel 6
-	telefon VARCHAR(15) CHECK (telefon LIKE '0264/%'),		--7. Numerele de telefon vor fi introduse în următorul format (004) 0264/158963.	id_tip_act INT FOREIGN KEY REFERENCES Acte(id),			--6. Câmpul TipActID să permită introducerea unor valori cuprinse între 1 şi 4.
+	telefon VARCHAR(15) CHECK (telefon LIKE '0264/%'),		--7. Numerele de telefon vor fi introduse în următorul format (004) 0264/158963.
+	id_tip_act INT FOREIGN KEY REFERENCES Acte(id),			--6. Câmpul TipActID să permită introducerea unor valori cuprinse între 1 şi 4.
 	numar_act VARCHAR(15),
 	emitent VARCHAR(30),
 	data_expirarii DATE,
@@ -107,4 +108,59 @@ VALUES
 
 
 
---II. Să se creeze un nou tabel cu numele Plăţi în baza de date CLIENTI. Tabelul va avea următoarea structură:CREATE TABLE Plati (	id INT PRIMARY KEY IDENTITY(1, 1),						--a) Să se stabilească cheia primară.					id_client INT FOREIGN KEY REFERENCES InfoClienti(id),	--b) Să se creeze o relaţie de tipul one-to-many între tabelul Infoclienţi şi tabelul Plăţi. Să se forţeze integritatea referenţială.	data_platii DATE,	suma MONEY,	data_scadenta DATE)INSERT INTO Plati											--c) Să se introducă 8 înregistrări în tabelul Plăţi.(id_client, data_platii, suma, data_scadenta)VALUES(2, '2025-08-05', 1000, GETDATE()),(3, '2025-09-05', 26, GETDATE()),(4, '2025-02-05', 3456, GETDATE()),(5, '2025-04-05', 769, GETDATE()),(6, '2025-02-05', 100, GETDATE()),(7, '2025-03-05', 253, GETDATE()),(2, '2025-04-05', 2346, GETDATE()),(3, '2025-05-05', 235, GETDATE())--III. Să se adauge un nou tabel - Rezervari care să conţină date referitoare la rezervările camerelor unui hotel.CREATE TABLE Rezervari (	id INT PRIMARY KEY IDENTITY(1, 1),									--b) Să se stabilească cheia primară pentru tabelul Rezervări. 	id_client INT FOREIGN KEY REFERENCES InfoClienti(id),				--d) Să se creeze relaţia dintre cele două tabele şi să se impună integritatea referenţială.	data_rezervare DATE,	data_sosire DATE,	data_plecare DATE,	numar_camere INT,	numar_adulti INT,	numar_copii INT,	tip_camera VARCHAR(15) 	CHECK (tip_camera in ('single', 'double', 'twin', 'apartament')),	--a) Câmpul de date TipCamera să permită introducerea următoarelor valori: single, double, twin, apartament. 	status_anulare BIT)ALTER TABLE Rezervari													--c) Adăugați două câmpuri calculate: numărul de nopți și numărul de persoane	ADD numar_nopti AS (DATEDIFF(DAY, data_plecare, data_sosire)), 	numar_persoane AS (numar_adulti + numar_copii);INSERT INTO Rezervari (id_client, data_rezervare, data_sosire, data_plecare, numar_camere, numar_adulti, numar_copii, tip_camera, status_anulare)VALUES(2, '2025-01-01', '2025-01-25', '2025-02-06', 1, 1, 0, 'single', 0),(3, '2025-01-01', '2025-02-25', '2025-03-03', 1, 1, 0, 'single', 0),(4, '2025-01-01', '2025-04-27', '2025-05-02', 1, 1, 0, 'single', 0),(5, '2025-01-01', '2025-06-26', '2025-07-03', 1, 1, 0, 'double', 0),(6, '2025-01-01', '2025-08-26', '2025-09-03', 1, 1, 0, 'double', 0),(7, '2025-01-01', '2025-10-26', '2025-11-03', 1, 2, 0, 'double', 0),(2, '2025-01-01', '2025-11-26', '2025-12-03', 1, 1, 1, 'twin', 0),(3, '2025-01-01', '2025-03-26', '2025-04-03', 1, 2, 0, 'twin', 0),(4, '2025-01-01', '2025-05-26', '2025-06-03', 1, 2, 2, 'apartament', 0),(5, '2025-01-01', '2025-01-26', '2025-02-03', 1, 4, 0, 'apartament', 0)												--e) Să se adauge 10 de rezervări					
+--II. Să se creeze un nou tabel cu numele Plăţi în baza de date CLIENTI. Tabelul va avea următoarea structură:
+
+CREATE TABLE Plati (
+	id INT PRIMARY KEY IDENTITY(1, 1),						--a) Să se stabilească cheia primară.				
+	id_client INT FOREIGN KEY REFERENCES InfoClienti(id),	--b) Să se creeze o relaţie de tipul one-to-many între tabelul Infoclienţi şi tabelul Plăţi. Să se forţeze integritatea referenţială.
+	data_platii DATE,
+	suma MONEY,
+	data_scadenta DATE
+)
+
+INSERT INTO Plati											--c) Să se introducă 8 înregistrări în tabelul Plăţi.
+(id_client, data_platii, suma, data_scadenta)
+VALUES
+(2, '2025-08-05', 1000, GETDATE()),
+(3, '2025-09-05', 26, GETDATE()),
+(4, '2025-02-05', 3456, GETDATE()),
+(5, '2025-04-05', 769, GETDATE()),
+(6, '2025-02-05', 100, GETDATE()),
+(7, '2025-03-05', 253, GETDATE()),
+(2, '2025-04-05', 2346, GETDATE()),
+(3, '2025-05-05', 235, GETDATE())
+
+
+--III. Să se adauge un nou tabel - Rezervari care să conţină date referitoare la rezervările camerelor unui hotel.
+
+CREATE TABLE Rezervari (
+	id INT PRIMARY KEY IDENTITY(1, 1),									--b) Să se stabilească cheia primară pentru tabelul Rezervări. 
+	id_client INT FOREIGN KEY REFERENCES InfoClienti(id),				--d) Să se creeze relaţia dintre cele două tabele şi să se impună integritatea referenţială.
+	data_rezervare DATE,
+	data_sosire DATE,
+	data_plecare DATE,
+	numar_camere INT,
+	numar_adulti INT,
+	numar_copii INT,
+	tip_camera VARCHAR(15) 
+	CHECK (tip_camera in ('single', 'double', 'twin', 'apartament')),	--a) Câmpul de date TipCamera să permită introducerea următoarelor valori: single, double, twin, apartament. 
+	status_anulare BIT
+)
+
+ALTER TABLE Rezervari													--c) Adăugați două câmpuri calculate: numărul de nopți și numărul de persoane
+	ADD numar_nopti AS (DATEDIFF(DAY, data_plecare, data_sosire)), 
+	numar_persoane AS (numar_adulti + numar_copii);
+
+INSERT INTO Rezervari 
+(id_client, data_rezervare, data_sosire, data_plecare, numar_camere, numar_adulti, numar_copii, tip_camera, status_anulare)
+VALUES
+(2, '2025-01-01', '2025-01-25', '2025-02-06', 1, 1, 0, 'single', 0),
+(3, '2025-01-01', '2025-02-25', '2025-03-03', 1, 1, 0, 'single', 0),
+(4, '2025-01-01', '2025-04-27', '2025-05-02', 1, 1, 0, 'single', 0),
+(5, '2025-01-01', '2025-06-26', '2025-07-03', 1, 1, 0, 'double', 0),
+(6, '2025-01-01', '2025-08-26', '2025-09-03', 1, 1, 0, 'double', 0),
+(7, '2025-01-01', '2025-10-26', '2025-11-03', 1, 2, 0, 'double', 0),
+(2, '2025-01-01', '2025-11-26', '2025-12-03', 1, 1, 1, 'twin', 0),
+(3, '2025-01-01', '2025-03-26', '2025-04-03', 1, 2, 0, 'twin', 0),
+(4, '2025-01-01', '2025-05-26', '2025-06-03', 1, 2, 2, 'apartament', 0),
+(5, '2025-01-01', '2025-01-26', '2025-02-03', 1, 4, 0, 'apartament', 0)												--e) Să se adauge 10 de rezervări					
