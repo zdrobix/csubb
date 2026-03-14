@@ -1,0 +1,18 @@
+%num2float(single(0))
+%n = myminsubnorm(single(1))
+%fprintf('%.60f\n', n)
+%num2float(n)
+%num2float(realmin('single'))
+num2float(single(1))
+num2float(single(1)+ eps('single'))
+num2float(single(1)+2 * eps('single'))
+num2float(single(1)+3 * eps('single'))
+num2float(single(2))
+num2float(single(2) + 2 * eps('single'))
+num2float(single(2^30 ))
+single(2^30 + 10) == single(2^30)
+m =realmax('single')
+num2float(m)
+num2float(single(1/0))
+
+
